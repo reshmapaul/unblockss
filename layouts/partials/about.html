@@ -10,8 +10,20 @@
                             <h3>{{ . }}</h3>
                         {{ end }}
                         </div>
-                        {{ with .Site.Params.about.description }}
-                            <p>{{ . | markdownify }}</p>
+                        {{ with .Site.Params.about.content }}
+                            <li>{{ . | markdownify }}</li>
+                        {{ end }}
+                        {{ with .Site.Params.about.content1 }}
+                            <li>{{ . | markdownify }}</li>
+                        {{ end }}
+                        {{ with .Site.Params.about.content2 }}
+                            <li>{{ . | markdownify }}</li>
+                        {{ end }}
+                        {{ with .Site.Params.about.content3 }}
+                            <li>{{ . | markdownify }}</li>
+                        {{ end }}
+                        {{ with .Site.Params.about.content4 }}
+                            <li>{{ . | markdownify }}</li>
                         {{ end }}
                     </div>
                 </div>

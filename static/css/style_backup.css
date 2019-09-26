@@ -113,7 +113,7 @@ a:active {
 }
 
 .btn-home {
-  background-color: #f68d29;
+  background-color: #1bafb4;
   border-radius: 0px;
   color: #fff;
   font-size: 18px;
@@ -161,7 +161,7 @@ a:active {
   border-top: 5px solid #ecf0f1;
   border-bottom: 5px solid #ecf0f1;
   border-right: 5px solid #ecf0f1;
-  background: #f68d29;
+  background: #1bafb4;
   width: 50px;
   height: 60px;
   -webkit-transform-origin: 0% 50%;
@@ -198,17 +198,17 @@ a:active {
   }
 
   20% {
-    background: #f68d29;
+    background: #1bafb4;
   }
 
   29.9% {
-    background: #f68d29;
+    background: #1bafb4;
   }
 
   30% {
     -webkit-transform: perspective(200px) rotateY(-90deg);
     transform: perspective(200px) rotateY(-90deg);
-    background: #f68d29;
+    background: #1bafb4;
   }
 
   54.999% {
@@ -222,13 +222,13 @@ a:active {
   60% {
     -webkit-transform: perspective(200px) rotateY(-180deg);
     transform: perspective(200px) rotateY(-180deg);
-    background: #f68d29;
+    background: #1bafb4;
   }
 
   100% {
     -webkit-transform: perspective(200px) rotateY(-180deg);
     transform: perspective(200px) rotateY(-180deg);
-    background: #f68d29;
+    background: #1bafb4;
   }
 }
 
@@ -239,17 +239,17 @@ a:active {
   }
 
   20% {
-    background: #f68d29;
+    background: #1bafb4;
   }
 
   29.9% {
-    background: #f68d29;
+    background: #1bafb4;
   }
 
   30% {
     -webkit-transform: perspective(200px) rotateY(-90deg);
     transform: perspective(200px) rotateY(-90deg);
-    background: #f68d29;
+    background: #1bafb4;
   }
 
   54.999% {
@@ -263,13 +263,13 @@ a:active {
   60% {
     -webkit-transform: perspective(200px) rotateY(-180deg);
     transform: perspective(200px) rotateY(-180deg);
-    background: #f68d29;
+    background: #1bafb4;
   }
 
   100% {
     -webkit-transform: perspective(200px) rotateY(-180deg);
     transform: perspective(200px) rotateY(-180deg);
-    background: #f68d29;
+    background: #1bafb4;
   }
 }
 
@@ -422,7 +422,7 @@ a:active {
   font-size: 30px;
   display: inline-block;
   margin-bottom: 15px;
-  color: #f68d29;
+  color: #1bafb4;
 }
 
 .service .block h3 {
@@ -504,7 +504,7 @@ a:active {
   border-radius: 0;
   border: none;
   box-shadow: none;
-  background: #f68d29;
+  background: #1bafb4;
   padding: 0px 35px;
   color: #fff;
   font-weight: bold;
@@ -523,8 +523,8 @@ a:active {
 
 .btn-send {
   line-height: 48px;
-  border: 2px solid #f68d29;
-  background: #f68d29;
+  border: 2px solid #1bafb4;
+  background: #1bafb4;
   color: #fff;
   width: 100%;
   font-size: 14px;

@@ -16,7 +16,7 @@ theme = "infinity-hugo"
     # Hero Area
     [params.hero]
         enable      = true
-        bg          = "images/header-bg.jpg"
+        bg          = "images/banner.jpg"
         title       = "Patients need access to all their data to guide their treatment decisions and care"
         subtitle    = "Unblock Health is a first-in-class patient advocacy tool designed for patients and consumers who are determined to be empowered in their health care journey and are no longer willing to accept traditional barriers to their information."
         btnText     = "Register for a Demo"
@@ -28,7 +28,13 @@ theme = "infinity-hugo"
     [params.about]
         enable      = true
         heading     = "Unblock Health is a platform that provides patients and care partners with a way to demand access to information that is critical for people to make informed, engaged, and empowered decisions about their care. Unblock Health is designed to:"
-        description = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ulla-mco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, aspernatur."
+        content = "Hold healthcare organizations accountable when they do not release medical records in a timely, HIPAA compliant manner, while carefully tracking the process of interactions needed and reporting both violations and access champions in the public domain."
+
+        content1 = "Request patient-generated health data (PGHD) from mhealth & digital tech devices and apps."
+
+        content2 = "Request an itemized list of all the places that one’s health information has been “shared” or sold to facilitate transparency and awareness of human data science practices."
+
+        content3 = "To facilitate a digital workflow for the implementation of addendums that may be flagged by patients and care partners upon review of their medical records and health information."
 
         [[params.about.sliderItem]]
             image   = "images/about/1.jpg"
@@ -43,8 +49,8 @@ theme = "infinity-hugo"
     # Service Section
     [params.service]
         enable      = true
-        title       = "Find Better Solutions Build Better Products"
-        subtitle    = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et"
+        title       = "Why UnBlock Health?"
+        subtitle    = "Unblock Health is ready to unlock barriers standing in the way of real-world interoperability, patient empowerment, and data access and transparency of the future"
         [[params.service.serviceItem]]
             # give icon(themefisher icon font), title, description
             # more about themefisher icon font visit https://github.com/themefisher/themefisher-font
@@ -59,8 +65,8 @@ theme = "infinity-hugo"
             # more about themefisher icon font visit https://github.com/themefisher/themefisher-font
             # use delay for reveal items one by one
             icon    = "tf-circle-compass"
-            title   = "Speed Optimized"
-            description = "Lorem ipsum dolor sit amet, con-sectetur adipisicing elit, sed do eiusmod tempor incididunt ut"
+            title   = "DEMAND FOR REAL TIME ACCESS OF MEDICAL RECORDS"
+            description = "The rise of participatory medicine, shared decision making, and consumerism have contributed to patients expecting and demanding access to their medical records in real-time."
             delay   = "0.2s"
 
         [[params.service.serviceItem]]
@@ -68,8 +74,8 @@ theme = "infinity-hugo"
             # more about themefisher icon font visit https://github.com/themefisher/themefisher-font
             # use delay for reveal items one by one
             icon    = "tf-anchor2"
-            title   = "Tons of Feature"
-            description = "Lorem ipsum dolor sit amet, con-sectetur adipisicing elit, sed do eiusmod tempor incididunt ut"
+            title   = "ACCESS TO DATA FROM WEARABLES"
+            description = "Patients are expecting access to their data that may have been collected by a broad spectrum of digital health technologies, such as wearables, apps, etc."
             delay   = "0.4s"
 
         [[params.service.serviceItem]]
@@ -77,8 +83,8 @@ theme = "infinity-hugo"
             # more about themefisher icon font visit https://github.com/themefisher/themefisher-font
             # use delay for reveal items one by one
             icon    = "tf-globe"
-            title   = "Fully SEO Optimized"
-            description = "Lorem ipsum dolor sit amet, con-sectetur adipisicing elit, sed do eiusmod tempor incididunt ut"
+            title   = "NEED FOR TRANSPARENCY"
+            description = "Patients are demanding transparency about who has access to their data and are appalled by common human data science practices where aggregated data is sold for significant commercial profit. People expect privacy and want to direct who accesses their data, for what reason"
             delay   = "0.6s"
         
         [[params.service.serviceItem]]
@@ -86,8 +92,8 @@ theme = "infinity-hugo"
             # more about themefisher icon font visit https://github.com/themefisher/themefisher-font
             # use delay for reveal items one by one
             icon    = "tf-strategy"
-            title   = "Fully Responsive"
-            description = "Lorem ipsum dolor sit amet, con-sectetur adipisicing elit, sed do eiusmod tempor incididunt ut"
+            title   = "CORRECTION OF ERRORS WITHIN THE MEDICAL RECORD"
+            description = "With increases in accessing data comes the discovery of the many errors that are often found within medical records. Patients need a streamlined way of submitting an addendum to their medical record."
             delay   = "0.8s"
 
         [[params.service.serviceItem]]
@@ -95,8 +101,8 @@ theme = "infinity-hugo"
             # more about themefisher icon font visit https://github.com/themefisher/themefisher-font
             # use delay for reveal items one by one
             icon    = "tf-circle-compass"
-            title   = "Speed Optimized"
-            description = "Lorem ipsum dolor sit amet, con-sectetur adipisicing elit, sed do eiusmod tempor incididunt ut"
+            title   = "RISE IN THE NEED FOR PATIENT ADVOCACY TOOLS"
+            description = "Patients are demanding patient advocacy tools to pushback against a healthcare ecosystem that is responsible for friction points that hamper their healthcare trajectory."
             delay   = "1s"
 
         [[params.service.serviceItem]]
@@ -104,8 +110,8 @@ theme = "infinity-hugo"
             # more about themefisher icon font visit https://github.com/themefisher/themefisher-font
             # use delay for reveal items one by one
             icon    = "tf-anchor2"
-            title   = "Tons of Feature"
-            description = "Lorem ipsum dolor sit amet, con-sectetur adipisicing elit, sed do eiusmod tempor incididunt ut"
+            title   = "MAKE INFORMED DECISIONS ABOUT THEIR CARE"
+            description = "Patients often cannot get access to their medical records and health information, especially when they are faced with an emergency or critical diagnosis, such as a chronic illness or cancer."
             delay   = "1.2s"
 
         [[params.service.serviceItem]]
@@ -113,9 +119,20 @@ theme = "infinity-hugo"
             # more about themefisher icon font visit https://github.com/themefisher/themefisher-font
             # use delay for reveal items one by one
             icon    = "tf-globe"
-            title   = "Fully SEO Optimized"
-            description = "Lorem ipsum dolor sit amet, con-sectetur adipisicing elit, sed do eiusmod tempor incididunt ut"
+            title   = "IMPROVE PATIENT SATISFACTION"
+            description = "Resolve and reduce delays "
             delay   = "1.5s"
+
+        [[params.service.serviceItem]]
+            # give icon(themefisher icon font), title, description
+            # more about themefisher icon font visit https://github.com/themefisher/themefisher-font
+            # use delay for reveal items one by one
+            icon    = "tf-globe"
+            title   = "IMPROVE PATIENT SATISFACTION"
+            description = "Resolve and reduce delays "
+            delay   = "1.7s"
+
+        
     
     
     # Call to Action Section
@@ -123,9 +140,9 @@ theme = "infinity-hugo"
         enable      = true
         bg          = "images/call-to-action.jpg"
         title       = "Subscribe to our mailing list"
-        subtitle    = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod"
+        subtitle    = "We will keep you posted "
 
     [params.contact]
         enable      = true
         title       = "Get In Touch"
-        subtitle    = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex"
+        subtitle    = "It's time to Unblock Health! Register with us to learn more"

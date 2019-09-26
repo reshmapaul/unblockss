@@ -11,16 +11,7 @@
                         {{ end }}
                         </div>
                         {{ with .Site.Params.about.description }}
-                            <li>{{ . | markdownify }}</li>
-                        {{ end }}
-                        {{ with .Site.Params.about.description }}
-                            <li>{{ . | markdownify }}</li>
-                        {{ end }}
-                        {{ with .Site.Params.about.description }}
-                            <li>{{ . | markdownify }}</li>
-                        {{ end }}
-                        {{ with .Site.Params.about.description }}
-                            <li>{{ . | markdownify }}</li>
+                            <p>{{ . | markdownify }}</p>
                         {{ end }}
                     </div>
                 </div>

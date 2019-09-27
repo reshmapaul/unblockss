@@ -19,7 +19,8 @@ theme = "infinity-hugo"
         bg          = "images/banner.jpg"
         title       = "Patients need access to all their data to guide their treatment decisions and care"
         subtitle    = "Unblock Health is a first-in-class patient advocacy tool designed for patients and consumers who are determined to be empowered in their health care journey and are no longer willing to accept traditional barriers to their information."
-        btnText     = "Register for a Demo"
+        btnText     = "Register for an Invitation as a Patient Advocate"
+		btnTextTwo     = "Register for an Invitation as a Hospital HIM"
         countdownYear = "2019"
         countdownMonth = "12"
         countdownDay  = "27"
@@ -49,7 +50,7 @@ theme = "infinity-hugo"
     # Service Section
     [params.service]
         enable      = true
-        title       = "Why UnBlock Health?"
+        title       = "Why Unblock Health?"
         subtitle    = "Unblock Health is ready to unlock barriers standing in the way of real-world interoperability, patient empowerment, and data access and transparency of the future"
         [[params.service.serviceItem]]
             # give icon(themefisher icon font), title, description

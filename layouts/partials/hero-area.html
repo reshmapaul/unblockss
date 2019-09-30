@@ -20,15 +20,21 @@
                             <a class="btn btn-home" href="#about" role="button">
                                 {{ . }}
                             </a>
+                             {{ end }}
+                             {{ with .Site.Params.hero.btnTextTwo }}
+                              <a class="btn btn-home" href="#healthinfo" role="button">
+                                {{ . }}
+                            </a>
+                             {{ end }}
                         </div>
-                        {{ end }}
-						{{ with .Site.Params.hero.btnTextTwo }}
-                        <div class="wow fadeInDown" data-wow-delay="0.7s" data-wow-duration=".7s">
+                       
+						
+                        <!--<div class="wow fadeInDown" data-wow-delay="0.7s" data-wow-duration=".7s">
                             <a class="btn btn-home" href="#about" role="button">
                                 {{ . }}
                             </a>
-                        </div>
-                        {{ end }}
+                        </div>-->
+                       
                     </div>
                 </div>
                 <div class="col-lg-5 col-md-6 wow zoomIn">

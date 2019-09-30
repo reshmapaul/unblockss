@@ -1,19 +1,20 @@
-{{ if .Site.Params.service.enable }}
+{{ if .Site.Params.healthinformation.enable }}
     {{"<!-- Service Section -->" | safeHTML}}
-    <section id="service" class="service section">
+    <section id="healthinfo" class="service section">
         <div class="container">
             <div class="row">
                 <div class="heading wow fadeInUp">
-                    {{ with .Site.Params.service.title }}
+                    {{ with .Site.Params.healthinformation.title }}
                         <h2>{{ . }}</h2>
                     {{ end }}
-                    {{ with .Site.Params.service.subtitle }}
+                    {{ with .Site.Params.healthinformation.subtitle }}
                         <p>{{ . }}</p>
                     {{ end }}
                 </div>
-                {{ range .Site.Params.service.serviceItem }}
+                {{ range .Site.Params.healthinformation.healthinformationItem }}
                     <div class="col-sm-6 col-md-3 wow fadeInLeft" data-wow-delay="{{ .delay }}">
                         <div class="block">
+                            <!--<i class="{{ .icon }}"></i>-->
                             <img src="{{ .icon }}" class="img-responsive healthinfo-img" alt="{{ .title }}" title="{{ .title }}"/>
                             <h3>{{ .title }}</h3>
                             <p>{{ .description }}</p>

@@ -38,13 +38,55 @@ theme = "infinity-hugo"
         content3 = "To facilitate a digital workflow for the implementation of addendums that may be flagged by patients and care partners upon review of their medical records and health information."
 
         [[params.about.sliderItem]]
-            image   = "images/about/1.jpg"
+            image   = "images/about/contentslider-1.jpg"
         [[params.about.sliderItem]]
-            image   = "images/about/2.jpg"
+            image   = "images/about/contentslider-2.jpg"
         [[params.about.sliderItem]]
-            image   = "images/about/3.jpg"
-        [[params.about.sliderItem]]
-            image   = "images/about/2.jpg"
+            image   = "images/about/contentslider-3.jpg"
+
+
+    # Health information Section
+    [params.healthinformation]
+        enable      = true
+        title       = "What is Lorem Ipsum?"
+        subtitle    = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+        [[params.healthinformation.healthinformationItem]]
+            # give icon(themefisher icon font), title, description
+            # more about themefisher icon font visit https://github.com/themefisher/themefisher-font
+            # use delay for reveal items one by one
+            icon    = "/images/healthInformation/health-information-management.png"
+            title   = "Health Information Management (HIM)"
+            description = "Handle patient requests safely, securely while guarding patient privacy."
+            delay   = "0s"
+
+        [[params.healthinformation.healthinformationItem]]
+            # give icon(themefisher icon font), title, description
+            # more about themefisher icon font visit https://github.com/themefisher/themefisher-font
+            # use delay for reveal items one by one
+            icon    = "/images/healthInformation/office-of-patient-experience.png"
+            title   = "Office of Patient Experience"
+            description = "Ensure facility/caregiver is providing safe, high quality, affordable care that meets patient satisfaction."
+            delay   = "0.2s"
+
+        [[params.healthinformation.healthinformationItem]]
+            # give icon(themefisher icon font), title, description
+            # more about themefisher icon font visit https://github.com/themefisher/themefisher-font
+            # use delay for reveal items one by one
+            icon    = "/images/healthInformation/onc.png"
+            title   = "ONC/CMS"
+            description = "Creation of policies to reduce & prevent data blocking."
+            delay   = "0.4s"
+
+        [[params.healthinformation.healthinformationItem]]
+            # give icon(themefisher icon font), title, description
+            # more about themefisher icon font visit https://github.com/themefisher/themefisher-font
+            # use delay for reveal items one by one
+            icon    = "/images/healthInformation/patients-and-care-partners.png"
+            title   = "Patients and Care partners"
+            description = "Want to be an engaged, empowered, informed driver of their (or their loved ones) care."
+            delay   = "0.6s"
+        
+        
 
     
     # Service Section
@@ -56,7 +98,7 @@ theme = "infinity-hugo"
             # give icon(themefisher icon font), title, description
             # more about themefisher icon font visit https://github.com/themefisher/themefisher-font
             # use delay for reveal items one by one
-            icon    = "tf-strategy"
+            icon    = "/images/services/real-time-access-to-medical records.png"
             title   = "DEMAND FOR REAL TIME ACCESS OF MEDICAL RECORDS"
             description = "The rise of participatory medicine, shared decision making, and consumerism have contributed to patients expecting and demanding access to their medical records in real-time."
             delay   = "0s"
@@ -65,7 +107,7 @@ theme = "infinity-hugo"
             # give icon(themefisher icon font), title, description
             # more about themefisher icon font visit https://github.com/themefisher/themefisher-font
             # use delay for reveal items one by one
-            icon    = "tf-circle-compass"
+            icon    = "/images/services/access to data from wearables.png"
             title   = "ACCESS TO DATA FROM WEARABLES"
             description = "Patients are expecting access to their data that may have been collected by a broad spectrum of digital health technologies, such as wearables, apps, etc."
             delay   = "0.2s"
@@ -74,7 +116,7 @@ theme = "infinity-hugo"
             # give icon(themefisher icon font), title, description
             # more about themefisher icon font visit https://github.com/themefisher/themefisher-font
             # use delay for reveal items one by one
-            icon    = "tf-anchor2"
+            icon    = "/images/services/need-for-transperacy.png"
             title   = "NEED FOR TRANSPARENCY"
             description = "Patients are demanding transparency about who has access to their data and are appalled by common human data science practices where aggregated data is sold for significant commercial profit. People expect privacy and want to direct who accesses their data, for what reason"
             delay   = "0.4s"
@@ -83,7 +125,7 @@ theme = "infinity-hugo"
             # give icon(themefisher icon font), title, description
             # more about themefisher icon font visit https://github.com/themefisher/themefisher-font
             # use delay for reveal items one by one
-            icon    = "tf-globe"
+            icon    = "/images/services/correction-of-errors.png"
             title   = "CORRECTION OF ERRORS WITHIN THE MEDICAL RECORD"
             description = "With increases in accessing data comes the discovery of the many errors that are often found within medical records. Patients need a streamlined way of submitting an addendum to their medical record."
             delay   = "0.6s"
@@ -92,7 +134,7 @@ theme = "infinity-hugo"
             # give icon(themefisher icon font), title, description
             # more about themefisher icon font visit https://github.com/themefisher/themefisher-font
             # use delay for reveal items one by one
-            icon    = "tf-strategy"
+            icon    = "/images/services/patient-advocacy- tools.png"
             title   = "RISE IN THE NEED FOR PATIENT ADVOCACY TOOLS"
             description = "Patients are demanding patient advocacy tools to pushback against a healthcare ecosystem that is responsible for friction points that hamper their healthcare trajectory."
             delay   = "0.8s"
@@ -101,7 +143,7 @@ theme = "infinity-hugo"
             # give icon(themefisher icon font), title, description
             # more about themefisher icon font visit https://github.com/themefisher/themefisher-font
             # use delay for reveal items one by one
-            icon    = "tf-circle-compass"
+            icon    = "/images/services/informed-decisions.png"
             title   = "MAKE INFORMED DECISIONS ABOUT THEIR CARE"
             description = "Patients often cannot get access to their medical records and health information, especially when they are faced with an emergency or critical diagnosis, such as a chronic illness or cancer."
             delay   = "1s"
@@ -110,7 +152,7 @@ theme = "infinity-hugo"
             # give icon(themefisher icon font), title, description
             # more about themefisher icon font visit https://github.com/themefisher/themefisher-font
             # use delay for reveal items one by one
-            icon    = "tf-anchor2"
+            icon    = "/images/services/patient-satisfaction.png"
             title   = "IMPROVE PATIENT SATISFACTION"
             description = "Resolve and reduce delays and improve outcomes by improving coordination of care."
             delay   = "1.2s"
@@ -119,7 +161,7 @@ theme = "infinity-hugo"
             # give icon(themefisher icon font), title, description
             # more about themefisher icon font visit https://github.com/themefisher/themefisher-font
             # use delay for reveal items one by one
-            icon    = "tf-globe"
+            icon    = "/images/services/healthcare-organizations.png"
             title   = "HEALTHCARE ORGANIZATIONS SHOULD BE ACCOUNTABLE"
             description = "Hold healthcare organizations accountable when they do not release medical records in a timely, HIPAA compliant manner, while carefully tracking the process of interactions needed and reporting both violations and access champions in the public domain."
             delay   = "1.5s"

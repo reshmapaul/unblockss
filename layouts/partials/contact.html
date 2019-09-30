@@ -17,17 +17,26 @@
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-6 offset-md-3">
                     <div class="form-group">
-                        <form action="#" method="post" id="contact-form">
+                        <form  method="POST" id="quickcontact">
                             <div class="input-field">
-                                <input type="text" class="form-control" placeholder="Your Name" name="name">
+                                 <input type="text" class="form-control" placeholder="Name*" name="Name" 
+                                 id="name">
+                                 <span class="error" id="namealert" style="display: none;">Please Enter Name</span>
                             </div>
                             <div class="input-field">
-                                <input type="email" class="form-control" placeholder="Email Address" name="email">
+                                <input type="email" class="form-control" placeholder="Email Address*" name="Email" id="email">
+                                <span class="error" id="emailalert" style="display: none;">Please Enter Email.</span>
                             </div>
                             <div class="input-field">
-                                <textarea class="form-control" placeholder="Your Message" rows="3" name="message"></textarea>
+                                <input type="text" class="form-control" placeholder="Subject*" name="Subject" id="subject">
+                                <span class="error" id="subjectalert" style="display: none;">Please Enter      Subject.</span>
                             </div>
-                            <button class="btn btn-send" type="submit">Send me</button>
+                            <div class="input-field">
+                                <textarea class="form-control" placeholder="Message" rows="3" name="Message"></textarea>
+                            </div>
+                            <input type="hidden" name="_subject" value="[UnBlock Health] - Contact Form Submission" />
+                            <input id="contact-submit-live" type="button" class="btn btn-send" value="Send">
+                            <!--<button class="btn btn-send" type="submit">Send me</button>-->
                         </form>
 
                         <div id="success">

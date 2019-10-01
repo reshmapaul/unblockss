@@ -458,7 +458,6 @@ a:active {
     font-family: 'Droid Serif', serif;
 }
 .about li {
-    list-style: circle;
     font-size: 15px;
     color: #607D8B;
 }
@@ -595,8 +594,11 @@ footer p a:hover {
   text-decoration: none;
 }
 .about li {
-    list-style: circle;
     font-size: 15px;
+    list-style-type: circle;
+    margin-left: 18px;
+    line-height: 19px;
+    margin-bottom: 10px;
 }
 a.btn.btn-home {
     width: 45%;

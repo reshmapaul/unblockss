@@ -60,10 +60,17 @@ $(document).ready(function(){
     }
    var uid = uuidv4();
    //alert(uid);
-   $('#contact-submit-live').click(function(e){
+   $('#cntbtn').click(function(){ 
+    $('#patientoption').val('Patient Advocate').trigger('change');
+   })
+   $('#hospitalhimbtn').click(function(){ 
+    $('#patientoption').val('Hospital HIM').trigger('change');
+   })
+   $('#quickcontact').click(function(e){
       var first_name = $('#name').val();
       var email = $('#email').val();
       var subject = $('#subject').val();
+      var patientdetails = $('#patientoption').val();
       var message = $('#message').val();
       var o = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
         if (first_name == '') {
@@ -87,9 +94,15 @@ $(document).ready(function(){
          else {
           $('#subjectalert').css('display', 'none');
          }
+         if (patientdetails == '') {
+          $('#patientalert').css('display', 'block');
+            return  false;
+         }
+         else {
+          $('#patientalert').css('display', 'none');
+         }
          
-         
-          var form = new FormData();
+          /*var form = new FormData();
           form.append("grant_type", "client_credentials");
           form.append("client_id", "edcca281-18eb-1d06-a1a8-5d1c45897769");
           form.append("client_secret", "citrus");
@@ -147,7 +160,7 @@ $(document).ready(function(){
           }
           });
       });  
-    });      
+    });*/      
    
         });
     /*$("#contact-form").validate({

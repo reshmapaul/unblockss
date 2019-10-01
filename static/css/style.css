@@ -95,7 +95,6 @@ a:active {
 .heading h2 {
   color: #3c3c3c;
   padding-bottom: 15px;
-  text-transform: capitalize;
   font-weight: 600;
   font-size: 40px;
   line-height: 40px;
@@ -519,6 +518,7 @@ a:active {
   padding: 0px 35px;
   color: #fff;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .input-field .form-control {
@@ -634,6 +634,12 @@ section#healthinfo .block {
     line-height: 21px;
     margin-bottom: 15px;
 }
+.form-control{
+  color: #999999 !important;
+}
+select#herobtn {
+    height: 50px;
+}
 
 
 @media (max-width: 480px) {
@@ -642,29 +648,104 @@ section#healthinfo .block {
     height: auto !important;
   }
   .hero-area h1 {
-    line-height: 32px;
-    font-size: 25px;
-    margin-top: 85px;
+    line-height: 32px !important;
+    font-size: 25px !important;
+    margin-top: 85px !important;
 }
 a.btn.btn-home {
-    width: 100%;
-    float: inherit;
+    width: 100% !important;
+    float: inherit !important;
 }
 a.btn.btn-home:nth-child(2) {
-    margin-top: 0;
+    margin-top: 0 !important;
 }
 .service .block p{
-  min-height: 90px;
+  min-height: 90px !important;
 }
 .heading h2{
-  font-size: 25px;
-    line-height: 30px;
+  font-size: 25px !important;
+    line-height: 30px !important;
 }
 .call-to-action .block .input-group input{
-  width: 100%;
+  width: 100% !important;
+  float: inherit !important;
 }
-.service .input-group-btn{
-  display: block;
+span.input-group-btn {
+    display: block !important;
 }
+div#navbarResponsive {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding-left: 15px;
+    /* padding-bottom: 15px; */
+    width: 221px;
+    margin-top: 10px;
+}
+
+}
+
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+
+   .hero-area{
+    height: auto !important;
+  }
+  .hero-area h1 {
+    line-height: 32px !important;
+    font-size: 25px !important;
+    margin-top: 85px !important;
+}
+a.btn.btn-home {
+    width: 100% !important;
+    float: inherit !important;
+}
+a.btn.btn-home:nth-child(2) {
+    margin-top: 0 !important;
+}
+.service .block p{
+  min-height: 90px !important;
+}
+.heading h2{
+  font-size: 25px !important;
+    line-height: 30px !important;
+}
+.call-to-action .block .input-group input{
+  width: 100% !important;
+  float: inherit !important;
+}
+span.input-group-btn {
+    display: block !important;
+}
+div#navbarResponsive {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding-left: 15px;
+    /* padding-bottom: 15px; */
+    width: 221px;
+    margin-top: 10px;
+}
+
+
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+
+  h1.wow.fadeInDown {
+    font-size: 35px !important;
+    line-height: 38px !important;
+}
+a.btn.btn-home {
+    width: 80% !important;
+    float: inherit !important;
+}
+a.btn.btn-home:nth-child(2) {
+    margin-top: 0 !important;
+}
+a.nav-link {
+    cursor: pointer;
+}
+
+
 
 }

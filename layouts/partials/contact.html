@@ -17,7 +17,7 @@
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-6 offset-md-3">
                     <div class="form-group">
-                        <form  method="POST" id="quickcontact">
+                        <form  action ="https://formspree.io/benson.ap@citrusinformatics.com" method="POST" id="quickcontact">
                             <div class="input-field">
                                  <input type="text" class="form-control" placeholder="Name*" name="Name" 
                                  id="name">
@@ -32,10 +32,18 @@
                                 <span class="error" id="subjectalert" style="display: none;">Please Enter      Subject.</span>
                             </div>
                             <div class="input-field">
+                                <select name="Patient Information" id="patientoption" class="form-control">
+                                 <option value="">Please Select Option*</option>
+                                  <option value="Patient Advocate">Patient Advocate</option>
+                                  <option value="Hospital HIM">Hospital HIM</option>
+                              </select>
+                              <span class="error" id="patientalert" style="display: none;">Please Select any option</span>
+                            </div>
+                            <div class="input-field">
                                 <textarea class="form-control" placeholder="Message" rows="3" name="Message"></textarea>
                             </div>
                             <input type="hidden" name="_subject" value="[UnBlock Health] - Contact Form Submission" />
-                            <input id="contact-submit-live" type="button" class="btn btn-send" value="REGISTER">
+                            <input id="contact-submit-live" type="submit" class="btn btn-send" value="REGISTER">
                             <!--<button class="btn btn-send" type="submit">Send me</button>-->
                         </form>
 

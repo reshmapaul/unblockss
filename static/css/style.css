@@ -634,3 +634,37 @@ section#healthinfo .block {
     line-height: 21px;
     margin-bottom: 15px;
 }
+
+
+@media (max-width: 480px) {
+
+  .hero-area{
+    height: auto !important;
+  }
+  .hero-area h1 {
+    line-height: 32px;
+    font-size: 25px;
+    margin-top: 85px;
+}
+a.btn.btn-home {
+    width: 100%;
+    float: inherit;
+}
+a.btn.btn-home:nth-child(2) {
+    margin-top: 0;
+}
+.service .block p{
+  min-height: 90px;
+}
+.heading h2{
+  font-size: 25px;
+    line-height: 30px;
+}
+.call-to-action .block .input-group input{
+  width: 100%;
+}
+.service .input-group-btn{
+  display: block;
+}
+
+}

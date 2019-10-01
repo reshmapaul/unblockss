@@ -433,8 +433,8 @@ a:active {
   font-size: 18px;
   margin-bottom: 15px;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  min-height: 77px;
+  letter-spacing: 0px;
+  min-height: 51px;
 }
 .service.section .heading p {
     width: 75%;
@@ -450,9 +450,9 @@ a:active {
     About start
 --*/
 .about .content h3 {
-  font-size: 21px;
+      font-size: 19px;
     font-weight: 300;
-    line-height: 28px;
+    line-height: 25px;
     color: #f68c29;
     margin-bottom: 15px;
     font-family: 'Droid Serif', serif;
@@ -616,14 +616,19 @@ a.btn.btn-home:nth-child(2):hover{
 .healthinfo-img {
     width: 50px;
 }
-span#namealert {
-    color: red;
-    font-size: 12px;
-    margin-left: 20px;
+.error{
+    color: red !important;
+    font-size: 12px !important;
+    margin-left: 20px !important;
 }
 section#healthinfo {
     padding-bottom: 0;
 }
 section#healthinfo .block {
     margin-bottom: 0;
+}
+.sub-heading h4 {
+    font-size: 16px;
+    line-height: 21px;
+    margin-bottom: 15px;
 }

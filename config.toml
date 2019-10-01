@@ -1,6 +1,6 @@
 baseURL = "/"
 languageCode = "en-us"
-title = "UnBlock Health"
+title = "Patients Need Access To All Their Data To Guide Their Treatment Decisions And Care"
 theme = "infinity-hugo"
 
 [params]
@@ -18,7 +18,7 @@ theme = "infinity-hugo"
         enable      = true
         bg          = "images/banner.jpg"
         title       = "Patients need access to all their data to guide their treatment decisions and care"
-        subtitle    = "Unblock Health is a first-in-class patient advocacy tool designed for patients and consumers who are determined to be empowered in their health care journey and are no longer willing to accept traditional barriers to their information."
+        subtitle    = "Unblock Health is a first-in-class, comprehensive suite of patient advocacy services designed for patients and consumers who are determined to be empowered in their health care journey and are no longer willing to accept traditional barriers to their information."
         btnText     = "Register for an Invitation as a Patient Advocate"
 		btnTextTwo     = "Register for an Invitation as a Hospital HIM"
         countdownYear = "2019"
@@ -28,14 +28,15 @@ theme = "infinity-hugo"
     # About Section
     [params.about]
         enable      = true
-        heading     = "Unblock Health is a platform that provides patients and care partners with a way to demand access to information that is critical for people to make informed, engaged, and empowered decisions about their care. Unblock Health is designed to:"
-        content = "Hold healthcare organizations accountable when they do not release medical records in a timely, HIPAA compliant manner, while carefully tracking the process of interactions needed and reporting both violations and access champions in the public domain."
+        heading     = "We’ve listened to patients’ frustrations and witnessed the barriers they face in accessing their data. We’ve heard patients demands for transparency and watched them be completely ignored. We know first-hand the grief, loss, anxiety, and distrust that stems from data blocking. We have vowed to not stand back silently, powerlessly, and helplessly any longer."
+        subheading  = "Unblock Health is a suite of services that finally provides patients and carepartners with a way to level the playing field and demand access to the critical information needed to make informed, engaged, and empowered decisions about their care. Unblock Health is strategically designed to:"
+        content = "Hold healthcare organizations accountable when they do not release medical records in a timely, HIPAA compliant manner, while carefully tracking the often intricate, multi-facteted process of interactions needed, reporting both violations and access champions in the public domain. "
 
-        content1 = "Request patient-generated health data (PGHD) from mhealth & digital tech devices and apps."
+        content1 = "Request patient-generated health data (PGHD) from mhealth & digital health tech devices and apps."
 
         content2 = "Request an itemized list of all the places that one’s health information has been “shared” or sold to facilitate transparency and awareness of human data science practices."
 
-        content3 = "To facilitate a digital workflow for the implementation of addendums that may be flagged by patients and care partners upon review of their medical records and health information."
+        content3 = "To facilitate a digital workflow for the implementation of addendums that may be flagged by patients and carepartners upon review of their medical records and health information."
 
         [[params.about.sliderItem]]
             image   = "images/about/contentslider-1.jpg"
@@ -48,8 +49,8 @@ theme = "infinity-hugo"
     # Health information Section
     [params.healthinformation]
         enable      = true
-        title       = "What is Lorem Ipsum?"
-        subtitle    = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+        title       = "Key Personas"
+        subtitle    = "Primary Goals of key personas who play a vital role in improving care coordination"
         [[params.healthinformation.healthinformationItem]]
             # give icon(themefisher icon font), title, description
             # more about themefisher icon font visit https://github.com/themefisher/themefisher-font
@@ -93,14 +94,14 @@ theme = "infinity-hugo"
     [params.service]
         enable      = true
         title       = "Why Unblock Health?"
-        subtitle    = "Unblock Health is ready to unlock barriers standing in the way of real-world interoperability, patient empowerment, and data access and transparency of the future"
+        subtitle    = "Unblock Health is ready to unlock barriers standing in the way of real-world interoperability, meaningful patient empowerment, open data access, and transparency of the future."
         [[params.service.serviceItem]]
             # give icon(themefisher icon font), title, description
             # more about themefisher icon font visit https://github.com/themefisher/themefisher-font
             # use delay for reveal items one by one
             icon    = "/images/services/real-time-access-to-medical records.png"
             title   = "DEMAND FOR REAL TIME ACCESS OF MEDICAL RECORDS"
-            description = "The rise of participatory medicine, shared decision making, and consumerism have contributed to patients expecting and demanding access to their medical records in real-time."
+            description = "The rise of participatory medicine, shared decision making, and consumerism have contributed to patients expecting and demanding access to their medical records in real-time, where they are."
             delay   = "0s"
 
         [[params.service.serviceItem]]
@@ -109,7 +110,7 @@ theme = "infinity-hugo"
             # use delay for reveal items one by one
             icon    = "/images/services/access to data from wearables.png"
             title   = "ACCESS TO DATA FROM WEARABLES"
-            description = "Patients are expecting access to their data that may have been collected by a broad spectrum of digital health technologies, such as wearables, apps, etc."
+            description = "Patients use a broad spectrum of digital health technologies, such as wearables and apps, to enhance their care and expect access to their data in order to make actionable decisions."
             delay   = "0.2s"
 
         [[params.service.serviceItem]]
@@ -118,7 +119,7 @@ theme = "infinity-hugo"
             # use delay for reveal items one by one
             icon    = "/images/services/need-for-transperacy.png"
             title   = "NEED FOR TRANSPARENCY"
-            description = "Patients are demanding transparency about who has access to their data and are appalled by common human data science practices where aggregated data is sold for significant commercial profit. People expect privacy and want to direct who accesses their data, for what reason"
+            description = "Patients are appalled by common human data science practices where aggregated data is sold for significant commercial profit. Patients are demanding transparency about who has access to their data and for what purposes."
             delay   = "0.4s"
 
         [[params.service.serviceItem]]
@@ -127,7 +128,7 @@ theme = "infinity-hugo"
             # use delay for reveal items one by one
             icon    = "/images/services/correction-of-errors.png"
             title   = "CORRECTION OF ERRORS WITHIN THE MEDICAL RECORD"
-            description = "With increases in accessing data comes the discovery of the many errors that are often found within medical records. Patients need a streamlined way of submitting an addendum to their medical record."
+            description = "With increases in accessing data comes the discovery of the many errors and omissions that are often found within medical records. Patients need a streamlined way of submitting an addendum to their medical record for continuity of care purposes. Patients have a right to a comprehensive and accurate medical record. It’s a matter of safety."
             delay   = "0.6s"
         
         [[params.service.serviceItem]]
@@ -136,7 +137,7 @@ theme = "infinity-hugo"
             # use delay for reveal items one by one
             icon    = "/images/services/patient-advocacy- tools.png"
             title   = "RISE IN THE NEED FOR PATIENT ADVOCACY TOOLS"
-            description = "Patients are demanding patient advocacy tools to pushback against a healthcare ecosystem that is responsible for friction points that hamper their healthcare trajectory."
+            description = "As consumers, patients are in demand of patient advocacy tools to pushback against a healthcare ecosystem that is responsible for friction points that hamper their healthcare trajectory."
             delay   = "0.8s"
 
         [[params.service.serviceItem]]
@@ -154,7 +155,7 @@ theme = "infinity-hugo"
             # use delay for reveal items one by one
             icon    = "/images/services/patient-satisfaction.png"
             title   = "IMPROVE PATIENT SATISFACTION"
-            description = "Resolve and reduce delays and improve outcomes by improving coordination of care."
+            description = "Resolve and reduce delays and pinpoint weaknesses in HIPAA compliant data access workflows that negatively impact the patient experience and patient care.  Readily improve outcomes by improving coordination and continuity of patient care."
             delay   = "1.2s"
 
         [[params.service.serviceItem]]
@@ -173,10 +174,10 @@ theme = "infinity-hugo"
     [params.cta]
         enable      = true
         bg          = "images/subscribe-bg.jpg"
-        title       = "Subscribe to our mailing list"
-        subtitle    = "We will keep you posted "
+        title       = "Request an Invitation"
+        subtitle    = "Unblock Health is currently available on a limited, invitation only basis.  Click 'Request an Invitation' to confirm your early, pre-launch access today"
 
     [params.contact]
         enable      = true
-        title       = "Get In Touch"
-        subtitle    = "It's time to Unblock Health! Register with us to learn more"
+        title       = "Become an Unblock Health early adopter and pioneer"
+        subtitle    = "It's time to Unblock Health! Register to request your pre-launch, early access invitation today!"

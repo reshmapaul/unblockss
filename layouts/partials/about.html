@@ -9,7 +9,11 @@
                         {{ with .Site.Params.about.heading }}
                             <h3>{{ . }}</h3>
                         {{ end }}
+                        {{ with .Site.Params.about.subheading }}
+                            <h4>{{ . }}</h4>
+                        {{ end }}
                         </div>
+                        
                         {{ with .Site.Params.about.content }}
                             <li>{{ . | markdownify }}</li>
                         {{ end }}

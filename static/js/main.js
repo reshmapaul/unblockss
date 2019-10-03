@@ -211,9 +211,9 @@ $(document).ready(function(){
         }
     });*/
     var showChar = 150;
-    var ellipsestext = "...";
+    var ellipsestext = "....";
     var moretext = "See More";
-    var lesstext = "Show Less";
+    var lesstext = "See Less";
   $('.more').each(function() {
     var content = $(this).html();
       if(content.length > showChar) {

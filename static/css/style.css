@@ -112,7 +112,7 @@ a:active {
 }
 
 .btn-home {
-  background-color: #f68d29;
+  background-color: #20b9cb;
   border-radius: 0px;
   color: #fff;
   font-size: 18px;
@@ -307,7 +307,7 @@ a:active {
 
 .hero-area .counter {
   background: rgba(255, 255, 255, 0.2);
-  padding: 18px;
+  padding: 5px 18px ;
 }
 
 .hero-area .counter ul li {
@@ -336,9 +336,7 @@ a:active {
   overflow: hidden;
   height: 60px;
 }
-.comment {
-    min-height: 200px !important;
-}
+
 @media only screen and (max-width:400px) {
   .hero-area .counter ul li .digit {
     font-size: 30px;
@@ -600,7 +598,7 @@ footer p a:hover {
     list-style-type: circle;
     margin-left: 18px;
     line-height: 19px;
-    margin-bottom: 10px;
+    margin-bottom: 18px;
 }
 a.btn.btn-home {
     width: 45%;
@@ -610,7 +608,7 @@ a.btn.btn-home {
     font-size: 15px;
 }
 a.btn.btn-home:nth-child(2) {
-    background: #242727;
+    background: #319517;
 }
 a.btn.btn-home:nth-child(2):hover{
   background-color: #fff;
@@ -644,7 +642,7 @@ select#herobtn {
 }
 a.morelink {
     display: block;
-    background: #242727;
+    background: #1b83b8;
     width: 100px;
     margin: auto;
     margin-top: 15px;
@@ -661,12 +659,12 @@ a.morelink:hover {
     font-weight: bold;
     text-shadow: none;
 }
+.comment {
+    min-height: 200px !important;
+}
 .morecontent span {
   display: none;
 }
-
-
-
 
 @media (max-width: 480px) {
 

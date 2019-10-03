@@ -184,7 +184,7 @@ theme = "infinity-hugo"
         bg          = "images/subscribe-bg.jpg"
         title       = "Request an Invitation"
         subtitle    = "Unblock Health is currently available on a limited, invitation only basis."
-        subtitle1    = "Click 'Request an Invitation' to confirm your early, pre-launch access today"
+        subtitle1    = "Click <b>'Request an Invitation'</b> to confirm your early, pre-launch access today"
 
 
     [params.contact]

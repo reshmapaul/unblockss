@@ -40,6 +40,7 @@
                 <div class="col-lg-5 col-md-6 wow zoomIn">
                     <div class="block">
                         <div class="counter text-center">
+                            {{ with .Site.Params.hero.countertoptitle }}<p>{{ . }}</p>{{ end }}
                             <ul id="countdown_dashboard" data-year="{{ with .Site.Params.hero.countdownYear }} {{ . }}{{ end }}" data-month="{{ with .Site.Params.hero.countdownMonth }} {{ . }}{{ end }}" data-day="{{ with .Site.Params.hero.countdownDay }} {{ . }}{{ end }}">
                                 <li>
                                     <div class="dash days_dash">
@@ -71,6 +72,7 @@
                                     </div>
                                 </li>
                             </ul>
+                            {{ with .Site.Params.hero.counterbottomtitle }}<p>{{ . }}</p>{{ end }}
                         </div>
                     </div>
                 </div>

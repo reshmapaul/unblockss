@@ -24,12 +24,20 @@ theme = "infinity-hugo"
         countdownYear = "2019"
         countdownMonth = "12"
         countdownDay  = "27"
+        countertoptitle ="Soft Launch"
+        counterbottomtitle ="At Connected Health"
 
     # About Section
     [params.about]
         enable      = true
-        heading     = "We’ve listened to patients’ frustrations and witnessed the barriers they face in accessing their data. We’ve heard patients demands for transparency and watched them be completely ignored. We know first-hand the grief, loss, anxiety, and distrust that stems from data blocking. We have vowed to not stand back silently, powerlessly, and helplessly any longer."
-        subheading  = "Unblock Health is a suite of services that finally provides patients and carepartners with a way to level the playing field and demand access to the critical information needed to make informed, engaged, and empowered decisions about their care. Unblock Health is strategically designed to:"
+        heading     = "We’ve listened to patients’ frustrations and witnessed the barriers they face in accessing their data. We’ve heard patients demands for transparency and watched them be completely ignored. We know first-hand the grief, loss, anxiety, and distrust that stems from data blocking."
+
+        heading2  = "We have vowed to not stand back silently, powerlessly, and helplessly any longer."
+
+        subheading  = "Unblock Health is a suite of services that finally provides patients and carepartners with a way to level the playing field and demand access to the critical information needed to make informed, engaged, and empowered decisions about their care."
+
+        subheading2  = "Unblock Health is strategically designed to:"
+
         content = "Hold healthcare organizations accountable when they do not release medical records in a timely, HIPAA compliant manner, while carefully tracking the often intricate, multi-facteted process of interactions needed, reporting both violations and access champions in the public domain. "
 
         content1 = "Request patient-generated health data (PGHD) from mhealth & digital health tech devices and apps."
@@ -49,8 +57,8 @@ theme = "infinity-hugo"
     # Health information Section
     [params.healthinformation]
         enable      = true
-        title       = "Key Personas"
-        subtitle    = "Primary Goals of key personas who play a vital role in improving care coordination"
+        title       = "Who is Unblock Health for?"
+        subtitle    = "Primary Goals of people who play a vital role in improving care coordination"
         [[params.healthinformation.healthinformationItem]]
             # give icon(themefisher icon font), title, description
             # more about themefisher icon font visit https://github.com/themefisher/themefisher-font
@@ -175,7 +183,9 @@ theme = "infinity-hugo"
         enable      = true
         bg          = "images/subscribe-bg.jpg"
         title       = "Request an Invitation"
-        subtitle    = "Unblock Health is currently available on a limited, invitation only basis.  Click 'Request an Invitation' to confirm your early, pre-launch access today"
+        subtitle    = "Unblock Health is currently available on a limited, invitation only basis."
+        subtitle1    = "Click 'Request an Invitation' to confirm your early, pre-launch access today"
+
 
     [params.contact]
         enable      = true

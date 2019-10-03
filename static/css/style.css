@@ -336,7 +336,9 @@ a:active {
   overflow: hidden;
   height: 60px;
 }
-
+.comment {
+    min-height: 200px !important;
+}
 @media only screen and (max-width:400px) {
   .hero-area .counter ul li .digit {
     font-size: 30px;
@@ -640,6 +642,30 @@ section#healthinfo .block {
 select#herobtn {
     height: 50px;
 }
+a.morelink {
+    display: block;
+    background: #242727;
+    width: 100px;
+    margin: auto;
+    margin-top: 15px;
+    border-radius: 15px;
+    color: #fff;
+    padding: 5px;
+}
+a.morelink:hover {
+    text-decoration: none;
+    background: #f68c29;
+}
+.counter.text-center p {
+    color: #000;
+    font-weight: bold;
+    text-shadow: none;
+}
+.morecontent span {
+  display: none;
+}
+
+
 
 
 @media (max-width: 480px) {

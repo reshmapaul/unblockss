@@ -7,17 +7,28 @@
                     {{ with .Site.Params.healthinformation.title }}
                         <h2>{{ . }}</h2>
                     {{ end }}
-                    {{ with .Site.Params.healthinformation.subtitle }}
+                    <!--{{ with .Site.Params.healthinformation.subtitle }}
                         <p>{{ . }}</p>
-                    {{ end }}
+                    {{ end }}-->
                 </div>
+                {{ $counter := 0 }}
                 {{ range .Site.Params.healthinformation.healthinformationItem }}
                     <div class="col-sm-6 col-md-3 wow fadeInLeft" data-wow-delay="{{ .delay }}">
                         <div class="block">
                             <!--<i class="{{ .icon }}"></i>-->
                             <img src="{{ .icon }}" class="img-responsive healthinfo-img" alt="{{ .title }}" title="{{ .title }}"/>
                             <h3>{{ .title }}</h3>
-                            <p>{{ .description }}</p>
+                                  
+                                <ul id="myList{{$counter}}">
+                                <li>{{ .description }}</li>
+                                <li>{{ .him1 }}</li>
+                                <li>{{ .him2 }}</li>
+                                <li>{{ .him3 }}</li>
+                                <li>{{ .subdesc}}</li>
+                            </ul>
+                            <div id="loadMore{{$counter}}" class="readmore-link">Read More</div>
+                            <div id="showLess{{$counter}}" class="readmore-link">Show less</div>
+                            {{ $counter = add $counter 1 }}
                         </div>
                     </div>
                 {{ end }}

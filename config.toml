@@ -22,10 +22,13 @@ theme = "infinity-hugo"
         btnText     = "Register for an Invitation as a Patient Advocate"
 		btnTextTwo     = "Register for an Invitation as a Hospital HIM"
         countdownYear = "2019"
-        countdownMonth = "12"
-        countdownDay  = "27"
-        countertoptitle ="Soft Launch"
-        counterbottomtitle ="At Connected Health"
+        countdownMonth = "10"
+        countdownDay  = "18"
+        countdownHour = "20"
+        CountdownMinute ="20"
+        CountdownSeconds ="00"
+        countertoptitle ="The Moment"
+        counterbottomtitle ="Patients Have Been Waiting For"
 
     # About Section
     [params.about]
@@ -57,7 +60,7 @@ theme = "infinity-hugo"
     # Health information Section
     [params.healthinformation]
         enable      = true
-        title       = "Who is Unblock Health for?"
+        title       = "Unblock Health is an Absolute MUST for:"
         subtitle    = "Primary Goals of people who play a vital role in improving care coordination"
         [[params.healthinformation.healthinformationItem]]
             # give icon(themefisher icon font), title, description
@@ -65,7 +68,10 @@ theme = "infinity-hugo"
             # use delay for reveal items one by one
             icon    = "/images/healthInformation/health-information-management.png"
             title   = "Health Information Management (HIM)"
-            description = "Handle patient requests safely, securely while guarding patient privacy."
+            description = "How well is your organization embracing and complying with new patient data access and information sharing requirements?"
+            him1 ="Do you know what barriers patients are facing at your organization in accessing their data?"
+            him2 ="Don’t have a strategy to help patients request their PGHD from digital tech your organization recommends/uses?"
+            him3 ="Still handling hand-written or faxed addendum requests for processing and implementing patient record addendums?"
             delay   = "0s"
 
         [[params.healthinformation.healthinformationItem]]
@@ -74,7 +80,9 @@ theme = "infinity-hugo"
             # use delay for reveal items one by one
             icon    = "/images/healthInformation/office-of-patient-experience.png"
             title   = "Office of Patient Experience"
-            description = "Ensure facility/caregiver is providing safe, high quality, affordable care that meets patient satisfaction."
+            description = "Lack of coordination of care negatively impacts the patient experience & outcomes, especially in chronic illness & life altering diagnoses"
+            him1 ="Delays in access to medical records and health information may result in negative HCAPS results or impact facility/caregiver reputation in public domain."
+            him2 ="What if your organization’s patient data access practices were shared online for patients & consumers to consider when deciding where to get care?"
             delay   = "0.2s"
 
         [[params.healthinformation.healthinformationItem]]
@@ -83,7 +91,9 @@ theme = "infinity-hugo"
             # use delay for reveal items one by one
             icon    = "/images/healthInformation/onc.png"
             title   = "ONC/CMS"
-            description = "Creation of policies to reduce & prevent data blocking."
+           description = "Policies against data blocking are in place but how to enforce locally?"
+            him1 ="There are no tools available for patients and care partners to directly report data blocking."
+            him2 ="Patients & consumers have no direct way to request PGHD from digital health technologies."
             delay   = "0.4s"
 
         [[params.healthinformation.healthinformationItem]]
@@ -92,7 +102,11 @@ theme = "infinity-hugo"
             # use delay for reveal items one by one
             icon    = "/images/healthInformation/patients-and-care-partners.png"
             title   = "Patients and Care partners"
-            description = "Want to be an engaged, empowered, informed driver of their (or their loved ones) care."
+            description = "Can’t get access to your own medical info quickly enough? "
+            him1 ="Unable to make informed, educated decisions about your care due to data blocking?"
+            him2 ="Desperately need access to PGHD?"
+            him3 ="Wondering where your data may have been shared/sold?"
+            subdesc ="Trying to correct an error in your medical record to no avail?"
             delay   = "0.6s"
         
         

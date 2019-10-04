@@ -665,7 +665,58 @@ a.morelink:hover {
 .morecontent span {
   display: none;
 }
-
+section#healthinfo ul {
+    min-height: 120px;
+    margin-left: 20px;
+}
+section#healthinfo li{
+  list-style:circle;
+  text-align: left;
+  padding-right: 20px;
+}
+.readmore-link {
+    cursor: pointer;
+}
+section#healthinfo {
+    margin-bottom: 90px;
+}
+#myList0 li{ display:none;
+}
+#myList1 li{ display:none;
+}
+#myList2 li{ display:none;
+}
+#myList3 li{ display:none;
+}
+ ul#myList0 li:last-child {
+  display: none !important;
+}
+ ul#myList1 li:last-child, ul#myList1 li:nth-last-child(2) {
+  display: none !important;
+}
+ul#myList2 li:last-child, ul#myList2 li:nth-last-child(2) {
+  display: none !important;
+}
+.readmore-link{
+    display: block;
+    background: #1b83b8;
+    width: 100px;
+    margin: auto;
+    margin-top: 15px;
+    border-radius: 15px;
+    color: #fff;
+    padding: 5px;
+}
+.readmore-link:hover{
+ text-decoration: none;
+ background: #f68c29;
+}
+#loadMore1 {
+    cursor:pointer;
+}
+#showLess1 {
+    cursor:pointer;
+}
 @media (max-width: 480px) {
 
   .hero-area{

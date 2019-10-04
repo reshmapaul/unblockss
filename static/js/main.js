@@ -29,15 +29,18 @@ $(document).ready(function(){
     
     $year = $('#countdown_dashboard').data('year');
     $month = $('#countdown_dashboard').data('month');
-    $day = $('#countdown_dashboard').data('day');
+    $day =  $('#countdown_dashboard').data('day');
+    $hour = $('#countdown_dashboard').data('hour');
+    $min =  $('#countdown_dashboard').data('minute');
+    $seconds = $('#countdown_dashboard').data('seconds');
     $('#countdown_dashboard').countDown({
         targetDate: {
             'day':      $day,
             'month':    $month,
             'year':     $year,
-            'hour':     23,
-            'min':      59,
-            'sec':      59,
+            'hour':     $hour,
+            'min':      $min,
+            'sec':      $seconds,
         },
         omitWeeks: true
     });
@@ -210,36 +213,127 @@ $(document).ready(function(){
             });
         }
     });*/
-    var showChar = 150;
+    var showChar = 180;
     var ellipsestext = "....";
-    var moretext = "See More";
-    var lesstext = "See Less";
-  $('.more').each(function() {
-    var content = $(this).html();
-      if(content.length > showChar) {
+    var moretext = "Read More";
+    var lesstext = "Show Less";
+    $('.more').each(function() {
+      var content = $(this).html();
+        if(content.length > showChar) {
 
-        var c = content.substr(0, showChar);
-        var h = content.substr(showChar-1, content.length - showChar);
+          var c = content.substr(0, showChar);
+          var h = content.substr(showChar-1, content.length - showChar);
 
-        var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
+          var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
 
-        $(this).html(html);
+          $(this).html(html);
+        }
+    });
+    $(".morelink").click(function(){
+      if($(this).hasClass("less")) {
+        $(this).removeClass("less");
+        $(this).html(moretext);
+      } else {
+        $(this).addClass("less");
+        $(this).html(lesstext);
       }
-  });
-  $(".morelink").click(function(){
-    if($(this).hasClass("less")) {
-      $(this).removeClass("less");
-      $(this).html(moretext);
-    } else {
-      $(this).addClass("less");
-      $(this).html(lesstext);
-    }
-    $(this).parent().prev().toggle();
-    $(this).prev().toggle();
-    return false;
-  });
+      $(this).parent().prev().toggle();
+      $(this).prev().toggle();
+      return false;
+    });
+    $('#myList1 li').each(function(index) {
+      var size_li =0;
+      var size_li = $("#myList"+index+" li").size();
+      //console.log(size_li);
+      x=1;
+      $('#myList'+index+' li:lt('+x+')').show();
+      $('#showLess'+index).hide();
+      $('#loadMore'+index).click(function () {
+        $('#loadMore'+index).hide();
+        x= (x+5 <= size_li) ? x+5 : size_li;
+        console.log(x);
+        $('#myList'+index+' li:lt('+x+')').show();
+        $('#showLess'+index).show();
+    });
+    $('#showLess'+index).click(function () {
+      $('#showLess'+index).hide();
+        x1=(x-5<0) ? 2 : 1;
+        console.log(x1);
+        $('#myList'+index+' li').not(':lt('+x1+')').hide();
+        $('#loadMore'+index).show();
 
+      });
+    });
+
+    /*size_li = $("#myList0 li").size();
+    x=1;
+    $('#myList0 li:lt('+x+')').show();
+    $('#showLess0').hide();
+    $('#loadMore0').click(function () {
+        $('#loadMore0').hide();
+        x= (x+5 <= size_li) ? x+5 : size_li;
+        $('#myList0 li:lt('+x+')').show();
+        $('#showLess0').show();
+    });
+    $('#showLess0').click(function () {
+       $('#showLess0').hide();
+        x=(x-7<0) ? 1 : x-7;
+        $('#myList0 li').not(':lt('+x+')').hide();
+        $('#loadMore0').show();
+    });
+
+    size_li = $("#myList1 li").size();
+    x=1;
+    $('#myList1 li:lt('+x+')').show();
+    $('#showLess1').hide();
+    $('#loadMore1').click(function () {
+        $('#loadMore1').hide();
+        x= (x+5 <= size_li) ? x+5 : size_li;
+        $('#myList1 li:lt('+x+')').show();
+        $('#showLess1').show();
+    });
+    $('#showLess1').click(function () {
+       $('#showLess1').hide();
+        x=(x-7<0) ? 1 : x-7;
+        $('#myList1 li').not(':lt('+x+')').hide();
+        $('#loadMore1').show();
+    });
+    size_li = $("#myList2 li").size();
+    x=1;
+    $('#myList2 li:lt('+x+')').show();
+    $('#showLess2').hide();
+    $('#loadMore2').click(function () {
+        $('#loadMore2').hide();
+        x= (x+5 <= size_li) ? x+5 : size_li;
+        $('#myList2 li:lt('+x+')').show();
+        $('#showLess2').show();
+    });
+    $('#showLess2').click(function () {
+       $('#showLess2').hide();
+        x=(x-7<0) ? 1 : x-7;
+        $('#myList2 li').not(':lt('+x+')').hide();
+        $('#loadMore2').show();
+    });
+    size_li = $("#myList3 li").size();
+    x=1;
+    $('#myList3 li:lt('+x+')').show();
+    $('#showLess3').hide();
+    $('#loadMore3').click(function () {
+        $('#loadMore3').hide();
+        x= (x+5 <= size_li) ? x+5 : size_li;
+        $('#myList3 li:lt('+x+')').show();
+        $('#showLess3').show();
+    });
+    $('#showLess3').click(function () {
+       $('#showLess3').hide();
+        x=(x-7<0) ? 1 : x-7;
+        $('#myList3 li').not(':lt('+x+')').hide();
+        $('#loadMore3').show();
+    });*/
+
+     
 });
+
 
 
 

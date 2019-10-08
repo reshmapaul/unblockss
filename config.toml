@@ -17,7 +17,7 @@ theme = "infinity-hugo"
     [params.hero]
         enable      = true
         bg          = "images/banner.jpg"
-        title       = "Patients need access to all their data to guide their treatment decisions and care"
+        title       = "Unblock Health is revolutionizing patient autonomy and healthcare consumerism."
         subtitle    = "Unblock Health is a first-in-class, comprehensive suite of patient advocacy services designed for patients and consumers who are determined to be empowered in their health care journey and are no longer willing to accept traditional barriers to their information."
         btnText     = "Register for an Invitation as a Patient Advocate"
 		btnTextTwo     = "Register for an Invitation as a Hospital HIM"
@@ -80,7 +80,7 @@ theme = "infinity-hugo"
             # use delay for reveal items one by one
             icon    = "/images/healthInformation/office-of-patient-experience.png"
             title   = "Office of Patient Experience"
-            description = "Lack of coordination of care negatively impacts the patient experience & outcomes, especially in chronic illness & life altering diagnoses"
+            description = "Lack of coordination of care negatively impacts the patient experience & outcomes, especially in chronic illness & life altering diagnoses."
             him1 ="Delays in access to medical records and health information may result in negative HCAPS results or impact facility/caregiver reputation in public domain."
             him2 ="What if your organization’s patient data access practices were shared online for patients & consumers to consider when deciding where to get care?"
             delay   = "0.2s"
@@ -101,7 +101,7 @@ theme = "infinity-hugo"
             # more about themefisher icon font visit https://github.com/themefisher/themefisher-font
             # use delay for reveal items one by one
             icon    = "/images/healthInformation/patients-and-care-partners.png"
-            title   = "Patients and Care partners"
+            title   = "Patients and Carepartners"
             description = "Can’t get access to your own medical info quickly enough? "
             him1 ="Unable to make informed, educated decisions about your care due to data blocking?"
             him2 ="Desperately need access to PGHD?"

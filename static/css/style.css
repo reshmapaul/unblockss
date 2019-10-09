@@ -413,6 +413,7 @@ a:active {
 --*/
 .service {
   text-align: center;
+  padding-bottom: 0;
 }
 
 .service .block {
@@ -471,11 +472,12 @@ a:active {
     call-to-action start
 --*/
 .call-to-action {
-  padding: 90px 0px;
+  padding: 50px 0px;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  border-top: 1px solid #dcdbdb;
 }
 
 .call-to-action:before {
@@ -491,7 +493,7 @@ a:active {
   font-size: 30px;
   margin-bottom: 6px;
   font-weight: 600;
-  color: #fff;
+  color:#3c3c3c;
 }
 
 .call-to-action .block p {
@@ -524,7 +526,7 @@ a:active {
 
 .input-field .form-control {
   box-shadow: none;
-  background: #f5f5f5;
+  background: #eaeaea;
   border: none;
   width: 100%;
   height: 50px;
@@ -619,6 +621,7 @@ a.btn.btn-home:nth-child(2):hover{
 }
 .healthinfo-img {
     width: 50px;
+        margin-bottom: 15px;
 }
 .error{
     color: red !important;
@@ -672,12 +675,14 @@ a.morelink:hover {
 section#healthinfo ul {
     min-height: 120px;
     margin-left: 20px;
+    min-height: 200px;
 }
 section#healthinfo li{
   list-style:circle;
   text-align: left;
   padding-right: 20px;
   font-size: 16px;
+  
 }
 .readmore-link {
     cursor: pointer;
@@ -722,6 +727,19 @@ ul#myList2 li:last-child, ul#myList2 li:nth-last-child(2) {
 #showLess1 {
     cursor:pointer;
 }
+.col-lg-6.partnersection:nth-child(2) {
+    text-align: left;
+}
+.col-lg-6.partnersection {
+    text-align: right;
+    margin-top: 35px;
+}
+section#contact {
+    padding-top: 80px;
+    background: #f8f8f8;
+}
+
+
 @media (max-width: 480px) {
 
   .hero-area{

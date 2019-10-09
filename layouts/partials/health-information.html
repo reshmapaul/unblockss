@@ -17,7 +17,7 @@
                         <div class="block">
                             <!--<i class="{{ .icon }}"></i>-->
                             <img src="{{ .icon }}" class="img-responsive healthinfo-img" alt="{{ .title }}" title="{{ .title }}"/>
-                            <h3>{{ .title }}</h3>
+                            <h3>{{ .title | safeHTML}}</h3>
                                   
                                 <ul id="myList{{$counter}}">
                                 <li>{{ .description }}</li>

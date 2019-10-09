@@ -213,7 +213,7 @@ $(document).ready(function(){
             });
         }
     });*/
-    var showChar = 150;
+    var showChar = 85;
     var ellipsestext = "....";
     var moretext = "Read More";
     var lesstext = "Show Less";

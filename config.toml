@@ -90,10 +90,10 @@ theme = "infinity-hugo"
             # more about themefisher icon font visit https://github.com/themefisher/themefisher-font
             # use delay for reveal items one by one
             icon    = "/images/healthInformation/onc.png"
-            title   = "ONC/CMS"
-           description = "Policies against data blocking are in place but how to enforce locally?"
-            him1 ="There are no tools available for patients and care partners to directly report data blocking."
-            him2 ="Patients & consumers have no direct way to request PGHD from digital health technologies."
+            title   = "Regulatory: HHS, ONC,<br> CMS"
+           description = "While policies against data blocking are in place, there are no tools available for patients, carepartners, and consumers to directly report the broad spectrum of data blocking they routinely incur where they are."
+            him1 ="Patients & consumers have no way to directly request PGHD from digital health technologies."
+            him2 ="With increased access to data, patients and consumers need a seamless way to file addendum requests to correct errors & omissions."
             delay   = "0.4s"
 
         [[params.healthinformation.healthinformationItem]]
@@ -101,12 +101,12 @@ theme = "infinity-hugo"
             # more about themefisher icon font visit https://github.com/themefisher/themefisher-font
             # use delay for reveal items one by one
             icon    = "/images/healthInformation/patients-and-care-partners.png"
-            title   = "Patients and Carepartners"
-            description = "Can’t get access to your own medical info quickly enough? "
-            him1 ="Unable to make informed, educated decisions about your care due to data blocking?"
-            him2 ="Desperately need access to PGHD?"
-            him3 ="Wondering where your data may have been shared/sold?"
-            subdesc ="Trying to correct an error in your medical record to no avail?"
+            title   = "Patients and </br>Carepartners"
+            description = "Are you facing a life-altering diagnosis and can’t get access to your own medical information quickly enough?"
+            him1 ="Are you unable to make informed, educated decisions about your care due to data blocking?"
+            him2 ="Do you use a digital health technology, like a wearable or app, and desperately need access to your PGHD?"
+            him3 =" Do you want transparency about where your data may have been shared or sold and for what purposes?"
+            subdesc ="Have you found an error or omission in your medical record that needs to be corrected immediately for continuity of care purposes?"
             delay   = "0.6s"
         
         
@@ -196,11 +196,11 @@ theme = "infinity-hugo"
     [params.cta]
         enable      = true
         bg          = "images/subscribe-bg.jpg"
-        title       = "Request an Invitation"
-        subtitle    = "Unblock Health is currently available on a limited, invitation only basis."
-        subtitle1    = "Click <b>'Request an Invitation'</b> to confirm your early, pre-launch access today"
-
-
+        title       = "Partners"
+        netspectivelogo ="/images/Netspective-PartnerLogo.jpg"
+        netspectiveurl ="https://netspective.com/"
+        enlightenlogo   ="/images/Enlighten-PartnerLogo.jpg"
+        enlightenurl  ="https://www.enlighteningresults.com/"
     [params.contact]
         enable      = true
         title       = "Become an Unblock Health early adopter and pioneer"

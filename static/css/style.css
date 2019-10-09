@@ -666,7 +666,7 @@ a.morelink:hover {
     text-shadow: none;
 }
 .comment {
-    min-height: 200px !important;
+    min-height: 200px;
     font-size: 16px;
 }
 .morecontent span {
@@ -742,6 +742,40 @@ section#contact {
 
 @media (max-width: 480px) {
 
+  .comment {
+    min-height: auto !important;
+  }
+
+  .service .block {
+    margin-bottom: 0;
+}
+
+  .col-lg-6.partnersection {
+    text-align: center !important;
+}
+
+  section#healthinfo {
+    margin-bottom: 20px;
+}
+
+ .service .fadeInLeft {
+    margin-bottom: 35px;
+}
+
+  section#healthinfo ul {
+    min-height: auto;
+}
+.heading {
+    padding-bottom: 20px;
+}
+  .section {
+    padding: 50px 0;
+}
+
+  nav#top-nav {
+    padding: 10px;
+  }
+
   .hero-area{
     height: auto !important;
   }
@@ -784,6 +818,39 @@ div#navbarResponsive {
 
 @media (min-width: 481px) and (max-width: 767px) {
 
+  /*.comment {
+    min-height: auto !important;
+  }*/
+
+  .service .block {
+    margin-bottom: 0;
+}
+  .col-lg-6.partnersection {
+    text-align: center !important;
+}
+
+section#healthinfo {
+    margin-bottom: 20px;
+}
+  .service .fadeInLeft {
+    margin-bottom: 35px;
+}
+
+ /* section#healthinfo ul {
+    min-height: auto;
+}*/
+
+  .heading {
+    padding-bottom: 20px;
+}
+
+  .section {
+    padding: 50px 0;
+}
+
+  nav#top-nav {
+    padding: 10px;
+}
 
    .hero-area{
     height: auto !important;

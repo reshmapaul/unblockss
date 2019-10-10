@@ -452,7 +452,7 @@ a:active {
 --*/
 .about .content h3 {
       font-size: 19px;
-    font-weight: 300;
+    font-weight: bold;
     line-height: 25px;
     color: #f68c29;
     margin-bottom: 15px;
@@ -601,7 +601,7 @@ footer p a:hover {
     list-style-type: circle;
     margin-left: 18px;
     line-height: 19px;
-    margin-bottom: 18px;
+    margin-bottom: 7px;
 }
 a.btn.btn-home {
     width: 45%;
@@ -637,7 +637,7 @@ section#healthinfo .block {
 .sub-heading h4 {
     font-size: 16px;
     line-height: 21px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 .form-control{
   color: #999999 !important;
@@ -818,6 +818,10 @@ div#navbarResponsive {
 
 @media (min-width: 481px) and (max-width: 767px) {
 
+  .service .block h3{
+    min-height: 81px;
+  }
+
   /*.comment {
     min-height: auto !important;
   }*/
@@ -884,20 +888,71 @@ span.input-group-btn {
 div#navbarResponsive {
     background-color: rgba(0, 0, 0, 0.9);
     padding-left: 15px;
-    /* padding-bottom: 15px; */
     width: 221px;
     margin-top: 10px;
 }
-
 
 }
 
 
 @media (min-width: 768px) and (max-width: 1024px) {
 
+  .about li {
+    font-size: 14px;
+    line-height: 18px;
+}
+  .sub-heading h4 {
+    font-size: 14px;
+    line-height: 18px;
+  }
 
-  h1.wow.fadeInDown {
-    font-size: 35px !important;
+  .service .block {
+    margin-bottom: 0;
+}
+
+  .service .block h3 {
+    font-size: 14px;
+    min-height: 80px !important;
+    line-height: 20px;
+}
+section#healthinfo ul{
+  min-height: 145px;
+}
+section#healthinfo li {
+    padding-right:0px;
+    font-size: 14px;
+    line-height: 18px;
+}
+.about .content h3 {
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 21px;
+  }
+  .comment {
+    min-height: 150px;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+  .section {
+    padding: 50px 0;
+}
+
+.heading h2{
+  font-size: 30px;
+}
+.heading{
+  padding-bottom: 30px;
+}
+  .counter.text-center p{
+    font-size: 15px;
+  }
+
+.hero-area .counter ul li .digit{
+  font-size: 30px;
+}
+h1.wow.fadeInDown {
+    font-size: 30px !important;
     line-height: 38px !important;
 }
 a.btn.btn-home {
@@ -911,6 +966,10 @@ a.nav-link {
     cursor: pointer;
 }
 
+}
 
-
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation:landscape) {
+  section#healthinfo ul{
+  min-height: 235px;
+  }
 }

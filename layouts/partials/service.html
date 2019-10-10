@@ -11,8 +11,12 @@
                         <p>{{ . }}</p>
                     {{ end }}
                 </div>
+            </div>
                 {{ $counter := 0 }}
                 {{ range .Site.Params.service.serviceItem }}
+                {{ if or (eq $counter  0)  (eq $counter  4)}}
+                  <div class="row">
+                 {{end}}
                     <div class="col-sm-6 col-md-3 wow fadeInLeft" data-wow-delay="{{ .delay }}">
                         <div class="block">
                             <img src="{{ .icon }}" class="img-responsive healthinfo-img" alt="{{ .title }}" title="{{ .title }}"/>
@@ -21,6 +25,9 @@
                         </div>
                          {{ $counter = add $counter 1 }}
                     </div>
+                    {{ if or (eq $counter  4) (eq $counter  9) }}
+                  </div>
+                 {{end}}   
                 {{ end }}
             </div>
         </div>

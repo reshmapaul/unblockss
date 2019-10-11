@@ -738,6 +738,16 @@ section#contact {
     padding-top: 80px;
     background: #f8f8f8;
 }
+#confirmmsg {
+    min-height: 340px;
+    padding-top: 100px;
+}
+.confirmregistration {
+    background: #efefef;
+}
+.confirmregistration .menu li a {
+    color: #000;
+}
 
 
 @media (max-width: 480px) {

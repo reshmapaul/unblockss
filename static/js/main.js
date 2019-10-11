@@ -6,6 +6,7 @@ $(document).ready(function(){
          var pathname = window.location.pathname;
          if(pathname == '/registerconfirm/'){
           $('#top-nav').addClass('confirmregistration');
+          $('#commonfooter').addClass('confirm-page-footer');
         }
      new WOW().init();
 

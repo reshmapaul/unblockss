@@ -536,8 +536,8 @@ a:active {
 }
 
 .btn-send {
-  line-height: 48px;
-  border: 2px solid #f68d29;
+  line-height: 25px;
+  border: 0;
   background: #f68d29;
   color: #fff;
   width: 100%;
@@ -737,16 +737,6 @@ ul#myList2 li:last-child, ul#myList2 li:nth-last-child(2) {
 section#contact {
     padding-top: 80px;
     background: #f8f8f8;
-}
-#confirmmsg {
-    min-height: 340px;
-    padding-top: 100px;
-}
-.confirmregistration {
-    background: #efefef;
-}
-.confirmregistration .menu li a {
-    color: #000;
 }
 
 
@@ -978,8 +968,30 @@ a.nav-link {
 
 }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation:landscape) {
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation:portrait) {
   section#healthinfo ul{
   min-height: 235px;
   }
+}
+
+
+div#success {
+    text-align: center;
+    font-size: 16px;
+    padding: 15px 0 0 0;
+    color: #4CAF50;
+}
+div#confirmmsg {
+    color: #4CAF50;
+    font-size: 22px;
+    text-align: center;
+    background: #f3f3f3;
+    margin-top: 100px;
+    padding-top: 147px;
+}
+.confirm-page-footer{
+  position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
 }

@@ -4,7 +4,7 @@ $(window).load(function() {
 
 $(document).ready(function(){
          var pathname = window.location.pathname;
-         if(pathname == '/registerconfirm/'){
+         if(pathname == '/confirmregistration/'){
           $('#top-nav').addClass('confirmregistration');
           $('#commonfooter').addClass('confirm-page-footer');
         }

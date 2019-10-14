@@ -69,7 +69,7 @@ $(document).ready(function(){
    $('#hospitalhimbtn').click(function(){ 
     $('#patientoption').val('HIM').trigger('change');
    })
-          $('#contact-submit').click(function(e){
+      $('#contact-submit').click(function(e){
       var first_name = $('#quickname').val();
       var email = $('#quickemail').val();
       var subject = $('#quicksubject').val();

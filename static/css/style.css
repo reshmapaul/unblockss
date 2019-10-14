@@ -299,8 +299,9 @@ a:active {
   padding-bottom: 19px;
   text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
 }
-.sk-ww-twitter-hashtag-feed div:nth-child(4) a{
-display: none !important;
+.twitter-feed iframe {
+    background: #fff;
+    margin-top: 10px;
 }
 .hero-area p {
   color: #fff;

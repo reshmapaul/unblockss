@@ -1,17 +1,19 @@
 baseURL = "/"
 languageCode = "en-us"
-title = "Patients Need Access To All Their Data To Guide Their Treatment Decisions And Care"
+title = "Patient Advocacy Suite | Healthcare Advocate Services | Unblock Health"
 theme = "infinity-hugo"
 
 [params]
-
+    Description  = "The first-in-class comprehensive digital healthcare suite of patient advocacy tools for patients and consumers who are determined to be empowered in their health care journey. Unblock Health is revolutionizing patient autonomy and healthcare consumerism."
+    logotitle ="Comprehensive Healthcare Suite of Patient Advocacy Services designed for Patients and Consumers - Unblock Health"
+    footersectionaboutcontent ="Unblock Health is a first-in-class, comprehensive suite of patient advocacy services designed for patients and consumers who are determined to be empowered in their health care journey and are no longer willing to accept traditional barriers to their information."
     # Navigation
     [params.navigation]
         logo = "images/logo.png"
         home = "Home"
         about = "About"
         service = "Services"
-        contact = "Contact"
+        register = "Register"
 
     # Hero Area
     [params.hero]
@@ -60,8 +62,8 @@ theme = "infinity-hugo"
     # Health information Section
     [params.healthinformation]
         enable      = true
-        title       = "Unblock Health is an Absolute MUST for:"
-        subtitle    = "Primary Goals of people who play a vital role in improving care coordination"
+        title       = "Digital Healthcare Suite of Patient Advocacy Services - Unblock Health"
+        subtitle    = "Unblock Health is an Absolute MUST for:"
         [[params.healthinformation.healthinformationItem]]
             # give icon(themefisher icon font), title, description
             # more about themefisher icon font visit https://github.com/themefisher/themefisher-font
@@ -201,7 +203,7 @@ theme = "infinity-hugo"
         netspectiveurl ="https://netspective.com/"
         enlightenlogo   ="/images/Enlighten-PartnerLogo.jpg"
         enlightenurl  ="https://www.enlighteningresults.com/"
-    [params.contact]
+    [params.register]
         enable      = true
         title       = "Become an Unblock Health early adopter and pioneer"
         subtitle    = "It's time to Unblock Health! Register to request your pre-launch, early access invitation today!"

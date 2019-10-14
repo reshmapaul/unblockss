@@ -21,9 +21,11 @@ h6 {
 }
 
 h1 {
-  font-size: 44px;
-  line-height: 56px;
-  color: #fff;
+   color: #3c3c3c;
+    padding-bottom: 15px;
+    font-weight: normal;
+    font-size: 44px;
+    line-height: 40px;
 }
 
 h2 {
@@ -291,13 +293,15 @@ a:active {
 
 .hero-area h1 {
   color: #fff;
-  font-size: 55px;
+  font-size: 44px;
   text-transform: uppercase;
   font-weight: bold;
   padding-bottom: 19px;
   text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
 }
-
+.sk-ww-twitter-hashtag-feed div:nth-child(4) a{
+display: none !important;
+}
 .hero-area p {
   color: #fff;
   font-size: 20px;
@@ -974,7 +978,6 @@ a.nav-link {
   }
 }
 
-
 div#success {
     text-align: center;
     font-size: 16px;
@@ -986,12 +989,71 @@ div#confirmmsg {
     font-size: 22px;
     text-align: center;
     background: #f3f3f3;
-    margin-top: 100px;
-    padding-top: 147px;
+    margin-top: 150px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    width: 50%;
+    margin: auto;
+    border-radius: 15px;
 }
 .confirm-page-footer{
   position: fixed;
     bottom: 0;
     right: 0;
     left: 0;
+}
+footer.timeline-Footer.u-cf {
+    display: none;
+}
+header.MediaCard-siteUser {
+    display: none;
+}
+.SandboxRoot.env-bp-430 .timeline-Tweet-text {
+    font-size: 14px;
+    line-height: 18px;
+  }
+.twitter {
+    padding-top: 10px;
+}
+#commonfooter .form-group .form-control {
+    margin-bottom: 9px;
+}
+.timeline-Widget{
+  border-radius: 0 !important;
+}
+footer ul#top-nav {
+    width: 65%;
+    margin: auto;
+}
+.copyright-txt{
+    font-weight: normal;
+    letter-spacing: 1px;
+    width: 100%;
+    display: inline-block;
+}
+.about-unblock {
+    color: #fff;
+    font-size: 14px;
+    text-align: left;
+}
+section#register {
+    background: #f8f8f8;
+}
+.timeline-Footer{
+  display: none !important; 
+}
+.about-unblock p {
+    font-weight: normal;
+    letter-spacing: 0;
+    font-size: 14px;
+    margin-top: 20px;
+}
+.about-unblock img {
+    margin-top: 10px;
+    width: 175px;
+} 
+.footer-content .col-md-12 {
+    border-top: 1px solid;
+    margin-top: 15px;
+    padding-top: 15px;
 }

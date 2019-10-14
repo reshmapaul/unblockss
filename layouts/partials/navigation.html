@@ -1,14 +1,15 @@
 <div class="container">
-    <nav class="navbar navbar-fixed-top  navigation " id="top-nav">
+    <nav class="navbar navbar-fixed-top  navigation" id="top-nav">
         <a class="navbar-brand float-none float-lg-left" href="{{ .Site.BaseURL }}">
             
-            <img src="/images/logo.png" alt="{{ .Site.Title }}" title="{{ .Site.Title }}"/>
+            <img src="/images/logo.png" alt="{{ .Site.Params.logotitle }}" title="{{ .Site.Params.logotitle }}"/>
             
         </a>
         <button class="navbar-toggler hidden-lg-up float-lg-right" type="button" data-toggle="collapse" data-target="#navbarResponsive">
             <i class="tf-ion-android-menu"></i>
         </button>
-        <div class="collapse navbar-toggleable-md" id="navbarResponsive">
+        
+    <div class="collapse navbar-toggleable-md" id="navbarResponsive">
             <ul class="nav navbar-nav menu float-lg-right" id="top-nav">
                 <li class="nav-item active">
                     <a class="nav-link" href="{{ .Site.BaseURL }}#home">
@@ -29,10 +30,10 @@
                         </a>
                     </li>
                 {{ end }}
-                {{ if .Site.Params.contact.enable }}
+                {{ if .Site.Params.register.enable }}
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ .Site.BaseURL }}#contact">
-                            {{ with .Site.Params.navigation.contact }} {{ . }} {{ end }}
+                        <a class="nav-link" href="{{ .Site.BaseURL }}#register">
+                            {{ with .Site.Params.navigation.register }} {{ . }} {{ end }}
                         </a>
                     </li>
                 {{ end }}

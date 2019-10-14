@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title> {{ .Site.Title }} </title>
-    <meta name="description" content="">
+    <meta name="description" content="{{ .Site.Params.Description }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {{ .Hugo.Generator }}
     {{"<!-- Fonts -->" | safeHTML }}
@@ -25,10 +25,19 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-KXR6XQ6');</script>
     <!-- End Google Tag Manager -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalOrganization",
+  "name": "Unblock Health",
+  "url": "https://unblock.health",
+  "logo": "https://unblock.health/images/logo.png"
+}
+</script>
 </head>
 
 <body id="body">
-   <!-- Google Tag Manager (noscript) -->
+  <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KXR6XQ6"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->

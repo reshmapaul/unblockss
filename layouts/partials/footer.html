@@ -1,10 +1,79 @@
 <footer id="commonfooter">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
-                <div class="block">
-                    <p>Copyright &copy;
-                        <a href="#">Unblock Health</a>| All Rights Reserved.</p>
+            <div class="col-md-4 about-unblock">
+                <img src="/images/footer-logo.png" class="footer-logo" alt="{{ .Site.Params.logotitle }}" title="{{ .Site.Params.logotitle }}"/></br>
+                 <p>{{ .Site.Params.footersectionaboutcontent }}</p>
+            </div>
+            <div class="col-md-4">
+               <!--<div class="twitter">
+                 <a class="twitter-timeline" data-height="400" href="https://twitter.com/@gracecordovano"></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+               </div>-->
+              <iframe src='https://www.sociablekit.com/app/embed/index.php?embed_id=29637' frameborder='0' width='100%' height='400'></iframe>
+
+            </div>
+            <div class="col-md-4">
+                <div class="form-group quick-contact">
+                    <form action="https://formspree.io/benson.ap@citrusinformatics.com" method="POST"  id="contactform">
+                        <div class="input-field">
+                            <input type="text" class="form-control" placeholder="Name*" name="Name" 
+                                 id="quickname">
+                            <span class="error" id="quicknamealert" style="display: none;">Please Enter Name</span>
+                        </div>
+                        <div class="input-field">
+                            <input type="email" class="form-control" placeholder="Email Address*" name="Email" id="quickemail">
+                            <span class="error" id="quickemailalert" style="display: none;">Please Enter Email.</span>
+                        </div>
+                        <div class="input-field">
+                            <input type="text" class="form-control" placeholder="Subject*" name="Subject" id="quicksubject">
+                            <span class="error" id="quicksubjectalert" style="display: none;">Please Enter Subject.</span>
+                        </div>
+                        <div class="input-field">
+                            <textarea class="form-control" placeholder="Message" rows="3" name="Message" id="message"></textarea>
+                            <span class="error" id="messagealert" style="display: none;">Please Enter Message*.</span>
+                        </div>
+                        <input type="hidden" name="_subject" value="[UnBlock Health] - Contact Form Submission" />
+                            
+                            <button class="btn btn-send" id="contact-submit" type="submit">Send</button>
+                        </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="row footer-content">
+                  <div class="col-md-12">
+                        <div class="block">
+                           <ul class="nav navbar-nav menu float-lg-right" id="top-nav">
+                             <li class="nav-item active">
+                                <a class="nav-link" href="{{ .Site.BaseURL }}#home">
+                                    {{ with .Site.Params.navigation.home }} {{ . }} {{ end }}
+                                </a>
+                            </li>
+                            {{ if .Site.Params.about.enable }}
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ .Site.BaseURL }}#about"> 
+                                        {{ with .Site.Params.navigation.about }} {{ . }} {{ end }}
+                                    </a>
+                                </li>
+                            {{ end }}
+                            {{ if .Site.Params.service.enable }}
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ .Site.BaseURL }}#service">
+                                        {{ with .Site.Params.navigation.service }} {{ . }} {{ end }}
+                                    </a>
+                                </li>
+                               {{ end }}
+                               {{ if .Site.Params.register.enable }}
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ .Site.BaseURL }}#register">
+                                        {{ with .Site.Params.navigation.register }} {{ . }} {{ end }}
+                                    </a>
+                                </li>
+                                {{ end }}
+                                <li class="nav-item"><a class="nav-link" href="#">Sitemap</a></li>
+                          </ul>
+                            <p class="copyright-txt">Comprehensive Healthcare Suite of Patient Advocacy Services Designed for Patients and Consumers - <a href="#">Unblock Health</a> | Copyright &copy; 2019. All Rights Reserved.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -4,12 +4,12 @@
         <div class="container">
             <div class="row">
                 <div class="heading wow fadeInUp">
-                    {{ with .Site.Params.healthinformation.title }}
+                    <!--{{ with .Site.Params.healthinformation.title }}
+                        <h1 class="unblock-h1">{{ . }}</h1>
+                    {{ end }}-->
+                   {{ with .Site.Params.healthinformation.subtitle }}
                         <h2>{{ . }}</h2>
                     {{ end }}
-                    <!--{{ with .Site.Params.healthinformation.subtitle }}
-                        <p>{{ . }}</p>
-                    {{ end }}-->
                 </div>
                 {{ $counter := 0 }}
                 {{ range .Site.Params.healthinformation.healthinformationItem }}

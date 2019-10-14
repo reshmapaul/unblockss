@@ -64,10 +64,10 @@ $(document).ready(function(){
    var uid = uuidv4();
    //alert(uid);
    $('#cntbtn').click(function(){ 
-    $('#patientoption').val('Patient Advocate').trigger('change');
+    $('#patientoption').val('PA').trigger('change');
    })
    $('#hospitalhimbtn').click(function(){ 
-    $('#patientoption').val('Hospital HIM').trigger('change');
+    $('#patientoption').val('HIM').trigger('change');
    })
           $('#contact-submit').click(function(e){
       var first_name = $('#quickname').val();

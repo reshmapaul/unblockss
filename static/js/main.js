@@ -6,6 +6,10 @@ $(document).ready(function(){
 
 
      new WOW().init();
+     $('iframe').load( function() {
+    $('iframe').contents().find("head")
+      .append($("<style type='text/css'>  .EmbedBody_footer{display:none;}  </style>"));
+});
 
 
      $('#top-nav').onePageNav({
@@ -52,9 +56,6 @@ $(document).ready(function(){
         autoPlay : 5000,
         }
     );
-
-
-
     //contact form validation
     function uuidv4() {
       return ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g, c =>
@@ -64,12 +65,12 @@ $(document).ready(function(){
    var uid = uuidv4();
    //alert(uid);
    $('#cntbtn').click(function(){ 
-    $('#patientoption').val('PA').trigger('change');
+     $('#patientoption').val('PA').trigger('change');
    })
    $('#hospitalhimbtn').click(function(){ 
-    $('#patientoption').val('HIM').trigger('change');
+     $('#patientoption').val('HIM').trigger('change');
    })
-      $('#contact-submit').click(function(e){
+    $('#contact-submit').click(function(e){
       var first_name = $('#quickname').val();
       var email = $('#quickemail').val();
       var subject = $('#quicksubject').val();
@@ -105,7 +106,90 @@ $(document).ready(function(){
          }
   
     });
-   $('#contact-submit-live').click(function(e){
+    $('#subscribe-submit').click(function(e){
+      var first_name = $('#subscribename').val();
+      var email = $('#subscribeemail').val();
+      var title = $('#title').val();
+      var o = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
+        if (first_name == '') {
+          $('#subscribenamealert').css('display', 'block');
+              return  false;
+         }
+         else {
+          $('#subscribenamealert').css('display', 'none');
+         }
+         if (email == '' || email.search(o) == -1 ) {
+            $('#subscribeemailalert').css('display', 'block');
+            return  false;
+         }
+         else {
+            $('#subscribeemailalert').css('display', 'none');
+          }
+         
+         var form = new FormData();
+          form.append("grant_type", "client_credentials");
+          form.append("client_id", "7bd2f745-e4e7-139e-cb4e-5d9c611a300d");
+          form.append("client_secret", "@8]f+}Z/G/$qV8>V");
+          var settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": "https://crm-test.netspective.org/Api/access_token",
+            "method": "POST",
+            "headers": {
+              "Accept": "application/vnd.api+json"
+            },
+            "processData": false,
+            "contentType": false,
+            "mimeType": "multipart/form-data",
+            "data": form
+          }
+        
+    $.ajax(settings).done(function (response) {
+        
+      var obj = $.parseJSON(response);
+      var access_token= obj.access_token;
+      var settings = {
+          "url": "https://crm-test.netspective.org/Api/V8/module",
+          "method": "POST",
+          "headers": {
+            "Accept": "application/vnd.api+json",
+            "Authorization": "Bearer "+access_token+"",
+            "Content-Type": "application/json"
+           },
+          "processData": false,
+          "data": "{\r\n  \"data\": {\r\n    \"type\": \"Contacts\",\r\n    \"id\": \""+uid+ "\",\r\n    \"attributes\": {\r\n     \"first_name\":\""+first_name+"\",\r\n     \"email1\":\""+email+"\"\r\n,\r\n     \"lead_source\":\"Web Site\"\r\n,\r\n     \"title\":\""+title+"\"\r\n   }\r\n  }\r\n}\r\n"
+        }
+
+        $.ajax(settings).done(function (response) {
+        //console.log(response);
+          var contactid = response.data.id;
+          var settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": "https://crm-test.netspective.org/Api/V8/module/Accounts/c69ec5eb-f926-2e91-b6b1-5d9c5f808107/relationships",
+            "method": "POST",
+            "headers": {
+              "Accept": "application/vnd.api+json",
+              "Authorization": "Bearer "+access_token+"",
+              "Content-Type": "application/json"
+            },
+            "processData": false,
+            "data": "{  \r\n   \"data\":{  \r\n         \"type\":\"Contacts\",\r\n         \"id\":\""+contactid+"\"\r\n\t    \r\n      }\r\n}"
+          }
+
+          $.ajax(settings).done(function (response) {
+         //console.log(response);
+            if(response.meta.message != ""){
+              $('#subscribename').val('');
+              $('#subscribeemail').val('');
+               var $subscribesuccess = $('#subscribesuccess'); // get the reference of the div
+              $subscribesuccess.show().html('You have been successfully added to our Mailing List!');
+            }
+          });
+        });  
+      });    
+    });
+    $('#contact-submit-live').click(function(e){
       var first_name = $('#name').val();
       var email = $('#email').val();
       var subject = $('#subject').val();
@@ -159,7 +243,7 @@ $(document).ready(function(){
             "data": form
           }
         
-      $.ajax(settings).done(function (response) {
+    $.ajax(settings).done(function (response) {
         
       var obj = $.parseJSON(response);
       var access_token= obj.access_token;
@@ -175,8 +259,8 @@ $(document).ready(function(){
           "data": "{\r\n  \"data\": {\r\n    \"type\": \"Contacts\",\r\n    \"id\": \""+uid+ "\",\r\n    \"attributes\": {\r\n     \"first_name\":\""+first_name+"\",\r\n     \"email1\":\""+email+"\"\r\n,\r\n     \"lead_source\":\"Web Site\"\r\n,\r\n     \"title\":\""+patientdetails+"\"\r\n   }\r\n  }\r\n}\r\n"
         }
 
-      $.ajax(settings).done(function (response) {
-      //console.log(response);
+        $.ajax(settings).done(function (response) {
+        //console.log(response);
           var contactid = response.data.id;
           var settings = {
             "async": true,
@@ -192,17 +276,18 @@ $(document).ready(function(){
             "data": "{  \r\n   \"data\":{  \r\n         \"type\":\"Contacts\",\r\n         \"id\":\""+contactid+"\"\r\n\t    \r\n      }\r\n}"
           }
 
-    $.ajax(settings).done(function (response) {
+          $.ajax(settings).done(function (response) {
          //console.log(response);
-         if(response.meta.message != ""){
-             var $success = $('#success'); // get the reference of the div
-            $success.show().html('Your Message was sent successfully');
-          }
+            if(response.meta.message != ""){
+              $('#name').val('');
+              $('#email').val('');
+               var $success = $('#success'); // get the reference of the div
+              $success.show().html('Your Message was sent successfully');
+            }
           });
-      });  
-    });    
-   
-        });
+        });  
+      });    
+    });
     /*$("#contact-form").validate({
         rules: {
             name: {

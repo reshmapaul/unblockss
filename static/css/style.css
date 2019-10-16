@@ -129,6 +129,7 @@ a:active {
   border: 1px solid #fff;
 }
 
+
 /*Preloader*/
 #preloader {
   background-color: #fff;
@@ -507,7 +508,7 @@ a:active {
 }
 
 .call-to-action .block .input-group {
-  margin-top: 30px;
+
 }
 
 .call-to-action .block .input-group input {
@@ -567,7 +568,7 @@ a:active {
 }
 
 .input-field textarea.form-control {
-  height: 160px;
+  height: 120px;
   box-shadow: none;
 }
 
@@ -631,7 +632,8 @@ a.btn.btn-home:nth-child(2):hover{
 .error{
     color: red !important;
     font-size: 12px !important;
-    margin-left: 20px !important;
+    margin-left: 0;
+    text-align: left;
 }
 section#healthinfo {
     padding-bottom: 0;
@@ -1057,4 +1059,31 @@ section#register {
     border-top: 1px solid;
     margin-top: 15px;
     padding-top: 15px;
+}
+
+.quick-contact h3 {
+    color: #fff;
+    text-align: left;
+    margin-bottom: 15px;
+}
+.subscribe-form .form-control {
+    height: 50px;
+    border-radius: 0;
+    border: 0;
+}
+input#subscribe-submit {
+    height: 50px;
+}
+form#subscribe {
+    margin-top: 35px;
+}
+#subscribe .error{
+    position: absolute;
+    bottom: -30px;
+    margin-left: 10px !important;
+}
+div#subscribesuccess {
+    font-size: 18px;
+    color: #000;
+    margin-top: 10px;
 }

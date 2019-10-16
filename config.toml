@@ -203,6 +203,14 @@ theme = "infinity-hugo"
         netspectiveurl ="https://netspective.com/"
         enlightenlogo   ="/images/Enlighten-PartnerLogo.jpg"
         enlightenurl  ="https://www.enlighteningresults.com/"
+
+     # subscribe Section
+    [params.subscribe]
+        enable      = true
+        bg          = "images/subscribe-bg.jpg"
+        title       = "Subscribe to Our Mailing List!"
+        subtitle    = "Stay informed about the latest updates in Unblock Health"
+    
     [params.register]
         enable      = true
         title       = "Become an Unblock Health early adopter and pioneer"

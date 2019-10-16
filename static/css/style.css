@@ -300,9 +300,8 @@ a:active {
   padding-bottom: 19px;
   text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
 }
-.twitter-feed iframe {
-    background: #fff;
-    margin-top: 10px;
+.twitter-feed{
+    margin-top: 20px;
 }
 .hero-area p {
   color: #fff;

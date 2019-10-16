@@ -128,12 +128,12 @@ $(document).ready(function(){
          
          var form = new FormData();
           form.append("grant_type", "client_credentials");
-          form.append("client_id", "7bd2f745-e4e7-139e-cb4e-5d9c611a300d");
-          form.append("client_secret", "@8]f+}Z/G/$qV8>V");
+          form.append("client_id", "93d80a68-5ad0-878d-a787-5da44425070f");
+          form.append("client_secret", "_S9UX^KZ&&t9W(aH");
           var settings = {
             "async": true,
             "crossDomain": true,
-            "url": "https://crm-test.netspective.org/Api/access_token",
+            "url": "https://crm.unblock.health/Api/access_token",
             "method": "POST",
             "headers": {
               "Accept": "application/vnd.api+json"
@@ -149,7 +149,7 @@ $(document).ready(function(){
       var obj = $.parseJSON(response);
       var access_token= obj.access_token;
       var settings = {
-          "url": "https://crm-test.netspective.org/Api/V8/module",
+          "url": "https://crm.unblock.health/Api/V8/module",
           "method": "POST",
           "headers": {
             "Accept": "application/vnd.api+json",
@@ -166,7 +166,7 @@ $(document).ready(function(){
           var settings = {
             "async": true,
             "crossDomain": true,
-            "url": "https://crm-test.netspective.org/Api/V8/module/Accounts/c69ec5eb-f926-2e91-b6b1-5d9c5f808107/relationships",
+            "url": "https://crm.unblock.health/Api/V8/module/Accounts/aba27ce2-d758-bdeb-adef-5da4294bf9e8/relationships",
             "method": "POST",
             "headers": {
               "Accept": "application/vnd.api+json",

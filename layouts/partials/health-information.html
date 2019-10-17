@@ -16,7 +16,7 @@
                     <div class="col-sm-6 col-md-3 wow fadeInLeft" data-wow-delay="{{ .delay }}">
                         <div class="block">
                             <!--<i class="{{ .icon }}"></i>-->
-                            <img src="{{ .icon }}" class="img-responsive healthinfo-img" alt="{{ .title }}" title="{{ .title }}"/>
+                            <img src="{{ .icon }}" class="img-responsive healthinfo-img" alt="{{ .title | safeHTML }}" title="{{ .title | safeHTML }}"/>
                             <h3>{{ .title | safeHTML}}</h3>
                                   
                                 <ul id="myList{{$counter}}">

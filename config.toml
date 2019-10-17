@@ -200,8 +200,10 @@ theme = "infinity-hugo"
         bg          = "images/subscribe-bg.jpg"
         title       = "Partners"
         netspectivelogo ="/images/Netspective-PartnerLogo.jpg"
+        netspectivetitle ="Netspective Communications"
         netspectiveurl ="https://netspective.com/"
         enlightenlogo   ="/images/Enlighten-PartnerLogo.jpg"
+        enlightentitle  ="Enlightening Results"
         enlightenurl  ="https://www.enlighteningresults.com/"
 
      # subscribe Section

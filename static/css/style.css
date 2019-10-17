@@ -300,8 +300,9 @@ a:active {
   padding-bottom: 19px;
   text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
 }
-.twitter-feed{
-    margin-top: 20px;
+.twitter-feed iframe {
+    background: #fff;
+    margin-top: 10px;
 }
 .hero-area p {
   color: #fff;
@@ -567,7 +568,7 @@ a:active {
 }
 
 .input-field textarea.form-control {
-  height: 120px;
+  height: 156px;
   box-shadow: none;
 }
 
@@ -629,7 +630,7 @@ a.btn.btn-home:nth-child(2):hover{
         margin-bottom: 15px;
 }
 .error{
-    color: red !important;
+    color: #fff !important;
     font-size: 12px !important;
     margin-left: 0;
     text-align: left;
@@ -807,6 +808,17 @@ a.btn.btn-home:nth-child(2) {
 .call-to-action .block .input-group input{
   width: 100% !important;
   float: inherit !important;
+  margin-bottom: 15px !important;
+}
+input#subscribe-submit {
+    height: 50px;
+    width: 100%;
+}
+#subscribe .error {
+    position: absolute;
+    bottom: 57px !important;
+    margin-left: 15px !important;
+    z-index: 9;
 }
 span.input-group-btn {
     display: block !important;
@@ -823,6 +835,17 @@ div#navbarResponsive {
 
 
 @media (min-width: 481px) and (max-width: 767px) {
+
+  #subscribe .error {
+    position: absolute;
+    bottom: 45px !important;
+    margin-left: 10px !important;
+}
+input#subscribe-submit {
+    height: 50px;
+    width: 92%;
+    margin-top: 10px;
+}
 
   .service .block h3{
     min-height: 81px;
@@ -1018,7 +1041,7 @@ header.MediaCard-siteUser {
     padding-top: 10px;
 }
 #commonfooter .form-group .form-control {
-    margin-bottom: 9px;
+    margin-bottom: 10px;
 }
 .timeline-Widget{
   border-radius: 0 !important;
@@ -1051,7 +1074,7 @@ section#register {
     margin-top: 20px;
 }
 .about-unblock img {
-    margin-top: 10px;
+    margin-top: 12px;
     width: 175px;
 } 
 .footer-content .col-md-12 {
@@ -1085,4 +1108,20 @@ div#subscribesuccess {
     font-size: 18px;
     color: #000;
     margin-top: 10px;
+}
+.col-md-4.twitter-feed {
+    padding-top: 10px;
+}
+.eapps-twitter-feed-posts-item-link-info-description {
+    text-align: left;
+}
+.eapps-twitter-feed-posts-item-link-info-domain {
+    text-align: left;
+}
+.eapps-twitter-feed .eui-widget-title { margin-bottom: 16px !important;}
+
+.eapps-twitter-feed .eui-widget-title { text-align: left !important;}
+
+ .eui-widget-title a {
+    font-weight: normal;
 }

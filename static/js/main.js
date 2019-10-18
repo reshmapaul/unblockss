@@ -3,14 +3,17 @@ $(window).load(function() {
 });
 
 $(document).ready(function(){
-
+     var pathname = window.location.pathname;
+         if(pathname == '/sitemap/'){
+          $('#top-nav').addClass('confirmregistration');
+          //$('#commonfooter').addClass('confirm-page-footer');
+        }
+        if(pathname == '/404.html'){
+          $('#top-nav').addClass('confirmregistration');
+          //$('#commonfooter').addClass('confirm-page-footer');
+        }
 
      new WOW().init();
-     $('iframe').load( function() {
-    $('iframe').contents().find("head")
-      .append($("<style type='text/css'>  .EmbedBody_footer{display:none;}  </style>"));
-});
-
 
      $('#top-nav').onePageNav({
         currentClass: 'current',
@@ -37,18 +40,19 @@ $(document).ready(function(){
     $hour = $('#countdown_dashboard').data('hour');
     $min =  $('#countdown_dashboard').data('minute');
     $seconds = $('#countdown_dashboard').data('seconds');
-    $('#countdown_dashboard').countDown({
-        targetDate: {
-            'day':      $day,
-            'month':    $month,
-            'year':     $year,
-            'hour':     $hour,
-            'min':      $min,
-            'sec':      $seconds,
-        },
-        omitWeeks: true
-    });
-
+     if($('#countdown_dashboard').length != 0) {
+        $('#countdown_dashboard').countDown({
+            targetDate: {
+                'day':      $day,
+                'month':    $month,
+                'year':     $year,
+                'hour':     $hour,
+                'min':      $min,
+                'sec':      $seconds,
+            },
+            omitWeeks: true
+        });
+    }
     $(".about-slider").owlCarousel(
         {
         singleItem: true,

@@ -1,0 +1,24 @@
+{{ partial "header.html" . }}
+{{ partial "navigation.html" . }}
+<section class="section sitemap" >
+        <div class="container">
+        	<div class="heading">
+        	  <h2>Sitemap</h2>
+        	</div>
+            <div class="row">
+              <ul>
+              	<li><a href="{{.Site.BaseURL}}">Home</a></li>
+ 				<li><a href="{{.Site.BaseURL}}/#about">About</a></li>
+ 				<li><a href="{{.Site.BaseURL}}/#service">Services</a></li>
+ 				<li><a href="{{.Site.BaseURL}}/#register">Register for an invitation as patient advocate</a></li>
+ 				<li><a href="{{.Site.BaseURL}}/#register">Register for an invitation as hospital HIM</a></li>
+ 				<li><a href="{{.Site.BaseURL}}/#partners">Partners</a></li>
+                <li><a href="https://www.netspective.com/">Netspective</a></li>
+                <li><a href="https://www.netspective.com/">Enlightening Results</a></li>
+
+<li><a href="{{.Site.BaseURL}}/404.html">404</a></li>
+</ul>
+        </div>
+</section>
+
+{{ partial "footer.html" . }}

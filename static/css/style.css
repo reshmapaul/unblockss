@@ -630,7 +630,7 @@ a.btn.btn-home:nth-child(2):hover{
         margin-bottom: 15px;
 }
 .error{
-    color: #fff !important;
+    color: red !important;
     font-size: 12px !important;
     margin-left: 0;
     text-align: left;
@@ -749,6 +749,12 @@ section#contact {
 
 @media (max-width: 480px) {
 
+  .navigation .navbar-toggler {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
   .comment {
     min-height: auto !important;
   }
@@ -830,11 +836,41 @@ div#navbarResponsive {
     width: 221px;
     margin-top: 10px;
 }
+.confirmregistration a {
+    color: #fff !important;
+}
+.sitemap li {
+    list-style-type: square;
+    width: 100% !important;
+    float: none;
+    padding-left: 45px;
+}
+.sitemap h2 {
+    margin-top: 35px;
+}
 
 }
 
 
 @media (min-width: 481px) and (max-width: 767px) {
+  .sitemap h2 {
+    margin-top: 35px;
+}
+  .sitemap li {
+    list-style-type: square;
+    width: 100% !important;
+    float: none;
+    padding-left: 45px;
+}
+
+.confirmregistration a {
+    color: #fff !important;
+}
+  .navigation .navbar-toggler {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
 
   #subscribe .error {
     position: absolute;
@@ -1103,6 +1139,7 @@ form#subscribe {
     position: absolute;
     bottom: -30px;
     margin-left: 10px !important;
+    color: #fff !important;
 }
 div#subscribesuccess {
     font-size: 18px;
@@ -1112,16 +1149,41 @@ div#subscribesuccess {
 .col-md-4.twitter-feed {
     padding-top: 10px;
 }
-.eapps-twitter-feed-posts-item-link-info-description {
-    text-align: left;
-}
-.eapps-twitter-feed-posts-item-link-info-domain {
-    text-align: left;
-}
-.eapps-twitter-feed .eui-widget-title { margin-bottom: 16px !important;}
 
-.eapps-twitter-feed .eui-widget-title { text-align: left !important;}
+.confirmregistration{
+    background-color: #fff;
+    box-shadow: 0 2px 7px 0px rgba(142, 142, 142, 0.15);
+    color: #3b4045;
+}
 
- .eui-widget-title a {
-    font-weight: normal;
+.confirmregistration .menu li a{
+    color: #3b4045;
+}
+.sitemap li a {
+    color: #3b4045;
+    font-size: 16px;
+    margin-bottom: 15px;
+    display: block;
+}
+.sitemap li {
+    list-style-type: square;
+    width: 50%;
+    float: left;
+}
+.sitemap li a:hover{
+  text-decoration: none;
+  color: #f68c29;
+}
+.error-block {
+    text-align: center;
+}
+.error-block .b-text-1 {
+    font-size: 16px;
+}
+.error-block .b-text-1 a {
+    color: #f68c29;
+    font-weight: bold;
+}
+.error-block img {
+    width: 100%;
 }

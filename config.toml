@@ -24,13 +24,13 @@ theme = "infinity-hugo"
         btnText     = "Register for an Invitation as a Patient Advocate"
 		btnTextTwo     = "Register for an Invitation as a Hospital HIM"
         countdownYear = "2019"
-        countdownMonth = "10"
+        countdownMonth = "11"
         countdownDay  = "18"
         countdownHour = "20"
         CountdownMinute ="20"
         CountdownSeconds ="00"
-        countertoptitle ="The Moment"
-        counterbottomtitle ="Patients Have Been Waiting For"
+        countertoptitle ="Now accepting "
+        counterbottomtitle ="invitations requests"
 
     # About Section
     [params.about]

@@ -200,7 +200,7 @@ section.section.sitemap .heading{
   font-style: italic;
   font-weight: 600;
 }
-.animated .headshot-title {
+.animated .headshot-title, .confirmregistration .headshot-title {
     color: #242727;
 }
 nav#top-nav {

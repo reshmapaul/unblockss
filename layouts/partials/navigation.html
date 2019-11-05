@@ -1,10 +1,12 @@
 <div class="container">
     <nav class="navbar navbar-fixed-top  navigation" id="top-nav">
-        <div itemscope="" itemtype="http://schema.org/MedicalOrganization">
+        <div class="container headshot-container">
+          <div class="col-lg-8 col-md-12 pt-1">
+            <div itemscope="" itemtype="http://schema.org/MedicalOrganization">
              <a class="navbar-brand float-none float-lg-left" href="{{ .Site.BaseURL }}" itemprop="url">        
                 <img src="/images/logo.png" alt="{{ .Site.Params.logotitle }}" title="{{ .Site.Params.logotitle }}" itemprop="logo"/>      
-            </a>
-        </div>
+              </a>
+            </div>
         <button class="navbar-toggler hidden-lg-up float-lg-right" type="button" data-toggle="collapse" data-target="#navbarResponsive">
             <i class="tf-ion-android-menu"></i>
         </button>
@@ -12,7 +14,7 @@
     <div class="collapse navbar-toggleable-md" id="navbarResponsive">
             <ul class="nav navbar-nav menu float-lg-right" id="top-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="{{ .Site.BaseURL }}#home">
+                    <a class="nav-link" href="{{ .Site.BaseURL }}">
                         {{ with .Site.Params.navigation.home }} {{ . }} {{ end }}
                     </a>
                 </li>
@@ -37,7 +39,27 @@
                         </a>
                     </li>
                 {{ end }}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ .Site.BaseURL }}faqs">
+                        {{ with .Site.Params.navigation.faqs }} {{ . }} {{ end }}
+                    </a>
+                </li>
             </ul>
         </div>
+    </div>
+      <div class="col-lg-4 col-md-12">
+          <div class="row top-head-shot">
+                <span class="headshot-title">Brought to you by</span>
+                <div class="head-shot-col">
+                     <a href="https://twitter.com/shaidhshah" target="_blank"><img src="/images/shahid-sha.png" alt="Shahidsha"><br>
+                        @ShahidNShah</a>
+                </div>
+                <div class="head-shot-col">
+                    <a href="https://twitter.com/GraceCordovano" target="_blank"><img src="/images/grace.png" alt="Grace Cordovano"><br>
+                        @GraceCordovano</a>
+                </div>
+           </div>
+      </div>
+    </div> 
     </nav>
 </div>

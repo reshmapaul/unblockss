@@ -4,13 +4,14 @@ $(window).load(function() {
 
 $(document).ready(function(){
      var pathname = window.location.pathname;
-         if(pathname == '/sitemap/'){
+         if(pathname == '/faqs/'){
           $('#top-nav').addClass('confirmregistration');
+          $('#top-nav').addClass('animated');
           //$('#commonfooter').addClass('confirm-page-footer');
         }
         if(pathname == '/404.html'){
           $('#top-nav').addClass('confirmregistration');
-          //$('#commonfooter').addClass('confirm-page-footer');
+          $('#top-nav').addClass('animated');
         }
 
      new WOW().init();

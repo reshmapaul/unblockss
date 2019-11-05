@@ -14,6 +14,7 @@ theme = "infinity-hugo"
         about = "About"
         service = "Services"
         register = "Register"
+        faqs     ="FAQs"
 
     # Hero Area
     [params.hero]

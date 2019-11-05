@@ -80,6 +80,8 @@ a:active {
 .section {
   padding: 100px 0;
 }
+
+
 .top-head-shot a {
   color: #03d9ef;
 }
@@ -89,14 +91,6 @@ a:active {
 .head-shot-col {
   float: right;
   margin:0 10px 0 10px;
-}
-.faq-title {
-    font-size: 18px;
-    font-weight: 600;
-    padding-top: 10px;
-    padding-bottom: 5px;
-    margin-top: 15px;
-    border-top: 1px solid #efefef;
 }
 /*05.11.19*/
 
@@ -186,6 +180,8 @@ nav#top-nav{
 }
 
 
+
+
 section.section.sitemap {
     padding-top: 150px;
 }
@@ -200,7 +196,7 @@ section.section.sitemap .heading{
   font-style: italic;
   font-weight: 600;
 }
-.animated .headshot-title, .confirmregistration .headshot-title {
+.animated .headshot-title, .confirmregistration .headshot-title{
     color: #242727;
 }
 nav#top-nav {
@@ -228,14 +224,8 @@ right: 60px;
 .head-shot-col {
     margin-top: 10px;
 }
-.eapps-twitter-feed-posts-item-text{
-  text-align: left;
-}
-.eapps-twitter-feed-title{
-  color: #fff;
-}
 
-/*05/11/19 end */
+/*end */
 
 /*--
     custom heading
@@ -498,6 +488,14 @@ right: 60px;
   overflow: hidden;
   height: 60px;
 }
+ .faq-title {
+    font-size: 18px;
+    font-weight: 600;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    margin-top: 15px;
+    border-top: 1px solid #efefef;
+}
 
 @media only screen and (max-width:400px) {
   .hero-area .counter ul li .digit {
@@ -569,7 +567,6 @@ right: 60px;
 .menu li a:focus {
   background: none;
 }
-
 
 /*--
     service start
@@ -952,7 +949,7 @@ section#contact {
   .hero-area h1 {
     line-height: 32px !important;
     font-size: 25px !important;
-    margin-top: 85px !important;
+    margin-top: 155px !important;
 }
 a.btn.btn-home {
     width: 100% !important;
@@ -986,14 +983,8 @@ input#subscribe-submit {
 span.input-group-btn {
     display: block !important;
 }
-div#navbarResponsive {
-    background-color: rgba(0, 0, 0, 0.9);
-    padding-left: 15px;
-    /* padding-bottom: 15px; */
-    width: 221px;
-    margin-top: 10px;
-}
-.confirmregistration a {
+
+.confirmregistration .nav a {
     color: #fff !important;
 }
 .sitemap li {
@@ -1081,11 +1072,7 @@ section#healthinfo {
    .hero-area{
     height: auto !important;
   }
-  .hero-area h1 {
-    line-height: 32px !important;
-    font-size: 25px !important;
-    margin-top: 85px !important;
-}
+
 a.btn.btn-home {
     width: 100% !important;
     float: inherit !important;
@@ -1344,3 +1331,4 @@ div#subscribesuccess {
 .error-block img {
     width: 100%;
 }
+

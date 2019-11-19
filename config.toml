@@ -1,7 +1,8 @@
-baseURL = "/"
+baseURL = "https://www.unblock.health/"
 languageCode = "en-us"
 title = "Patient Advocacy Suite | Healthcare Advocate Services | Unblock Health"
 theme = "infinity-hugo"
+paginate = 10
 
 [params]
     Description  = "The first-in-class comprehensive digital healthcare suite of patient advocacy tools for patients and consumers who are determined to be empowered in their health care journey. Unblock Health is revolutionizing patient autonomy and healthcare consumerism."

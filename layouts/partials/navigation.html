@@ -39,13 +39,13 @@
                         </a>
                     </li>
                 {{ end }}
-                <li class="nav-item">
-                        <a class="nav-link" href="{{ .Site.BaseURL }}news">
+                <li class="nav-item" id="current">
+                        <a class="nav-link"  href="{{ .Site.BaseURL }}news">
                             News
                         </a>
                     </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ .Site.BaseURL }}faqs">
+                <li class="nav-item" id="faq">
+                    <a class="nav-link"  href="{{ .Site.BaseURL }}faqs">
                         {{ with .Site.Params.navigation.faqs }} {{ . }} {{ end }}
                     </a>
                 </li>

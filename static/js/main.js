@@ -3,11 +3,22 @@ $(window).load(function () {
 });
 
 $(document).ready(function () {
+   $('ul li a').click(function(){
+    $('li a').removeClass("active");
+    $(this).addClass("active");
+});
   var pathname = window.location.pathname;
+  
   if (pathname == '/faqs/' || pathname.includes('/news/')) {
     $('#top-nav').addClass('confirmregistration');
     $('#top-nav').addClass('animated');
+    $('#current').addClass('current');
+     
     //$('#commonfooter').addClass('confirm-page-footer');
+  }
+  if(pathname == '/faqs/'){
+    $('#current').removeClass('current');
+    $('#faq').addClass('current'); 
   }
   if (pathname == '/404.html') {
     $('#top-nav').addClass('confirmregistration');

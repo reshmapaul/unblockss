@@ -1,7 +1,7 @@
-
-    {{ partial "header.html" . }} 
-     {{ partial "navigation.html" . }}
-    <section class="single-body">
+{{ partial "header.html" . }}
+{{ partial "navigation.html" . }}
+<section class="single-body">
+    {{ partial "bread-crumb.html" . }}
     <main class="container content side-text-padding single-blog-card inner-card">
         {{ if isset .Params "banner" }}
         <picture class="post-figure m-b-15">
@@ -11,32 +11,39 @@
         <article class="post {{ if ne .Params.dropcap false }}dropcase{{ end }}">
             <div class="cover-content">
                 <ol class="breadcrumb">
-                    <li><a href='{{ .Site.BaseURL}}'>Home</a></li>
-                    <li>{{.Title}}</li>
+
                 </ol>
                 <header class="post-header">
                     <h1 class="post-title">{{ .Title }}</h1>
-                    <p class="post-date">Posted <time datetime="{{ .Date.Format " 2006-01-02 " }}">{{ .Date.Format "Jan 2, 2006" }}</time> via <a style="margin-left:3px; text-decoration: underline;" target="_blank" href="{{ .Params.cleanUrl }}">{{ .Params.sourceBaseUrl }}</a>
+                    <p class="post-date">Posted <time
+                            datetime="{{ .Date.Format " 2006-01-02 " }}">{{ .Date.Format "Jan 2, 2006" }}</time> via <a
+                            style="margin-left:3px; text-decoration: underline;" target="_blank"
+                            href="{{ .Params.cleanUrl }}">{{ .Params.sourceBaseUrl }}</a>
                     </p>
                 </header>
-                {{ .Content }}
+                <p>{{ .Content }}</p>
                 <hr>
                 <div class="detail-sm-block">
                     <h3>Share</h3>
-                    <a href="http://twitter.com/share?url={{ .Permalink }}&amp;text={{ .Title }}&amp;via={{ .Site.Social.twitter }}" target="_blank" class="share-btn twitter">
+                    <a href="http://twitter.com/share?url={{ .Permalink }}&amp;text={{ .Title }}&amp;via={{ .Site.Social.twitter }}"
+                        target="_blank" class="share-btn twitter">
                         <i class="fab fa-twitter"></i>
                     </a>
-                    <a href="http://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" target="_blank" class="share-btn facebook">
+                    <a href="http://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" target="_blank"
+                        class="share-btn facebook">
                         <i class="fab fa-facebook"></i>
                     </a>
-                    <a href="http://www.linkedin.com/shareArticle?url={{ .Permalink }}&amp;title={{ .Title }}" target="_blank" class="share-btn linkedin">
+                    <a href="http://www.linkedin.com/shareArticle?url={{ .Permalink }}&amp;title={{ .Title }}"
+                        target="_blank" class="share-btn linkedin">
                         <i class="fab fa-linkedin"></i>
                     </a>
-                    <a href="mailto:?subject=Check out this post by {{ .Permalink }}&amp;body={{ .Permalink }}" target="_blank" class="share-btn email">
+                    <a href="mailto:?subject=Check out this post by {{ .Permalink }}&amp;body={{ .Permalink }}"
+                        target="_blank" class="share-btn email">
                         <i class="fas fa-envelope"></i>
                     </a>
                 </div>
-                <hr> Continue reading at <a style="text-decoration: underline;" target="_blank" href="{{ .Params.cleanUrl }}">{{ .Params.sourceBaseUrl }}</a>
+                <hr> Continue reading at <a style="text-decoration: underline;" target="_blank"
+                    href="{{ .Params.cleanUrl }}">{{ .Params.sourceBaseUrl }}</a>
             </div>
         </article>
     </main>

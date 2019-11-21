@@ -108,6 +108,9 @@ a:active {
 .eapps-twitter-feed-extra-small .eapps-twitter-feed-posts-item-text {
     text-align: left;
 }
+li.nav-item.current a {
+    color: #f68c29 !important;
+}
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px)  {
 
@@ -623,8 +626,41 @@ right: 60px;
   background: none;
 }
 
-.brief-outer .menu li a {
-    color: #000;
+.brief-outer a {
+  color: #333 !important;
+  text-decoration: none !important;
+}
+.single-body a {
+  text-decoration: none !important;
+  color: #333 !important;
+}
+.post-date {
+  display: block;
+  color: #7a7b7c;
+  font-size: 0.8em;
+  margin: 0;
+}
+.breadcrumb {
+  background-color: #fff !important;
+}
+.single-body p {
+  margin: 0 0 10px;
+}
+.selected_navigation {
+  color:#F68D29 !important;
+}
+.new-ofer-breadcrumbs {
+  color: #999;
+  font-size: 14px;
+  line-height: 18px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-transform: capitalize;
+}
+ #breadcrumbs a {
+    color: #0275d8 !important;
+    text-decoration: none;
+    text-transform: uppercase;
 }
 /*--
     service start

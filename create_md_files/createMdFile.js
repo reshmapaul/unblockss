@@ -60,7 +60,8 @@ async function main() {
                         await getRequest(options).then(async function(response) {
                             if (response['_embedded']['elements'].length > 0) {
                                 const elements = response['_embedded']['elements'];
-                                const mdFileName = item['id'];
+                                let mdFileName = item['subject'].replace(/[^a-z\d\s]+/gi, " ");
+                                mdFileName = mdFileName.trim();
                                 let featuredImageUrl = '';
                                 let metaDataUrl = '';
                                 elements.some(function(attachment, index, _arr) {
@@ -74,12 +75,12 @@ async function main() {
                                         }
                                     }
                                 });
-                                console.log(featuredImageUrl);
                                 if (featuredImageUrl !== '') {
                                     options.url = featuredImageUrl;
                                     options['encoding'] = 'binary';
                                     await getRequest(options, false).then(async function(responseData) {
-                                        let fileName = item['id'];
+                                        let fileName = item['subject'].replace(/[^a-z\d\s]+/gi, "");
+                                        fileName = fileName.trim();
                                         fileName = fileName + '.png';
                                         imagePath = "/images/resources/" + fileName;
                                         mdContent = mdContent + "banner = " + '"' + imagePath + '"' + "\n";

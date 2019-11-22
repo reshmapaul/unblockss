@@ -1,7 +1,7 @@
 {{ partial "header.html" . }}
 {{ partial "navigation.html" . }}
 <section class="brief-outer section">
-    {{ partial "bread-crumb.html" . }}
+    <div id="breadcrumbs" class="new-ofer-breadcrumbs container"><a href="/">Home</a> &gt; News </div>
     <div class="container">
         {{ range .Paginator.Pages }}
         <div class="card blog-card custom-card-row" rel="bookmark">

@@ -1,7 +1,7 @@
 {{ partial "header.html" . }}
 {{ partial "navigation.html" . }}
 <section class="single-body">
-    <div id="breadcrumbs" class="new-ofer-breadcrumbs container"><a href="/">Home</a> &gt; <a href="/news">News</a> &gt; {{ .Title }}</div>
+    {{ partial "bread-crumb.html" . }}
     <main class="container content side-text-padding single-blog-card inner-card">
         {{ if isset .Params "banner" }}
         <picture class="post-figure m-b-15">

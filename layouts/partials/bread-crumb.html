@@ -6,7 +6,7 @@
   {{ $path := index . $elem_index }}
   {{ if ne $elem_index 0 }} > {{ end }}
   {{ $path_url := path.Join $.Site.Params.hostName $path }}
-  {{ if ne $elem_index (sub $length 1) }}
+  {{ if or (eq $elem_index 0) (eq $elem_index 1) }}
   <a href="{{ $path_url }}">{{ $breadcrumb }}</a>
   {{else}}
   {{ $breadcrumb }}
@@ -19,9 +19,9 @@
   {{ range $elem_index, $breadcrumb := (split .URL "/") }}
   {{ if gt (len . ) 0 }}
   {{ if ne $elem_index (sub $length 2) }}
-   > <a href="/{{ . }}"></a>
+   > <a href="/{{ . }}">{{ humanize (replace . "posts" "blog") }}</a>
   {{else}}
-   > {{ . }}
+   >{{.}}
   {{ end }}
   {{ end }}
   {{ end }}

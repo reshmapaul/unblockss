@@ -17,7 +17,7 @@ breadcrumbs:
 breadcrumbLinks:
  - / 
  - /news
- - /news
+ - /
  - / 
 ---
 The ONC finally released its long-awaited proposed rule to implement the “information blocking” prohibition of the 21st Century Cures Act by identifying conduct that is not information blocking. If finalized, ONC’s proposed rule would have a significant impact on data sharing arrangements and other relationships among health care providers, health IT developers, and other stakeholders. In this On the Subject, our experienced team analyzes ONC’s information blocking proposals and suggests practical next steps for the regulated industry.<br><br><a target="_blank" href=https://www.natlawreview.com/article/onc-proposes-to-define-conduct-not-information-blocking-under-cures-act>Read on natlawreview.com</a>

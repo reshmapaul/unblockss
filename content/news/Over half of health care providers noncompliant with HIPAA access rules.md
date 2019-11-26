@@ -21,7 +21,7 @@ breadcrumbs:
 breadcrumbLinks:
  - / 
  - /news
- - /news
+ - /
  - / 
 ---
 <p>Some patients who request their medical records still do not receive them within the legally mandated 30-day period or in the format requested, says Deven McGraw, chief regulatory officer at Ciitizen and a former HHS Office for Civil Rights official. An updated scorecard from Ciitizen found compliance with HIPAA Right of Access rules has risen, but 51% of health care providers are noncompliant.<br><br><a href="https://www.healthcareitnews.com/news/patients-still-facing-big-obstacles-getting-their-own-health-data">Read on healthcareitnews.com</a></p>

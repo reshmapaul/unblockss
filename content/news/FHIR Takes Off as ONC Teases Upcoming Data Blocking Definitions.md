@@ -22,7 +22,7 @@ breadcrumbs:
 breadcrumbLinks:
  - / 
  - /news
- - /news
+ - /
  - / 
 ---
 ONC official Steven Posnack explains how FHIR is taking hold as the industry waits for the ONC's proposals to tackle data blocking.<br><br><a target="_blank" href=https://healthitanalytics.com/news/fhir-takes-off-as-onc-teases-upcoming-data-blocking-definitions>Read on healthitanalytics.com</a>

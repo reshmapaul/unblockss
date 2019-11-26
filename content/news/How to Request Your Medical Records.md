@@ -21,7 +21,7 @@ breadcrumbs:
 breadcrumbLinks:
  - / 
  - /news
- - /news
+ - /
  - / 
 ---
 If you've never requested your medical records from your doctor or hospital before, the process can seem complicated. However, understanding the law, the requirements, and the basic steps will ease the process.<br><br><a target="_blank" href=https://journal.ahima.org/2012/03/01/how-to-request-your-medical-records/>Read on journal.ahima.org</a>

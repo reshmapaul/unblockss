@@ -14,38 +14,38 @@
     <div class="collapse navbar-toggleable-md" id="navbarResponsive">
             <ul class="nav navbar-nav menu float-lg-right" id="top-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="{{ .Site.BaseURL }}">
+                    <a id="Home_Top_Button" class="nav-link" href="{{ .Site.BaseURL }}">
                         {{ with .Site.Params.navigation.home }} {{ . }} {{ end }}
                     </a>
                 </li>
                 {{ if .Site.Params.about.enable }}
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ .Site.BaseURL }}#about">
+                        <a id="About_Top_Button" class="nav-link" href="{{ .Site.BaseURL }}#about">
                             {{ with .Site.Params.navigation.about }} {{ . }} {{ end }}
                         </a>
                     </li>
                 {{ end }}
                 {{ if .Site.Params.service.enable }}
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ .Site.BaseURL }}#service">
+                        <a id="Service_Top_Button" class="nav-link" href="{{ .Site.BaseURL }}#service">
                             {{ with .Site.Params.navigation.service }} {{ . }} {{ end }}
                         </a>
                     </li>
                 {{ end }}
                 {{ if .Site.Params.register.enable }}
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ .Site.BaseURL }}#register">
+                        <a id="Register_Top_Button" class="nav-link" href="{{ .Site.BaseURL }}#register">
                             {{ with .Site.Params.navigation.register }} {{ . }} {{ end }}
                         </a>
                     </li>
                 {{ end }}
                 <li class="nav-item" id="current">
-                        <a class="nav-link"  href="{{ .Site.BaseURL }}news">
+                        <a id="News_Top_Button"  class="nav-link"  href="{{ .Site.BaseURL }}news">
                             News
                         </a>
                     </li>
                 <li class="nav-item" id="faq">
-                    <a class="nav-link"  href="{{ .Site.BaseURL }}faqs">
+                    <a id="Faq_button" class="nav-link"  href="{{ .Site.BaseURL }}faqs">
                         {{ with .Site.Params.navigation.faqs }} {{ . }} {{ end }}
                     </a>
                 </li>
@@ -56,11 +56,11 @@
           <div class="row top-head-shot">
                 <span class="headshot-title">Brought to you by</span>
                 <div class="head-shot-col">
-                     <a href="https://twitter.com/ShahidNShah" target="_blank"><img src="/images/shahid-sha.png" alt="Shahidsha"><br>
+                     <a id="Shahid_twitter_page" href="https://twitter.com/ShahidNShah" target="_blank"><img src="/images/shahid-sha.png" alt="Shahidsha"><br>
                         @ShahidNShah</a>
                 </div>
                 <div class="head-shot-col">
-                    <a href="https://twitter.com/GraceCordovano" target="_blank"><img src="/images/grace.png" alt="Grace Cordovano"><br>
+                    <a id="Grace_twitter_page" href="https://twitter.com/GraceCordovano" target="_blank"><img src="/images/grace.png" alt="Grace Cordovano"><br>
                         @GraceCordovano</a>
                 </div>
            </div>

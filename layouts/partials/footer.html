@@ -18,19 +18,19 @@
                         <div class="input-field">
                             <input type="text" class="form-control" placeholder="Name*" name="Name" 
                                  id="quickname">
-                            <span class="error" id="quicknamealert" style="display: none;">Please Enter Name</span>
+                            <span class="error Contact_name_error" id="quicknamealert" style="display: none;">Please Enter Name</span>
                         </div>
                         <div class="input-field">
                             <input type="email" class="form-control" placeholder="Email Address*" name="Email" id="quickemail">
-                            <span class="error" id="quickemailalert" style="display: none;">Please Enter Email.</span>
+                            <span class="error Contact_email_error" id="quickemailalert" style="display: none;">Please Enter Email.</span>
                         </div>
                         <div class="input-field">
                             <input type="text" class="form-control" placeholder="Subject*" name="Subject" id="quicksubject">
-                            <span class="error" id="quicksubjectalert" style="display: none;">Please Enter Subject.</span>
+                            <span class="error Contact_subject_error" id="quicksubjectalert" style="display: none;">Please Enter Subject.</span>
                         </div>
                         <div class="input-field">
                             <textarea class="form-control" placeholder="Message" rows="3" name="Message" id="message"></textarea>
-                            <span class="error" id="messagealert" style="display: none;">Please Enter Message*.</span>
+                            <span class="error Contact_message_error" id="messagealert" style="display: none;">Please Enter Message*.</span>
                         </div>
                         <input type="hidden" name="_subject" value="[UnBlock Health] - Contact Form Submission" />
                             
@@ -44,32 +44,32 @@
                         <div class="block">
                            <ul class="nav navbar-nav menu float-lg-right" id="top-nav">
                              <li class="nav-item active">
-                                <a class="nav-link" href="{{ .Site.BaseURL }}#home">
+                                <a id="Home_footer_button" class="nav-link" href="{{ .Site.BaseURL }}">
                                     {{ with .Site.Params.navigation.home }} {{ . }} {{ end }}
                                 </a>
                             </li>
                             {{ if .Site.Params.about.enable }}
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ .Site.BaseURL }}#about"> 
+                                    <a id="About_footer_button" class="nav-link" href="{{ .Site.BaseURL }}#about"> 
                                         {{ with .Site.Params.navigation.about }} {{ . }} {{ end }}
                                     </a>
                                 </li>
                             {{ end }}
                             {{ if .Site.Params.service.enable }}
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ .Site.BaseURL }}#service">
+                                    <a id="Services_footer_button" class="nav-link" href="{{ .Site.BaseURL }}#service">
                                         {{ with .Site.Params.navigation.service }} {{ . }} {{ end }}
                                     </a>
                                 </li>
                                {{ end }}
                                {{ if .Site.Params.register.enable }}
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ .Site.BaseURL }}#register">
+                                    <a id="Register_footer_button" class="nav-link" href="{{ .Site.BaseURL }}#register">
                                         {{ with .Site.Params.navigation.register }} {{ . }} {{ end }}
                                     </a>
                                 </li>
                                 {{ end }}
-                                <li class="nav-item"><a class="nav-link" href="{{ .Site.BaseURL }}sitemap">Sitemap</a></li>
+                                <li id="Sitemap_footer_button" class="nav-item"><a class="nav-link" href="{{ .Site.BaseURL }}sitemap">Sitemap</a></li>
                           </ul>
                             <p class="copyright-txt">Comprehensive Healthcare Suite of Patient Advocacy Services Designed for Patients and Consumers - <a href="#">Unblock Health</a> | Copyright &copy; 2019. All Rights Reserved.</p>
                         </div>

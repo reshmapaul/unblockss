@@ -25,14 +25,15 @@ paginate = 10
         subtitle    = "Unblock Health is a first-in-class, comprehensive suite of patient advocacy services designed for patients and consumers who are determined to be empowered in their health care journey and are no longer willing to accept traditional barriers to their information."
         btnText     = "Register for an Invitation as a Patient Advocate"
 		btnTextTwo     = "Register for an Invitation as a Hospital HIM"
-        countdownYear = "2019"
-        countdownMonth = "11"
-        countdownDay  = "28"
-        countdownHour = "20"
-        CountdownMinute ="20"
-        CountdownSeconds ="00"
-        countertoptitle ="Now accepting "
-        counterbottomtitle ="invitations requests"
+        thankyoumessage ="Thank you for your interest and patience as we review the early access invitations at this time. Stay tuned!"
+        #countdownYear = "2019"
+        #countdownMonth = "11"
+        #countdownDay  = "28"
+        #countdownHour = "20"
+        #CountdownMinute ="20"
+        #CountdownSeconds ="00"
+        #countertoptitle ="Now accepting "
+        #counterbottomtitle ="invitations requests"
 
     # About Section
     [params.about]

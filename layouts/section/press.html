@@ -1,0 +1,66 @@
+{{ partial "header.html" . }}
+{{ partial "navigation.html" . }}
+<section class="brief-outer section">
+    <div id="breadcrumbs" class="new-ofer-breadcrumbs container"><a href="/">Home</a> &gt; Press </div>
+    <div class="container">
+        {{ range .Paginator.Pages }}
+        <div class="card blog-card custom-card-row" rel="bookmark">
+            {{ if isset .Params "banner" }}
+            <div class="card-img-container">
+                <picture>
+                    <a href="{{ .Permalink }}"><img src="{{.Params.banner | absURL }}" class="card-img"></a>
+                </picture>
+            </div>
+            {{ end }}
+            <article class="card-body">
+                <a href="{{ .Permalink }}">
+                    <h2 class="card-title">{{ .Title }} </h2>
+                </a>
+                <div class="card-text ch-limit"><a href="{{ .Permalink }}">{{ .Content }}</a></div>
+                <div class="card-subtext muted-text row">
+                    <div class="col-lg-8">
+                        <a href="{{ .Permalink }}">
+                            <p>Posted <time
+                                    datetime="{{ .Date.Format " 2006-01-02 " }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+                            </p>
+                        </a>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="social-share social-count-display">
+                            <a class="fb-share-push"
+                                href="http://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}&amp;title={{ .Title }}&amp;summary={{.Content}}"
+                                target="_blank">
+                                <div class="small-bt-row"><span class="col a"><i
+                                            class="fab fa-facebook-square cl-f"></i></span> </div>
+                            </a>
+                            <a class="twitter-share-push"
+                                href="http://twitter.com/share?url={{ .Permalink }}&amp;text={{ .Title }}&amp;via={{ .Site.Social.twitter }}"
+                                target="_blank">
+                                <div class="small-bt-row"><span class="col a"><i
+                                            class="fab fa-twitter-square cl-t"></i></span></div>
+                            </a>
+                            <a class="linkedin-share-push"
+                                href="http://www.linkedin.com/shareArticle?url={{ .Permalink  }}&amp;title={{ .Title }}"
+                                target="_blank">
+                                <div class="small-bt-row"><span class="col a"><i class="fab fa-linkedin"></i></span>
+                                </div>
+                            </a>
+                            <a class="email-share-push"
+                                href="mailto:?subject=Check out this post by {{ .Params.author }}&amp;body={{ .Permalink }}"
+                                target="_blank">
+                                <div class="small-bt-row"><span class="col a"><i
+                                            class="fas fa-envelope cl-m"></i></span> </div>
+                            </a>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+        {{ end }}
+        <div class="row">
+            {{ partial "pagination" .}}
+        </div>
+    </div>
+</section>
+{{ partial "footer.html" . }}

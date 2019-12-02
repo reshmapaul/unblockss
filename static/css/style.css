@@ -111,6 +111,7 @@ a:active {
 li.nav-item.current a {
     color: #f68c29 !important;
 }
+.herobtnsection{width: 65%;margin: auto;}
 /*Style for twitter feed starts here*/
 .twitter-feed-sec p {
     line-height: 17px;
@@ -551,6 +552,9 @@ nav#top-nav{
 
 
 }
+@media (max-width: 767px) {
+.herobtnsection{width: 100%;margin: auto;}
+  }
 
 @media (min-width: 481px) and (max-width: 767px) {
 
@@ -572,6 +576,7 @@ nav#top-nav{
     right: 10px !important;
     top: 85px !important;
 }
+
 
 }
 
@@ -878,15 +883,17 @@ right: 60px;
 .hero-area {
   background-size: cover;
   background-attachment: fixed;
-  height: 100vh;
+  /*height: 100vh;*/
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 250px 0 150px 0px;
 }
 
 .hero-area h1 {
   color: #fff;
-  font-size: 44px;
+  /*font-size: 44px;*/
+  font-size: 34px;
   text-transform: uppercase;
   font-weight: bold;
   padding-bottom: 19px;
@@ -1427,6 +1434,7 @@ section#contact {
 
   .hero-area{
     height: auto !important;
+    padding: 80px 0 80px 0px !important;
   }
   .hero-area h1 {
     line-height: 32px !important;
@@ -1551,9 +1559,11 @@ section#healthinfo {
     padding: 10px;
 }
 
-   .hero-area{
-    height: auto !important;
-  }
+.hero-area{
+  height: auto !important;
+  padding: 80px 0 80px 0px !important;
+}
+/*.hero-area h1{margin-top:0px !important;}*/
 
 a.btn.btn-home {
     width: 100% !important;
@@ -1647,12 +1657,12 @@ h1.wow.fadeInDown {
     line-height: 38px !important;
 }
 a.btn.btn-home {
-    width: 80% !important;
-    float: inherit !important;
+    width: 50% !important;
+    float: left !important;
 }
-a.btn.btn-home:nth-child(2) {
+/*a.btn.btn-home:nth-child(2) {
     margin-top: 0 !important;
-}
+}*/
 a.nav-link {
     cursor: pointer;
 }

@@ -111,7 +111,7 @@ a:active {
 li.nav-item.current a {
     color: #f68c29 !important;
 }
-.herobtnsection{width: 65%;margin: auto;}
+.herobtnsection{width: 65%;margin: 50px auto 0px;}
 /*Style for twitter feed starts here*/
 .twitter-feed-sec p {
     line-height: 17px;
@@ -887,7 +887,7 @@ right: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 250px 0 150px 0px;
+  padding: 170px 0 90px 0px;
 }
 
 .hero-area h1 {

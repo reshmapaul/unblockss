@@ -550,8 +550,7 @@ $(document).ready(function () {
         $.ajax(settings).done(function (response) {
           //console.log(response);
           if (response.meta.message != "") {
-            $('#name').val('');
-            $('#email').val('');
+            $("#contactform").trigger("reset");
             var $success = $('#successfooter'); // get the reference of the div
             $success.show().html('Your Message was sent successfully');
           }

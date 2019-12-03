@@ -552,7 +552,7 @@ $(document).ready(function () {
           if (response.meta.message != "") {
             $('#name').val('');
             $('#email').val('');
-            var $success = $('#success'); // get the reference of the div
+            var $success = $('#successfooter'); // get the reference of the div
             $success.show().html('Your Message was sent successfully');
           }
         });

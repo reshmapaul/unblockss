@@ -1277,6 +1277,12 @@ a.btn.btn-home:nth-child(2):hover{
     margin-left: 0;
     text-align: left;
 }
+#errorfooter{
+    color: red !important;
+    font-size: 12px !important;
+    margin-left: 0;
+    text-align: left;
+}
 section#healthinfo {
     padding-bottom: 0;
 }
@@ -1676,6 +1682,12 @@ a.nav-link {
 }
 
 div#success {
+    text-align: center;
+    font-size: 16px;
+    padding: 15px 0 0 0;
+    color: #4CAF50;
+}
+div#successfooter {
     text-align: center;
     font-size: 16px;
     padding: 15px 0 0 0;

@@ -1277,12 +1277,6 @@ a.btn.btn-home:nth-child(2):hover{
     margin-left: 0;
     text-align: left;
 }
-#errorfooter{
-    color: red !important;
-    font-size: 12px !important;
-    margin-left: 0;
-    text-align: left;
-}
 section#healthinfo {
     padding-bottom: 0;
 }
@@ -2242,6 +2236,15 @@ div#subscribesuccess {
 }
 .single-body{
     margin-top:120px;
+}
+ .custom-card-row .card-body .ch-limit p {
+    margin: 0 0 0px!important;
+}
+.custom-card-row .card-body .ch-limit a {
+    color: #333!important;
+}
+.black-link {
+    color: #333!important;
 }
 @media screen and (pointer: coarse) {
     .card-hover {

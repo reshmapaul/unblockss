@@ -10,22 +10,22 @@ $(window).load(function () {
          $(this).addClass("Acess_wearables_read"); 
       }
       else if(id == 'data2'){
-          $(this).addClass("Need_for_transparency_show");
+          $(this).addClass("Need_for_transparency_read");
       }
       else if(id == 'data3'){
-          $(this).addClass("Correction_of_error_show");
+          $(this).addClass("Correction_of_error_read");
       }
       else if(id == 'data4'){
-          $(this).addClass("Need_for_transparency_show");
+          $(this).addClass("Rise_for_patients_read");
       }
       else if(id == 'data5'){
-          $(this).addClass("Decisions_for_care_show");
+          $(this).addClass("Decisions_for_care_read");
       }
       else if(id == 'data6'){
-          $(this).addClass("Improve_patient_satisfaction_show");
+          $(this).addClass("Improve_patient_satisfaction_read");
       }
       else if(id == 'data7'){
-          $(this).addClass("Healthcare_organizations_show");
+          $(this).addClass("Healthcare_organizations_read");
       }  
      
 });
@@ -657,8 +657,8 @@ $('.readmore-link').each(function( index ) {
           $(this).addClass("Correction_of_error_read");
         }
         else if(id == 'data4'){
-          $(this).removeClass("Need_for_transparency_show");
-          $(this).addClass("Need_for_transparency_read");
+          $(this).removeClass("Rise_for_patients_show");
+          $(this).addClass("Rise_for_patients_read");
         }
         else if(id == 'data5'){
           $(this).removeClass("Decisions_for_care_show");
@@ -691,8 +691,8 @@ $('.readmore-link').each(function( index ) {
           $(this).addClass("Correction_of_error_show");
       }
       else if(id == 'data4'){
-          $(this).removeClass("Need_for_transparency_read");
-          $(this).addClass("Need_for_transparency_show");
+          $(this).removeClass("Rise_for_patients_read");
+          $(this).addClass("Rise_for_patients_show");
       }
       else if(id == 'data5'){
           $(this).removeClass("Decisions_for_care_read");

@@ -1,5 +1,34 @@
 $(window).load(function () {
   $("#preloader").fadeOut("slow");
+  $('.morelink').each(function( index ) {
+  var id = $(this).attr('id');
+     
+      if(id == 'data0'){
+         $(this).addClass("Demand_medical_records_read");  
+      }
+      else if(id == 'data1'){
+         $(this).addClass("Acess_wearables_read"); 
+      }
+      else if(id == 'data2'){
+          $(this).addClass("Need_for_transparency_show");
+      }
+      else if(id == 'data3'){
+          $(this).addClass("Correction_of_error_show");
+      }
+      else if(id == 'data4'){
+          $(this).addClass("Need_for_transparency_show");
+      }
+      else if(id == 'data5'){
+          $(this).addClass("Decisions_for_care_show");
+      }
+      else if(id == 'data6'){
+          $(this).addClass("Improve_patient_satisfaction_show");
+      }
+      else if(id == 'data7'){
+          $(this).addClass("Healthcare_organizations_show");
+      }  
+     
+});
 });
 
 
@@ -127,36 +156,10 @@ $(document).ready(function () {
   });*/
 
   /*twitter hashtag feed end */
+ 
 
-$('.morelink').each(function( index ) {
-  var id = $(this).attr('id');    
-     if(id == 'data0'){
-         $(this).addClass("Demand_medical_records_read");  
-      }
-      else if(id == 'data1'){
-         $(this).addClass("Acess_wearables_read"); 
-      }
-      else if(id == 'data2'){
-          $(this).addClass("Need_for_transparency_read");
-      }
-      else if(id == 'data3'){
-          $(this).addClass("Correction_of_error_read");
-      }
-      else if(id == 'data4'){
-          $(this).addClass("Need_for_transparency_read");
-      }
-      else if(id == 'data5'){
-          $(this).addClass("Decisions_for_care_read");
-      }
-      else if(id == 'data6'){
-          $(this).addClass("Improve_patient_satisfaction_read");
-      }
-      else if(id == 'data7'){
-          $(this).addClass("Healthcare_organizations_read");
-      }
-});
- $('.readmore-link').each(function( index ) {
-  var id = $(this).attr('id');    
+$('.readmore-link').each(function( index ) {
+      var id = $(this).attr('id');    
       if(id == 'loadMore0'){
          $(this).addClass("Health_information_management_read");  
       }
@@ -181,7 +184,32 @@ $('.morelink').each(function( index ) {
       else if(id == 'showLess3'){
           $(this).addClass("Patients_and_carepartners_show");
       }
-});
+  });
+
+  /*$('#loadMore0').click(function(){
+    $("#loadMore0").addClass("Health_information_management_read");
+  });
+  $('#showLess0').click(function(){
+    $("#showLess0").addClass("Health_information_management_show");
+  });
+   $('#loadMore1').click(function(){
+    $("#loadMore1").addClass("Office_of_patient_experience_read");
+  });
+  $('#showLess1').click(function(){
+    $("#showLess1").addClass("Office_of_patient_experience_show");
+  });
+   $('#loadMore2').click(function(){
+    $("#loadMore2").addClass("Regulatory_read");
+  });
+  $('#showLess2').click(function(){
+    $("#showLess2").addClass("Regulatory_show");
+  });
+   $('#loadMore3').click(function(){
+    $("#loadMore3").addClass("Patients_and_carepartners_read");
+  });
+  $('#showLess3').click(function(){
+    $("#showLess3").addClass("Patients_and_carepartners_show");
+  });*/
   
   $('ul li a').click(function(){
       $('li a').removeClass("active");
@@ -613,70 +641,70 @@ $('.morelink').each(function( index ) {
     if ($(this).hasClass("less")) {
       $(this).removeClass("less");
         if(id == 'data0'){
-          $(this).removeClass("Demand_medical_records_read");
-          $(this).addClass("Demand_medical_records_show");  
+          $(this).removeClass("Demand_medical_records_show");
+          $(this).addClass("Demand_medical_records_read");  
         }
         else if(id == 'data1'){
-          $(this).removeClass("Acess_wearables_read");
-          $(this).addClass("Acess_wearables_show");
+          $(this).removeClass("Acess_wearables_show");
+          $(this).addClass("Acess_wearables_read");
         }
         else if(id == 'data2'){
-          $(this).removeClass("Need_for_transparency_read");
-          $(this).addClass("Need_for_transparency_show");
+          $(this).removeClass("Need_for_transparency_show");
+          $(this).addClass("Need_for_transparency_read");
         }
         else if(id == 'data3'){
-          $(this).removeClass("Correction_of_error_read");
-          $(this).addClass("Correction_of_error_show");
+          $(this).removeClass("Correction_of_error_show");
+          $(this).addClass("Correction_of_error_read");
         }
         else if(id == 'data4'){
-          $(this).removeClass("Need_for_transparency_read");
-          $(this).addClass("Need_for_transparency_show");
+          $(this).removeClass("Need_for_transparency_show");
+          $(this).addClass("Need_for_transparency_read");
         }
         else if(id == 'data5'){
-          $(this).removeClass("Decisions_for_care_read");
-          $(this).addClass("Decisions_for_care_show");
+          $(this).removeClass("Decisions_for_care_show");
+          $(this).addClass("Decisions_for_care_read");
         }
         else if(id == 'data6'){
-          $(this).removeClass("Improve_patient_satisfaction_read");
-          $(this).addClass("Improve_patient_satisfaction_show");
+          $(this).removeClass("Improve_patient_satisfaction_show");
+          $(this).addClass("Improve_patient_satisfaction_read");
         }
         else if(id == 'data7'){
-          $(this).removeClass("Healthcare_organizations_read");
-          $(this).addClass("Healthcare_organizations_show");
+          $(this).removeClass("Healthcare_organizations_show");
+          $(this).addClass("Healthcare_organizations_read");
         }
         $(this).html(moretext);
     }else {
       if(id == 'data0'){
-         $(this).removeClass("Demand_medical_records_show");
-         $(this).addClass("Demand_medical_records_read");  
+         $(this).removeClass("Demand_medical_records_read");
+         $(this).addClass("Demand_medical_records_show");  
       }
       else if(id == 'data1'){
-         $(this).removeClass("Acess_wearables_show");
-         $(this).addClass("Acess_wearables_read"); 
+         $(this).removeClass("Acess_wearables_read");
+         $(this).addClass("Acess_wearables_show"); 
       }
       else if(id == 'data2'){
-          $(this).removeClass("Need_for_transparency_show");
-          $(this).addClass("Need_for_transparency_read");
+          $(this).removeClass("Need_for_transparency_read");
+          $(this).addClass("Need_for_transparency_show");
       }
       else if(id == 'data3'){
-          $(this).removeClass("Correction_of_error_show");
-          $(this).addClass("Correction_of_error_read");
+          $(this).removeClass("Correction_of_error_read");
+          $(this).addClass("Correction_of_error_show");
       }
       else if(id == 'data4'){
-          $(this).removeClass("Need_for_transparency_show");
-          $(this).addClass("Need_for_transparency_read");
+          $(this).removeClass("Need_for_transparency_read");
+          $(this).addClass("Need_for_transparency_show");
       }
       else if(id == 'data5'){
-          $(this).removeClass("Decisions_for_care_show");
-          $(this).addClass("Decisions_for_care_read");
+          $(this).removeClass("Decisions_for_care_read");
+          $(this).addClass("Decisions_for_care_show");
       }
       else if(id == 'data6'){
-          $(this).removeClass("Improve_patient_satisfaction_show");
-          $(this).addClass("Improve_patient_satisfaction_read");
+          $(this).removeClass("Improve_patient_satisfaction_read");
+          $(this).addClass("Improve_patient_satisfaction_show");
       }
       else if(id == 'data7'){
-          $(this).removeClass("Healthcare_organizations_show");
-          $(this).addClass("Healthcare_organizations_read");
+          $(this).removeClass("Healthcare_organizations_read");
+          $(this).addClass("Healthcare_organizations_show");
       }
       $(this).addClass("less");
       $(this).html(lesstext);
@@ -704,6 +732,7 @@ $('.morelink').each(function( index ) {
     $('#showLess' + index).click(function () {
       $('#showLess' + index).hide();
       x1 = (x - 5 < 0) ? 2 : 1;
+      console.log(x1);
       $('#myList' + index + ' li').not(':lt(' + x1 + ')').hide();
       $('#loadMore' + index).show();
 

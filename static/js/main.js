@@ -127,9 +127,8 @@ $(document).ready(function () {
   });*/
 
   /*twitter hashtag feed end */
- 
 
-  $('#loadMore0').click(function(){
+$('#loadMore0').click(function(){
     $("#loadMore0").addClass("Health_information_management_read");
   });
   $('#showLess0').click(function(){
@@ -495,7 +494,9 @@ $(document).ready(function () {
     else {
       $('#messagealert').css('display', 'none');
     }
-    var description = 'From QCF, Subject: '+subject+', Message: '+message;
+    var description = 'Subject: '+subject;
+    description += '&#013;&#010;';
+    description += 'Message: '+message;
     var form = new FormData();
     form.append("grant_type", "client_credentials");
     form.append("client_id", "93d80a68-5ad0-878d-a787-5da44425070f");

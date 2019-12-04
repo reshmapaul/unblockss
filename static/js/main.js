@@ -128,30 +128,60 @@ $(document).ready(function () {
 
   /*twitter hashtag feed end */
 
-$('#loadMore0').click(function(){
-    $("#loadMore0").addClass("Health_information_management_read");
-  });
-  $('#showLess0').click(function(){
-    $("#showLess0").addClass("Health_information_management_show");
-  });
-   $('#loadMore1').click(function(){
-    $("#loadMore1").addClass("Office_of_patient_experience_read");
-  });
-  $('#showLess1').click(function(){
-    $("#showLess1").addClass("Office_of_patient_experience_show");
-  });
-   $('#loadMore2').click(function(){
-    $("#loadMore2").addClass("Regulatory_read");
-  });
-  $('#showLess2').click(function(){
-    $("#showLess2").addClass("Regulatory_show");
-  });
-   $('#loadMore3').click(function(){
-    $("#loadMore3").addClass("Patients_and_carepartners_read");
-  });
-  $('#showLess3').click(function(){
-    $("#showLess3").addClass("Patients_and_carepartners_show");
-  });
+$('.morelink').each(function( index ) {
+  var id = $(this).attr('id');    
+     if(id == 'data0'){
+         $(this).addClass("Demand_medical_records_read");  
+      }
+      else if(id == 'data1'){
+         $(this).addClass("Acess_wearables_read"); 
+      }
+      else if(id == 'data2'){
+          $(this).addClass("Need_for_transparency_read");
+      }
+      else if(id == 'data3'){
+          $(this).addClass("Correction_of_error_read");
+      }
+      else if(id == 'data4'){
+          $(this).addClass("Need_for_transparency_read");
+      }
+      else if(id == 'data5'){
+          $(this).addClass("Decisions_for_care_read");
+      }
+      else if(id == 'data6'){
+          $(this).addClass("Improve_patient_satisfaction_read");
+      }
+      else if(id == 'data7'){
+          $(this).addClass("Healthcare_organizations_read");
+      }
+});
+ $('.readmore-link').each(function( index ) {
+  var id = $(this).attr('id');    
+      if(id == 'loadMore0'){
+         $(this).addClass("Health_information_management_read");  
+      }
+      else if(id == 'loadMore1'){
+         $(this).addClass("Office_of_patient_experience_read"); 
+      }
+      else if(id == 'loadMore2'){
+          $(this).addClass("Regulatory_read");
+      }
+      else if(id == 'loadMore3'){
+          $(this).addClass("Patients_and_carepartners_read");
+      }
+      else if(id == 'showLess0'){
+         $(this).addClass("Health_information_management_show");  
+      }
+      else if(id == 'showLess1'){
+         $(this).addClass("Office_of_patient_experience_show"); 
+      }
+      else if(id == 'showLess2'){
+          $(this).addClass("Regulatory_show");
+      }
+      else if(id == 'showLess3'){
+          $(this).addClass("Patients_and_carepartners_show");
+      }
+});
   
   $('ul li a').click(function(){
       $('li a').removeClass("active");
@@ -674,7 +704,6 @@ $('#loadMore0').click(function(){
     $('#showLess' + index).click(function () {
       $('#showLess' + index).hide();
       x1 = (x - 5 < 0) ? 2 : 1;
-      console.log(x1);
       $('#myList' + index + ' li').not(':lt(' + x1 + ')').hide();
       $('#loadMore' + index).show();
 

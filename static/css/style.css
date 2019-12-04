@@ -1294,6 +1294,12 @@ section#healthinfo .block {
 select#herobtn {
     height: 50px;
 }
+.next-article-date{
+display: block;
+    color: #7a7b7c;
+    font-size: 15px;
+    margin: 0;
+}
 a.morelink {
     display: block;
     background: #1b83b8;

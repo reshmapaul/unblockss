@@ -42,13 +42,15 @@
                 <!--Continue reading at <a style="text-decoration: underline;" target="_blank"
                     href="{{ .Params.cleanUrl }}">{{ .Params.sourceBaseUrl }}</a>-->
             </div>
+             {{ with .PrevInSection }}
             <h3 class="text-center next-ttl">Next Article</h3>
                 <nav class="side-padding">
-                    {{ with .PrevInSection }}
+                   
                     {{ .Render "li-next" }}
-                    {{ end }}
+                   
 
                 </nav>
+             {{ end }}
             </div>
         </article>
     </main>

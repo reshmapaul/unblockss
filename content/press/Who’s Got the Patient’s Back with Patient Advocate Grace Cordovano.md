@@ -24,4 +24,4 @@ That’s not to say that the people working inside of this industry are bad. Not
 
 I don’t blame anyone for this. If you look at the history of how the system evolved, it makes a ton of sense that we’ve ended up here. And I’m encouraged by some of the emerging trends in the industry to pay for value, coordinate care and address the social determinants of health (SDOH). We’ll get better, but it’ll take time.
 
-In the meantime, what will I do if I or one of my loved ones gets sick? Like really, chronically sick where we need tight coordination across teams of caregivers from many organizations right now?
+In the meantime, what will I do if I or one of my loved ones gets sick? Like really, chronically sick where we need tight coordination across teams of caregivers from many organizations right now? <br><br><a target="_blank" href=https://thehcbiz.com/patient-advocate-grace-cordovano/>Read on thehcbiz.com</a>

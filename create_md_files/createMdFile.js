@@ -16,14 +16,14 @@ getRequest = (options, json = true) => new Promise((resolve, reject) => {
     });
 });
 
-async function main() {
+async function main(projectId, type) {
     // Setting URL and headers for request
     const headers = {
         'Content-Type': 'application/json',
         'Authorization': CONFIGURATION.authToken
     }
     const options = {
-        url: CONFIGURATION.apiUrl + 'projects/' + CONFIGURATION.projectId + '/work_packages',
+        url: CONFIGURATION.apiUrl + 'projects/' + projectId + '/work_packages?filters=[{ "updatedAt": { "operator": ">t-", "values":[1]}}]',
         method: 'GET',
         headers: headers,
     }
@@ -36,10 +36,10 @@ async function main() {
         for (let i = 0; i < totalLength; i++) {
             offset = i + 1;
             if (i === Number(totalLength - 1)) {
-                options.url = CONFIGURATION.apiUrl + 'projects/' + CONFIGURATION.projectId + '/work_packages?offset=' + offset + '&pageSize=' + total;
+                options.url = CONFIGURATION.apiUrl + 'projects/' + projectId + '/work_packages?offset=' + offset + '&pageSize=' + total + '&filters=[{ "updatedAt": { "operator": ">t-", "values":[1]}}]';
             } else {
                 total = total - 50;
-                options.url = CONFIGURATION.apiUrl + 'projects/' + CONFIGURATION.projectId + '/work_packages?offset=' + offset + '&pageSize=' + 50;
+                options.url = CONFIGURATION.apiUrl + 'projects/' + projectId + '/work_packages?offset=' + offset + '&pageSize=' + 50 + '&filters=[{ "updatedAt": { "operator": ">t-", "values":[1]}}]';
             }
             await getRequest(options).then(async function (result) {
                 workPackages = result['_embedded']['elements'];
@@ -96,7 +96,7 @@ async function main() {
                                 } else {
                                     imagePath = "images/default.png";
                                     mdContent = mdContent + "banner: " + '"' + imagePath + '"' + "\n";
-                                    fs.writeFile('content/news/' + mdFileName + '.md', mdContent, function (err) {
+                                    fs.writeFile('content/' + type + '/' + mdFileName + '.md', mdContent, function (err) {
                                         if (err) { throw err } else {
                                             console.log(mdFileName, 'Saved successfully!');
                                         }
@@ -148,27 +148,31 @@ async function main() {
                                     });
                                 }
                                 if (ogSiteName) {
-                                    mdContent = mdContent + "breadcrumbs:\n - Home\n - News\n - " + ogSiteName + "\n - "+mdFileName+"\n";
-                                    mdContent = mdContent + "breadcrumbLinks:\n - / \n - /news\n - /\n - / \n";
+                                    const siteName = ogSiteName.replace(/\s/g, '-');
+                                    const sourcePath = '/' + type + '/source/' + siteName.toLowerCase();
+                                    mdContent = mdContent + "breadcrumbs:\n - Home\n - " + type.charAt(0).toUpperCase() + type.slice(1) + "\n - " + ogSiteName + "\n - " + mdFileName + "\n";
+                                    mdContent = mdContent + "breadcrumbLinks:\n - / \n - /" + type + "\n - " + sourcePath + "\n - / \n";
+                                    mdContent = mdContent + "source: " + '"' + ogSiteName + '"' + "\n";
+                                    mdContent = mdContent + type + "/source: " + '"' + ogSiteName + '"' + "\n";
                                 } else {
-                                    mdContent = mdContent + "breadcrumbs:\n - Home\n - News\n - "+mdFileName+"\n";
-                                    mdContent = mdContent + "breadcrumbLinks:\n - / \n - /news\n - / \n";
+                                    mdContent = mdContent + "breadcrumbs:\n - Home\n - " + type.charAt(0).toUpperCase() + type.slice(1) + "\n - " + mdFileName + "\n";
+                                    mdContent = mdContent + "breadcrumbLinks:\n - / \n - /" + type + "\n - / \n";
                                 }
                                 mdContent = mdContent + "---\n" + item['description']['raw'] + "\n";
-                                if (fs.existsSync('content/news/' + mdFileName + '.md')) {
-                                    fs.unlink('content/news/' + mdFileName + '.md', (err) => {
+                                if (fs.existsSync('content/' + type + '/' + mdFileName + '.md')) {
+                                    fs.unlink('content/' + type + '/' + mdFileName + '.md', (err) => {
                                         if (err) {
                                             console.error(err)
                                             return
                                         }
-                                        fs.writeFile('content/news/' + mdFileName + '.md', mdContent, function (err) {
+                                        fs.writeFile('content/' + type + '/' + mdFileName + '.md', mdContent, function (err) {
                                             if (err) { throw err } else {
                                                 console.log(mdFileName, 'Saved successfully!');
                                             }
                                         });
                                     });
                                 } else {
-                                    fs.writeFile('content/news/' + mdFileName + '.md', mdContent, function (err) {
+                                    fs.writeFile('content/' + type + '/' + mdFileName + '.md', mdContent, function (err) {
                                         if (err) { throw err } else {
                                             console.log(mdFileName, 'Saved successfully!');
                                         }
@@ -189,4 +193,15 @@ async function main() {
     })
 }
 
-main();
+const fetchNews = main(CONFIGURATION.newsProjectId, 'news');
+fetchNews.then(function (newsResponse) {
+    console.log('news completed..');
+    const fetchEvents = main(CONFIGURATION.eventProjectId, 'events');
+    fetchEvents.then(function (eventResponse) {
+        console.log('events completed..');
+        const fetchPress = main(CONFIGURATION.eventProjectId, 'press');
+        fetchPress.then(function (pressResponse) {
+            console.log('press completed..');
+        });
+    });
+});

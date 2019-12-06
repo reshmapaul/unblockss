@@ -199,7 +199,7 @@ fetchNews.then(function (newsResponse) {
     const fetchEvents = main(CONFIGURATION.eventProjectId, 'events');
     fetchEvents.then(function (eventResponse) {
         console.log('events completed..');
-        const fetchPress = main(CONFIGURATION.eventProjectId, 'press');
+        const fetchPress = main(CONFIGURATION.pressProjectId, 'press');
         fetchPress.then(function (pressResponse) {
             console.log('press completed..');
         });

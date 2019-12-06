@@ -220,3 +220,5 @@ paginate = 10
         enable      = true
         title       = "Become an Unblock Health early adopter and pioneer"
         subtitle    = "It's time to Unblock Health! Register to request your pre-launch, early access invitation today!"
+    [taxonomies]
+        news_sources = "news/source"

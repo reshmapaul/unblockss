@@ -217,17 +217,27 @@ $('.readmore-link').each(function( index ) {
    });
   var pathname = window.location.pathname;
   
-  if (pathname == '/faqs/' || pathname.includes('/news/')) {
+  if (pathname == '/faqs/') {
     $('#top-nav').addClass('confirmregistration');
     $('#top-nav').addClass('animated');
     $('#current').addClass('current');
      
     //$('#commonfooter').addClass('confirm-page-footer');
   }
+  if(pathname.includes('/news/')) {
+    $('#top-nav').addClass('confirmregistration');
+    $('#current').removeClass('current');
+    $('#news').addClass('current'); 
+  }
   if(pathname.includes('/press/')) {
     $('#top-nav').addClass('confirmregistration');
     $('#current').removeClass('current');
     $('#press').addClass('current'); 
+  }
+  if(pathname.includes('/events/')) {
+    $('#top-nav').addClass('confirmregistration');
+    $('#current').removeClass('current');
+    $('#events').addClass('current'); 
   }
   if(pathname == '/faqs/'){
     $('#current').removeClass('current');
@@ -766,7 +776,31 @@ $('.readmore-link').each(function( index ) {
       }
     }
   }
-  
+  $('#subscribe-submit').prop('disabled', 'disabled');
+  $('#subscribe-submit').addClass('is-disabled');
+  $('#subscribe').on('blur keyup change', 'textarea,input', function (event) {
+    validateForm('#subscribe', '#subscribe-submit');
+  });
+  $('#contact-submit-live').prop('disabled', 'disabled');
+  $('#contact-submit-live').addClass('is-disabled');
+  $('#quickcontact').on('blur keyup change', 'textarea,input', function (event) {
+    validateForm('#quickcontact', '#contact-submit-live');
+  });
+  $('#contact-submit').prop('disabled', 'disabled');
+  $('#contact-submit').addClass('is-disabled');
+  $('#contactform').on('blur keyup change', 'textarea,input', function (event) {
+    validateForm('#contactform', '#contact-submit');
+  });
+  function validateForm(id,buttonId) {
+    var valid = $(id).validate().checkForm();
+    if (valid) {
+      $(buttonId).prop('disabled', false);
+      $(buttonId).removeClass('is-disabled');
+    } else {
+      $(buttonId).prop('disabled', 'disabled');
+      $(buttonId).addClass('is-disabled');
+    }
+  }
 });
 
 

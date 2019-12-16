@@ -52,8 +52,26 @@ async function main(projectId, type) {
                             sourceBaseUrl = sourceBaseUrl.split('/');
                             sourceBaseUrl = sourceBaseUrl[2];
                         }
-                        mdContent = "--- \ntitle: " + '"' + item['subject'] + '"' + "\ncleanUrl: " + '"' + item[CONFIGURATION.cleanUrlField] + "" + '"' + "\ndate: " + '"' + item['createdAt'] + "" + '"' + "\n";
+                        mdContent = "--- \ntitle: " + '"' + item['subject'] + '"' + "\ncleanUrl: " + '"' + item[CONFIGURATION.cleanUrlField] + "" + '"' + "\n";
+                        if (type !== 'events') {
+                            mdContent = mdContent + "date: " + '"' + item['createdAt'] + "" + '"' + "\n";
+                        }
                         mdContent = mdContent + "sourceBaseUrl: " + '"' + sourceBaseUrl + '"' + "\n";
+                        if (item['startDate']) {
+                            mdContent = mdContent + "date: " + item['startDate'] + "\n";
+                            mdContent = mdContent + "eventdate: " + item['startDate'] + "\n";
+                            mdContent = mdContent + "publishdate: " + item['createdAt'] + "\n";
+                        }
+                        if (item['dueDate']) {
+                            mdContent = mdContent + "enddate: " + item['dueDate'] + "\n";
+                        }
+                        if (item[CONFIGURATION.locationField]) {
+                            mdContent = mdContent + "location: " + '"' + item[CONFIGURATION.locationField] + '"' + "\n";
+                        }
+                        if (type === 'events') {
+                            mdContent = mdContent + "layout: " + '"' + "event" + '"' + "\n";
+                            mdContent = mdContent + "sub: " + '"' + "events" + '"' + "\n";
+                        }
                         let attachMentUrl = item['_links']['attachments']['href'];
                         attachMentUrl = CONFIGURATION.baseUrl + attachMentUrl;
                         options.url = attachMentUrl;

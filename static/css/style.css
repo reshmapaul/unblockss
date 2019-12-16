@@ -1464,13 +1464,13 @@ a.btn.btn-home:nth-child(2) {
 .call-to-action .block .input-group input{
   width: 100% !important;
   float: inherit !important;
-  margin-bottom: 15px !important;
+  margin-bottom: 25px !important;
 }
 input#subscribe-submit {
     height: 50px;
     width: 100%;
 }
-#subscribe .error {
+#subscribe .custom-error {
     position: absolute;
     bottom: 57px !important;
     margin-left: 15px !important;
@@ -1526,7 +1526,10 @@ input#subscribe-submit {
     width: 92%;
     margin-top: 10px;
 }
-
+#subscribe .input-group {
+  position: relative;
+  width: 100%;
+}
   .service .block h3{
     min-height: 81px;
   }
@@ -1783,11 +1786,33 @@ input#subscribe-submit {
 form#subscribe {
     margin-top: 35px;
 }
-#subscribe .error{
+/* #subscribe .error{
     position: absolute;
     bottom: -30px;
     margin-left: 10px !important;
     color: #fff !important;
+} */
+#subscribe .input-group{
+  position: relative;
+  width: 250px;
+}
+#subscribe label.error {
+  color: white !important;
+  font-size: 12px !important;
+  margin-left: 0;
+  text-align: left;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 50px;
+}
+#contactform label.error {
+  color: white !important;
+  font-size: 12px !important;
+  margin-left: 0;
+  text-align: left;
+  width: 100%;
+  left: 0;
 }
 div#subscribesuccess {
     font-size: 18px;
@@ -2185,6 +2210,8 @@ div#subscribesuccess {
 .social-count-display .small-bt-row .col i {
     font-size: 16px!important;
     color: #0077b5;
+    min-width: 18px!important;
+    text-align: center;
 }
 
 .cl-f {
@@ -2343,10 +2370,6 @@ div#subscribesuccess {
 .iconsec i:nth-child(1) a:hover{
 color: #0fa9ef;
 }
-
-
-
-
 p.msgcontent {
     color: #ffb570 !important;
     font-size: 36px;
@@ -2355,4 +2378,257 @@ p.msgcontent {
     padding-bottom: 85px;
     text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
     padding-top: 85px;
+}
+.post-title {
+  font-size: 24px!important;
+  font-weight: 500!important;
+  margin-bottom: 5px!important;
+  line-height: 1.2;
+  margin: 0 0 0.4em 0;
+}
+.new-ofer-btn-1 {
+  background: #f8f8f8;
+  padding: 8px 9px 8px 9px;
+  border: 1px solid #dddddd;
+  color: #222!important;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  outline: 0px!important;
+  border-radius: 3px;
+  margin-left: 5px;
+  margin-bottom: 10px;
+  text-decoration: none!important;
+  display: inline-block;
+}
+.new-ofer-btn-1 i, .top-10-most-row .nav-link i, .event-date-holder i, .event-location-holder i {
+	width: 17px;
+	text-align: center;
+} 
+
+
+/* new event structure > starts  */
+.date-event-row {
+  min-height: 190px;
+}
+.date-event-col-1 {
+ float:left;
+ width:18%;
+ margin-right: 2%;
+ position: relative;
+   top: 5px;
+}
+.date-event-col-1 .card-title {
+   margin-top: 5px !important;
+   font-size: 22px !important;
+}
+.date-display {
+ min-height: 125px;
+ background: #e9e9e9;
+ border-radius: 5px;
+ overflow:hidden;
+ text-align: center;
+ color: #000;
+}
+.date-event-mo {
+ background:#3a9e53;
+ text-align: center;
+ font-size: 18px;
+ line-height: 20px;
+ font-weight: 600;
+ color:#fff;
+ padding: 4px 3px 6px 3px;
+}
+.date-event-dt {
+ font-size: 60px;
+ line-height: 62px;
+ font-weight: 600;
+ color: #000;
+}
+.date-event-da {
+ font-size: 14px;
+ line-height: 16px;
+ font-weight: 600;
+ color: #000;
+ margin-top: 3px;
+}
+.date-event-col-2 {
+ float:left;
+ width:80%;
+ color: #333;
+}
+.date-event-col-2 a {
+ color: #333;
+}
+.date-event-col-2 a:hover {
+ color: #000;
+}
+.event-date-holder {
+ font-size: 16px;
+ line-height: 19px;
+ margin-top:8px;	
+ margin-bottom:6px;	
+}
+.event-location-holder {
+ font-size: 17px;
+ line-height: 19px;
+ font-style: italic;
+ margin-bottom:8px;	
+ word-break: break-all;
+}
+.event-topic-holder {
+ margin-top:7px;
+ margin-bottom:4px;
+ font-size: 13px;
+ color:#333;		
+}
+.event-topic-holder span {
+ display: inline-block;
+ background: #e9e9e9;
+ border-radius: 3px;
+ padding: 2px 7px 3px 7px;
+ margin-right: 5px;
+ margin-bottom: 6px;
+}
+
+.count-calendar-holder .new-ofering-row-2-cell {
+   width: 100%;
+   padding: 0px;
+   text-align: left;	
+}
+.add-cal-btn-1 {
+ font-size:18px;
+ color: #222;
+ background:#e9e9e9;
+ outline: 0!important;
+ border:1px solid #dbdbdb;
+ padding: 9px 15px 11px 15px;
+ cursor: pointer;
+ border-radius: 5px;
+ float:right;
+}
+.add-cal-btn-2 {
+ background: #f8f8f8;
+   padding: 8px 9px 8px 9px;
+   border: 1px solid #dddddd;
+   color: #222!important;
+   font-size: 15px;
+   line-height: 18px;
+   font-weight: 400;
+   outline: 0px!important;
+   border-radius: 3px;
+   margin-left: 5px;
+   margin-bottom: 10px;
+   text-decoration: none!important;
+ display: inline-block;
+ float:right;
+}
+.overflow-v {
+ overflow: visible!important;
+}
+.overflow-h {
+ overflow: hidden!important;
+}
+@media (max-width:767px) {
+.date-event-col-1 {
+ width:28%;
+ margin-right: 3%;
+}
+.date-event-col-2 {
+ width:69%;
+}
+.date-event-mo {
+ font-size: 15px;
+   line-height: 20px;
+}
+.date-event-dt {
+ font-size: 47px;
+   line-height: 49px;
+}
+.date-event-da {
+ font-size: 15px;
+ line-height: 18px;
+}
+.date-display {
+   min-height: auto;
+   padding-bottom: 10px;
+}	
+}
+@media (max-width:480px) {
+.date-event-col-1 {
+ width:138px;
+}
+.date-event-col-2 {
+ width:100%;
+}
+#subscribe .input-group {
+  position: relative;
+  width: 100%;
+}
+}
+/* new event structure < ends  */
+
+
+/* new event details < starts  */
+.ev-det-date-display {
+ position: absolute;
+ width:102px;
+ margin-right:5px;
+ margin-top:5px;
+}
+.ev-det-date-display .date-event-mo {
+   font-size: 14px;
+ line-height: 18px;
+}
+.ev-det-date-display .date-event-da {
+   font-size: 13px;
+ line-height: 15px;
+}
+.ev-det-date-bt {
+ /*width:170px;*/
+ min-width:178px;
+}
+@media (max-width:1199px) {
+.ev-det-date-display {
+ width: 84px;
+}
+.ev-det-date-display {
+   min-height: auto;
+   padding-bottom: 10px;
+   z-index: 8;
+   margin-top: 34px;
+}
+.ev-det-date-display .date-event-dt {
+   font-size: 44px;
+ line-height: 46px;
+}
+.ev-det-date-display .date-event-da {
+   font-size: 12px;
+   line-height: 13px;
+}
+.ev-det-date-display .date-event-mo {
+   font-size: 12px;
+   line-height: 14px;
+}
+}
+@media (max-width:767px) {
+.ev-det-date-display {
+ margin-top: -110px;
+ margin-left: 15px;
+}
+}
+/* new event details < ends  */
+.social-share{
+  float: left;
+}
+.social-share a{
+  color: #fff !important;
+}
+.no-events-found{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+.is-disabled{
+  pointer-events: none;
 }

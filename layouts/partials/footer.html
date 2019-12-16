@@ -16,29 +16,27 @@
                     <h3>Contact Us</h3>
                     <form method="POST"  id="contactform">
                         <div class="input-field">
-                            <input type="text" class="form-control" placeholder="Name*" name="Name" 
-                                 id="quickname">
-                            <span class="error Contact_name_error" id="quicknamealert" style="display: none;">Please Enter Name</span>
+                            <input type="text" class="form-control" placeholder="Name*" name="Name" id="quickname" required>
                         </div>
                         <div class="input-field">
-                            <input type="email" class="form-control" placeholder="Email Address*" name="Email" id="quickemail">
-                            <span class="error Contact_email_error" id="quickemailalert" style="display: none;">Please Enter Email.</span>
+                            <input type="email" class="form-control" placeholder="Email Address*" name="Email" id="quickemail" required>
                         </div>
                         <div class="input-field">
-                            <input type="text" class="form-control" placeholder="Subject*" name="Subject" id="quicksubject">
-                            <span class="error Contact_subject_error" id="quicksubjectalert" style="display: none;">Please Enter Subject.</span>
+                            <input type="text" class="form-control" placeholder="Subject*" name="Subject" id="quicksubject" required>
                         </div>
                         <div class="input-field">
-                            <textarea class="form-control" placeholder="Message" rows="3" name="Message" id="quickmessage"></textarea>
-                            <span class="error Contact_message_error" id="messagealert" style="display: none;">Please Enter Message*.</span>
+                            <textarea class="form-control" placeholder="Message*" rows="3" name="Message" id="quickmessage" required></textarea>
                         </div>
                         <input type="hidden" name="_subject" value="[UnBlock Health] - Contact Form Submission" />
-
                         <input id="contact-submit" type="button" class="btn btn-send" value="Send">   
                             <!--<button class="btn btn-send" id="contact-submit" type="submit">Send</button>-->
                         </form>
-                            <div id="successfooter" style="display:none;"></div>
-                            <div id="errorfooter" style="display:none;"></div>
+                        <div id="successfooter" style="display:none;">
+                            
+                        </div>
+                        <div id="errorfooter" style="display:none;">
+                           
+                        </div>
                         </div>
                     </div>
                 </div>

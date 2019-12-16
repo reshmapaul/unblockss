@@ -1,0 +1,112 @@
+<div class="card blog-card" rel="bookmark">
+  <article class="card-body date-event-row">
+    {{ if (eq .Params.sub "events") }}
+    {{ $startDate :=  dateFormat "January 2, 2006" .Params.date }}
+    {{ $endDate :=  dateFormat "January 2, 2006" .Params.enddate }}
+    {{ $day := dateFormat "Monday" .Params.date }}
+    {{ $month := dateFormat "January" .Params.date }}
+    {{ $daydate := dateFormat "02" .Params.date }}
+    <div class="date-event-col-1">
+      {{ if ge .Date.Unix now.Unix  }}
+      {{ with  .OutputFormats.Get "Calendar" -}}
+      <a href="{{ .Permalink | safeURL }}">
+        <div class="date-display">
+          <div class="date-event-mo">{{ $month }}</div>
+          <div class="date-event-dt">{{ $daydate }}</div>
+          <div class="date-event-da">{{ $day }}</div>
+        </div>
+      </a>
+      {{- end }}
+      {{ else }}
+      <div class="date-display">
+        <div class="date-event-mo">{{ $month }}</div>
+        <div class="date-event-dt">{{ $daydate }}</div>
+        <div class="date-event-da">{{ $day }}</div>
+      </div>
+      {{ end }}
+    </div>
+    <div class="date-event-col-2">
+      <!-- title -->
+      <h2 class="card-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+      {{ if eq $startDate  $endDate }}
+      <div class="event-date-holder"><i class="far fa-calendar-alt"></i> {{ $endDate }}
+        {{ if le .Date.Unix now.Unix   }}
+        {{ if ge .Params.enddate  (now.Format "2006-01-02")}}
+        <span class="badge badge-success">Live</span>
+        {{ else }}
+        <span> ({{ add (div (sub now.Unix .Date.Unix) 86400) 1}} Days ago)</span>
+        {{ end }}
+        {{ else }}
+        {{ $daycount := (div (sub .Date.Unix now.Unix) 86400) }}
+        {{ if eq $daycount 0}}
+        <span> (in {{ add (div (sub .Date.Unix now.Unix) 86400) 1}} Day) </span>
+        {{ else }}
+        <span> (in {{ add (div (sub .Date.Unix now.Unix) 86400) 1}} Days)</span>
+        {{ end }}
+        {{ end }}</div>
+      {{else}}
+      {{ if eq (dateFormat "2006" .Params.date) (dateFormat "2006" .Params.enddate) }}
+      <div class="event-date-holder"><i class="far fa-calendar-alt"></i> {{ dateFormat "January 2" .Params.date }}
+        to {{ $endDate }}
+        {{ if le .Date.Unix now.Unix   }}
+        {{ if ge .Params.enddate  (now.Format "2006-01-02")}}
+        <span class="badge badge-success">Live</span>
+        {{ else }}
+        <span> ({{ add (div (sub now.Unix .Date.Unix) 86400) 1}} Days ago)</span>
+        {{ end }}
+        {{ else }}
+        {{ $daycount := (div (sub .Date.Unix now.Unix) 86400) }}
+        {{ if eq $daycount 0}}
+        <span> (in {{ add (div (sub .Date.Unix now.Unix) 86400) 1}} Day) </span>
+        {{ else }}
+        <span> (in {{ add (div (sub .Date.Unix now.Unix) 86400) 1}} Days)</span>
+        {{ end }}
+        {{ end }}</div>
+      {{ else }}
+      <div class="event-date-holder"><i class="far fa-calendar-alt"></i> {{ $startDate }} to {{ $endDate }}
+        {{ if le .Date.Unix now.Unix   }}
+        {{ if ge .Params.enddate  (now.Format "2006-01-02")}}
+        <span class="badge badge-success">Live</span>
+        {{ else }}
+        <span> ({{ add (div (sub now.Unix .Date.Unix) 86400) 1}} Days ago)</span>
+        {{ end }}
+        {{ else }}
+        {{ $daycount := (div (sub .Date.Unix now.Unix) 86400) }}
+        {{ if eq $daycount 0}}
+        <span> (in {{ add (div (sub .Date.Unix now.Unix) 86400) 1}} Day) </span>
+        {{ else }}
+        <span> (in {{ add (div (sub .Date.Unix now.Unix) 86400) 1}} Days)</span>
+        {{ end }}
+        {{ end }}</div>
+      {{ end }}
+      {{end}}
+      {{ if  (ne .Params.location "null") -}}
+      <div class="event-location-holder"><i class="fas fa-map-marker-alt"></i> {{ .Params.location }}</div>
+      {{ end -}}
+      <div class="count-calendar-holder row">
+        <div class="col-md-12 pull-right">
+          {{ if ge .Params.enddate  (now.Format "2006-01-02")}}
+          {{ with  .OutputFormats.Get "Calendar" -}}
+          <a class="new-ofer-btn-1 pull-right" href="{{ .Permalink | safeURL }}"> <i class="far fa-calendar-alt"></i>
+            Add to Calendar</a>
+          {{end }}
+          {{ end }}
+        </div>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </article>
+  {{ if isset .Params "banner" }}
+  <div class="card-img-container">
+    {{ if ne .Params.banner "Nil" }}
+    <a href="{{ .Permalink }}"><img src="{{.Params.banner }}" class="card-img"
+        onerror="this.onerror=null; this.src='/img/content/post/no-image-article.jpg'" /></a> {{else}}
+    <a href="{{ .Permalink }}"><img src="/img/content/post/no-image-article.jpg" class="card-img"
+        onerror="this.onerror=null; this.src='/img/content/post/no-image-article.jpg'" /></a> {{end}}
+  </div>
+  {{ else }}
+  <a href="{{ .Permalink }}"><img src="/img/content/post/no-image-article.jpg" class="card-img"
+      onerror="this.onerror=null; this.src='/img/content/post/no-image-article.jpg'" /></a> {{ end }}
+</div>
+<!-- New event design ends -->
+{{ end }}

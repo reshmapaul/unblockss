@@ -3,7 +3,7 @@
         <div class="container headshot-container">
           <div class="col-lg-8 col-md-12 pt-1">
             <div itemscope="" itemtype="http://schema.org/MedicalOrganization">
-             <a class="navbar-brand float-none float-lg-left" href="{{ .Site.BaseURL }}" itemprop="url">        
+             <a id="Home_Logo_Button" class="navbar-brand float-none float-lg-left" href="{{ .Site.BaseURL }}" itemprop="url">        
                 <img src="/images/logo.png" alt="{{ .Site.Params.logotitle }}" title="{{ .Site.Params.logotitle }}" itemprop="logo"/>      
               </a>
             </div>
@@ -39,18 +39,17 @@
                         </a>
                     </li>
                 {{ end }}
-                <li class="nav-item" id="current">
-                        <a id="News_Top_Button"  class="nav-link"  href="{{ .Site.BaseURL }}news">
-                            News
-                        </a>
-                    </li>
-					<li class="nav-item" id="press">
-                        <a id="Press_Top_Button"  class="nav-link"  href="{{ .Site.BaseURL }}press">
-                            Press
-                        </a>
-                </li>
+                        <li class="nav-item" id="news">
+                            <a id="News_Top_Button" class="nav-link" href="{{ .Site.BaseURL }}news">News</a>
+                        </li>
+                        <li class="nav-item" id="press">
+                            <a id="Press_Top_Button" class="nav-link" href="{{ .Site.BaseURL }}press">Press</a>
+                        </li>
+                        <li class="nav-item" id="events">
+                                <a id="Events_Top_Button" class="nav-link" href="{{ .Site.BaseURL }}events">Events</a>
+                            </li>
                 <li class="nav-item" id="faq">
-                    <a id="Faq_Top_Button" class="nav-link"  href="{{ .Site.BaseURL }}faqs">
+                    <a id="Faq_button" class="nav-link"  href="{{ .Site.BaseURL }}faqs">
                         {{ with .Site.Params.navigation.faqs }} {{ . }} {{ end }}
                     </a>
                 </li>
@@ -60,12 +59,12 @@
       <div class="col-lg-4 col-md-12">
           <div class="row top-head-shot">
                 <span class="headshot-title">Brought to you by</span>
-                <div class="head-shot-col">
-                     <a id="Shahid_twitter_page" href="https://twitter.com/ShahidNShah" target="_blank"><img src="/images/shahid-sha.png" alt="Shahidsha" id="Shahid_twitter_page"><br>
+                <div class="head-shot-col shahid_twitter_page">
+                     <a id="Shahid_twitter_page" href="https://twitter.com/ShahidNShah" target="_blank"><img src="/images/shahid-sha.png" alt="Shahidsha"><br>
                         @ShahidNShah</a>
                 </div>
-                <div class="head-shot-col">
-                    <a id="Grace_twitter_page" href="https://twitter.com/GraceCordovano" target="_blank"><img src="/images/grace.png" alt="Grace Cordovano" id="Grace_twitter_page"><br>
+                <div class="head-shot-col grace_twitter_page">
+                    <a id="Grace_twitter_page" href="https://twitter.com/GraceCordovano" target="_blank"><img src="/images/grace.png" alt="Grace Cordovano"><br>
                         @GraceCordovano</a>
                 </div>
            </div>

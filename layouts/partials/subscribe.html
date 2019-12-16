@@ -1,45 +1,44 @@
 {{ if .Site.Params.subscribe.enable }}
-    {{"<!-- Call To Action Section -->" | safeHTML}}
-    <section class="call-to-action" style='background-image: url("{{ with .Site.Params.cta.bg }}{{.}}{{ end }}")' >
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 wow text-center">
-                    <div class="block">
-                        {{ with .Site.Params.subscribe.title }}
-                            <h2>{{ . }}</h2>
-                        {{ end }}
-                        {{ with .Site.Params.subscribe.subtitle }}
-                            <p>{{ . }}</p>
-                        {{ end }}
-                        <div class="col-sm-12 subscribe-form">
-                           
-                               <form method="POST" id="subscribe" class="form-inline">
-                                    <div class="input-group mr-sm-2">
-                                        <input type="text" class="form-control mr-sm-2" placeholder="Name*" name="Name" 
-                                             id="subscribename">
-                                        <span class="error Subscribe_name_error" id="subscribenamealert" style="display: none;">Please Enter Name</span>
-                                    </div>
-                                    <div class="input-group mr-sm-2">
-                                        <input type="email" class="form-control" placeholder="Email Address*" name="Email" id="subscribeemail">
-                                        <span class="error Subscribe_email_error" id="subscribeemailalert" style="display: none;">Please Enter Email.</span>
-                                    </div>
-                                  <input type="hidden" name="title" id="title" value="GEN" />
-                                    <!--<div class="input-group">
+{{"<!-- Call To Action Section -->" | safeHTML}}
+<section class="call-to-action" style='background-image: url("{{ with .Site.Params.cta.bg }}{{.}}{{ end }}")'>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 wow text-center">
+                <div class="block">
+                    {{ with .Site.Params.subscribe.title }}
+                    <h2>{{ . }}</h2>
+                    {{ end }}
+                    {{ with .Site.Params.subscribe.subtitle }}
+                    <p>{{ . }}</p>
+                    {{ end }}
+                    <div class="col-sm-12 subscribe-form">
+
+                        <form method="POST" id="subscribe" class="form-inline">
+                            <div class="input-group mr-sm-2">
+                                <input type="text" class="form-control mr-sm-2" placeholder="Name*" name="Name"
+                                    id="subscribename" required>
+                            </div>
+                            <div class="input-group mr-sm-2">
+                                <input type="email" class="form-control" placeholder="Email Address*" name="Email"
+                                    id="subscribeemail" required>
+                            </div>
+                            <input type="hidden" name="title" id="title" value="GEN" />
+                            <!--<div class="input-group">
                                     <input type="text" class="form-control" placeholder="Your Email Address Here">
                                     <span class="input-group-btn">
                                         <button class="btn btn-default btn-subscription" type="button">Subscribe</button>
                                     </span>
                                    </div>-->
-                                   <!--<button class="btn btn-send" id="subscribe-submit" type="submit">Sign Up</button>-->
-                                   <input id="subscribe-submit" type="button" class="btn btn-primary" value="Sign Up">
-                               </form>
-                               <div id="subscribesuccess" style="display:none;">
-                            
+                            <!--<button class="btn btn-send" id="subscribe-submit" type="submit">Sign Up</button>-->
+                            <input id="subscribe-submit" type="button" class="btn btn-primary" value="Sign Up">
+                        </form>
+                        <div id="subscribesuccess" style="display:none;">
+
                         </div>
 
-                       </div>
-                  </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
+</section>
 {{ end }}

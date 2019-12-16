@@ -1,10 +1,10 @@
 ---
-layout: "news"
-mastHead: "Events"
-breadcrumbs:
-- Home
-- Events
-breadcrumbLinks:
-- "/"
-- "/"
+ title: "Upcoming"
+ layout: "list-event-upcoming" 
+ breadcrumbs:
+ - Home
+ - Events 
+ breadcrumbLinks:
+ - "/"
+ - "/"
 ---

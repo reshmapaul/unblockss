@@ -9,7 +9,7 @@
   {{ if eq $elem_index 0}}
   <a href="{{ $path_url }}">{{ $breadcrumb }}</a>
   {{ else if ne $path "/"  }}
-  <a href="{{ $path_url }}">{{ $breadcrumb }}</a>
+  <a href="{{ $path_url }}"> {{ $breadcrumb }}</a>
   {{ else }}
   {{ $breadcrumb }}
   {{ end }}
@@ -23,7 +23,7 @@
   {{ if ne $elem_index (sub $length 2) }}
   > <a href="/{{ . }}">{{ humanize (replace . "posts" "blog") }}</a>
   {{else}}
-  >{{.}}
+  > {{.}}
   {{ end }}
   {{ end }}
   {{ end }}

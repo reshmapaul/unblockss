@@ -2039,6 +2039,7 @@ div#subscribesuccess {
     margin-bottom: 0px!important;
     border-top: 0px solid #ededed!important;
     padding-top: 20px!important;
+    clear:both;
 }
 
 .cover-content {

@@ -183,6 +183,7 @@ async function main(projectId, type) {
                                             console.error(err)
                                             return
                                         }
+                                    }).then(function () {
                                         fs.writeFile('content/' + type + '/' + mdFileName + '.md', mdContent, function (err) {
                                             if (err) { throw err } else {
                                                 console.log(mdFileName, 'Saved successfully!');

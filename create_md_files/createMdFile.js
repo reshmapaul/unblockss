@@ -177,26 +177,11 @@ async function main(projectId, type) {
                                     mdContent = mdContent + "breadcrumbLinks:\n - / \n - /" + type + "\n - / \n";
                                 }
                                 mdContent = mdContent + "---\n" + item['description']['raw'] + "\n";
-                                if (fs.existsSync('content/' + type + '/' + mdFileName + '.md')) {
-                                    fs.unlink('content/' + type + '/' + mdFileName + '.md', (err) => {
-                                        if (err) {
-                                            console.error(err)
-                                            return
-                                        }
-                                        fs.writeFile('content/' + type + '/' + mdFileName + '.md', mdContent, function (err) {
-                                            if (err) { throw err } else {
-                                                console.log(mdFileName, 'Saved successfully!');
-                                            }
-                                        });
-                                    });
-                                } else {
-                                    fs.writeFile('content/' + type + '/' + mdFileName + '.md', mdContent, function (err) {
-                                        if (err) { throw err } else {
-                                            console.log(mdFileName, 'Saved successfully!');
-                                        }
-                                    });
-                                }
-                            }
+                                fs.writeFile('content/' + type + '/' + mdFileName + '.md', mdContent, function (err) {
+                                    if (err) { throw err } else {
+                                        console.log(mdFileName, 'Saved successfully!');
+                                    }
+                                });
                         });
                     }
                 };

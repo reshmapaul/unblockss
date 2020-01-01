@@ -23,7 +23,7 @@ async function main(projectId, type) {
         'Authorization': CONFIGURATION.authToken
     }
     const options = {
-        url: CONFIGURATION.apiUrl + 'projects/' + projectId + '/work_packages?filters=[{ "updatedAt": { "operator": ">t-", "values":[1]}}]',
+        url: CONFIGURATION.apiUrl + 'projects/' + projectId + '/work_packages',
         method: 'GET',
         headers: headers,
     }
@@ -36,10 +36,10 @@ async function main(projectId, type) {
         for (let i = 0; i < totalLength; i++) {
             offset = i + 1;
             if (i === Number(totalLength - 1)) {
-                options.url = CONFIGURATION.apiUrl + 'projects/' + projectId + '/work_packages?offset=' + offset + '&pageSize=' + total + '&filters=[{ "updatedAt": { "operator": ">t-", "values":[1]}}]';
+                options.url = CONFIGURATION.apiUrl + 'projects/' + projectId + '/work_packages?offset=' + offset + '&pageSize=' + total;
             } else {
                 total = total - 50;
-                options.url = CONFIGURATION.apiUrl + 'projects/' + projectId + '/work_packages?offset=' + offset + '&pageSize=' + 50 + '&filters=[{ "updatedAt": { "operator": ">t-", "values":[1]}}]';
+                options.url = CONFIGURATION.apiUrl + 'projects/' + projectId + '/work_packages?offset=' + offset + '&pageSize=' + 50;
             }
             await getRequest(options).then(async function (result) {
                 workPackages = result['_embedded']['elements'];

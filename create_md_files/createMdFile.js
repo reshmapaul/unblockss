@@ -182,6 +182,7 @@ async function main(projectId, type) {
                                         console.log(mdFileName, 'Saved successfully!');
                                     }
                                 });
+                            }
                         });
                     }
                 };

@@ -2637,3 +2637,6 @@ p.msgcontent {
 .is-disabled{
   pointer-events: none;
 }
+.cover-content img {
+  width:100%;
+}

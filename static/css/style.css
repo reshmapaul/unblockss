@@ -2280,6 +2280,10 @@ div#subscribesuccess {
 .black-link {
     color: #333!important;
 }
+.custom-card-row img {
+    height: 230px;
+    object-fit: cover;
+}
 @media screen and (pointer: coarse) {
     .card-hover {
         transform: scale(0.95);

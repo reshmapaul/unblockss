@@ -1,7 +1,7 @@
 const request = require('request');
 const CONFIGURATION = require('./configuration');
 const fs = require('fs');
-
+const converter = require('html-to-markdown');
 getRequest = (options, json = true) => new Promise((resolve, reject) => {
     request.get(options, function (err, resp, body) {
         if (err) {
@@ -176,7 +176,7 @@ async function main(projectId, type) {
                                     mdContent = mdContent + "breadcrumbs:\n - Home\n - " + type.charAt(0).toUpperCase() + type.slice(1) + "\n - " + mdFileName + "\n";
                                     mdContent = mdContent + "breadcrumbLinks:\n - / \n - /" + type + "\n - / \n";
                                 }
-                                mdContent = mdContent + "---\n" + item['description']['raw'] + "\n";
+                                mdContent = mdContent + "---\n" + converter.convert(item['description']['raw']) + "\n";
                                 fs.writeFile('content/' + type + '/' + mdFileName + '.md', mdContent, function (err) {
                                     if (err) { throw err } else {
                                         console.log(mdFileName, 'Saved successfully!');

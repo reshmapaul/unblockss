@@ -18,12 +18,12 @@ twitterCreator: "@jeffgorke"
 breadcrumbs:
  - Home
  - News
- - Forbes
  - Physician Documentation And Coding  The Third Rail
 breadcrumbLinks:
  - / 
  - /news
- - /
  - / 
+source: "Forbes"
+news/source: "Forbes"
 ---
-<p>Often too little attention is paid to documentation, coding, and billing in many medical practices. This creates the risk of financial penalty and legal jeopardy but also patient safety risks.&nbsp;<br><br><a href="https://www.forbes.com/sites/jeffgorke/2019/10/24/physician-documentation-and-coding-the-third-rail/#16fbf02a1ca7">Read on forbes.com</a></p>
+Often too little attention is paid to documentation, coding, and billing in many medical practices. This creates the risk of financial penalty and legal jeopardy but also patient safety risks.&nbsp;<br><br><a href="https://www.forbes.com/sites/jeffgorke/2019/10/24/physician-documentation-and-coding-the-third-rail/#16fbf02a1ca7">Read on forbes.com</a>

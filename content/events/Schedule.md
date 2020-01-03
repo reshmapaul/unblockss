@@ -22,12 +22,10 @@ twitterDescription: "HIMSS Global Health Conference & Exhibition: Find out what'
 breadcrumbs:
  - Home
  - Events
- - HIMSS20
  - Schedule
 breadcrumbLinks:
  - / 
  - /events
- - /events/source/himss20
  - / 
 source: "HIMSS20"
 events/source: "HIMSS20"

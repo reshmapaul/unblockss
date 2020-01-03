@@ -1,9 +1,9 @@
 --- 
 title: "Information Blocking "
 cleanUrl: "https://www.healthit.gov/topic/information-blocking"
-date: "2019-11-21T11:29:29Z"
+date: "2019-12-13T03:48:28Z"
 sourceBaseUrl: "www.healthit.gov"
-banner : "/images/resources/Information Blocking.png"
+banner: "images/default.png"
 breadcrumbs:
  - Home
  - News
@@ -13,6 +13,4 @@ breadcrumbLinks:
  - /news
  - / 
 ---
-In a 2015 report to Congress, the Office of the National Coordinator for Health Information Technology (ONC) provided a definition of information blocking, an analysis of the extent to which the practice exists in the industry, and recommendations to address the issue.  
-  
-[Read on healthit.gov](https://www.healthit.gov/topic/information-blocking)
+Health IT developers, health information networks, and health information exchanges that the Inspector General, following an investigation, determines to have committed information blocking shall be subject to a civil monetary penalty determined by the Secretary of Health and Human Services for all such violations identified through such investigation, which may not exceed $1,000,000 per violation.<br><br><a target="_blank" href=https://www.healthit.gov/topic/information-blocking>Read on healthit.gov</a>

@@ -18,12 +18,10 @@ twitterTitle: "Preconference Events | Patient Experience Conference"
 breadcrumbs:
  - Home
  - Events
- - Patient Experience Conference
  - Preconference Events
 breadcrumbLinks:
  - / 
  - /events
- - /events/source/patient-experience-conference
  - / 
 source: "Patient Experience Conference"
 events/source: "Patient Experience Conference"

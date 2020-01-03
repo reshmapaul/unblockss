@@ -2640,3 +2640,6 @@ p.msgcontent {
 .cover-content img {
   width:100%;
 }
+.cover-content p strong {
+    font-weight: bold;
+}

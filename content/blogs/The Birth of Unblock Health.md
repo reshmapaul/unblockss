@@ -20,11 +20,12 @@ Unblock Health is the culmination of over 20 years of boots-on-the-ground patien
 
 
 ![Patients need specific tools to drill through the barriers of data blocking.](/images/blogs/Birth_of_Unblock_Health.jpg)
-***Patients need specific tools to drill through the barriers of data blocking.***
+
+*Patients need specific tools to drill through the barriers of data blocking.*
 
 We’ve personally and professionally witnessed the devastating, multi-faceted struggles people face while managing their care in the midst of a life-altering diagnosis. We’ve listened to patients’ frustrations and witnessed the barriers they face in accessing their data. We’ve heard patients demands for transparency and watched them be completely ignored. We know first-hand the grief, loss, anxiety, and distrust that stems from data blocking. 
 
-#### We have vowed to not stand back silently, powerlessly, and helplessly a moment longer. ####
+__We have vowed to not stand back silently, powerlessly, and helplessly a moment longer.__
 
 What is Unblock Health? Stay tuned for our next piece! Can’t wait that long? We don’t blame you! Dive in at https://www.unblock.health/ and don’t hesitate to reach out with any questions.
 

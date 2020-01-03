@@ -13,4 +13,6 @@ breadcrumbLinks:
  - /news
  - / 
 ---
-The federal government is pushing forward with regulatory action that it hopes will end data blocking and promote more sharing of patient information.<br><br><a target="_blank" href=https://www.managedhealthcareexecutive.com/health-law-policy/whats-being-done-stop-ehr-data-blocking>Read on managedhealthcareexecutive.com</a>
+The federal government is pushing forward with regulatory action that it hopes will end data blocking and promote more sharing of patient information.  
+  
+[Read on managedhealthcareexecutive.com](https://www.managedhealthcareexecutive.com/health-law-policy/whats-being-done-stop-ehr-data-blocking)

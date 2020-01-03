@@ -22,4 +22,6 @@ breadcrumbLinks:
 source: "Modern Healthcare"
 news/source: "Modern Healthcare"
 ---
-The fine marks the second settlement HHS' Office for Civil Rights has announced as part of its Right of Access Initiative, an effort the agency launched earlier this year to ensure patients have access to their medical records as mandated under HIPAA.<br><br><a target="_blank" href=https://www.modernhealthcare.com/information-technology/florida-provider-pay-85k-fine-not-sharing-timely-patient-records>Read on modernhealthcare.com</a>
+The fine marks the second settlement HHS' Office for Civil Rights has announced as part of its Right of Access Initiative, an effort the agency launched earlier this year to ensure patients have access to their medical records as mandated under HIPAA.  
+  
+[Read on modernhealthcare.com](https://www.modernhealthcare.com/information-technology/florida-provider-pay-85k-fine-not-sharing-timely-patient-records)

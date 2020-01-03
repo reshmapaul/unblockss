@@ -17,4 +17,6 @@ breadcrumbLinks:
  - /news
  - / 
 ---
-Many well-known websites are using third-party analytics scripts to track every movement of visitors to their sites, a study claims. Known as session-...<br><br><a target="_blank" href=https://www.modernhealthcare.com/article/20171102/NEWS/171109976/health-it-leaders-call-data-blocking-guidance-too-vague>Read on modernhealthcare.com</a>
+Many well-known websites are using third-party analytics scripts to track every movement of visitors to their sites, a study claims. Known as session-...  
+  
+[Read on modernhealthcare.com](https://www.modernhealthcare.com/article/20171102/NEWS/171109976/health-it-leaders-call-data-blocking-guidance-too-vague)

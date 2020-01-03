@@ -23,4 +23,8 @@ breadcrumbLinks:
 source: "Healthcare IT Today"
 news/source: "Healthcare IT Today"
 ---
-Focus on interoperability for health data systems has increased recently given multiple proposed Department of Health and Human Services’ regulations addressing how health data is shared. Healthcare providers are a primary source of health data and should be aware of how to prepare for these new regulations.&nbsp;While each hospital has its unique approach to managing its health data and sharing of that information, there are actions all hospitals can take to prepare for heightened expectations for health data interoperability.<br><br><a href="https://www.healthcareittoday.com/2019/10/09/5-actions-hospitals-should-take-now-to-prepare-for-interoperability/">Read on healthcareittoday.com</a>
+Focus on interoperability for health data systems has increased recently given multiple proposed Department of Health and Human Services’ regulations addressing how health data is shared. Healthcare providers are a primary source of health data and should be aware of how to prepare for these new regulations. 
+
+While each hospital has its unique approach to managing its health data and sharing of that information, there are actions all hospitals can take to prepare for heightened expectations for health data interoperability.  
+  
+[Read on healthcareittoday.com](https://www.healthcareittoday.com/2019/10/09/5-actions-hospitals-should-take-now-to-prepare-for-interoperability/)

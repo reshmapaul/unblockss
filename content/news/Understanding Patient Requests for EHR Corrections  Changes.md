@@ -25,4 +25,6 @@ breadcrumbLinks:
 source: "PatientEngagementHIT"
 news/source: "PatientEngagementHIT"
 ---
-By understanding requirements for patient requests for medical record corrections and working to encourage patient data access and review, clinicians, hospitals, and health systems can empower patients as partners in their pursuit of healthcare safety.<br><br><a target="_blank" href=https://patientengagementhit.com/news/understanding-patient-requests-for-ehr-corrections-changes>Read on patientengagementhit.com</a>
+By understanding requirements for patient requests for medical record corrections and working to encourage patient data access and review, clinicians, hospitals, and health systems can empower patients as partners in their pursuit of healthcare safety.  
+  
+[Read on patientengagementhit.com](https://patientengagementhit.com/news/understanding-patient-requests-for-ehr-corrections-changes)

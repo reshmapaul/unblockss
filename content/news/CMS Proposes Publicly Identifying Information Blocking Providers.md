@@ -13,4 +13,6 @@ breadcrumbLinks:
  - /news
  - / 
 ---
-As part of MyHealthEData, CMS is planning on publishing a public list of providers partcipating in information blocking.<br><br><a target="_blank" href=https://ehrintelligence.com/news/cms-proposes-publicly-identifying-information-blocking-providers>Read on ehrintelligence.com</a>
+As part of MyHealthEData, CMS is planning on publishing a public list of providers partcipating in information blocking.  
+  
+[Read on ehrintelligence.com](https://ehrintelligence.com/news/cms-proposes-publicly-identifying-information-blocking-providers)

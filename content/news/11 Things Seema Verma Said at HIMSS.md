@@ -13,4 +13,6 @@ breadcrumbLinks:
  - /news
  - / 
 ---
-CMS Administrator had powerful messages to share related to new HHS interoperability proposal. <br><br><a target="_blank" href=https://www.healthleadersmedia.com/innovation/11-things-seema-verma-said-himss>Read on healthleadersmedia.com</a>
+CMS Administrator had powerful messages to share related to new HHS interoperability proposal.   
+  
+[Read on healthleadersmedia.com](https://www.healthleadersmedia.com/innovation/11-things-seema-verma-said-himss)

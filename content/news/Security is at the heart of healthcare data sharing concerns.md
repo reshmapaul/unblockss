@@ -26,4 +26,6 @@ breadcrumbLinks:
 source: "SearchHealthIT"
 news/source: "SearchHealthIT"
 ---
-John Halamka, health IT expert and executive director of the Health Technology Exploration Center of Beth Israel Lahey Health, said the proposed rules are a step in the right direction, helping address "friction in data flows" that have long existed in healthcare. They also ensure patients can access their data with no unnecessary difficulty. But he does question the timing of enforcement.<br><br><a target="_blank" href=https://searchhealthit.techtarget.com/news/252474378/Security-is-at-the-heart-of-healthcare-data-sharing-concerns>Read on searchhealthit.techtarget.com</a>
+John Halamka, health IT expert and executive director of the Health Technology Exploration Center of Beth Israel Lahey Health, said the proposed rules are a step in the right direction, helping address "friction in data flows" that have long existed in healthcare. They also ensure patients can access their data with no unnecessary difficulty. But he does question the timing of enforcement.  
+  
+[Read on searchhealthit.techtarget.com](https://searchhealthit.techtarget.com/news/252474378/Security-is-at-the-heart-of-healthcare-data-sharing-concerns)

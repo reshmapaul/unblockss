@@ -15,4 +15,6 @@ breadcrumbLinks:
  - /news
  - / 
 ---
-Personal health information is no longer private.<br><br><a target="_blank" href=https://www.healthaffairs.org/do/10.1377/hblog20191210.216658/full/>Read on healthaffairs.org</a>
+Personal health information is no longer private.  
+  
+[Read on healthaffairs.org](https://www.healthaffairs.org/do/10.1377/hblog20191210.216658/full/)

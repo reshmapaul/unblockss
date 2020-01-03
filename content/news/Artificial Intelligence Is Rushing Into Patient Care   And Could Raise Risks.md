@@ -23,6 +23,6 @@ breadcrumbLinks:
 source: "Scientific American"
 news/source: "Scientific American"
 ---
-AI developers cull electronic health records because they hold huge amounts of detailed data, Cho said. But those developers often aren’t aware that they’re building atop a deeply broken system. Electronic health records were developed for billing, not patient care, and are filled with mistakes or missing data.
-
-A KHN investigation published in March found sometimes life-threatening errors in patients’ medication lists, lab tests and allergies.<br><br><a target="_blank" href=https://www.scientificamerican.com/article/artificial-intelligence-is-rushing-into-patient-care-and-could-raise-risks/>Read on scientificamerican.com</a>
+AI developers cull electronic health records because they hold huge amounts of detailed data, Cho said. But those developers often aren’t aware that they’re building atop a deeply broken system. Electronic health records were developed for billing, not patient care, and are filled with mistakes or missing data. A KHN investigation published in March found sometimes life-threatening errors in patients’ medication lists, lab tests and allergies.  
+  
+[Read on scientificamerican.com](https://www.scientificamerican.com/article/artificial-intelligence-is-rushing-into-patient-care-and-could-raise-risks/)

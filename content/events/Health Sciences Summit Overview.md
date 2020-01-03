@@ -26,4 +26,6 @@ breadcrumbLinks:
  - /events
  - / 
 ---
-The healthcare and life sciences landscape has changed drastically in the last few years. This has led to a fundamental shift from the era of “Life Sciences” into an era of  “Health Sciences” that focuses on what OZ calls the “Human Experience.”<br><br><a target="_blank" href=https://offers.followoz.com/health-sciences-summit-overview>Read on offers.followoz.com</a>
+The healthcare and life sciences landscape has changed drastically in the last few years. This has led to a fundamental shift from the era of “Life Sciences” into an era of  “Health Sciences” that focuses on what OZ calls the “Human Experience.”  
+  
+[Read on offers.followoz.com](https://offers.followoz.com/health-sciences-summit-overview)

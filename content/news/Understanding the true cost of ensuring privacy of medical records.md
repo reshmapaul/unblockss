@@ -26,4 +26,6 @@ breadcrumbLinks:
 source: "sun-sentinel.com"
 news/source: "sun-sentinel.com"
 ---
-Protecting our medical records takes highly qualified and trained staff, and costs money. If the fee structure is reduced or eliminated by the Florida Legislature, the cost for protecting patient privacy will fall back on the patients with higher fees for medical services.<br><br><a target="_blank" href=https://www.sun-sentinel.com/opinion/commentary/fl-op-com-fuentes-medical-records-privacy-20191030-yoosyfv4wveinhduwq7gzyuw5q-story.html>Read on sun-sentinel.com</a>
+Protecting our medical records takes highly qualified and trained staff, and costs money. If the fee structure is reduced or eliminated by the Florida Legislature, the cost for protecting patient privacy will fall back on the patients with higher fees for medical services.  
+  
+[Read on sun-sentinel.com](https://www.sun-sentinel.com/opinion/commentary/fl-op-com-fuentes-medical-records-privacy-20191030-yoosyfv4wveinhduwq7gzyuw5q-story.html)

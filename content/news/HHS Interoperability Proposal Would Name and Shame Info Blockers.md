@@ -13,4 +13,6 @@ breadcrumbLinks:
  - /news
  - / 
 ---
-The government's plan would put pressure on hospitals and other providers that engage in 'information blocking.'<br><br><a target="_blank" href=https://www.healthleadersmedia.com/innovation/hhs-interoperability-proposal-would-name-and-shame-info-blockers>Read on healthleadersmedia.com</a>
+The government's plan would put pressure on hospitals and other providers that engage in 'information blocking.'  
+  
+[Read on healthleadersmedia.com](https://www.healthleadersmedia.com/innovation/hhs-interoperability-proposal-would-name-and-shame-info-blockers)

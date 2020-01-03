@@ -23,4 +23,6 @@ breadcrumbLinks:
 source: "TheHill"
 news/source: "TheHill"
 ---
-Personal data is aggregated, packaged and sold every day without the knowledge or full consent of the subject consumers, and it has been exploited and abused to the detriment of those consumers. However, overly stringent privacy rules regarding health data could impede timely care and patient safety, writes Piers Nash, former director at the Center for Data Intensive Science, who suggests a Hippocratic oath for using and sharing personal health data.<br><br><a href="https://thehill.com/opinion/healthcare/471360-could-health-data-privacy-kill-you">Read on thehill.com</a>
+Personal data is aggregated, packaged and sold every day without the knowledge or full consent of the subject consumers, and it has been exploited and abused to the detriment of those consumers. However, overly stringent privacy rules regarding health data could impede timely care and patient safety, writes Piers Nash, former director at the Center for Data Intensive Science, who suggests a Hippocratic oath for using and sharing personal health data.  
+  
+[Read on thehill.com](https://thehill.com/opinion/healthcare/471360-could-health-data-privacy-kill-you)

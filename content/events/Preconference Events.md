@@ -26,7 +26,6 @@ breadcrumbLinks:
 source: "Patient Experience Conference"
 events/source: "Patient Experience Conference"
 ---
-EXPERIENCE REIMAGINED
- 
-
-Healthcare leaders at the forefront of the global patient experience movement will address which systems, tools and insights revolutionize the role of the patient and the caregiver. We’ll explore patient perspectives and clinical considerations to understand how empathy and innovation must be incorporated as integral pillars to deliver the best clinical, physical and emotional experience in healthcare.<br><br><a target="_blank" href=http://www.empathyandinnovation.com/cleveland/2020/preconference-events>Read on empathyandinnovation.com</a>
+EXPERIENCE REIMAGINED   Healthcare leaders at the forefront of the global patient experience movement will address which systems, tools and insights revolutionize the role of the patient and the caregiver. We’ll explore patient perspectives and clinical considerations to understand how empathy and innovation must be incorporated as integral pillars to deliver the best clinical, physical and emotional experience in healthcare.  
+  
+[Read on empathyandinnovation.com](http://www.empathyandinnovation.com/cleveland/2020/preconference-events)

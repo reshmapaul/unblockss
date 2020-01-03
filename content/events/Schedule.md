@@ -30,4 +30,6 @@ breadcrumbLinks:
 source: "HIMSS20"
 events/source: "HIMSS20"
 ---
-HIMSS Global Health Conference & Exhibition: Find out what's next in health.<br><br><a target="_blank" href=https://www.himssconference.org/Search/SessionSearch?Keywords=grace+cordovano>Read on himssconference.org</a>
+HIMSS Global Health Conference & Exhibition: Find out what's next in health.  
+  
+[Read on himssconference.org](https://www.himssconference.org/Search/SessionSearch?Keywords=grace+cordovano)

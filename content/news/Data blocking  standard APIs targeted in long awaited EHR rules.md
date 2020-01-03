@@ -13,4 +13,6 @@ breadcrumbLinks:
  - /news
  - / 
 ---
-Data blocking, standard APIs targeted in long-awaited EHR rules<br><br><a target="_blank" href=https://www.healthcaredive.com/news/data-blocking-standard-apis-targeted-in-long-awaited-ehr-rules/542951/>Read on healthcaredive.com</a>
+Data blocking, standard APIs targeted in long-awaited EHR rules  
+  
+[Read on healthcaredive.com](https://www.healthcaredive.com/news/data-blocking-standard-apis-targeted-in-long-awaited-ehr-rules/542951/)

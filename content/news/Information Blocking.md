@@ -13,4 +13,6 @@ breadcrumbLinks:
  - /news
  - / 
 ---
-Health IT developers, health information networks, and health information exchanges that the Inspector General, following an investigation, determines to have committed information blocking shall be subject to a civil monetary penalty determined by the Secretary of Health and Human Services for all such violations identified through such investigation, which may not exceed $1,000,000 per violation.<br><br><a target="_blank" href=https://www.healthit.gov/topic/information-blocking>Read on healthit.gov</a>
+Health IT developers, health information networks, and health information exchanges that the Inspector General, following an investigation, determines to have committed information blocking shall be subject to a civil monetary penalty determined by the Secretary of Health and Human Services for all such violations identified through such investigation, which may not exceed $1,000,000 per violation.  
+  
+[Read on healthit.gov](https://www.healthit.gov/topic/information-blocking)

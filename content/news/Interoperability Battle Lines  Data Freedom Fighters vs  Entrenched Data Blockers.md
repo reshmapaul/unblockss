@@ -24,4 +24,6 @@ breadcrumbLinks:
 source: "4sight Health"
 news/source: "4sight Health"
 ---
-On a cold Minnesota morning in January 2018, Fairview Health Services CEO James Hereford addressed Twin Cities business executives regarding healthcare IT and innovation. (1) With an advanced degree in ...<br><br><a target="_blank" href=https://www.4sighthealth.com/interoperability-battle-lines-data-freedom-fighters-vs-entrenched-data-blockers/>Read on 4sighthealth.com</a>
+On a cold Minnesota morning in January 2018, Fairview Health Services CEO James Hereford addressed Twin Cities business executives regarding healthcare IT and innovation. (1) With an advanced degree in ...  
+  
+[Read on 4sighthealth.com](https://www.4sighthealth.com/interoperability-battle-lines-data-freedom-fighters-vs-entrenched-data-blockers/)

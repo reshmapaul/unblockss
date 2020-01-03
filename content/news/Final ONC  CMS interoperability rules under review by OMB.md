@@ -23,4 +23,6 @@ breadcrumbLinks:
 source: "FierceHealthcare"
 news/source: "FierceHealthcare"
 ---
-Major federal rules aimed at stopping information blocking and spurring data sharing are one step closer to being finalized. The Office of the National Coordinator for Health IT's interoperability and information blocking rule is now under review at the Office of Management and Budget, the last step before publication. <br><br><a target="_blank" href=https://www.fiercehealthcare.com/tech/final-onc-cms-interoperability-rules-submitted-to-office-management-and-budget-for-review>Read on fiercehealthcare.com</a>
+Major federal rules aimed at stopping information blocking and spurring data sharing are one step closer to being finalized. The Office of the National Coordinator for Health IT's interoperability and information blocking rule is now under review at the Office of Management and Budget, the last step before publication.   
+  
+[Read on fiercehealthcare.com](https://www.fiercehealthcare.com/tech/final-onc-cms-interoperability-rules-submitted-to-office-management-and-budget-for-review)

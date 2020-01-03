@@ -26,4 +26,6 @@ breadcrumbLinks:
 source: "Health Data Management"
 news/source: "Health Data Management"
 ---
-Former ONC chief sees open APIs as a critical piece of the industry’s interoperability puzzle to accelerate the flow of information.<br><br><a target="_blank" href=https://www.healthdatamanagement.com/news/desalvo-healthcare-data-remains-very-highly-blocked?brief=00000152-14ad-d1cc-a5fa-7cff19540000>Read on healthdatamanagement.com</a>
+Former ONC chief sees open APIs as a critical piece of the industry’s interoperability puzzle to accelerate the flow of information.  
+  
+[Read on healthdatamanagement.com](https://www.healthdatamanagement.com/news/desalvo-healthcare-data-remains-very-highly-blocked?brief=00000152-14ad-d1cc-a5fa-7cff19540000)

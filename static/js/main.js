@@ -243,6 +243,11 @@ $('.readmore-link').each(function( index ) {
     $('#current').removeClass('current');
     $('#faq').addClass('current'); 
   }
+  if(pathname.includes('/blogs/')) {
+    $('#top-nav').addClass('confirmregistration');
+    $('#current').removeClass('current');
+    $('#blogs').addClass('current'); 
+  }
   if (pathname == '/404.html') {
     $('#top-nav').addClass('confirmregistration');
     $('#top-nav').addClass('animated');

@@ -23,4 +23,6 @@ breadcrumbLinks:
  - /press
  - / 
 ---
-Patient autonomy is revolutionized by access to their data, says Grace Cordovano, board-certified patient advocate and CEO of Enlightening Results.<br><br><a target="_blank" href=https://himsstv.brightcovegallery.com/detail/video/6101127525001/healthcare-must-meet-patients-where-they-are?autoStart=true&q=grace%20cordovano>Read on himsstv.brightcovegallery.com</a>
+Patient autonomy is revolutionized by access to their data, says Grace Cordovano, board-certified patient advocate and CEO of Enlightening Results.  
+  
+[Read on himsstv.brightcovegallery.com](https://himsstv.brightcovegallery.com/detail/video/6101127525001/healthcare-must-meet-patients-where-they-are?autoStart=true&q=grace%20cordovano)

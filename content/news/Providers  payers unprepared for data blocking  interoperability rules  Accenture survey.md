@@ -23,4 +23,6 @@ breadcrumbLinks:
 source: "FierceHealthcare"
 news/source: "FierceHealthcare"
 ---
-One in six (17%) healthcare executives are “completely unaware” of new legislation that requires greater patient access to healthcare records and sharing of such records—with two-thirds (65%) only “somewhat” or “vaguely” familiar, a new Accenture survey finds.<br><br><a target="_blank" href=https://www.fiercehealthcare.com/tech/providers-payers-lagging-awareness-and-preparation-for-data-blocking-interoperability-rules>Read on fiercehealthcare.com</a>
+One in six (17%) healthcare executives are “completely unaware” of new legislation that requires greater patient access to healthcare records and sharing of such records—with two-thirds (65%) only “somewhat” or “vaguely” familiar, a new Accenture survey finds.  
+  
+[Read on fiercehealthcare.com](https://www.fiercehealthcare.com/tech/providers-payers-lagging-awareness-and-preparation-for-data-blocking-interoperability-rules)

@@ -29,4 +29,6 @@ breadcrumbLinks:
 source: "The #HCBiz Show!"
 press/source: "The #HCBiz Show!"
 ---
-Grace Cordovano is a board-certified patient advocate. Grace helps us to understand why patient advocates are needed, how they add value, and how much work and expertise is really necessary to do this job effectively.<br><br><a target="_blank" href=https://thehcbiz.com/patient-advocate-grace-cordovano/>Read on thehcbiz.com</a>
+Grace Cordovano is a board-certified patient advocate. Grace helps us to understand why patient advocates are needed, how they add value, and how much work and expertise is really necessary to do this job effectively.  
+  
+[Read on thehcbiz.com](https://thehcbiz.com/patient-advocate-grace-cordovano/)

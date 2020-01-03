@@ -25,4 +25,6 @@ breadcrumbLinks:
 source: "CNBC"
 news/source: "CNBC"
 ---
-But hospital execs worry that this data may be used in unintended ways, and not always in the patient’s best interest.<br><br><a target="_blank" href=https://www.cnbc.com/2019/12/18/hospital-execs-say-theyre-flooded-with-requests-for-your-health-data.html>Read on cnbc.com</a>
+But hospital execs worry that this data may be used in unintended ways, and not always in the patient’s best interest.  
+  
+[Read on cnbc.com](https://www.cnbc.com/2019/12/18/hospital-execs-say-theyre-flooded-with-requests-for-your-health-data.html)

@@ -23,4 +23,6 @@ breadcrumbLinks:
 source: "FierceHealthcare"
 news/source: "FierceHealthcare"
 ---
-Warner urged that, at a minimum, CMS' final rule should include standards that guarantee patients have ready access to their personal health data and an ability to regularly monitor the information for accuracy. Patients need to be informed of all commercial uses of their data, including any third parties their data have been shared with, Warner urged.<br><br><a target="_blank" href=https://www.fiercehealthcare.com/tech/lawmakers-push-hhs-for-more-clarity-stronger-data-privacy-protections-onc-cms-interoperability>Read on fiercehealthcare.com</a>
+Warner urged that, at a minimum, CMS' final rule should include standards that guarantee patients have ready access to their personal health data and an ability to regularly monitor the information for accuracy. Patients need to be informed of all commercial uses of their data, including any third parties their data have been shared with, Warner urged.  
+  
+[Read on fiercehealthcare.com](https://www.fiercehealthcare.com/tech/lawmakers-push-hhs-for-more-clarity-stronger-data-privacy-protections-onc-cms-interoperability)

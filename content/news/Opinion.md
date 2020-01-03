@@ -22,4 +22,6 @@ breadcrumbLinks:
  - /news
  - / 
 ---
-Let’s put our differences aside and work together to achieve real change, starting with a pernicious problem that drives so much of our mutual discontent: electronic health records.<br><br><a target="_blank" href=https://www.nytimes.com/2019/12/31/opinion/doctors-nurses-and-the-paperwork-crisis-that-could-unite-them.html>Read on nytimes.com</a>
+Let’s put our differences aside and work together to achieve real change, starting with a pernicious problem that drives so much of our mutual discontent: electronic health records.  
+  
+[Read on nytimes.com](https://www.nytimes.com/2019/12/31/opinion/doctors-nurses-and-the-paperwork-crisis-that-could-unite-them.html)

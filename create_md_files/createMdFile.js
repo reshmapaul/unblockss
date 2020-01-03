@@ -168,8 +168,8 @@ async function main(projectId, type) {
                                 if (ogSiteName) {
                                     const siteName = ogSiteName.replace(/\s/g, '-');
                                     const sourcePath = '/' + type + '/source/' + siteName.toLowerCase();
-                                    mdContent = mdContent + "breadcrumbs:\n - Home\n - " + type.charAt(0).toUpperCase() + type.slice(1) + "\n - " + ogSiteName + "\n - " + mdFileName + "\n";
-                                    mdContent = mdContent + "breadcrumbLinks:\n - / \n - /" + type + "\n - " + sourcePath + "\n - / \n";
+                                    mdContent = mdContent + "breadcrumbs:\n - Home\n - " + type.charAt(0).toUpperCase() + type.slice(1) + "\n - " + mdFileName + "\n";
+                                    mdContent = mdContent + "breadcrumbLinks:\n - / \n - /" + type + "\n - / \n";
                                     mdContent = mdContent + "source: " + '"' + ogSiteName + '"' + "\n";
                                     mdContent = mdContent + type + "/source: " + '"' + ogSiteName + '"' + "\n";
                                 } else {

@@ -788,12 +788,8 @@ $('.readmore-link').each(function( index ) {
   });
   $('#contact-submit-live').prop('disabled', 'disabled');
   $('#contact-submit-live').addClass('is-disabled');
-  $('#quickcontact').on('blur keyup change', 'textarea,input,select', function (event) {
-     quickContactValidation = validateForm('#quickcontact', '#contact-submit-live');
-     if((quickContactValidation==true)&&($("#name").val().length > 0)&&($("#email").val().length > 0)&&($("#patientoption").val()=="PA" ||$("#patientoption").val()=="HIM")){ 
-        $('#contact-submit-live').prop('disabled', false);
-        $('#contact-submit-live').removeClass('is-disabled');
-     }
+  $('#quickcontact').on('blur keyup change', 'textarea,input', function (event) {
+    validateForm('#quickcontact', '#contact-submit-live');
   });
   $('#contact-submit').prop('disabled', 'disabled');
   $('#contact-submit').addClass('is-disabled');
@@ -805,11 +801,9 @@ $('.readmore-link').each(function( index ) {
     if (valid) {
       $(buttonId).prop('disabled', false);
       $(buttonId).removeClass('is-disabled');
-      return true;
     } else {
       $(buttonId).prop('disabled', 'disabled');
       $(buttonId).addClass('is-disabled');
-      return false;
     }
   }
 });

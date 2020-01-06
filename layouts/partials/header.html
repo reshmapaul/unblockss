@@ -6,9 +6,33 @@
     <title> {{ .Site.Title }} </title>
     <meta name="description" content="{{ .Site.Params.Description }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <meta property="og:locale" content="en_US" />
+ <meta property="og:type" content="article" />
+{{ if ne .Params.title "Nil" }}
+<meta property="og:title" content="{{.Params.title }}" />
+{{end}}
+<meta property="og:description" content="{{.Summary }}">
+<meta property="og:site_name" content="unblock.health" />
+ {{ if ne .Params.banner "Nil" }}
+<meta property="og:image" content="{{.Params.banner }}" />
+{{else}}
+<meta property="og:image" content="images/default.png" />
+{{end}} 
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@unblock.health" />
+  <meta name="twitter:title" content="{{.Params.title }}" />
+  <meta name="twitter:description" content="{{.Summary }}" />
+  {{ if ne .Params.banner "Nil" }}
+<meta property="og:image" content="{{.Params.banner }}" />
+{{else}}
+<meta property="og:image" content="images/default.png" />
+{{end}}  
+
     {{ .Hugo.Generator }}
     {{"<!-- Fonts -->" | safeHTML }}
     <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400i|Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     {{ "<!-- Stylesheets -->" | safeHTML }}
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ "css/bootstrap.min.css" | absURL }}">

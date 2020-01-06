@@ -243,10 +243,10 @@ $('.readmore-link').each(function( index ) {
     $('#current').removeClass('current');
     $('#faq').addClass('current'); 
   }
-  if(pathname.includes('/blogs/')) {
+  if(pathname.includes('/blog/')) {
     $('#top-nav').addClass('confirmregistration');
     $('#current').removeClass('current');
-    $('#blogs').addClass('current'); 
+    $('#blog').addClass('current'); 
   }
   if (pathname == '/404.html') {
     $('#top-nav').addClass('confirmregistration');

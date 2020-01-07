@@ -24,10 +24,10 @@
   <meta name="twitter:title" content="{{.Params.title }}" />
   <meta name="twitter:description" content="{{.Summary }}" />
   {{ if ne .Params.banner "Nil" }}
-<meta property="og:image" content="{{.Params.banner }}" />
-{{else}}
-<meta property="og:image" content="images/default.png" />
-{{end}}  
+   <meta property="twitter:image" content="images/UnblockHealth-logo.png"/>
+  {{else}}
+  <meta property="twitter:image" content="images/default.png" />
+  {{end}}  
 
     {{ .Hugo.Generator }}
     {{"<!-- Fonts -->" | safeHTML }}

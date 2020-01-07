@@ -2643,3 +2643,10 @@ p.msgcontent {
 .cover-content p strong {
     font-weight: bold;
 }
+article.dropcase li {
+    font-size: 15px;
+    list-style-type: circle;
+    margin-left: 18px;
+    line-height: 19px;
+    margin-bottom: 7px;
+}

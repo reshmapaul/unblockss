@@ -6,28 +6,27 @@
     <title> {{ .Site.Title }} </title>
     <meta name="description" content="{{ .Site.Params.Description }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-     <meta property="og:locale" content="en_US" />
- <meta property="og:type" content="article" />
-{{ if ne .Params.title "Nil" }}
-<meta property="og:title" content="{{.Params.title }}" />
-{{end}}
-<meta property="og:description" content="{{.Summary }}">
-<meta property="og:site_name" content="unblock.health" />
- {{ if ne .Params.banner "Nil" }}
-<meta property="og:image" content="{{.Params.banner }}" />
-{{else}}
-<meta property="og:image" content="images/default.png" />
-{{end}} 
-
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:site" content="@unblock.health" />
-  <meta name="twitter:title" content="{{.Params.title }}" />
-  <meta name="twitter:description" content="{{.Summary }}" />
-  {{ if ne .Params.banner "Nil" }}
-   <meta property="twitter:image" content="images/UnblockHealth-logo.png"/>
-  {{else}}
-  <meta property="twitter:image" content="images/default.png" />
-  {{end}}  
+    <meta property="og:locale" content="en_US" />
+     <meta property="og:type" content="article" />
+    {{ if ne .Params.title "Nil" }}
+    <meta property="og:title" content="{{.Params.title }}" />
+    {{end}}
+    <meta property="og:description" content="{{.Summary }}">
+    <meta property="og:site_name" content="unblock.health" />
+     {{ if ne .Params.banner "Nil" }}
+    <meta property="og:image" content="{{.Params.banner }}" />
+    {{else}}
+    <meta property="og:image" content="images/default.png" />
+    {{end}} 
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@unblock.health" />
+    <meta name="twitter:title" content="{{.Params.title }}" />
+    <meta name="twitter:description" content="{{.Summary }}" />
+    {{ if ne .Params.banner "Nil" }}
+     <meta property="twitter:image" content="{{ .Site.BaseURL }}{{.Params.banner }}"/>
+    {{else}}
+    <meta property="twitter:image" content="{{ .Site.BaseURL }}images/default.png" />
+    {{end}}  
 
     {{ .Hugo.Generator }}
     {{"<!-- Fonts -->" | safeHTML }}

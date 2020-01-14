@@ -31,8 +31,8 @@ There are currently no other patient self-advocacy tools to:
 - request an itemized list of where their data has been shared and/or sold. 
 
 
-![Unblock Health is glowing with value for patients, carepartners, consumers, and careproviders who are ready to champion data access and end information blocking](/images/blogs/What is the Value of Unblock Health.jpg)
-***Unblock Health is glowing with value for patients, carepartners, consumers, and careproviders who are ready to champion data access and end information blocking***
+![Unblock Health is glowing with value for patients, carepartners, consumers, and care providers who are ready to champion data access and end information blocking](/images/blogs/What is the Value of Unblock Health.jpg)
+***Unblock Health is glowing with value for patients, carepartners, consumers, and care providers who are ready to champion data access and end information blocking***
 
 
 But what about HIPAA? Isn’t that enough, you ask? Stay tuned for our next piece! Can’t wait that long? We don’t blame you! Dive in at https://www.unblock.health/ and don’t hesitate to reach out with any questions.

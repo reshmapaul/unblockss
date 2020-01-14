@@ -33,128 +33,20 @@ $(window).load(function () {
 
 
 $(document).ready(function () {
-/*twitter hashtag feed */
-
-  /*var query =
-    '{"query":"query {\n  unblockhealth_tweets {\n    date\n    description\n    favcount\n    id\n    image_url\n    retweeted\n    screen_name\n    title\n    tweet_id\n    tweetcount\n    video_url\n  profile_image_url\n  }\n}\n"}';
-
-  $.ajax({
-    url: 'https://api-twitter-hashtag.infra.lectio.cc/v1/graphql',
-    contentType: 'application/json',
-    dataType: 'json',
-    type: 'POST',
-    beforeSend: function(xhr) {
-      xhr.setRequestHeader('x-hasura-admin-secret', 'MkH57Eokp6nu');
-    },
-    data: query,
-    success: function(result) {
-      // console.log(result['data']['unblock_test_unblockhealth_tweets']);
-      const feedsList = result['data']['unblockhealth_tweets'];
-      //console.log(feedsList);
-
-      let feedListHtml = '';
-      feedsList.forEach(function(feed) {
-        console.log('<div class="dropdown-menu"><iframe src="https://www.facebook.com/plugins/share_button.php?href=https://twitter.com/statuses/'+feed.tweet_id+'"&layout=button&size=small&appId=831536586968161&width=67&height=20" width="67" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>');
-        /* html population start */
-        /*feedListHtml += ' <div class="panel-body twitter-feed-sec">';
-        feedListHtml += '<div class="retweet-top">';
-        if (feed.retweeted) {
-          feedListHtml +=
-            '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 18 18" class="eapps-twitter-feed-posts-item-retweet-status-icon">';
-          feedListHtml +=
-            '<path  d="M17.712 11.961a.493.493 0 0 1 0 .698l-2.518 2.517a.491.491 0 0 1-.698 0l-2.517-2.517a.493.493 0 1 1 .698-.698l1.675 1.674V6.468c0-.817-.665-1.481-1.481-1.481H8.494a.494.494 0 1 1 0-.987h4.377a2.471 2.471 0 0 1 2.468 2.468v7.168l1.675-1.675a.493.493 0 0 1 .698 0zm-8.348 2.373a.494.494 0 0 1 0 .988H4.986a2.471 2.471 0 0 1-2.468-2.47V5.686L.843 7.36a.493.493 0 1 1-.698-.698l2.518-2.518a.493.493 0 0 1 .698 0l2.517 2.518a.493.493 0 1 1-.698.698L3.505 5.685v7.168c0 .817.665 1.48 1.48 1.48h4.379z">';
-          feedListHtml += '</path>';
-          feedListHtml += '</svg>';
-          feedListHtml +=
-            '<span class="retweet-count"><a href="https://twitter.com/'+feed.screen_name+'" target="_blank">'+
-            feed.retweeted +
-            '</a> Retweeted</span>';
-        }
-        feedListHtml +=
-          '<span class="twitter-icon-right"><a href="https://twitter.com/'+feed.screen_name+'/status/'+feed.tweet_id+'" target="_blank" title="View on Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></span>';
-        feedListHtml += '</div >';
-        feedListHtml += '<div class="media">';
-        feedListHtml += '<div class="media-left">';
-
-        feedListHtml += '<a href="https://twitter.com/'+feed.screen_name+'" target="_blank"><img src="' + feed.profile_image_url + '"';
-        feedListHtml += 'class="media-object circle">';
-        feedListHtml += '</div>';
-        feedListHtml += '<div class="media-body">';
-        feedListHtml +=
-          '<p><a href="https://twitter.com/'+feed.screen_name+'" target="_blank"><span class="feed-main-name">' +
-          feed.title +
-          '</span></a> <a href="https://twitter.com/'+feed.screen_name+'" target="_blank"><span class="time">@' +
-          feed.screen_name +
-          '<span class="separator"></span><span class="time-lapse">' +
-          timeSince(feed.date) +
-          'ago</span></a></span></p>';
-        feedListHtml += '</div>';
-        feedListHtml += '</div>';
-        feedListHtml += '<div class="description-area">';
-        var description;
-        //console.log(feed.description.indexOf(feed.screen_name));
-        if (feed.description.indexOf(feed.screen_name + ':') > 0) {
-          description = feed.description.split('@' + feed.screen_name + ':');
-          description = description[1];
-        } else {
-          description = feed.description ? feed.description : '';
-        }
-        // console.log('substring' + description);
-        feedListHtml += '<p>' + description + '</p>';
-        feedListHtml += '</div>';
-        feedListHtml += '<div class="post">';
-        if (feed.image_url) {
-          feedListHtml += '<img class="not" src="' + feed.image_url + '">';
-        }
-        feedListHtml += '<p class="iconsec">';
-        feedListHtml +=
-          '<i class="" aria-hidden="true"><a href="https://twitter.com/intent/tweet?in_reply_to='+feed.tweet_id+'&related='+feed.screen_name+'" target="_blank" title="Reply"><svg width="18" height="18" viewBox="0 0 18 18">';
-        feedListHtml +=
-          '<path d="M13.359 11.545c-.747.632-3.2 2.242-4.458 3.056v-2.098a.493.493 0 0 0-.493-.493H7.146c-2.41 0-4.159-1.63-4.159-3.874 0-2.327 1.822-4.148 4.147-4.148l3.729.006c2.326 0 4.147 1.821 4.149 4.144 0 1.257-.619 2.531-1.653 3.407zM7.136 3C4.255 3 2 5.256 2 8.136c0 2.685 2.079 4.727 4.877 4.851h1.037v2.52a.49.49 0 0 0 .759.416c.174-.111 4.261-2.725 5.324-3.625 1.252-1.06 2-2.612 2.003-4.154-.004-2.886-2.258-5.136-5.134-5.137L7.136 3z">';
-        feedListHtml += '</path>';
-        feedListHtml += '</svg></a>';
-        feedListHtml += '</i>';
-        feedListHtml += '<i class="" aria-hidden="true">';
-        feedListHtml +=
-          '<a href="https://twitter.com/intent/retweet?tweet_id='+feed.tweet_id+'&related='+feed.screen_name+'" target="_blank" title="Retweet"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 18 18"  class="eapps-twitter-feed-posts-item-retweet-status-icon">';
-        feedListHtml +=
-          '<path  d="M17.712 11.961a.493.493 0 0 1 0 .698l-2.518 2.517a.491.491 0 0 1-.698 0l-2.517-2.517a.493.493 0 1 1 .698-.698l1.675 1.674V6.468c0-.817-.665-1.481-1.481-1.481H8.494a.494.494 0 1 1 0-.987h4.377a2.471 2.471 0 0 1 2.468 2.468v7.168l1.675-1.675a.493.493 0 0 1 .698 0zm-8.348 2.373a.494.494 0 0 1 0 .988H4.986a2.471 2.471 0 0 1-2.468-2.47V5.686L.843 7.36a.493.493 0 1 1-.698-.698l2.518-2.518a.493.493 0 0 1 .698 0l2.517 2.518a.493.493 0 1 1-.698.698L3.505 5.685v7.168c0 .817.665 1.48 1.48 1.48h4.379z">';
-        feedListHtml += '</path>';
-        feedListHtml +=
-          '</svg><span class="retweet-count">' +
-          feed.tweetcount +
-          '</span></a></i>';
-        feedListHtml +=
-          '<i class="" aria-hidden="true"><a href="https://twitter.com/intent/like?tweet_id='+feed.tweet_id+'&related='+feed.screen_name+'" title="Like" class="popup"><svg width="18" height="18" viewBox="0 0 18 18">';
-        feedListHtml +=
-          '<path d="M5.556 4.988c-1.368 0-2.569 1.309-2.569 2.801 0 3.778 4.63 6.632 5.628 6.673.998-.041 5.628-2.895 5.628-6.673 0-1.492-1.201-2.801-2.57-2.801-1.665 0-2.593 1.932-2.602 1.951-.152.371-.761.371-.913 0-.008-.019-.937-1.951-2.602-1.951zM2 7.789C2 5.771 3.662 4 5.556 4c1.508 0 2.522 1.041 3.059 1.797C9.152 5.041 10.165 4 11.673 4c1.895 0 3.557 1.771 3.557 3.789 0 4.197-4.906 7.629-6.606 7.661C6.906 15.418 2 11.986 2 7.789z">';
-        feedListHtml += '</path>';
-        feedListHtml +=
-          '</svg><span class="like-count">' + feed.favcount + '</span></a></i>';
-        feedListHtml +=
-          '<span class="right"><div class="btn-group dropup share-dropdown"><button type="button" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 18 18">';
-        feedListHtml +=
-          '<path transform="rotate(-90 8.5 8.5)" d="M11.516 4.815l3.342 3.34a.486.486 0 0 1 0 .69l-3.341 3.34a.488.488 0 0 1-.689-.689l2.507-2.508H5.497a.487.487 0 1 1 0-.975h7.838l-2.508-2.508a.488.488 0 0 1 .69-.69zm-4.352 9.21a.488.488 0 0 1 0 .976H3.49A1.493 1.493 0 0 1 2 13.51V3.49C2 2.668 2.668 2 3.49 2h3.674a.488.488 0 0 1 0 .975H3.49a.515.515 0 0 0-.515.515v10.02c0 .285.23.515.515.515h3.674z">';
-        feedListHtml += '</path>';
-        feedListHtml += '</svg><span class="share-text">Share</span></a></i></span></button>';
-        //feedListHtml += '<div class="dropdown-menu"><a class="dropdown-item facebook popup" href="https://www.facebook.com/sharer/sharer.php?u=https://twitter.com/statuses/'+feed.tweet_id+'"><i class="fa fa-facebook" aria-hidden="true"></i> Share on Facebook</a>';
-        feedListHtml += '<div class="dropdown-menu"><iframe src="https://www.facebook.com/plugins/share_button.php?href=https://twitter.com/statuses/'+feed.tweet_id+'"&layout=button&size=small&appId=831536586968161&width=67&height=20" width="67" height="20" style="border:none;overflow:hidden;margin-left:25px;" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>';
-        feed_screen_name = "Twitter User"; 
-        if( feed.screen_name.trim()  != undefined ){
-          if( feed.screen_name.trim() != '' ){
-            feed_screen_name = feed.screen_name.trim(); 
-          }
-        }
-        feedListHtml += '<a class="dropdown-item twitter" onclick="twitterShare('+feed.tweet_id+',\''+feed_screen_name+'\')"><i class="fa fa-twitter" aria-hidden="true"></i> Share</a></div></div></span>';
-        feedListHtml += '</div>';
-        feedListHtml += '</div>';
-        /* html population End*/
-      /* });
-      $('#twitter_feed').html(feedListHtml);
-
+  /*twitter hashtag feed */
+  var ws = new WebSocket('wss://twitter-scraper.unblock.health:8882');
+  let count = 0;
+  ws.onmessage = function (unblockTweets) {
+    const tweets = unblockTweets.data;
+    if (count === 0) {
+      $(".twitter-loader").hide();
     }
-  });*/
-
+    const tweetId = tweets.split(' ')[0];
+    if (count < 50) {
+      createTweet(tweetId);
+    }
+    count = count + 1;
+  };
   /*twitter hashtag feed end */
  
 
@@ -814,13 +706,22 @@ $('.readmore-link').each(function( index ) {
   }
 });
 
-
-function twitterShare(tweet_id,screen_name){
-  if( tweet_id != undefined && screen_name != undefined ){
-    if( tweet_id ){
-    var url = "https://twitter.com/statuses/"+tweet_id;
-    var text = '';
-    window.open('https://twitter.com/home?status='+encodeURIComponent(url), '', 'left=0,top=0,width=550,height=450,personalbar=0,toolbar=0,scrollbars=0,resizable=0');
+function createTweet(tweetId) {
+  twttr.widgets.createTweet(tweetId,
+    document.getElementById('twitter_feed'),
+    {
+      align: 'left'
+    })
+    .then(function (el) {
+      // console.log("Tweet displayed..")
+    });
+}
+function twitterShare(tweet_id, screen_name) {
+  if (tweet_id != undefined && screen_name != undefined) {
+    if (tweet_id) {
+      var url = "https://twitter.com/statuses/" + tweet_id;
+      var text = '';
+      window.open('https://twitter.com/home?status=' + encodeURIComponent(url), '', 'left=0,top=0,width=550,height=450,personalbar=0,toolbar=0,scrollbars=0,resizable=0');
     }
   }
 

@@ -34,7 +34,7 @@ $(window).load(function () {
 
 $(document).ready(function () {
   /*twitter hashtag feed */
-  var ws = new WebSocket('wss://twitter-scraper.unblock.health:8882');
+  var ws = new WebSocket('wss://twint.netspective.io:8882');
   let count = 0;
   ws.onmessage = function (unblockTweets) {
     const tweets = unblockTweets.data;

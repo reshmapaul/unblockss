@@ -553,6 +553,14 @@ nav#top-nav{
 
 }
 @media (max-width: 767px) {
+  .post-figure img {
+    display: none!important;
+}
+.cover-content {
+    width: 100%!important;
+    padding: 20px 12px!important;
+    border: 0px solid #ededed!important;
+}
 .herobtnsection{width: 100%;margin: auto;}
   }
 

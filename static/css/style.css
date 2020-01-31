@@ -563,10 +563,8 @@ nav#top-nav{
     margin-top: 0px!important;
 }
 .herobtnsection{width: 100%;margin: auto;}
-div#breadcrumbs {
-    margin-top: 35px;
-    padding-bottom: 0;
-}
+div#breadcrumbs { margin-top: 35px; padding-bottom: 0;}
+.single-body { margin-top: 150px !important; }
   }
 
 @media (min-width: 481px) and (max-width: 767px) {

@@ -564,7 +564,18 @@ nav#top-nav{
 }
 .herobtnsection{width: 100%;margin: auto;}
 div#breadcrumbs { margin-top: 35px; padding-bottom: 0;}
-.single-body { margin-top: 150px !important; }
+ .single-body {
+    margin-top: 150px !important;
+}
+.date-display {
+    margin-bottom: 25px;
+}
+.brief-outer {
+    padding-top: 210px !important;
+}
+.cover-content a, .cover-content p{
+    word-break: break-all;
+}
   }
 
 @media (min-width: 481px) and (max-width: 767px) {

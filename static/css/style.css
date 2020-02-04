@@ -570,9 +570,9 @@ div#breadcrumbs { margin-top: 35px; padding-bottom: 0;}
 .date-display {
     margin-bottom: 25px;
 }
-.brief-outer {
+/*.brief-outer {
     padding-top: 210px !important;
-}
+}*/
 .cover-content a, .cover-content p{
     word-break: break-all;
 }

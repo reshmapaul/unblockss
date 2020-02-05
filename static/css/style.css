@@ -574,7 +574,7 @@ div#breadcrumbs { margin-top: 35px; padding-bottom: 0;}
     padding-top: 210px !important;
 }*/
 .cover-content a, .cover-content p{
-    word-break: break-all;
+    word-break: break-word;
 }
   }
 

@@ -36,12 +36,7 @@ async function main(projectId, type) {
         let offset = 0;
         for (let i = 0; i < totalLength; i++) {
             offset = i + 1;
-            if (i === Number(totalLength - 1)) {
-                options.url = CONFIGURATION.apiUrl + 'projects/' + projectId + '/work_packages?offset=' + offset + '&pageSize=' + total;
-            } else {
-                total = total - 50;
-                options.url = CONFIGURATION.apiUrl + 'projects/' + projectId + '/work_packages?offset=' + offset + '&pageSize=' + 50;
-            }
+            options.url = CONFIGURATION.apiUrl + 'projects/' + projectId + '/work_packages?offset=' + offset + '&pageSize=' + 50;
             await getRequest(options).then(async function (result) {
                 workPackages = result['_embedded']['elements'];
                 for (const item of workPackages) {
@@ -53,7 +48,8 @@ async function main(projectId, type) {
                             sourceBaseUrl = sourceBaseUrl.split('/');
                             sourceBaseUrl = sourceBaseUrl[2];
                         }
-                        mdContent = "--- \ntitle: " + '"' + item['subject'] + '"' + "\ncleanUrl: " + '"' + item[CONFIGURATION.cleanUrlField] + "" + '"' + "\n";
+                        var title = item['subject'].replace(/[^\x20-\x7E]/g, '');
+                        mdContent = "--- \ntitle: " + '"' + title + '"' + "\ncleanUrl: " + '"' + item[CONFIGURATION.cleanUrlField] + "" + '"' + "\n";
                         if (type !== 'events') {
                             mdContent = mdContent + "date: " + '"' + item['createdAt'] + "" + '"' + "\n";
                         }
@@ -177,8 +173,8 @@ async function main(projectId, type) {
                                     mdContent = mdContent + "breadcrumbs:\n - Home\n - " + type.charAt(0).toUpperCase() + type.slice(1) + "\n - " + mdFileName + "\n";
                                     mdContent = mdContent + "breadcrumbLinks:\n - / \n - /" + type + "\n - / \n";
                                 }
-                                
-                                mdContent = mdContent + "---\n" + turndownService.turndown(item['description']['raw']) + "\n";
+
+                                mdContent = mdContent + "---\n" + turndownService.turndown(item['description']['raw'].replace(/[^\x20-\x7E]/g, '')) + "\n";
                                 fs.writeFile('content/' + type + '/' + mdFileName + '.md', mdContent, function (err) {
                                     if (err) { throw err } else {
                                         console.log(mdFileName, 'Saved successfully!');

@@ -524,6 +524,125 @@ $('.readmore-link').each(function( index ) {
       });
     });
   });
+  $('#community-form-submit').click(function (e) {
+    var First_Name = $('#community_name').val();
+    var Email_Address = $('#community_email').val();
+    var Mobile_Number = $('#community_mobilenumber').val();
+    var Category = $('#category').val();
+    var TwitterHandle = $('#community_twitterhandle').val();
+    var LinkedInProfile = $('#community_linkedInprofile').val();
+    var DateAttendingFrom = $('#community_fromDate').val();
+    var DateAttendingTo =  $('#community_toDate').val();
+    var YourInterest =  $('#yourinterest').val();
+    var comments =  $('#community_comments').val();
+
+    var o = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
+    var filter = /^\d*(?:\.\d{1,2})?$/;
+    if (First_Name == '') {
+      $('#namealert').css('display', 'block');
+      return false;
+    }
+    else {
+      $('#namealert').css('display', 'none');
+    }
+    if (Email_Address == '' || Email_Address.search(o) == -1) {
+      $('#emailalert').css('display', 'block');
+      return false;
+    }
+    else {
+      $('#emailalert').css('display', 'none');
+    }
+    if (Category == '') {
+      $('#patientalert').css('display', 'block');
+      return false;
+    }
+    else {
+      $('#patientalert').css('display', 'none');
+    }
+
+  //description = '{ TwitterHandle : '+TwitterHandle+', LinkedInProfile : '+LinkedInProfile+', DateAttendingFrom : '+DateAttendingFrom+', DateAttendingTo  : '+DateAttendingTo+', Your Interest In Unblock Health : '+YourInterest+',Comments : '+comments+', Source:"HIMSS20"}';
+  
+  description = '{ "TwitterHandle" :\"'+ TwitterHandle +'\", "LinkedInProfile" :\"'+ LinkedInProfile +'\", "DateAttendingFrom" :\"'+ DateAttendingFrom +'\", "DateAttendingTo" :\"'+ DateAttendingTo +'\", "Your Interest In Unblock Health" :\"'+ YourInterest +'\", "Comments" :\"'+ comments +'\", "Source" :"HIMSS20"}';
+  description = JSON.stringify(description);
+   var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "https://test.admin.app.unblock.health/ubhweb/items/himss20_contact_details",
+  "method": "POST",
+  "headers": {
+    "Content-Type": "application/json"
+  },
+  "processData": false,
+  "data": "{\"status\": \"published\", \"full_name\": \"" + First_Name + "\", \"category\": \"" + Category + "\", \"e_mail\": \"" + Email_Address + "\", \"mobile_number\": \"" + Mobile_Number + "\", \"twitter_handle\": \"" + TwitterHandle + "\", \"linkedin_profile\": \"" + LinkedInProfile + "\", \"dates_attending_from\": \"" + DateAttendingFrom + "\", \"dates_attending_to\": \"" + DateAttendingTo + "\",  \"your_interest_in_unblock_health\": \"" + YourInterest + "\", \"comments\": \"" + comments + "\" ,  \r\n     \"source\":\"HIMSS20\"\r\n  } \r\n\r\n"
+}
+
+$.ajax(settings).done(function (response) {
+  //console.log(response);
+});
+   
+   var form = new FormData();
+    form.append("grant_type", "client_credentials");
+    form.append("client_id", "93d80a68-5ad0-878d-a787-5da44425070f");
+    form.append("client_secret", "_S9UX^KZ&&t9W(aH");
+    var settings = {
+      "async": true,
+      "crossDomain": true,
+      "url": "https://crm.unblock.health/Api/access_token",
+      "method": "POST",
+      "headers": {
+        "Accept": "application/vnd.api+json"
+      },
+      "processData": false,
+      "contentType": false,
+      "mimeType": "multipart/form-data",
+      "data": form
+    }
+    //var $success = $('#success'); // get the reference of the div
+    //$success.show().html('<div id="loader">Loading...</div>');
+    $.ajax(settings).done(function (response) {
+
+      var obj = $.parseJSON(response);
+      var access_token = obj.access_token;
+      var settings = {
+        "url": "https://crm.unblock.health/Api/V8/module",
+        "method": "POST",
+        "headers": {
+          "Accept": "application/vnd.api+json",
+          "Authorization": "Bearer " + access_token + "",
+          "Content-Type": "application/json"
+        },
+        "processData": false,
+        "data": "{\r\n  \"data\": {\r\n    \"type\": \"Contacts\",\r\n    \"id\": \"" + uid + "\",\r\n    \"attributes\": {\r\n     \"first_name\":\"" + First_Name + "\",\r\n     \"email1\":\"" + Email_Address + "\"\r\n, \r\n     \"title\":\"" + Category + "\"\r\n,\r\n     \"description\": "+ description  +",\r\n     \"phone_mobile\":\"" + Mobile_Number + "\"\r\n, \r\n     \"lead_source\":\"Conference\"\r\n   }\r\n  }\r\n}\r\n"
+      }
+
+      $.ajax(settings).done(function (response) {
+        //console.log(response);
+        var contactid = response.data.id;
+        var settings = {
+          "async": true,
+          "crossDomain": true,
+          "url": "https://crm.unblock.health/Api/V8/module/Accounts/aba27ce2-d758-bdeb-adef-5da4294bf9e8/relationships",
+          "method": "POST",
+          "headers": {
+            "Accept": "application/vnd.api+json",
+            "Authorization": "Bearer " + access_token + "",
+            "Content-Type": "application/json"
+          },
+          "processData": false,
+          "data": "{  \r\n   \"data\":{  \r\n         \"type\":\"Contacts\",\r\n         \"id\":\"" + contactid + "\"\r\n\t    \r\n      }\r\n}"
+        }
+
+        $.ajax(settings).done(function (response) {
+          //console.log(response);
+          if (response.meta.message != "") {
+            $("#communityform").trigger("reset");
+            var $success = $('#community_success'); // get the reference of the div
+            $success.show().html('Your Message was sent successfully');
+          }
+        });
+      });
+    });
+  });
   var showChar = 85;
   var ellipsestext = "....";
   var moretext = "Read More";
@@ -687,6 +806,15 @@ $('.readmore-link').each(function( index ) {
         $('#contact-submit-live').removeClass('is-disabled');
      }
   });
+  $('#community-form-submit').prop('disabled', 'disabled');
+  $('#community-form-submit').addClass('is-disabled');
+  $('#communityform').on('blur keyup change', 'textarea,input,select', function (event) {
+    comunityValidation = validateForm('#communityform', '#community-form-submit');
+    if ((comunityValidation == true) && ($("#community_name").val().length > 0) && ($("#community_email").val().length > 0) && ($("#community_fromDate").val().length > 0) && ($("#community_toDate").val().length > 0) && ($("#category").val() == "I’m a Patient" || $("#category").val() == "I’m a Patient Advocate" || $("#category").val() == "I’m a Carepartner")) {
+      $('#community-form-submit').prop('disabled', false);
+      $('#community-form-submit').removeClass('is-disabled');
+    }
+  });
   $('#contact-submit').prop('disabled', 'disabled');
   $('#contact-submit').addClass('is-disabled');
   $('#contactform').on('blur keyup change', 'textarea,input', function (event) {
@@ -704,6 +832,24 @@ $('.readmore-link').each(function( index ) {
       return false;
     }
   }
+  $("#community_fromDate").datepicker({
+        numberOfMonths: 1,
+        dateFormat: 'yy-mm-dd', 
+        onSelect: function (selected) {
+            var dt = new Date(selected);
+            dt.setDate(dt.getDate() + 1);
+            $("#community_toDate").datepicker("option", "minDate", dt);
+        }
+    });
+    $("#community_toDate").datepicker({
+        numberOfMonths: 1,
+        dateFormat: 'yy-mm-dd', 
+        onSelect: function (selected) {
+            var dt = new Date(selected);
+            dt.setDate(dt.getDate() - 1);
+            $("#community_fromDate").datepicker("option", "maxDate", dt);
+        }
+    });
 });
 
 function createTweet(tweetId) {

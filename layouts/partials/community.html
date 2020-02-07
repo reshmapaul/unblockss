@@ -1,0 +1,76 @@
+{{ if .Site.Params.community.enable }}
+{{"<!-- Contact Section -->" | safeHTML}}
+<section id="register" class="community">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="block">
+                    <div class="community-description">
+                       {{ with .Site.Params.community.title }}
+                      <h3 style="margin-bottom:20px;font-weight:700;" class="text-center">{{.}}</h3>
+                       {{ end }}
+
+                      {{ with .Site.Params.community.description }}
+                      <p>{{.}}</p>
+                       {{ end }}
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 offset-md-3">
+                <div class="form-group">
+                    <form method="POST" id="communityform">
+                        <div class="input-field">
+                            <input type="text" class="form-control" placeholder="Full name*" name="Full Name" id="community_name" required>
+                        </div>
+                        
+                        <!--<div class="input-field">
+                                <input type="text" class="form-control" placeholder="Subject*" name="Subject" id="subject">
+                                <span class="error" id="subjectalert" style="display: none;">Please Enter      Subject.</span>
+                            </div>-->
+                        <div class="input-field">
+                            <select name="Category*" id="category" class="form-control" required>
+                                <option value="">Please select a category*</option>
+                                <option value="Patient">I’m a Patient</option>
+                                <option value="PA">I’m a Patient Advocate</option>
+                                <option value="CP">I’m a Carepartner</option>
+                            </select>
+                        </div>
+                        <div class="input-field">
+                            <input type="email" class="form-control" placeholder="Email*" name="Email address" id="community_email" required>
+                        </div>
+                        <div class="input-field">
+                            <input type="text" class="form-control" placeholder="Mobile number" name="Mobile number" id="community_mobilenumber" >
+                        </div>
+                        <div class="input-field">
+                            <input type="text" class="form-control" placeholder="Twitter handle" name="Twitter handle" id="community_twitterhandle" required>
+                        </div>
+                        <div class="input-field">
+                            <input type="text" class="form-control" placeholder="LinkedIn profile" name="LinkedIn profile" id="community_linkedInprofile" >
+                        </div>
+                        <div class="input-field">
+                            <input type="text" class="form-control"  id="community_fromDate" name="from-attending-date" placeholder="Dates attending from">
+                            <input type="text" class="form-control"  id="community_toDate" name="to-attending-date" placeholder="Dates attending to">
+                        </div>
+                        <div class="input-field">
+                                <textarea class="form-control" placeholder="Your interest in Unblock Health" rows="3" id="yourinterest" name="Your interest in Unblock Health" ></textarea>
+                        </div>
+                        <div class="input-field">
+                               <input type="text" class="form-control" placeholder="Comments" name="comments" id="community_comments" >
+                        </div>
+                        <input type="hidden" name="_subject" value="[UnBlock Health] - Contact Form Submission" />
+                        <input id="community-form-submit" type="button" class="btn btn-send" value="Sign up">
+                        <!--<button class="btn btn-send" type="submit">Send me</button>-->
+                    </form>
+
+                    <div id="community_success" style="display:none;">
+
+                    </div>
+                    <div id="community_error" style="display:none;">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}

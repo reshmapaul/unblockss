@@ -2556,6 +2556,21 @@ p.msgcontent {
 .overflow-h {
  overflow: hidden!important;
 }
+input#community_fromDate {
+    width: 49%;
+    float: left;
+    margin-right: 1%;
+    margin-bottom: 10px;
+}
+input#community_toDate {
+    width: 50%;
+    float: left;
+    margin-bottom: 10px;
+}
+.community-description {
+    padding: 25px 15px;
+    font-size: 15px;
+}
 @media (max-width:767px) {
 .date-event-col-1 {
  width:28%;
@@ -2579,7 +2594,13 @@ p.msgcontent {
 .date-display {
    min-height: auto;
    padding-bottom: 10px;
-}	
+}
+input#community_fromDate {
+    width: 100%;   
+}
+input#community_toDate {
+    width: 100%;   
+} 	
 }
 @media (max-width:480px) {
 .date-event-col-1 {

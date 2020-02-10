@@ -1295,7 +1295,7 @@ a.btn.btn-home:nth-child(2):hover{
 }
 .error{
     color: red !important;
-    font-size: 12px !important;
+    /*font-size: 12px !important;*/
     margin-left: 0;
     text-align: left;
 }
@@ -2573,6 +2573,27 @@ input#community_toDate {
 }
 select#category {
     min-height: 100px !important;
+}
+#communityform ::-webkit-input-placeholder { /* Edge */
+  font-style:italic;
+  color: #989898;
+}
+
+#communityform :-ms-input-placeholder { /* Internet Explorer */
+  font-style:italic;
+  color: #989898;
+}
+
+#communityform ::placeholder {
+  font-style:italic;
+  color: #989898;
+}
+label.error {
+    font-size: 12px !important;
+}
+#category option:first-child{
+font-style:italic;
+color: #989898;
 }
 @media (max-width:767px) {
 .date-event-col-1 {

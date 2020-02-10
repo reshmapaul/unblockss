@@ -2571,6 +2571,9 @@ input#community_toDate {
     padding: 25px 15px;
     font-size: 15px;
 }
+select#category {
+    min-height: 100px !important;
+}
 @media (max-width:767px) {
 .date-event-col-1 {
  width:28%;

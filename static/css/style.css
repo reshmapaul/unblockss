@@ -1836,7 +1836,7 @@ form#subscribe {
   width: 100%;
   left: 0;
 }
-div#subscribesuccess {
+div#subscribesuccess, #community_success {
     font-size: 18px;
     color: #000;
     margin-top: 10px;
@@ -2575,26 +2575,41 @@ select#category {
     min-height: 100px !important;
 }
 #communityform ::-webkit-input-placeholder { /* Edge */
-  font-style:italic;
+  /*font-style:italic;*/
   color: #989898;
 }
 
 #communityform :-ms-input-placeholder { /* Internet Explorer */
-  font-style:italic;
+  /*font-style:italic;*/
   color: #989898;
 }
 
 #communityform ::placeholder {
-  font-style:italic;
+  /*font-style:italic;*/
   color: #989898;
 }
 label.error {
     font-size: 12px !important;
 }
 #category option:first-child{
-font-style:italic;
+/*font-style:italic;*/
 color: #989898;
 }
+.input-field.survey-field {
+    background: #eaeaea;
+}
+.survey-field .btn-group button.multiselect {
+    background: #ffffff;
+    color: #908f8f;
+}
+ .survey-field .multiselect-container label {
+    color: #999999 !important;
+}
+.survey-field ul.multiselect-container.dropdown-menu {
+    padding: 15px;
+    min-width: 250px;
+}
+
 @media (max-width:767px) {
 .date-event-col-1 {
  width:28%;

@@ -16,7 +16,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-6 offset-md-3">
+            <div class="col-xs-12 col-sm-12 col-md-8 offset-md-2">
                 <div class="form-group">
                     <form method="POST" id="communityform">
                         <div class="input-field">
@@ -27,13 +27,18 @@
                                 <input type="text" class="form-control" placeholder="Subject*" name="Subject" id="subject">
                                 <span class="error" id="subjectalert" style="display: none;">Please Enter      Subject.</span>
                             </div>-->
-                        <div class="input-field">
-                            <select name="Category*" id="category" multiple class="form-control" required>
-                                <option disabled>Please select one more categories as applicable*</option>
-                                <option value="Patient">I’m a Patient</option>
-                                <option value="PA">I’m a Patient Advocate</option>
-                                <option value="CP">I’m a Carepartner</option>
-                            </select>
+                           <div class="input-field survey-field">
+                           <select id="survey-category" class="survey-category" multiple="multiple" required>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                      <option value="Patient">I’m a Patient</option>
+                                      <option value="PA">I’m a Patient Advocate</option>
+                                      <option value="CP">I’m a Carepartner</option>
+                                    </div>
+                                </div>
+                           </div> 
+                          </select>
                         </div>
                         <div class="input-field">
                             <input type="email" class="form-control" placeholder="Email*" name="Email address" id="community_email" required>

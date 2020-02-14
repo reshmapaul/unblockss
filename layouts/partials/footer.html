@@ -47,7 +47,7 @@
                 <div class="row footer-content">
                   <div class="col-md-12">
                         <div class="block">
-                           <ul class="nav navbar-nav menu float-lg-right" id="top-nav">
+                           <ul class="nav navbar-nav menu" id="top-nav">
                              <li class="nav-item active">
                                 <a id="Home_footer_button" class="nav-link" href="{{ .Site.BaseURL }}">
                                     {{ with .Site.Params.navigation.home }} {{ . }} {{ end }}
@@ -75,6 +75,8 @@
                                 </li>
                                 {{ end }}
                                 <li id="Sitemap_footer_button" class="nav-item"><a class="nav-link" href="{{ .Site.BaseURL }}sitemap">Sitemap</a></li>
+                                <li id="Sitemap_footer_button" class="nav-item"><a class="nav-link" href="{{ .Site.BaseURL }}privacy-policy">Privacy Policy</a></li>
+                                <li id="Sitemap_footer_button" class="nav-item"><a class="nav-link" href="{{ .Site.BaseURL }}terms-and-conditions">Terms and Conditions</a></li>
                           </ul>
                             <p class="copyright-txt">Comprehensive Healthcare Suite of Patient Advocacy Services Designed for Patients and Consumers - <a href="#">Unblock Health</a> | Copyright &copy; {{ dateFormat "2006" now }}. All Rights Reserved.</p>
                         </div>

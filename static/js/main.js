@@ -1382,6 +1382,21 @@ $('.readmore-link').each(function( index ) {
    });
   var pathname = window.location.pathname;
   
+  
+  if (pathname == '/terms-and-conditions/') {
+    $('#top-nav').addClass('confirmregistration');
+    $('#top-nav').addClass('animated');
+    $('#current').addClass('current');
+
+    //$('#commonfooter').addClass('confirm-page-footer');
+  }
+  if (pathname == '/privacy-policy/') {
+    $('#top-nav').addClass('confirmregistration');
+    $('#top-nav').addClass('animated');
+    $('#current').addClass('current');
+
+    //$('#commonfooter').addClass('confirm-page-footer');
+  }
   if (pathname == '/faqs/') {
     $('#top-nav').addClass('confirmregistration');
     $('#top-nav').addClass('animated');

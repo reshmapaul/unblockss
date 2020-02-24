@@ -13,10 +13,8 @@
     {{end}}
     <meta property="og:description" content="{{.Summary }}">
     <meta property="og:site_name" content="unblock.health" />
-     {{ if ne .Params.banner "Nil" }}
-    <meta property="og:image" content="{{.Params.banner }}" />
-    {{else}}
-    <meta property="og:image" content="images/default.png" />
+    {{ if ne .Params.banner "Nil" }}
+    <meta property="og:image" content="{{ .Params.banner | absURL}}" />
     {{end}} 
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@unblock.health" />
@@ -24,8 +22,6 @@
     <meta name="twitter:description" content="{{.Summary }}" />
     {{ if ne .Params.banner "Nil" }}
      <meta property="twitter:image" content="{{ .Site.BaseURL }}{{.Params.banner }}"/>
-    {{else}}
-    <meta property="twitter:image" content="{{ .Site.BaseURL }}images/default.png" />
     {{end}}  
 
     {{ .Hugo.Generator }}

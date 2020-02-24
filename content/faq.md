@@ -2,6 +2,7 @@
 title = "FAQs"
 slug = "faqs"
 layout = "faqs"
+banner = "/images/about/contentslider-1.jpg"
 +++
 
 <div class="faq-title">Is this really a tool designed for patients to use directly?</div>

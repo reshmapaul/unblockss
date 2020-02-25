@@ -9,8 +9,16 @@
                        {{ with .Site.Params.community.title }}
                       <h3 style="margin-bottom:20px;font-weight:700;" class="text-center">{{.}}</h3>
                        {{ end }}
-
-                      {{ with .Site.Params.community.description }}
+                      {{ with .Site.Params.community.maindescription }}
+                      <p>{{.}}</p>
+                       {{ end }}
+                        {{ with .Site.Params.community.Date}}
+                      <p class="commmunity-name">{{.}}</p>
+                       {{ end }}
+                        {{ with .Site.Params.community.Location }}
+                      <p class="commmunity-name">{{.}}</p>
+                       {{ end }}
+                       {{ with .Site.Params.community.subdescription }}
                       <p>{{.}}</p>
                        {{ end }}
                     </div>

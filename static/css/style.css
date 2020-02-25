@@ -2752,6 +2752,12 @@ input#community_toDate {
 .cover-content p strong {
     font-weight: bold;
 }
+.commmunity-name {
+    font-weight: bold !important;
+}
+.community-description p {
+    margin-bottom: 11px;
+}
 article.dropcase li {
     font-size: 15px;
     list-style-type: circle;

@@ -5,8 +5,8 @@ VERSION:2.0
 BEGIN:VEVENT
 DTSTAMP:{{dateFormat "20060102T150405" .Date}}
 STATUS:CONFIRMED
-UID:{{dateFormat "20060102T150405" .Params.date}}@unblockhealth.com
-DTSTART:{{dateFormat "20060102T150405" .Params.date}}
+UID:{{dateFormat "20060102T150405" .Date}}@unblockhealthcoomunity.com
+DTSTART:{{dateFormat "20060102T150405" .Date}}
 DTEND:{{dateFormat "20060102T150405" .Params.enddate}}
 SUMMARY:{{.Title}}
 DESCRIPTION:{{ .Content | plainify }} (Info: {{with .Params.cleanurl}}{{.}}{{else}}{{ $.Site.Params.socialshare }}{{ .Permalink }}{{end}})

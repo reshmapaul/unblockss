@@ -236,3 +236,5 @@ paginate = 10
     events = ["HTML","Calendar"]
 [outputFormats.Calendar]
     protocol = "http://" 
+[date]
+   date = ["enddate", ":default"]

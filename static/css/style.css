@@ -2760,11 +2760,18 @@ input#community_toDate {
 .community-description p {
     margin-bottom: 11px;
 }
-article.dropcase li {
+/*article.dropcase li {
     font-size: 15px;
     list-style-type: circle;
     margin-left: 35px;
     line-height: 19px;
+    margin-bottom: 7px;
+}*/
+article.dropcase li {
+    font-size: 16px;
+    list-style-type: circle;
+    margin-left: 35px;
+    line-height: 25px;
     margin-bottom: 7px;
 }
 .twitter-loader {

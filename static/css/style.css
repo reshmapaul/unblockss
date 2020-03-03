@@ -2631,7 +2631,9 @@ color: #989898;
     margin-top: 20px;
     display: block;
 }
-
+.single-blog-card strong {
+    font-weight: bold;
+}
 @media (max-width:767px) {
 .date-event-col-1 {
  width:28%;

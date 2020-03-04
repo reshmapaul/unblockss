@@ -1,7 +1,7 @@
 --- 
 title: "Why is an Amazon delivery tracked better than a newly diagnosed cancer patient’s medical records request?"
 date: "2020-03-03"
-banner : "/images/blogs/are-you-afraid-of-the-Information-blocking-rules.jpg"
+banner : "/images/blogs/Why-is-an-Amazon-delivery-tracked.jpg"
 breadcrumbs:
  - Home
  - Blog

@@ -202,12 +202,16 @@ paginate = 10
         enable      = true
         bg          = "images/subscribe-bg.jpg"
         title       = "Partners"
-        netspectivelogo ="/images/Netspective-PartnerLogo.jpg"
+        netspectivelogo ="/images/partner-1-netspective.jpg"
         netspectivetitle ="Netspective Communications"
         netspectiveurl ="https://netspective.com/"
-        enlightenlogo   ="/images/Enlighten-PartnerLogo.jpg"
+        enlightenlogo   ="/images/partner-2-ER.jpg"
         enlightentitle  ="Enlightening Results"
         enlightenurl  ="https://www.enlighteningresults.com/"
+        titlesupporters = "Supporters"
+        Davedebronkartlogo ="/images/partner-2-epatient.jpg"
+        Davedebronkarttitle ="E-patients Dave"
+        Davedebronkarturl ="https://www.epatientdave.com/"
 
      # subscribe Section
     [params.subscribe]

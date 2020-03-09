@@ -3,26 +3,20 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title> {{ .Site.Title }} </title>
-    <meta name="description" content="{{ .Site.Params.Description }}">
+    <title> {{ .Params.ogTitle }} </title>
+    <meta name="description" content="{{ .Params.ogDescription }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="og:locale" content="en_US" />
-     <meta property="og:type" content="article" />
-    {{ if ne .Params.title "Nil" }}
-    <meta property="og:title" content="{{.Params.title }}" />
-    {{end}}
-    <meta property="og:description" content="{{.Summary }}">
-    <meta property="og:site_name" content="unblock.health" />
-    {{ if ne .Params.banner "Nil" }}
-    <meta property="og:image" content="{{ .Params.banner | absURL}}" />
-    {{end}} 
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="{{ .Params.ogTitle }}" />
+    <meta property="og:description" content="{{.Params.ogDescription }}">
+    <meta property="og:site_name" content="unblock.health" /> 
+    <meta property="og:image" content="{{ .Params.ogImage | absURL}}" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@unblock.health" />
-    <meta name="twitter:title" content="{{.Params.title }}" />
-    <meta name="twitter:description" content="{{.Summary }}" />
-    {{ if ne .Params.banner "Nil" }}
-     <meta property="twitter:image" content="{{ .Site.BaseURL }}{{.Params.banner }}"/>
-    {{end}}  
+    <meta name="twitter:title" content="{{.Params.ogTitle }}" />
+    <meta name="twitter:description" content="{{.Params.ogDescription }}" />
+    <meta property="twitter:image" content="{{ .Site.BaseURL }}{{.Params.ogImage }}"/>
 
     {{ .Hugo.Generator }}
     {{"<!-- Fonts -->" | safeHTML }}

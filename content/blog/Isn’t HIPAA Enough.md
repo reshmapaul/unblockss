@@ -2,6 +2,12 @@
 title: "Isn’t HIPAA Enough?"
 date: "2020-01-21"
 banner : "/images/blogs/Isn't-HIPAA-Enough.jpg"
+ogType: "article"
+ogTitle: "HIPAA | Patient Empowerment | data blocking | Unblock Health"
+ogDescription: "Unblock Health is revolutionizing patient empowerment, real-world interoperability, and transparency of the future."
+ogImage: "/images/blogs/Isn't-HIPAA-Enough.jpg"
+twitterImage: "/images/blogs/Isn't-HIPAA-Enough.jpg"
+twitterCard: "summary_large_image"
 breadcrumbs:
  - Home
  - Blog
@@ -21,7 +27,7 @@ The reality is, it’s not enough to be HIPAA 1996 compliant in our digitized wo
 Unblock Health is revolutionizing patient empowerment, real-world interoperability, and transparency of the future. Unblock Health tackles real-world patient unmet needs, providing the actual interoperability people and consumers need to be informed, empowered, and engaged members of their healthcare journey.  
 
 
-![Looking to end data blocking? Are you seeking transparency? Unblock Health will lead the way.](/images/blogs/Isn't-HIPAA-Enough.jpg)
+![HIPAA](/images/blogs/Isn't-HIPAA-Enough.jpg)
 ***Looking to end data blocking? Are you seeking transparency? Unblock Health will lead the way.***
 
 But what does social media have to do with it? Glad you asked! Don’t miss our next piece! Can’t wait that long? We don’t blame you! Dive in at https://www.unblock.health/ and don’t hesitate to reach out with any questions.

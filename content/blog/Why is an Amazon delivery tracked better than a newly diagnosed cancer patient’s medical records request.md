@@ -2,6 +2,12 @@
 title: "Why is an Amazon delivery tracked better than a newly diagnosed cancer patient’s medical records request?"
 date: "2020-03-03"
 banner : "/images/blogs/Why-is-an-Amazon-delivery-tracked.jpg"
+ogType: "article"
+ogTitle: "Patient Advocate Services | cancer patient’s medical records request | Unblock"
+ogDescription: "The first-in-class comprehensive Patient Advocate Services for patients and consumers who are determined to be empowered in their health care journey. Unblock Health is revolutionizing patient autonomy and healthcare consumerism."
+ogImage: "/images/blogs/Why-is-an-Amazon-delivery-tracked.jpg"
+twitterImage: "/images/blogs/Why-is-an-Amazon-delivery-tracked.jpg"
+twitterCard: "summary_large_image"
 breadcrumbs:
  - Home
  - Blog

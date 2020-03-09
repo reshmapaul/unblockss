@@ -2,6 +2,12 @@
 title: "What is the Value of Unblock Health?"
 date: "2020-01-14"
 banner : "/images/blogs/What is the Value of Unblock Health.jpg"
+ogType: "article"
+ogTitle: "Data blocking | assist patients struggling with data blocking | Unblock Health"
+ogDescription: "Unblock Health is designed to authentically meet patients where they are, supporting their struggles with data blocking and lack of transparency in their local communities and care settings."
+ogImage: "/images/blogs/What is the Value of Unblock Health.jpg"
+twitterImage: "/images/blogs/What is the Value of Unblock Health.jpg"
+twitterCard: "summary_large_image"
 breadcrumbs:
  - Home
  - Blog
@@ -31,7 +37,7 @@ There are currently no other patient self-advocacy tools to:
 - request an itemized list of where their data has been shared and/or sold. 
 
 
-![Unblock Health is glowing with value for patients, carepartners, consumers, and care providers who are ready to champion data access and end information blocking](/images/blogs/What is the Value of Unblock Health.jpg)
+![DATA BLOCKING](/images/blogs/What is the Value of Unblock Health.jpg)
 ***Unblock Health is glowing with value for patients, carepartners, consumers, and care providers who are ready to champion data access and end information blocking***
 
 

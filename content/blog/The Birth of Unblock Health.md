@@ -2,6 +2,12 @@
 title: "The Birth of Unblock Health"
 date: "2020-01-03T06:50:23Z"
 banner : "/images/blogs/Birth_of_Unblock_Health.jpg"
+ogType: "article"
+ogTitle: "patient advocacy experience | revolutionizing patient autonomy and healthcare consumerism"
+ogDescription: "Unblock Health is the culmination of over 20 years of boots-on-the-ground patient advocacy experience perfectly complemented with 30 years of leadership in digital tech, strategy, architecture, and engineering expertise to deliver an easy-to-use solution for the most neglected stakeholders in our health care ecosystem"
+ogImage: "/images/blogs/Birth_of_Unblock_Health.jpg"
+twitterImage: "/images/blogs/Birth_of_Unblock_Health.jpg"
+twitterCard: "summary_large_image"
 breadcrumbs:
  - Home
  - Blog
@@ -19,7 +25,7 @@ Once upon a time, at HIT Expo 2018 in sunny New Orleans, a board-certified patie
 Unblock Health is the culmination of over 20 years of boots-on-the-ground patient advocacy experience perfectly complemented with 30 years of leadership in digital tech, strategy, architecture, and engineering expertise to deliver an easy-to-use solution for the most neglected stakeholders in our health care ecosystem: the patient and their carepartner.
 
 
-![Patients need specific tools to drill through the barriers of data blocking.](/images/blogs/Birth_of_Unblock_Health.jpg)
+![patient advocacy experience](/images/blogs/Birth_of_Unblock_Health.jpg)
 ***Patients need specific tools to drill through the barriers of data blocking.***
 
 We’ve personally and professionally witnessed the devastating, multi-faceted struggles people face while managing their care in the midst of a life-altering diagnosis. We’ve listened to patients’ frustrations and witnessed the barriers they face in accessing their data. We’ve heard patients demands for transparency and watched them be completely ignored. We know first-hand the grief, loss, anxiety, and distrust that stems from data blocking. 

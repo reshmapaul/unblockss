@@ -2,6 +2,12 @@
 title: "What is Unblock Health?"
 date: "2020-01-07"
 banner : "/images/blogs/What_is_Unblock_Health.jpg"
+ogType: "article"
+ogTitle: "patient advocacy tool | Health Advocate Services | Unblock Health"
+ogDescription: "Unblock Health is a first-in-class patient advocacy tool designed for patients and consumers who are determined to be empowered in their health care journey and are no longer willing to accept traditional barriers to their information."
+ogImage: "/images/blogs/What_is_Unblock_Health.jpg"
+twitterImage: "/images/blogs/What_is_Unblock_Health.jpg"
+twitterCard: "summary_large_image"
 breadcrumbs:
  - Home
  - Blog
@@ -24,7 +30,7 @@ Unblock Health is designed to:
 - facilitate a digital workflow for the implementation of addendums that may be flagged by patients and carepartners upon review of their medical records and health information.
 
 
-![Unblock Health is the key to the top 4 barriers patients and consumers face in making informed decisions about their care.](/images/blogs/What_is_Unblock_Health.jpg)
+![patient advocacy tool](/images/blogs/What_is_Unblock_Health.jpg)
 ***Unblock Health is the key to the top 4 barriers patients and consumers face in making informed decisions about their care***
 
 

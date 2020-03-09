@@ -2,6 +2,12 @@
 title: "What’s Social Media Got to Do With It?"
 date: "2020-01-28"
 banner : "/images/blogs/What's-Social-Media-Got-To-Do-With-It.jpg"
+ogType: "article"
+ogTitle: "Social media channels to support patients | Patient Advocacy Suite | Unblock Health"
+ogDescription: "Patients rely heavily on peer-to-peer health support through various social media channels, such as Twitter,Facebook etc."
+ogImage: "/images/blogs/What's-Social-Media-Got-To-Do-With-It.jpg"
+twitterImage: "/images/blogs/What's-Social-Media-Got-To-Do-With-It.jpg"
+twitterCard: "summary_large_image"
 breadcrumbs:
  - Home
  - Blog
@@ -25,7 +31,7 @@ What is your organization doing to prevent data blocking and to address lack of 
 Unblock Health provides patients and carepartners with a way to demand access to information that is critical for people to make informed, engaged, and empowered decisions about their care. Unblock Health also supports organizations and care providers in their quest to be HIPAA compliant, especially in the ever evolving regulatory environment, so they may meet patients where they are, address interorganizational inefficiencies, and become proud data liberators and access champions.  
 
 
-![Unblock Health will bring clarity to opaque, poor HIPAA workflows that endanger patient safety, empowerment, and engagement.](/images/blogs/What's-Social-Media-Got-To-Do-With-It.jpg)
+![Social media got to do](/images/blogs/What's-Social-Media-Got-To-Do-With-It.jpg)
 ***Unblock Health will bring clarity to opaque, poor HIPAA workflows that endanger patient safety, empowerment, and engagement.***
 
 But how does Unblock Health REALLY work? Our next piece will be juicy. Stay tuned! 

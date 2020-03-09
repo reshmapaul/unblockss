@@ -2,6 +2,12 @@
 title: "The Dangers of Errors & Omissions in Your Medical Records"
 date: "2020-02-11"
 banner : "/images/blogs/the-dangers-of-errors & Omissions-in-your-medical-records.jpg"
+ogType: "article"
+ogTitle: "Errors and Omissions in your Medical Records | Personnal health Record | Unblock Health"
+ogDescription: "Unblock Health can ease the burden patients and their families face in correcting errors and omissions in their medical records."
+ogImage: "/images/blogs/the-dangers-of-errors & Omissions-in-your-medical-records.jpg"
+twitterImage: "/images/blogs/the-dangers-of-errors & Omissions-in-your-medical-records.jpg"
+twitterCard: "summary_large_image"
 breadcrumbs:
  - Home
  - Blog

@@ -2,6 +2,12 @@
 title: "When a Failing Heart Faces Information Blocking"
 date: "2020-02-04"
 banner : "/images/blogs/when-a-failing-heart-faces-information-blocking.jpg"
+ogType: "article"
+ogTitle: "Information Blocking | Patient Advocacy Suite | Unblock Health"
+ogDescription: "Unblock Health can ease the burden patients and their families face due to Information blocking for acquiring records in a HIPAA compliant manner in the format they specify by automating the process."
+ogImage: "/images/blogs/when-a-failing-heart-faces-information-blocking.jpg"
+twitterImage: "/images/blogs/when-a-failing-heart-faces-information-blocking.jpg"
+twitterCard: "summary_large_image"
 breadcrumbs:
  - Home
  - Blog

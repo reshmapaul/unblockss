@@ -8,7 +8,7 @@
             {{ if isset .Params "banner" }}
             <div class="card-img-container">
                 <picture>
-                    <a href="{{ .Permalink }}"><img src="{{.Params.banner | absURL }}" class="card-img"></a>
+                    <a href="{{ .Permalink }}"><img src="{{.Params.banner | absURL }}" class="card-img" alt="{{ .Title }}" title="{{ .Title }}"></a>
                 </picture>
             </div>
             {{ end }}

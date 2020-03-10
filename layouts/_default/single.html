@@ -5,7 +5,7 @@
     <main class="container content side-text-padding single-blog-card inner-card">
         {{ if isset .Params "banner" }}
         <picture class="post-figure m-b-15">
-            <a href="{{ .Params.link }}"><img src="{{.Params.banner | absURL }}"></a>
+            <a href="{{ .Params.link }}"><img src="{{.Params.banner | absURL }}" alt="{{ .Title }}" title="{{ .Title }}"></a>
         </picture>
         {{ end }}
         <article class="{{ if ne .Params.dropcap false }}dropcase{{ end }}">

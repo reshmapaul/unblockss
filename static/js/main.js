@@ -1063,7 +1063,7 @@ $('#patient-story-form-submit').click(function (e) {
 
 function sendm(token,to,First_Name,Last_Name,story_title,story_description,full_url){
   var subject = 'Unblock Health - Story Submitted';
-  var to = ["mary.john@netspective.org","vishnu.prasad@citrusinformatics.com"];
+  var to = ["mary.john@netspective.org","enlighteningresults@gmail.com"];
   //var to = ["vishnu.prasad@citrusinformatics.com"];
   
   var body = "";

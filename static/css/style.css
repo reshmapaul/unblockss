@@ -541,7 +541,7 @@ color: #fff !important;
     top: 85px !important;
 }
 div#navbarResponsive {
-    background-color: rgba(0, 0, 0, 0.9);
+    /*background-color: rgba(0, 0, 0, 0.9);*/
     padding-left: 15px;
     width: 221px;
     margin-top: 32px;
@@ -1621,7 +1621,7 @@ span.input-group-btn {
     display: block !important;
 }
 div#navbarResponsive {
-    background-color: rgba(0, 0, 0, 0.9);
+    /*background-color: rgba(0, 0, 0, 0.9);*/
     padding-left: 15px;
     width: 221px;
     margin-top: 10px;

@@ -971,8 +971,11 @@ right: 60px;
     padding-bottom: 5px;
     margin-top: 15px;
     border-top: 1px solid #efefef;
+    margin:10px;
 }
-
+.faq-content{
+  margin:10px;
+}
 @media only screen and (max-width:400px) {
   .hero-area .counter ul li .digit {
     font-size: 30px;
@@ -1503,7 +1506,7 @@ span.input-group-btn {
 }
 
 .confirmregistration .nav a {
-    color: #fff !important;
+    /*color: #fff !important;*/
 }
 .sitemap li {
     list-style-type: square;

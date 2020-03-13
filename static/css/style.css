@@ -1836,7 +1836,7 @@ form#subscribe {
   width: 100%;
   left: 0;
 }
-div#subscribesuccess, #community_success {
+div#subscribesuccess, #community_success, #patient_impact_story_success, #patient_impact_story_error {
     font-size: 18px;
     color: #000;
     margin-top: 10px;
@@ -2952,14 +2952,25 @@ label#story_description-error {
 /* PK style .... */
 @media (max-width:991px) {
 section.section.sitemap {
-    padding-top: 188px!important;
-}  
+    padding-top: 155px!important;
+}
+.navbar-toggleable-md .navbar-nav {
+    margin-top: 2.5rem!important;
+    background: #fff!important;
+}
+.menu li a {
+    color: #3c3c3c;
+} 
+.headshot-container .navbar-nav .nav-item {
+    margin-left: 0.7rem!important;
+} 
 }
 @media (max-width:767px) {
 section.section.sitemap {
     padding-top: 150px!important;
 }
 div#breadcrumbs {
+    margin-top: 0px!important;
     padding-bottom: 15px!important;
 }
 .add-photo {

@@ -1,0 +1,42 @@
+.custom em{
+    color: #a32843
+}
+
+.custom code{
+    color: #ff2f86
+}
+
+.customjs {
+    background-color: #504e9e
+}
+/* custom css*/
+
+.content-section {}
+.content-section h2 {
+    font-size: 30px !important;
+    text-align: left;
+    color:#95999d !important;
+    font-weight: normal !important;
+}
+.top-content, .bottom-content {
+    width: 100%;
+    float: left;
+}
+.top-left {
+    width: 49% !important;
+    float: left;
+    padding-left: 1%;
+}
+.top-right {
+    width: 49% !important;
+    float: left;
+    padding-left: 1%;
+}
+.clearfix {
+    clear:both;
+}
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+    display:inline-block;
+}

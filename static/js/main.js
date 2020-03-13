@@ -118,6 +118,13 @@ $('.readmore-link').each(function( index ) {
 
     //$('#commonfooter').addClass('confirm-page-footer');
   }
+  if (pathname == '/patient-impact-stories/') {
+    $('#top-nav').addClass('confirmregistration');
+    $('#top-nav').addClass('animated');
+    $('#current').addClass('current');
+
+    //$('#commonfooter').addClass('confirm-page-footer');
+  }
   if (pathname == '/privacy-policy/') {
     $('#top-nav').addClass('confirmregistration');
     $('#top-nav').addClass('animated');
@@ -150,6 +157,10 @@ $('.readmore-link').each(function( index ) {
   if(pathname == '/faqs/'){
     $('#current').removeClass('current');
     $('#faq').addClass('current'); 
+  }
+  if(pathname == '/patient-impact-stories/'){
+    $('#current').removeClass('current');
+    $('#patientimpact').addClass('current'); 
   }
   if(pathname.includes('/blog/')) {
     $('#top-nav').addClass('confirmregistration');
@@ -919,6 +930,16 @@ $.ajax(settings).done(function (response) {
             $("#community_fromDate").datepicker("option", "maxDate", dt);
         }
     });
+    
+    $('#patient_impact_story_form').on('blur keyup change', 'textarea,input,select', function (event) {
+
+      var comunityValidation = validateForm('#patient_impact_story_form', '#patient-story-form-submit');
+      if ((comunityValidation == true) && $('#agree_checkbox').prop("checked") == true && $("#patient_first_name").val().length > 0 && $("#patient_last_name").val().length > 0 && $("#patient_email").val().length > 0 )
+        {
+          $('#patient-story-form-submit').prop('disabled', false);
+          $('#patient-story-form-submit').removeClass('is-disabled');
+        }
+    });
 });
 
 function createTweet(tweetId) {
@@ -944,9 +965,230 @@ console.log("client_credentials");
 }
 
 
+$('#patient-story-form-submit').click(function (e) {
+  if($(this).val() == 'Please wait..'){
+    return false;
+  }
+  $(this).val('Please wait..');
+  $(this).attr('disabled',true);
+  var First_Name = $('#patient_first_name').val();
+  var Last_Name = $('#patient_last_name').val();
+  var Email_Address = $('#patient_email').val();
+  var story_title = $('#story_title').val();
+  var story_description =  $('#story_description').val();
+  var authorization_granted = $('#agree_checkbox').prop("checked");
+
+  
+  var token= "";
+  
+  $.ajax({
+    "async": true,
+    "crossDomain": true,
+    "url": "https://test.admin.web.unblock.health/directus/auth/authenticate",
+    "method": "POST",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "processData": false,
+
+    "data": "{\"email\": \"support@unblock.health\", \"password\": \"g%!YP25Fl65X\"    \r\n  } \r\n\r\n",
+    success: function(data, status, jqXHR){
+      token = data.data.token;
+      console.log(data.data.token);
+    
+
+    var jform = new FormData();
+    jform.append('data',$('#imgInp').get(0).files[0]); // Here's the important bit
+    
+    $.ajax({
+        url: 'https://test.admin.web.unblock.health/directus/files',
+        type: 'POST',
+        data: jform,
+        dataType: 'json',
+        mimeType: 'multipart/form-data', // this too
+        contentType: false,
+        cache: false,
+        processData: false,
+        headers: {
+          "Authorization": "bearer "+ token,
+          
+        },
+        success: function(data, status, jqXHR){
+          console.log(data);
+          
+          var photo = data.data.id;      
+          var full_url =   data.data.data.full_url;      
+        
+          var settings = {
+            "async": true,
+            "crossDomain": true,
+            //"url": "https://test.admin.app.unblock.health/ubhweb/items/himss20_contact_details",
+            "url": "https://test.admin.web.unblock.health/directus/items/patient_stories",
+            "method": "POST",
+            "headers": {
+              "Content-Type": "application/json",
+              "Authorization": "bearer "+ token,
+            },
+            "processData": false,
+        
+            "data": "{\"status\": \"published\", \"first_name\": \"" + First_Name + "\" , \"last_name\" : \"" + Last_Name + "\" , \"email_id\": \"" + Email_Address + "\", \"story_title\": \"" + story_title + "\", \"story_description\": \"" + story_description + "\", \"photo\": " + photo + ", \"authorization_granted\": " + photo + "   \r\n       } \r\n\r\n"
+          }
+          $.ajax(settings).done(function (response) {
+            $("#patient_impact_story_form").trigger("reset");
+            sendm(token,Email_Address,First_Name,Last_Name,story_title,story_description,full_url);
+
+            var $success = $('#patient_impact_story_success'); // get the reference of the div
+              $success.show().html('Your Story was sent successfully');
+              $('#patient-story-form-submit').val('Submit Your Story');
+              $('#patient-story-form-submit').attr('disabled',false);
+          });
+    
+        },
+        error: function(jqXHR,status,error){
+            // Hopefully we should never reach here
+            var $success = $('#patient_impact_story_error'); // get the reference of the div
+              $success.show().html('Sorry, The story was not able to sent, please check all fields are provided.');
+              $('#patient-story-form-submit').attr('disabled',false);
+        }
+    });
+  
+  }
+
+});
+});
 
 
 
 
 
+function sendm(token,to,First_Name,Last_Name,story_title,story_description,full_url){
+  var subject = 'Unblock Health - Story Submitted';
+  var to = ["mary.john@netspective.org","vishnu.prasad@citrusinformatics.com"];
+  //var to = ["vishnu.prasad@citrusinformatics.com"];
+  
+  var body = "";
+  body += " <div  style='text-align: left;' trbidi='on'>";
+  body += "<br />";
+  body += "HI ,<br />";
+  body += "<br />";
+  body += First_Name + " " + Last_Name +" added new story with the following details.<br />";
+  body += "<br />";
+  body += "<b>First Name:</b>&nbsp;"+ First_Name + "<br />";
+  body += "<br />";
+  body += "<b>Last Name:</b>&nbsp;"+ Last_Name +"<br />";
+  body += "<br />";
+  body += "<b>Story Title:</b>&nbsp;"+ story_title +"<br />";
+  body += "<br />";
+  body += "<div width:250px;><b>Story Description:</b>&nbsp;"+story_description +"</div><br/>";
+  body += "</br> <div class='separator' style='clear: both; text-align: center;'>";
+  body += "<b> Photo:</b>&nbsp;<a href='"+ full_url +"' style='margin-left: 3px; margin-right: 3px; text-decoration: underline;'>";
+  body += "</br>View Image";
+  // body += "<img border='0' data-original-height='1000' data-original-width='1500' height='425' src='"+ full_url +"' width='640' />";
+  body += "</a>";
+  body += "</div>";
+  body += "<br /></div>";
+  body += "  </div>";
+  
+  var settings = {
+    "async": true,
+    "crossDomain": true,
+    //"url": "https://test.admin.app.unblock.health/ubhweb/items/himss20_contact_details",
+    "url": "https://test.admin.web.unblock.health/directus/mail",
+    "method": "POST",
+    "headers": {
+      "Content-Type": "application/json",
+      "Authorization": "bearer "+ token,
+    },
+    "processData": false,
+    "data": JSON.stringify({"to": to, "subject": subject , "body" :  body })
+  }
+  $.ajax(settings).done(function (response) {
+    console.log(response);
+  });
+}
 
+
+$('#story_description').keyup(function() {
+    
+  var characterCount = $(this).val().length,
+      current = $('#current'),
+      maximum = $('#maximum'),
+      theCount = $('#the-count');
+    
+  current.text(characterCount);
+ 
+  
+  /*This isn't entirely necessary, just playin around*/
+  
+  
+  if (characterCount >= 500) {
+    maximum.css('color', '#8f0001');
+    current.css('color', '#8f0001');
+    theCount.css('font-weight','bold');
+  } else {
+    maximum.css('color','#666');
+    theCount.css('font-weight','normal');
+  }
+  
+      
+});
+
+
+$(document).on('click', '#close-preview', function(){ 
+  $('.image-preview').popover('hide');
+  // Hover befor close the preview
+  $('.image-preview').hover(
+      function () {
+         $('.image-preview').popover('show');
+      }, 
+       function () {
+         $('.image-preview').popover('hide');
+      }
+  );    
+});
+
+$(function() {
+  // Create the close button
+  var closebtn = $('<button/>', {
+      type:"button",
+      text: 'x',
+      id: 'close-preview',
+      style: 'font-size: initial;',
+  });
+  closebtn.attr("class","close pull-right");
+  // Set the popover default content
+  $('.image-preview').popover({
+      trigger:'manual',
+      html:true,
+      title: "<strong>Preview</strong>"+$(closebtn)[0].outerHTML,
+      content: "There's no image",
+      placement:'right'
+  });
+  // Clear event
+  $('.image-preview-clear').click(function(){
+      $('.image-preview').attr("data-content","").popover('hide');
+      $('.image-preview-filename').val("Add Your Photo*");
+      $('.image-preview-clear').hide();
+      $('.image-preview-input input:file').val("");
+      $(".image-preview-input-title").text("Browse"); 
+  }); 
+  // Create the preview image
+  $(".image-preview-input input:file").change(function (){     
+      var img = $('<img/>', {
+          id: 'dynamic',
+          width:250,
+          height:200
+      });      
+      var file = this.files[0];
+      var reader = new FileReader();
+      // Set preview image into the popover data-content
+      reader.onload = function (e) {
+          $(".image-preview-input-title").text("Change");
+          $(".image-preview-clear").show();
+          $(".image-preview-filename").val(file.name);            
+          img.attr('src', e.target.result);
+          $(".image-preview").attr("data-content",$(img)[0].outerHTML).popover("show");
+      }        
+      reader.readAsDataURL(file);
+  });  
+});

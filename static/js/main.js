@@ -979,23 +979,7 @@ $('#patient-story-form-submit').click(function (e) {
   var authorization_granted = $('#agree_checkbox').prop("checked");
 
   
-  var token= "";
-  
-  $.ajax({
-    "async": true,
-    "crossDomain": true,
-    "url": "https://test.admin.web.unblock.health/directus/auth/authenticate",
-    "method": "POST",
-    "headers": {
-      "Content-Type": "application/json"
-    },
-    "processData": false,
-
-    "data": "{\"email\": \"support@unblock.health\", \"password\": \"g%!YP25Fl65X\"    \r\n  } \r\n\r\n",
-    success: function(data, status, jqXHR){
-      token = data.data.token;
-      console.log(data.data.token);
-    
+  var token= "7sTXwg4jeFampJVOa6YxTRBv";
 
     var jform = new FormData();
     jform.append('data',$('#imgInp').get(0).files[0]); // Here's the important bit
@@ -1052,9 +1036,7 @@ $('#patient-story-form-submit').click(function (e) {
         }
     });
   
-  }
-
-});
+ 
 });
 
 

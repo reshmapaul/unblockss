@@ -18,7 +18,7 @@
                             href="{{ .Params.cleanUrl }}">{{ .Params.sourceBaseUrl }}</a> {{ end }}
                     </p>
                 </header>
-                <p>{{ .Content | safeHTML}}</p>
+                <p>{{ .Content }}</p>
                 <hr>
                 {{ partial "social.html" . }}
             </div>

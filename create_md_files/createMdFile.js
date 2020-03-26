@@ -126,6 +126,7 @@ async function main(projectId, type) {
                                                 const openGraphMetaData = meta['content'];
                                                 for (const openMeta of openGraphMetaData) {
                                                     openMeta['content'] = openMeta['content'].replace(/[^\x20-\x7E]/g, '');
+                                                    openMeta['content'] = openMeta['content'].replace(/"/g, '\\"');
                                                     if (openMeta['name'] === 'og:title') {
                                                         mdContent = mdContent + "ogTitle: " + '"' + openMeta['content'] + '"' + "\n";
                                                     } else if (openMeta['name'] === 'og:description') {
@@ -144,6 +145,7 @@ async function main(projectId, type) {
                                                 const twitterMetaData = meta['content'];
                                                 for (const twitterMeta of twitterMetaData) {
                                                     twitterMeta['content'] = twitterMeta['content'].replace(/[^\x20-\x7E]/g, '');
+                                                    twitterMeta['content'] = twitterMeta['content'].replace(/"/g, '\\"');
                                                     if (twitterMeta['name'] === 'twitter:card') {
                                                         mdContent = mdContent + "twitterCard: " + '"' + twitterMeta['content'] + '"' + "\n";
                                                     } else if (twitterMeta['name'] === 'twitter:description') {

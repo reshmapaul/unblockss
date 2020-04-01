@@ -1419,7 +1419,12 @@ section#contact {
     padding-top: 80px;
     background: #f8f8f8;
 }
-
+.brief-outer .post.dropcase a {
+    color: #0275d8!important;
+}
+.brief-outer .post.dropcase a:hover {
+    color: #014c8c!important;
+}
 
 @media (max-width: 480px) {
 

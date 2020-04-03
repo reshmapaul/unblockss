@@ -3015,3 +3015,9 @@ div#breadcrumbs {
   width: 59%!important;
 }  
 }
+.brief-outer .post.dropcase .social-share a {
+    color: #fff!important;
+}
+.brief-outer .post.dropcase a.new-ofer-btn-1 {
+    color: #333!important;
+}

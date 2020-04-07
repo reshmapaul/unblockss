@@ -68,6 +68,7 @@ async function main(projectId, type) {
                         if (type === 'events') {
                             mdContent = mdContent + "layout: " + '"' + "event" + '"' + "\n";
                             mdContent = mdContent + "sub: " + '"' + "events" + '"' + "\n";
+							mdContent = mdContent + "eventCancelled: " + '"' + item[CONFIGURATION.eventCancelledField] + '"' + "\n";
                         }
                         let attachMentUrl = item['_links']['attachments']['href'];
                         attachMentUrl = CONFIGURATION.baseUrl + attachMentUrl;

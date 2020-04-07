@@ -18,7 +18,11 @@
                             href="{{ .Params.cleanUrl }}">{{ .Params.sourceBaseUrl }}</a> {{ end }}
                     </p>
                 </header>
-                <p>{{ .Content }}</p>
+                <p>{{ .Content | safeHTML}}
+                        {{ if in .Params.cleanUrl ".pdf" }}
+                        <a href="{{ .Params.cleanUrl}}" target="_blank">Read More..</a>
+                        {{ end }}
+                </p>
                 <hr>
                 {{ partial "social.html" . }}
             </div>

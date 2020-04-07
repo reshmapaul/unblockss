@@ -12,15 +12,15 @@
                  <div class="alert alert-warning" role="alert">Don’t miss these events focused on patient advocacy, patient empowerment, data access, & transparency.</div> 
                 <ul class="nav nav-tabs text-center" id="myTab" role="tablist">
                   <li class="nav-item">
-                    <a class="nav-link show " id="followed-tab" href="/events" aria-controls="followed"
+                    <a class="nav-link show" id="followed-tab" href="/events" aria-controls="followed"
                       aria-selected="true"><i class="far fa-calendar-alt"></i> Upcoming Events</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link show active" id="favorite-tab" href="/events/past" aria-controls="favorite"
+                    <a class="nav-link show" id="favorite-tab" href="/events/past" aria-controls="favorite"
                       aria-selected="false"><i class="fas fa-history"></i> Past Events</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link show" id="cancelled-tab" href="/events/cancelled" aria-controls="favorite"
+                    <a class="nav-link show active" id="cancelled-tab" href="/events/cancelled" aria-controls="favorite"
                       aria-selected="false"><i class="far fa-calendar-times"></i> Cancelled Events</a>
                   </li>
                 </ul>
@@ -29,7 +29,7 @@
                 <div class="active" id="favorite" role="tabpanel" aria-labelledby="favorite-tab">
                   <div class="top-10-most-list">
                     <div class="fhir-list-row">
-                      {{ $paginator := .Paginate (where .Site.Pages.ByDate.Reverse "Params.enddate" "lt" (now.Format "2006-01-02")) }}
+                       {{ $paginator := .Paginate (where .Site.Pages.ByDate "Params.eventcancelled" "eq" "true") }}              
                       {{ if $paginator.Pages }}
                       {{ range $paginator.Pages }}
                       {{ .Render "li-event" }}

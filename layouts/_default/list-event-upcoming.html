@@ -17,13 +17,17 @@
                       <li class="nav-item">
                         <a class="nav-link show" id="favorite-tab" href="/events/past"  aria-controls="favorite" aria-selected="false"><i class="fas fa-history"></i> Past Events</a>
                       </li>
+                      <li class="nav-item">
+                      <a class="nav-link show" id="cancelled-tab" href="/events/cancelled" aria-controls="favorite"
+                      aria-selected="false"><i class="far fa-calendar-times"></i> Cancelled Events</a>
+                     </li>
                   </ul>
                 </div>
                 <div class="tab-content" id="myTabContent">
                   <div class="active" id="followed" role="tabpanel" aria-labelledby="followed-tab">
                     <div class="top-10-most-list">
                       <div class="fhir-list-row">
-                          {{ $paginator := .Paginate (where .Pages.ByDate "Params.enddate" "ge" (now.Format "2006-01-02")) }}                
+                          {{ $paginator := .Paginate (where (where .Pages.ByDate "Params.enddate" "ge" (now.Format "2006-01-02")) "Params.eventcancelled" "ne" "true") }}                
                           {{ if $paginator.Pages }}
                           {{ range $paginator.Pages }}
                           {{ .Render "li-event" }}

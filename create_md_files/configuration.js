@@ -7,6 +7,7 @@ const configuration = {
     pressProjectId: 32,
     cleanUrlField: 'customField2',
     locationField: 'customField5',
+	eventCancelledField: 'customField6',
     authToken: 'Basic YXBpa2V5OmQ3NDY3YzUwYzNhZDRhNDAwZDI1YmUzMTFmYmFjY2FlMTRmMDljZDk1YTQwYTRjZWI3NjRmYzcxZjcxZTE5NTA='
 };
 

@@ -54,6 +54,7 @@
               <!-- date -->
               {{ if eq $startDate  $endDate }}
               <div class="event-date-holder"><i class="far fa-calendar-alt"></i> {{ $endDate }}
+                {{ if( ne .Params.eventcancelled "true" )}}
                 {{ if le .Date.Unix now.Unix   }}
                 {{ if ge .Params.enddate  (now.Format "2006-01-02")}}
                 <span class="badge badge-success">Live</span>
@@ -67,11 +68,14 @@
                 {{ else }}
                 <span> (in {{ add (div (sub .Date.Unix now.Unix) 86400) 1}} Days)</span>
                 {{ end }}
-                {{ end }}</div>
+                {{ end }}
+                {{ end }}
+              </div>
               {{else}}
               {{ if eq (dateFormat "2006" .Params.date) (dateFormat "2006" .Params.enddate) }}
               <div class="event-date-holder"><i class="far fa-calendar-alt"></i>
                 {{ dateFormat "January 2" .Params.date }} to {{ $endDate }}
+                {{ if( ne .Params.eventcancelled "true" )}}
                 {{ if le .Date.Unix now.Unix   }}
                 {{ if ge .Params.enddate  (now.Format "2006-01-02")}}
                 <span class="badge badge-success">Live</span>
@@ -85,9 +89,12 @@
                 {{ else }}
                 <span> (in {{ add (div (sub .Date.Unix now.Unix) 86400) 1}} Days)</span>
                 {{ end }}
-                {{ end }}</div>
+                {{ end }}
+                {{ end }}
+              </div>
               {{ else }}
               <div class="event-date-holder"><i class="far fa-calendar-alt"></i> {{ $startDate }} to {{ $endDate }}
+                {{ if( ne .Params.eventcancelled "true" )}}
                 {{ if le .Date.Unix now.Unix   }}
                 {{ if ge .Params.enddate  (now.Format "2006-01-02")}}
                 <span class="badge badge-success">Live</span>
@@ -101,7 +108,9 @@
                 {{ else }}
                 <span> (in {{ add (div (sub .Date.Unix now.Unix) 86400) 1}} Days)</span>
                 {{ end }}
-                {{ end }}</div>
+                {{ end }}
+                {{ end }}
+              </div>
               {{ end }}
               {{end}}
               {{ if  (ne .Params.location "null") -}}
@@ -109,7 +118,7 @@
               {{ end -}}
             </div>
             <div class="col-lg-3 col-md-4">
-              {{ if ge .Date.Unix now.Unix   }}
+              {{ if and (ge .Date.Unix now.Unix) (ne .Params.eventcancelled "true") }}      
               {{ with  .OutputFormats.Get "Calendar" -}}
               <a href="{{ .Permalink | safeURL }}" class="new-ofer-btn-1 ev-det-date-bt pull-right" data-toggle="modal"
                 data-target=""><i class="far fa-calendar-alt"></i> Add to Calendar</a>

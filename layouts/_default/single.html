@@ -19,9 +19,11 @@
                     </p>
                 </header>
                 <p>{{ .Content | safeHTML}}
-                        {{ if in .Params.cleanUrl ".pdf" }}
-                        <a href="{{ .Params.cleanUrl}}" target="_blank">Read More..</a>
-                        {{ end }}
+                        {{ if isset .Params "pdfurl" }}   
+						<object data="{{ .Params.pdfURL | absURL}}" type="application/pdf" width="100%" height="500">
+							<embed src="{{ .Params.pdfURL | absURL}}" type="application/pdf" />
+						</object>
+                         {{ end }}
                 </p>
                 <hr>
                 {{ partial "social.html" . }}

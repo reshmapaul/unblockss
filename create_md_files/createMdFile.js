@@ -3,6 +3,7 @@ const CONFIGURATION = require('./configuration');
 const fs = require('fs');
 const TurndownService = require('turndown');
 const turndownService = new TurndownService();
+const path = require('path');
 
 getRequest = (options, json = true) => new Promise((resolve, reject) => {
     request.get(options, function (err, resp, body) {
@@ -83,23 +84,26 @@ async function main(projectId, type) {
 								let pdfUrl = '';
                                 let metaDataUrl = '';
                                 let ogSiteName = '';
-								let extension_img = '';
 								let attachment_title = '';
+								let curated_attachment_basename = '';
+								let curated_attachment_extension = '';
+								let extension_img = '';
                                 elements.some(function (attachment, index, _arr) {
                                     if (attachment['_links']['self']['title']) {
 										attachment_title = attachment['_links']['self']['title'];
-                                        if (attachment_title === 'Curated_Featured_Image.png' || attachment_title === 'Curated_Featured_Image.jpg' || attachment_title === 'Curated_Featured_Image.jpeg') {
-                                            featuredImageUrl = attachment['_links']['self']['href'];
-                                            featuredImageUrl = CONFIGURATION.baseUrl + featuredImageUrl + '/content';
-											extension_img = getImageExtension(attachment['_links']['self']['title']);
-                                        }else if (attachment['_links']['self']['title'] === 'Curated_Featured_Image.pdf') {
+										curated_attachment_extension = path.extname(attachment_title);
+										curated_attachment_basename = path.basename(attachment_title, curated_attachment_extension);							
+										if (attachment_title === 'Curated_Featured_Image.pdf') {
                                             pdfUrl = attachment['_links']['self']['href'];
                                             pdfUrl = CONFIGURATION.baseUrl + pdfUrl + '/content';
-                                        }
-										else if (attachment['_links']['self']['title'] === 'Lectio_Extension_Curation.json') {
+                                        }else if(curated_attachment_basename == 'Curated_Featured_Image') {
+                                            featuredImageUrl = attachment['_links']['self']['href'];
+                                            featuredImageUrl = CONFIGURATION.baseUrl + featuredImageUrl + '/content';
+											extension_img = path.extname(attachment_title);
+                                        }else if (attachment_title === 'Lectio_Extension_Curation.json') {
                                             metaDataUrl = attachment['_links']['self']['href'];
                                             metaDataUrl = CONFIGURATION.baseUrl + metaDataUrl + '/content';
-                                        }
+                                        }						
                                     }
                                 });
                                 if (featuredImageUrl !== '' && extension_img !== '') {
@@ -132,9 +136,9 @@ async function main(projectId, type) {
                                     options.url = pdfUrl;
                                     options['encoding'] = 'binary';
                                     await getRequest(options, false).then(async function (responseData) {
-                                        let fileName = item['subject'].replace(/[^a-z\d\s]+/gi, "");
-                                        pdfFileName = fileName.trim();
-                                        pdfFileName = fileName + '.pdf';
+                                        let pdfFileName = item['subject'].replace(/[^a-z\d\s]+/gi, "");
+                                        pdfFileName = pdfFileName.trim();
+                                        pdfFileName = pdfFileName + '.pdf';
                                         pdfPath = "/images/resources/" + pdfFileName;
                                         mdContent = mdContent + "pdfURL : " + '"' + pdfPath + '"' + "\n";
                                         fs.writeFile("static/images/resources/" + pdfFileName, responseData, 'binary', function (err) {
@@ -238,20 +242,3 @@ fetchNews.then(function (newsResponse) {
         });
     });
 });
-
-
-function getImageExtension(imageFile){
-	let extension = '';
-	switch (imageFile) {
-	  case 'Curated_Featured_Image.png':
-		extension = '.png';
-		break;
-	  case 'Curated_Featured_Image.jpg':
-		extension = '.jpg';
-		break;
-	  case 'Curated_Featured_Image.jpeg':
-		extension = '.jpeg';
-		break;
-	}
-	return extension;
-}

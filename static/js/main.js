@@ -33,7 +33,10 @@ $(window).load(function () {
 
 
 $(document).ready(function () {
-
+   $("a:contains('Read on')").each( function( i, element ) {
+        $(this).attr('target','_blank');
+     
+  });
   /*twitter hashtag feed */
   var ws = new WebSocket('wss://twint.netspective.io:8882');
   let count = 0;

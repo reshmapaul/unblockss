@@ -1,7 +1,7 @@
 <div class="container">
     <nav class="navbar navbar-fixed-top  navigation" id="top-nav">
         <div class="container headshot-container">
-          <div class="col-lg-9 col-md-12 pt-1">
+          <div class="col-lg-10 col-md-12 pt-1">
             <div itemscope="" itemtype="http://schema.org/MedicalOrganization">
              <a id="Home_Logo_Button" class="navbar-brand float-none float-lg-left" href="{{ .Site.BaseURL }}" itemprop="url">        
                 <img src="/images/logo.png" alt="{{ .Site.Params.logotitle }}" title="{{ .Site.Params.logotitle }}" itemprop="logo"/>      
@@ -12,7 +12,7 @@
         </button>
         
     <div class="collapse navbar-toggleable-md" id="navbarResponsive">
-            <ul class="nav navbar-nav menu float-lg-right" id="top-nav">
+            <ul class="nav navbar-nav menu float-lg-left" id="top-nav">
                 <li class="nav-item active">
                     <a id="Home_Top_Button" class="nav-link" href="{{ .Site.BaseURL }}">
                         {{ with .Site.Params.navigation.home }} {{ . }} {{ end }}
@@ -64,7 +64,7 @@
             </ul>
         </div>
     </div>
-      <div class="col-lg-3 col-md-12">
+      <div class="col-lg-3 col-md-12 custImage">
           <div class="row top-head-shot">
                 <span class="headshot-title">Brought to you by</span>
                 <div class="head-shot-col shahid_twitter_page">

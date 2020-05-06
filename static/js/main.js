@@ -1177,3 +1177,15 @@ $(function() {
       reader.readAsDataURL(file);
   });  
 });
+
+$(window).on("load",function(){
+var iframe = $('#patient-frame-slider').contents();
+
+iframe.find('#patient-last-slide').click(function(event){
+   console.log('click triggered');
+    $('html, body').animate({
+        'scrollTop' : $("#patient_impact_story_desc").position().top
+    });
+});
+  
+});

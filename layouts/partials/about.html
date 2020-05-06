@@ -3,7 +3,7 @@
     <section id="about" class="section about bg-gray">
         <div class="container">
             <div class="row">
-                <div class="col-md-7 col-sm-12 wow fadeInLeft">
+                <div class="col-md-7 col-sm-12 wow ">
                     <div class="content">
                         <div class="sub-heading">
                         {{ with .Site.Params.about.heading }}
@@ -38,7 +38,7 @@
                     </ul>
                     </div>
                 </div>
-                <div class="col-md-5 col-sm-12 wow fadeInLeft" data-wow-delay="0.3s">
+                <div class="col-md-5 col-sm-12 wow " data-wow-delay="0.3s">
                     <div class="about-slider">
                         {{ range .Site.Params.about.sliderItem }}
                             <img src="{{ .image }}" alt="slider-image">

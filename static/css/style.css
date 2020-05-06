@@ -83,7 +83,7 @@ a:active {
 
 
 .top-head-shot a {
-  color: #03d9ef;
+  color: #91ade0;
 }
 .top-head-shot img {
   height: 51px;
@@ -109,7 +109,7 @@ a:active {
     text-align: left;
 }
 li.nav-item.current a {
-    color: #f68c29 !important;
+    color: #91ade0 !important;
 }
 .herobtnsection{width: 65%;margin: 50px auto 0px;}
 /*Style for twitter feed starts here*/
@@ -553,7 +553,7 @@ nav#top-nav{
 
 }
 @media (max-width: 767px) {
- /* .post-figure img {
+  /*.post-figure img {
     display: none!important;
 }
 .cover-content {
@@ -633,7 +633,7 @@ nav#top-nav {
     padding: 0;
 }
  .top-head-shot a {
-    color: #f68c29;
+    color: #6d8fcc;
     font-weight: normal;
     font-size: 11px;
 }
@@ -683,7 +683,7 @@ right: 60px;
 }
 
 .btn-home {
-  background-color: #20b9cb;
+  background-color: #91ade0;
   border-radius: 0px;
   color: #fff;
   font-size: 18px;
@@ -732,7 +732,7 @@ right: 60px;
   border-top: 5px solid #ecf0f1;
   border-bottom: 5px solid #ecf0f1;
   border-right: 5px solid #ecf0f1;
-  background: #f68d29;
+  background: #6d8fcc;
   width: 50px;
   height: 60px;
   -webkit-transform-origin: 0% 50%;
@@ -819,17 +819,17 @@ right: 60px;
   }
 
   20% {
-    background: #f68d29;
+    background: #6d8fcc;
   }
 
   29.9% {
-    background: #f68d29;
+    background: #6d8fcc;
   }
 
   30% {
     -webkit-transform: perspective(200px) rotateY(-90deg);
     transform: perspective(200px) rotateY(-90deg);
-    background: #f68d29;
+    background: #6d8fcc;
   }
 
   54.999% {
@@ -843,13 +843,13 @@ right: 60px;
   60% {
     -webkit-transform: perspective(200px) rotateY(-180deg);
     transform: perspective(200px) rotateY(-180deg);
-    background: #f68d29;
+    background: #6d8fcc;
   }
 
   100% {
     -webkit-transform: perspective(200px) rotateY(-180deg);
     transform: perspective(200px) rotateY(-180deg);
-    background: #f68d29;
+    background: #6d8fcc;
   }
 }
 
@@ -860,17 +860,17 @@ right: 60px;
   }
 
   20% {
-    background: #f68d29;
+    background: #6d8fcc;
   }
 
   29.9% {
-    background: #f68d29;
+    background: #6d8fcc;
   }
 
   30% {
     -webkit-transform: perspective(200px) rotateY(-90deg);
     transform: perspective(200px) rotateY(-90deg);
-    background: #f68d29;
+    background: #6d8fcc;
   }
 
   54.999% {
@@ -884,13 +884,13 @@ right: 60px;
   60% {
     -webkit-transform: perspective(200px) rotateY(-180deg);
     transform: perspective(200px) rotateY(-180deg);
-    background: #f68d29;
+    background: #6d8fcc;
   }
 
   100% {
     -webkit-transform: perspective(200px) rotateY(-180deg);
     transform: perspective(200px) rotateY(-180deg);
-    background: #f68d29;
+    background: #6d8fcc;
   }
 }
 
@@ -1067,7 +1067,7 @@ right: 60px;
   margin: 0 0 10px;
 }
 .selected_navigation {
-  color:#F68D29 !important;
+  color:#6d8fcc !important;
 }
 .new-ofer-breadcrumbs {
   color: #999;
@@ -1097,7 +1097,7 @@ right: 60px;
   font-size: 30px;
   display: inline-block;
   margin-bottom: 15px;
-  color: #f68d29;
+  color: #6d8fcc;
 }
 
 .service .block h3 {
@@ -1127,7 +1127,7 @@ right: 60px;
       font-size: 19px;
     font-weight: bold;
     line-height: 25px;
-    color: #f68c29;
+    color: #6d8fcc;
     margin-bottom: 15px;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -1211,7 +1211,7 @@ right: 60px;
 .btn-send {
   line-height: 25px;
   border: 0;
-  background: #f68d29;
+  background: #6d8fcc;
   color: #fff;
   width: 100%;
   font-size: 14px;
@@ -1285,7 +1285,7 @@ a.btn.btn-home {
     font-weight: bold;
 }
 a.btn.btn-home:nth-child(2) {
-    background: #319517;
+    background: #45a699;
 }
 a.btn.btn-home:nth-child(2):hover{
   background-color: #fff;
@@ -1327,7 +1327,7 @@ display: block;
 }
 a.morelink {
     display: block;
-    background: #1b83b8;
+    background: #6d8fcc;
     width: 100px;
     margin: auto;
     margin-top: 15px;
@@ -1338,7 +1338,7 @@ a.morelink {
 }
 a.morelink:hover {
     text-decoration: none;
-    background: #f68c29;
+    background: #45a798;
 }
 .counter.text-center p {
     color: #000;
@@ -1389,7 +1389,7 @@ ul#myList2 li:last-child, ul#myList2 li:nth-last-child(2) {
 }
 .readmore-link{
     display: block;
-    background: #1b83b8;
+    background: #6d8fcc;
     width: 100px;
     margin: auto;
     margin-top: 15px;
@@ -1400,7 +1400,7 @@ ul#myList2 li:last-child, ul#myList2 li:nth-last-child(2) {
 }
 .readmore-link:hover{
  text-decoration: none;
- background: #f68c29;
+ background: #45a798;
 }
 #loadMore1 {
     cursor:pointer;
@@ -1875,7 +1875,7 @@ div#subscribesuccess, #community_success, #patient_impact_story_success, #patien
 }
 .sitemap li a:hover{
   text-decoration: none;
-  color: #f68c29;
+  color: #6d8fcc;
 }
 .error-block {
     text-align: center;
@@ -1884,7 +1884,7 @@ div#subscribesuccess, #community_success, #patient_impact_story_success, #patien
     font-size: 16px;
 }
 .error-block .b-text-1 a {
-    color: #f68c29;
+    color: #6d8fcc;
     font-weight: bold;
 }
 .error-block img {
@@ -2642,6 +2642,12 @@ color: #989898;
 .single-blog-card strong {
     font-weight: bold;
 }
+.brief-outer .post.dropcase a {
+    color: #0275d8!important;
+}
+.brief-outer .post.dropcase a:hover {
+    color: #014c8c!important;
+}
 @media (max-width:767px) {
 .date-event-col-1 {
  width:28%;
@@ -2836,7 +2842,7 @@ article.dropcase li {
     margin:10px 10px;
 }
 .himss-addtocalendar {
-    background: #f68d29!important;
+    background: #6d8fcc!important;
     border: 1px solid #f38924!important;
     color: #fff!important;
 }
@@ -2972,11 +2978,11 @@ section.section.sitemap {
 .headshot-container .navbar-nav .nav-item {
     margin-left: 0.7rem!important;
 }
-.single-body {  
-    margin-top: 160px !important; 
-  } 
-.brief-outer {  
-    padding-top: 156px !important;  
+.single-body {
+    margin-top: 160px !important;
+  }
+.brief-outer {
+    padding-top: 156px !important;
  }  
 }
 @media (max-width:767px) {
@@ -2990,8 +2996,8 @@ div#breadcrumbs {
 .add-photo {
   width: 80%!important;
 }
-.confirmregistration .menu li a { 
-    color: #3b4045 !important;  
+.confirmregistration .menu li a {
+    color: #3b4045 !important;
 }    
 }
 @media (max-width:539px) {
@@ -3029,4 +3035,170 @@ div#breadcrumbs {
 }
 .brief-outer .post.dropcase a.new-ofer-btn-1 {
     color: #333!important;
+}
+
+
+
+nav#top-nav {
+    background: rgba(5, 19, 44, 0.3);
+	min-height: 100px;
+}
+
+.custImage .top-head-shot img {
+    height: 51px;
+    border-radius: 50%;
+    border: 2px solid #91ade0;
+    width: 51px;
+    object-fit: cover;
+}
+
+.call-to-action .block h2 {
+    color: #fff;
+}
+
+@media screen and (max-width: 991px) {
+.headshot-container{position:relative;}
+.custImage{
+	position: absolute;
+	width: auto;
+	right: 70px;
+	top: 0px;
+}
+.navbar-toggleable-md .navbar-nav {
+    margin-top: 55px !important;
+}
+}
+@media only screen and (min-width: 481px) and (max-width:767px) {
+.row.top-head-shot {
+    position: relative;
+    top: 0px;
+    right: 0px;
+}
+.navigation .navbar-toggler {
+    position: absolute;
+    top: 20px !important;
+}
+nav#top-nav{height: auto;}
+div#navbarResponsive{width:100% !important;}
+}
+@media only screen and (min-width: 320px) and (max-width:480px) {
+nav#top-nav{height: auto;min-height: 155px;}
+div#navbarResponsive{width:100% !important; margin-top: 75px;}
+.navigation .navbar-toggler {
+    margin-top: 0px !important;
+    position: relative;
+    top: 35px !important;
+    right: 0px !important;
+}
+}
+.customSlide .custom-wrap{border:none;}
+@media screen and (min-width:1200px) {
+.customSlide .custom-wrap{height: 650px !important;}
+}
+@media screen and (max-width: 1199px) {
+.customSlide .custom-wrap{}
+.customSlide .custom-wrap{height: 560px !important;}
+}
+@media screen and (max-width:991px) {
+.customSlide .custom-wrap{height: 420px !important;}
+}
+@media screen and (max-width:767px) {
+.customSlide .custom-wrap{height: 310px !important;}
+}
+
+#patient_impact_story_desc {
+padding-top: 150px !important;
+float: left;
+}
+
+
+.headshot-container{position:relative;}
+.custImage{min-width: 240px;position: absolute;right: 0px;}
+.navbar-brand img{
+width: 160px;
+height: auto;
+margin-right: 10px;
+}
+.headshot-container .navbar-nav .nav-item + .nav-item {
+margin-left: 10px;
+}
+.headshot-container .menu li a{
+font-size: 16px;
+}
+.top-head-shot{padding-top: 5px;}
+span.headshot-title {position: absolute; font-weight: bold; font-size: 12px; right: 60px; top: -5px;}
+.top-head-shot a {color: #b6c9f1; font-weight: bold; font-size: 12px;}
+.custImage .top-head-shot img {
+height: 51px;
+border-radius: 50%;
+border: 2px solid #b6c9f1;
+width: 51px;
+object-fit: cover;
+}
+.animated .top-head-shot a {color: #718dc8;}
+.animated .custImage .top-head-shot img{border: 2px solid #718dc8;}
+.confirmregistration .top-head-shot a {color: #718dc8;}
+.confirmregistration .custImage .top-head-shot img{border: 2px solid #718dc8;}
+ nav#top-nav.animated {
+    height: auto;
+    min-height: 120px;
+}
+.navigation.animated .navbar-toggler {
+    top: 15px !important;
+}
+
+@media screen and (max-width:991px) {
+.custImage{right: 65px;}
+.footer-content .menu li a {color: #ffffff;}
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+.row.top-head-shot { top: 10px;}
+}
+
+@media only screen and (min-width : 991px) and (max-width : 1199px){
+ul.nav{margin-top: 20px;}
+}
+
+@media screen and (max-width:767px) {
+.navbar-toggleable-md .navbar-nav {
+margin-top: 30px !important;
+}
+.footer-content .navbar-nav .nav-item {
+float: left;
+width: 100%;
+margin: 0px !important;
+}
+}
+@media only screen and (min-width: 481px) and (max-width:767px) {
+span.input-group-btn {
+display: table-cell !important;
+}
+.pagination a.page-link{
+font-size: 12px;
+padding: 8px 12px !important;
+}
+.confirmregistration a {
+color: #718dc8 !important;
+}
+}
+@media only screen and (min-width: 320px) and (max-width:480px) {
+span.input-group-btn {
+display: table-cell !important;
+}
+.pagination a.page-link{
+font-size: 12px;
+padding: 5px 8px !important;
+}
+.head-shot-col { margin:10px 10px 0 0px !important;}
+.navbar-brand img {width: 110px;}
+.top-head-shot a {font-size: 10px;}
+.custImage .top-head-shot img {height: 40px;width: 40px;}
+ nav#top-nav.animated {
+    height: auto;
+    min-height: 120px;
+}
+.navigation.animated .navbar-toggler {
+    top: 15px !important;
+}
 }

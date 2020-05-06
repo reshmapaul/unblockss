@@ -1,0 +1,97 @@
+{{ partial "header.html" . }}
+{{ partial "navigation.html" . }}
+<section class="section sitemap container" >
+	 <div id="breadcrumbs" class="new-ofer-breadcrumbs container"> <a href="/">Home</a> > {{.Title}}</div>
+        <div class="container">
+        	<div class="heading">
+        	  <h2>{{.Title}}</h2>
+        	</div>
+          <div class="row">
+            {{.Content | safeHTML}}
+            <embed src="/reveal/"
+               width="100%" 
+               height="800" /> 
+          </div>
+          <div class="form-group community-description">
+            <div class="col-xs-12 col-sm-12 col-md-8 offset-md-2">
+              <p><h3>Would you like to share your story with us? Please fill in the details below. We will review your story and publish it here.</h3></p>
+            <form method="POST" id="communityform">
+                <div class="input-field">
+                    <input type="text" class="form-control" placeholder="Full name*" name="Full Name" id="community_name" required>
+                </div>
+                <div class="input-field">
+                    <input type="email" class="form-control" placeholder="Email*" name="Email address" id="community_email" required>
+                </div>
+              </br>
+                <h3>Your Story</h3>
+
+                <div class="input-field">
+                    <input type="text" class="form-control" placeholder="Story Title" name="Story Title" id="story_title">
+                </div>
+
+                <div class="input-group">
+                  <span class="input-group-btn">
+                      <span class="btn btn-default btn-file">
+                          Browse… <input type="file" id="imgInp">
+                      </span>
+                  </span>
+                  <img id='img-upload'/>
+              </div>
+                <div class="input-field">
+                        <textarea class="form-control" placeholder="Story description" rows="3" id="story_description" name="Story description" ></textarea>
+                </div>
+                <div class="input-field">
+                       <input type="text" class="form-control" placeholder="Comments" name="comments" id="community_comments" >
+                </div>
+                <input type="hidden" name="_subject" value="[UnBlock Health] - Patient Story Form Submission" />
+                <input id="patient-story-form-submit" type="button" class="btn btn-send" value="Submit Your Story">
+                <!--<button class="btn btn-send" type="submit">Send me</button>-->
+            </form>
+            </div>
+
+            <div id="patient_story_success" style="display:none;">
+
+            </div>
+            <div id="patient-story_error" style="display:none;">
+
+            </div>
+        </div>
+        </div>
+</section>
+
+{{ partial "footer.html" . }}
+<script>
+  $(document).on('change', '.btn-file :file', function() {
+		var input = $(this),
+			label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+		input.trigger('fileselect', [label]);
+		});
+
+		$('.btn-file :file').on('fileselect', function(event, label) {
+		    
+		    var input = $(this).parents('.input-group').find(':text'),
+		        log = label;
+		    
+		    if( input.length ) {
+		        input.val(log);
+		    } else {
+		        if( log ) alert(log);
+		    }
+	    
+		});
+		function readURL(input) {
+		    if (input.files && input.files[0]) {
+		        var reader = new FileReader();
+		        
+		        reader.onload = function (e) {
+		            $('#img-upload').attr('src', e.target.result);
+		        }
+		        
+		        reader.readAsDataURL(input.files[0]);
+		    }
+		}
+
+		$("#imgInp").change(function(){
+		    readURL(this);
+		}); 
+</script>

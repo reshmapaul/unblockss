@@ -3,7 +3,7 @@
     <section id="healthinfo" class="service section">
         <div class="container">
             <div class="row">
-                <div class="heading wow fadeInUp">
+                <div class="heading wow">
                     <!--{{ with .Site.Params.healthinformation.title }}
                         <h1 class="unblock-h1">{{ . }}</h1>
                     {{ end }}-->
@@ -13,7 +13,7 @@
                 </div>
                 {{ $counter := 0 }}
                 {{ range .Site.Params.healthinformation.healthinformationItem }}
-                    <div class="col-sm-6 col-md-3 wow fadeInLeft" data-wow-delay="{{ .delay }}">
+                    <div class="col-sm-6 col-md-3 wow" data-wow-delay="{{ .delay }}">
                         <div class="block">
                             <!--<i class="{{ .icon }}"></i>-->
                             <img src="{{ .icon }}" class="img-responsive healthinfo-img" alt="{{ .title | safeHTML }}" title="{{ .title | safeHTML }}"/>

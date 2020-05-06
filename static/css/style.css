@@ -3202,3 +3202,29 @@ padding: 5px 8px !important;
     top: 15px !important;
 }
 }
+
+.section {
+    padding: 150px 0 !important;
+}
+@media only screen and (min-device-width : 480px) and (max-device-width : 767px) and (orientation: landscape) { 
+  .headshot-container .navbar-nav .nav-item {
+    margin-left: 0.7rem !important;
+    float: left;
+    min-width: 30%;
+  }
+}
+@media screen and (max-width:480px){
+  span.headshot-title {
+    right: 45px;
+  }
+}
+@media screen and (max-width:425px){
+  .twitter-feed .main {
+    width: 100%;
+  }
+}
+@media screen and (min-device-width : 641px) and (max-device-width : 991px){
+  .card-img-container{width:40%;}
+  .card-body {width:60%;}
+  .custom-card-row img {width:100%;height: 230px; object-fit: cover;}
+}

@@ -533,7 +533,7 @@ color: #fff !important;
 
   .row.top-head-shot{
     position: fixed;
-    top: 10px;
+    top: 25px;
     right: 20px;
   }
   button.navbar-toggler {
@@ -3087,7 +3087,7 @@ div#navbarResponsive{width:100% !important; margin-top: 75px;}
 .navigation .navbar-toggler {
     margin-top: 0px !important;
     position: relative;
-    top: 35px !important;
+    top: 45px !important;
     right: 0px !important;
 }
 }
@@ -3196,10 +3196,10 @@ padding: 5px 8px !important;
 .custImage .top-head-shot img {height: 40px;width: 40px;}
  nav#top-nav.animated {
     height: auto;
-    min-height: 120px;
+    min-height: 138px;
 }
 .navigation.animated .navbar-toggler {
-    top: 15px !important;
+    top: 35px !important;
 }
 }
 
@@ -3207,6 +3207,7 @@ padding: 5px 8px !important;
     padding: 150px 0 !important;
 }
 @media only screen and (min-device-width : 480px) and (max-device-width : 767px) and (orientation: landscape) { 
+  .headshot-container ul.navbar-nav{float: left;width: 100%;}
   .headshot-container .navbar-nav .nav-item {
     margin-left: 0.7rem !important;
     float: left;
@@ -3228,3 +3229,5 @@ padding: 5px 8px !important;
   .card-body {width:60%;}
   .custom-card-row img {width:100%;height: 230px; object-fit: cover;}
 }
+
+

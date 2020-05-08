@@ -564,9 +564,7 @@ nav#top-nav{
 }*/
 .herobtnsection{width: 100%;margin: auto;}
 div#breadcrumbs { margin-top: 35px; padding-bottom: 0;}
- .single-body {
-    margin-top: 150px !important;
-}
+
 .date-display {
     margin-bottom: 25px;
 }
@@ -2301,6 +2299,9 @@ div#subscribesuccess, #community_success, #patient_impact_story_success, #patien
 .single-body{
     margin-top:120px;
 }
+.single-body {
+    margin-top: 150px !important;
+  }
  .custom-card-row .card-body .ch-limit p {
     margin: 0 0 0px!important;
 }
@@ -2978,9 +2979,8 @@ section.section.sitemap {
 .headshot-container .navbar-nav .nav-item {
     margin-left: 0.7rem!important;
 }
-.single-body {
-    margin-top: 160px !important;
-  }
+
+ 
 .brief-outer {
     padding-top: 156px !important;
  }  

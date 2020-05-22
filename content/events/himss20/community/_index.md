@@ -3,6 +3,6 @@
  layout: "community" 
  ogType: "community"
  ogDescription: "We're Putting a Stake in the Ground Against Data Blocking at HIMSS20 in Orlando!"
- banner : "/images/about/contentslider-1.jpg"
+ ogImage : "/images/about/contentslider-1.jpg"
 ---
 We're Putting a Stake in the Ground Against Data Blocking at HIMSS20 in Orlando!

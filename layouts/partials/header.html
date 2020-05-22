@@ -3,20 +3,52 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title> {{ .Params.ogTitle }} </title>
+    {{ if .Params.ogTitle }}
+    <title>{{ .Params.ogTitle }}</title>
+    {{ else }}
+    <title>{{ .Params.title }}</title>
+    {{ end }}
+    {{ if .Params.ogDescription }}
     <meta name="description" content="{{ .Params.ogDescription }}">
+    {{ else }}
+    <meta name="description" content="{{ .Content | truncate 150 }}">
+    {{ end }}
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="article" />
+    {{ if .Params.ogTitle }}
     <meta property="og:title" content="{{ .Params.ogTitle }}" />
+    {{ else }}
+    <meta property="og:title" content="{{ .Params.title }}" />
+    {{ end }}
+    {{ if .Params.ogDescription }}
     <meta property="og:description" content="{{.Params.ogDescription }}">
-    <meta property="og:site_name" content="unblock.health" /> 
+    {{ else }}
+    <meta property="og:description" content="{{ .Content | truncate 150 }}">
+    {{ end }}
+    <meta property="og:site_name" content="unblock.health" />
+    {{ if .Params.ogImage }} 
     <meta property="og:image" content="{{ .Params.ogImage | absURL}}" />
+    {{ else }}
+    <meta property="og:image" content="{{ .Params.banner | absURL}}" />
+    {{ end }}
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@unblock.health" />
+    {{ if .Params.ogTitle }}
     <meta name="twitter:title" content="{{.Params.ogTitle }}" />
+    {{ else }}
+    <meta name="twitter:title" content="{{.Params.title }}" />
+    {{ end }}
+    {{ if .Params.ogDescription }}
     <meta name="twitter:description" content="{{.Params.ogDescription }}" />
-    <meta property="twitter:image" content="{{ .Site.BaseURL }}{{.Params.ogImage }}"/>
+    {{ else }}
+    <meta name="twitter:description" content="{{ .Content | truncate 150 }}" />
+    {{ end }}
+    {{ if .Params.ogImage }}
+    <meta property="twitter:image" content="{{.Params.ogImage | absURL }}"/>
+    {{ else }}
+    <meta property="twitter:image" content="{{.Params.banner | absURL }}"/>
+    {{ end }}
 
     {{ .Hugo.Generator }}
     {{"<!-- Fonts -->" | safeHTML }}

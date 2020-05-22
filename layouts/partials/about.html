@@ -16,7 +16,7 @@
                             <h4>{{ . }}</h4>
                         {{ end }}
                         {{ with .Site.Params.about.subheading2 }}
-                            <h4>{{ . }}</h4>
+                            <h4>{{ . | markdownify }}</h4>
                         {{ end }}
                         </div>
                         <ul>

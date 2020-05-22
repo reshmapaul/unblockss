@@ -44,9 +44,9 @@ paginate = 10
 
         subheading  = "Unblock Health is a suite of services that finally provides patients and carepartners with a way to level the playing field and demand access to the critical information needed to make informed, engaged, and empowered decisions about their care."
 
-        subheading2  = "Unblock Health is strategically designed to:"
+        subheading2  = "Unblock Health, which is **FHIR** native and fully integratable, is strategically designed to:"
 
-        content = "Hold healthcare organizations accountable when they do not release medical records in a timely, HIPAA compliant manner, while carefully tracking the often intricate, multi-facteted process of interactions needed, reporting both violations and access champions in the public domain. "
+        content = "Hold healthcare organizations accountable when they do not release medical records in a timely, HIPAA compliant manner, while carefully tracking the often intricate, multi-faceted process of interactions needed, reporting both violations and access champions in the public domain. "
 
         content1 = "Request patient-generated health data (PGHD) from mhealth & digital health tech devices and apps."
 

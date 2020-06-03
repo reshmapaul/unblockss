@@ -8,6 +8,7 @@ ogDescription: "Unblock Health is designed to authentically meet patients where 
 ogImage: "/images/blogs/What is the Value of Unblock Health.jpg"
 twitterImage: "/images/blogs/What is the Value of Unblock Health.jpg"
 twitterCard: "summary_large_image"
+imagealt: "data blocking"
 breadcrumbs:
  - Home
  - Blog

@@ -6,11 +6,19 @@
         {{ range .Paginator.Pages }}
         <div class="card blog-card custom-card-row" rel="bookmark">
             {{ if isset .Params "banner" }}
+             {{ if isset .Params "imagealt" }}
+            <div class="card-img-container">
+                <picture>
+                    <a href="{{ .Permalink }}"><img src="{{.Params.banner | absURL }}" class="card-img" alt="{{ .Params.imagealt }}" title="{{ .Params.imagealt  }}"></a>
+                </picture>
+            </div>
+            {{ else }}
             <div class="card-img-container">
                 <picture>
                     <a href="{{ .Permalink }}"><img src="{{.Params.banner | absURL }}" class="card-img" alt="{{ .Title }}" title="{{ .Title }}"></a>
                 </picture>
             </div>
+            {{ end }}
             {{ end }}
             <article class="card-body">
                 <a href="{{ .Permalink }}">

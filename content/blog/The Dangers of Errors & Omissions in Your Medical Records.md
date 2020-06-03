@@ -8,6 +8,7 @@ ogDescription: "Unblock Health can ease the burden patients and their families f
 ogImage: "/images/blogs/the-dangers-of-errors & Omissions-in-your-medical-records.jpg"
 twitterImage: "/images/blogs/the-dangers-of-errors & Omissions-in-your-medical-records.jpg"
 twitterCard: "summary_large_image"
+imagealt: "medical records errors and omissions"
 breadcrumbs:
  - Home
  - Blog

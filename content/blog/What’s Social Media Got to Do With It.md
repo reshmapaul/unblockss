@@ -8,6 +8,7 @@ ogDescription: "Patients rely heavily on peer-to-peer health support through var
 ogImage: "/images/blogs/What's-Social-Media-Got-To-Do-With-It.jpg"
 twitterImage: "/images/blogs/What's-Social-Media-Got-To-Do-With-It.jpg"
 twitterCard: "summary_large_image"
+imagealt: "Social media got to do"
 breadcrumbs:
  - Home
  - Blog

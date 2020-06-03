@@ -8,6 +8,7 @@ ogDescription: "Unblock Health is revolutionizing patient empowerment, real-worl
 ogImage: "/images/blogs/Isn't-HIPAA-Enough.jpg"
 twitterImage: "/images/blogs/Isn't-HIPAA-Enough.jpg"
 twitterCard: "summary_large_image"
+imagealt: "HIPAA"
 breadcrumbs:
  - Home
  - Blog

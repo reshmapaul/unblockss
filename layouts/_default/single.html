@@ -4,9 +4,15 @@
     {{ partial "bread-crumb.html" . }}
     <main class="container content side-text-padding single-blog-card inner-card">
         {{ if isset .Params "banner" }}
+          {{ if isset .Params "imagealt" }}
+        <picture class="post-figure m-b-15">
+            <a href="{{ .Params.link }}"><img src="{{.Params.banner | absURL }}" alt="{{ .Params.imagealt }}" title="{{ .Params.imagealt }}"></a>
+        </picture>
+        {{ else }}
         <picture class="post-figure m-b-15">
             <a href="{{ .Params.link }}"><img src="{{.Params.banner | absURL }}" alt="{{ .Title }}" title="{{ .Title }}"></a>
         </picture>
+        {{ end }}
         {{ end }}
         <article class="{{ if ne .Params.dropcap false }}dropcase{{ end }}">
             <div class="cover-content">

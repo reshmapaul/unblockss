@@ -8,6 +8,7 @@ ogDescription: "Unblock Health is a first-in-class patient advocacy tool designe
 ogImage: "/images/blogs/What_is_Unblock_Health.jpg"
 twitterImage: "/images/blogs/What_is_Unblock_Health.jpg"
 twitterCard: "summary_large_image"
+imagealt: "patient advocacy tool"
 breadcrumbs:
  - Home
  - Blog

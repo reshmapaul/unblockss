@@ -4,10 +4,11 @@ date: "2020-01-03T06:50:23Z"
 banner : "/images/blogs/Birth_of_Unblock_Health.jpg"
 ogType: "article"
 ogTitle: "patient advocacy experience | revolutionizing patient autonomy and healthcare consumerism"
-ogDescription: "Unblock Health is the culmination of over 20 years of boots-on-the-ground patient advocacy experience perfectly complemented with 30 years of leadership in digital tech, strategy, architecture, and engineering expertise to deliver an easy-to-use solution for the most neglected stakeholders in our health care ecosystem"
+ogDescription: "Unblock Health is the culmination of over 20 years of boots-on-the-ground patient advocacy experience perfectly complemented with 30 years of leadership in digital tech, strategy, architecture, and engineering expertise to deliver an easy-to-use solution for the most neglected stakeholders in our health care ecosystem."
 ogImage: "/images/blogs/Birth_of_Unblock_Health.jpg"
 twitterImage: "/images/blogs/Birth_of_Unblock_Health.jpg"
 twitterCard: "summary_large_image"
+imagealt: "patient advocacy experience"
 breadcrumbs:
  - Home
  - Blog

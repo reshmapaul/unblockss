@@ -8,6 +8,7 @@ ogDescription: "Unblock Health can ease the burden patients and their families f
 ogImage: "/images/blogs/when-a-failing-heart-faces-information-blocking.jpg"
 twitterImage: "/images/blogs/when-a-failing-heart-faces-information-blocking.jpg"
 twitterCard: "summary_large_image"
+imagealt: "Information blocking"
 breadcrumbs:
  - Home
  - Blog

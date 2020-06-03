@@ -8,6 +8,7 @@ ogDescription: "The first-in-class comprehensive Patient Advocate Services for p
 ogImage: "/images/blogs/Why-is-an-Amazon-delivery-tracked.jpg"
 twitterImage: "/images/blogs/Why-is-an-Amazon-delivery-tracked.jpg"
 twitterCard: "summary_large_image"
+imagealt: "Patient Advocate Services"
 breadcrumbs:
  - Home
  - Blog

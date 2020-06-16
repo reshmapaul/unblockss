@@ -279,6 +279,10 @@ padding: 50px;
 .slide-29{font-size:18px; text-align:center; margin-top:0px;}
 .reveal .slide-29 h1{font-size: 28px !important;letter-spacing: 5px;margin-top: 50px;}
 
+.reveal p.text-small-1 {
+font-size: 20px !important;
+}
+
  @media screen and (min-width:991px){
 	.reveal .slides{
 		padding-bottom: 0px;

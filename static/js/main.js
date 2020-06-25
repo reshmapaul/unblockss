@@ -176,13 +176,19 @@ $('.readmore-link').each(function( index ) {
   }
 
   new WOW().init();
-
+  /*$('#top-nav').onePageNav({
+    currentClass: 'current',
+    changeHash: true,
+    scrollSpeed: 1200
+  });*/
+  
+ if ( window.location.pathname == '/' ){
   $('#top-nav').onePageNav({
     currentClass: 'current',
     changeHash: true,
     scrollSpeed: 1200
   });
-
+}
 
   //animated header class
   $(window).scroll(function () {

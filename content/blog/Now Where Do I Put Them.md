@@ -25,10 +25,7 @@ Once you get a copy of your medical records, where can I as a patient or carepar
 
 Unblock Health is not a personal health record (PHR). We do not offer an app to help you store your records once you have collected them. While we are not formally vetting and recommending apps to patients, carepartners, and consumers just yet, there are options currently available for individuals to consider.
 
-Microsoft OneDrive allows users to save their files and images and access them anywhere. A OneDrive Basic account with 5GB of storage is free while 100 GB storage is $1.99/month. Files can be accessed across all devices and even offline. OneDrive can help patients, their carepartners, and families collaborate, sharing records, files, images, and folders of health information via an email or text link. OneDrive options for monthly subscriptions are highlighted below.
-
-![OneDrive Monthly Subscriptions](/images/blogs/One-Drive-account.png)
-
+Microsoft OneDrive allows users to save their files and images and access them anywhere. A OneDrive Basic account with 5GB of storage is free while 100 GB storage is $1.99/month. Files can be accessed across all devices and even offline. OneDrive can help patients, their carepartners, and families collaborate, sharing records, files, images, and folders of health information via an email or text link. OneDrive options for monthly subscriptions are available <a href="https://www.microsoft.com/en-us/microsoft-365/onedrive/compare-onedrive-plans?activetab=tab:primaryr1" target="_blank">here</a>
 
 The <a href="https://www.carinalliance.com/" target="_blank">CARIN Alliance</a>, a multi-stakeholder collaborative committed to ensuring individuals get access to their digital health information so as to fulfill their health care goals, recently launched the <a href="https://myhealthapplication.com/" target="_blank">My Health Application</a> website. The website provides consumers with a listing of apps that have committed to the <a href="https://www.carinalliance.com/our-work/trust-framework-and-code-of-conduct/" target="_blank">CARIN Alliance Trust Framework and Code of Conduct</a> who have the functionality to aggregate health information. While any apps listed on this site should be carefully reviewed, especially their use cases and privacy policies, these are a great starting point.
 

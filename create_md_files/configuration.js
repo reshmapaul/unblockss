@@ -8,7 +8,7 @@ const configuration = {
     cleanUrlField: 'customField2',
     locationField: 'customField5',
 	eventCancelledField: 'customField6',
-    authToken: 'Basic YXBpa2V5OmQ3NDY3YzUwYzNhZDRhNDAwZDI1YmUzMTFmYmFjY2FlMTRmMDljZDk1YTQwYTRjZWI3NjRmYzcxZjcxZTE5NTA='
+    authToken: 'Basic YXBpa2V5OmJiYWQyY2I3NTQ5MTJkNDU1MzQ1ZDViOWE0ZGI3ZGVkYThjZGIyNTIzMGQ4ZDg1ZTc0MjRiOTJlNDg1YzlkODI='
 };
 
 /* Development */

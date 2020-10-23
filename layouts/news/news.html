@@ -3,6 +3,9 @@
 <section class="brief-outer section">
     {{ partial "bread-crumb.html" . }}
     <div class="container">
+        <div class="news-heading">
+              <h1>{{ .Params.title }}</h1>
+        </div>
         {{ range .Paginator.Pages }}
         <div class="card blog-card custom-card-row" rel="bookmark">
             {{ if isset .Params "banner" }}

@@ -1,0 +1,12 @@
+  [[redirects]]
+  from = "/events/images/default.png"
+  to = "/events/"
+  status = 301
+  force = true
+
+  [[redirects]]
+  from = "/events/patient-access-of-phi-and-communications/images/default.png"
+  to = "/events/"
+  status = 301
+  force = true
+

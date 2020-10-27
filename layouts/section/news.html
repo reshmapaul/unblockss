@@ -3,6 +3,9 @@
 <section class="brief-outer section">
     <div id="breadcrumbs" class="new-ofer-breadcrumbs container"><a href="/">Home</a> &gt; News </div>
     <div class="container">
+        <div class="h1-custom-heading">
+            <h1>{{ .Params.Title}}</h1>
+          </div>
         {{ range .Paginator.Pages }}
         <div class="card blog-card custom-card-row" rel="bookmark">
             {{ if isset .Params "banner" }}

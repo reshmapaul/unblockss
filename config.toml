@@ -54,6 +54,8 @@ paginate = 10
 
         content3 = "To facilitate a digital workflow for the implementation of addendums that may be flagged by patients and carepartners upon review of their medical records and health information."
 
+        content4 = "Unblock Health is not a standardization, certification, or vetting authority for patient access technologies but rather a leading authority in the realms of software solutions, policy-shaping, and patient access education."
+
         [[params.about.sliderItem]]
             image   = "images/about/contentslider-1.jpg"
         [[params.about.sliderItem]]

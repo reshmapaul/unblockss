@@ -32,10 +32,10 @@
                         {{ with .Site.Params.about.content3 }}
                             <li>{{ . | markdownify }}</li>
                         {{ end }}
-                        {{ with .Site.Params.about.content4 }}
-                            <li>{{ . | markdownify }}</li>
-                        {{ end }}
                     </ul>
+                    {{ with .Site.Params.about.content4 }}
+                     <p>{{ . | markdownify }}</p>
+                    {{ end }}
                     </div>
                 </div>
                 <div class="col-md-5 col-sm-12 wow " data-wow-delay="0.3s">

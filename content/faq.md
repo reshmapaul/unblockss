@@ -35,6 +35,12 @@ ogImage = "/images/about/contentslider-1.jpg"
 
 <p class="faq-content">With increased access to their medical records, more and more patients are finding errors and gaps in information upon reviewing their medical records. It is critically important to have these errors flagged and corrected as soon as possible as these errors and gaps can negatively impact coordination of care, treatment planning, patient safety, informed decision making, and even clinical trial enrollment.  Unblock Health provides patients with a way to immediately address medical record addendums where they are in a systematic manner. No more hand-written addendum record requests!</p>
 
+<div class="faq-title">Does Unblock Health review, rate, or vet third-party apps which may serve as a personal health record (PHR) or patient access solution?</div>
+
+
+<p class="faq-content">No. Unblock Health is not a standardization, certification, or vetting authority for patient access technologies but rather a software solutions provider, policy shaper, and patient access educator. If you are an innovator with such an app or solution, you may consider reaching out to <a href="https://www.medigy.com/" target="_blank">Medigy</a>, a platform that allows for the community to conduct peer reviews and vetting by way of a crowd-sourcing model. For more information, please reach out to Medigy <a href="https://www.medigy.com/contact-us/" target="_blank">here</a>.</p>
+
+
 
 
 

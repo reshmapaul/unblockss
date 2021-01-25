@@ -1,25 +1,26 @@
-/* Production */
+require('dotenv').config();
+let API_URL, BASE_URL, NEWS_PROJECT_ID, EVENTS_PROJECT_ID, PRESS_PROJECT_ID, CLEAN_URL_FIELD, LOCATION_FIELD, EVENT_CANCELLED_FIELD, AUTH_TOKEN;
+    API_URL = process.env.API_URL;
+    BASE_URL= process.env.BASE_URL;
+    NEWS_PROJECT_ID=process.env.NEWS_PROJECT_ID;
+    EVENTS_PROJECT_ID=process.env.EVENTS_PROJECT_ID;
+    PRESS_PROJECT_ID=process.env.PRESS_PROJECT_ID;
+    CLEAN_URL_FIELD=process.env.CLEAN_URL_FIELD;
+    LOCATION_FIELD=process.env.LOCATION_FIELD;
+    EVENT_CANCELLED_FIELD=process.env.EVENT_CANCELLED_FIELD;
+    AUTH_TOKEN=process.env.AUTH_TOKEN;
+
 const configuration = {
-    apiUrl: 'https://op.infra.lectio.cc/api/v3/',
-    baseUrl: 'https://op.infra.lectio.cc',
-    newsProjectId: 33,
-    eventProjectId: 34,
-    pressProjectId: 32,
-    cleanUrlField: 'customField2',
-    locationField: 'customField5',
-	eventCancelledField: 'customField6',
-    authToken: 'Basic YXBpa2V5OmJiYWQyY2I3NTQ5MTJkNDU1MzQ1ZDViOWE0ZGI3ZGVkYThjZGIyNTIzMGQ4ZDg1ZTc0MjRiOTJlNDg1YzlkODI='
+    apiUrl: API_URL,
+    baseUrl: BASE_URL,
+    newsProjectId: NEWS_PROJECT_ID,
+    eventProjectId: EVENTS_PROJECT_ID,
+    pressProjectId: PRESS_PROJECT_ID,
+    cleanUrlField: CLEAN_URL_FIELD,
+    locationField: LOCATION_FIELD,
+    eventCancelledField: EVENT_CANCELLED_FIELD,
+    authToken: AUTH_TOKEN
 };
 
-/* Development */
-/*const configuration = {
-    apiUrl: 'https://openproject-devl.netspective.com/api/v3/',
-    baseUrl: 'https://openproject-devl.netspective.com',
-    newsProjectId: 9,
-    eventProjectId: 10,
-    pressProjectId: 11,
-    cleanUrlField: 'customField8',
-    locationField: 'customField11',
-    authToken: 'Basic YXBpa2V5OmE5ZjMwNTg4NWRhZTc3NmNhZGM1OWI5ZDM0Yzc5NTRmNTA4M2IyZDRkNzhkZjU5YWYzOWRiMDI2ZjlmMzgxNGU='
-};*/
+
 module.exports = configuration;

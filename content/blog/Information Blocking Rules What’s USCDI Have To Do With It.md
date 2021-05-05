@@ -1,9 +1,9 @@
 --- 
-title: "Information Blocking Rules What’s USCDI Have To Do With It?"
+title: "Information Blocking Rules: What’s USCDI Have To Do With It?"
 date: "2021-05-04"
 banner : "/images/blogs/Information-Blocking-Rules.jpg"
 ogType: "article"
-ogTitle: "Information Blocking Rules What’s USCDI Have To Do With It? | Unblock Health"
+ogTitle: "Information Blocking Rules: What’s USCDI Have To Do With It? | Unblock Health"
 ogDescription: "Sometimes it’s hard to keep track of every important resource, reference, and article. With all the buzz about the Information Blocking Rules, we’re here to make things a little easier."
 ogImage: "/images/blogs/Information-Blocking-Rules.jpg"
 twitterImage: "/images/blogs/Information-Blocking-Rules.jpg"
@@ -12,7 +12,7 @@ imagealt: "Information Blocking Rules"
 breadcrumbs:
  - Home
  - Blog
- - Information Blocking Rules What’s USCDI Have To Do With It?
+ - Information Blocking Rules:What’s USCDI Have To Do With It?
 breadcrumbLinks:
  - / 
  - /blog

@@ -54,7 +54,9 @@ On Twitter, as part of a discussion thread in response to the WIRED article, And
 
 As a patient, we don't know what we don't know. With CDSS and AI-based decision-making increasingly woven into the workflows of patient care at healthcare delivery organizations (HDOs) and provider practices across the nation, patients need to know what data and reports are being used to make decisions about them and their care. 
 
-As patients, we should request from our hospitals, physicians, and cancer centers any data, reports, scores, etc. generated from CDS tools about us. We need to bring greater awareness and transparency about the data being generated about us. Together, we can make CDSS more aligned with humane patient care, more robust, all while also addressing stigma, bias, and inequities that may be introduced by current black box algorithms.
+As patients, we should request from our hospitals, physicians, and cancer centers any data, reports, scores, etc. generated from CDS tools about us. Speak to your doctor and care team if they use clinical decision support like NarxCare reports and scores to guide your care. Request copies of these reports and review the information there. Ask questions about how the scores may be impacting your care. You can also request a copy of these reports through the medical records department.
+
+We need to bring greater awareness and transparency about the data being generated about us. Together, we can make CDSS more aligned with humane patient care, more robust, all while also addressing stigma, bias, and inequities that may be introduced by current black box algorithms.
 
 
 Yours In Unblocking Health,

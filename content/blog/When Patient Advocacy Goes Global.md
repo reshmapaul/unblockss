@@ -19,7 +19,7 @@ breadcrumbLinks:
  - / 
 ---
 
-It was an honor to discuss Innovation in Patient Engagement From the Patient & Carepartner Perspective at the <a href="https://www.healthit.gov/topic/global-digital-health-partnership" target="_blank">9th Global Digital Health Partnership Summit</a>. 
+It was an honor to discuss Innovation in Patient Engagement From the Patient & Carepartner Perspective at the <a href="https://www.healthit.gov/topic/global-digital-health-partnership" target="_blank">9th Global Digital Health Partnership Summit.</a>. 
 
 Understanding the patient is of essence and yet the word “patient” is one of the most misunderstood words in healthcare’s vocabulary. There is a patient life experience continuum that best captures what it means to live life as a patient where there are 5 categories of being a patient. 
 

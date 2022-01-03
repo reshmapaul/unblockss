@@ -500,7 +500,26 @@ a.dropdown-item.twitter {
 color: #fff !important;
 }
 /*Style for twitter feed ends here*/
-
+.blog-surprise-no-more-surprise-billing ul:first-of-type {
+    list-style: none !important;
+}
+.blog-surprise-no-more-surprise-billing ul:first-of-type li{
+    list-style-type:none !important;
+    position: relative;
+    margin-left: 20px !important;
+}
+.blog-surprise-no-more-surprise-billing ul:first-of-type li p{
+    display: inline !important;
+    position: relative;
+    left: 15px;
+}
+.blog-surprise-no-more-surprise-billing ul:first-of-type li:before {
+    color: #000;
+    content: '-';
+    font-size: 1.2em;
+    font-weight: normal;
+    position: absolute;
+}
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px)  {
 
 

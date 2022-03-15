@@ -3254,4 +3254,11 @@ padding: 5px 8px !important;
   .custom-card-row img {width:100%;height: 230px; object-fit: cover;}
 }
 
+.pagination {
+    flex-wrap: wrap;
+}
+.pagination .page-link {
+    padding: 8px 10px!important;
+}
+
 

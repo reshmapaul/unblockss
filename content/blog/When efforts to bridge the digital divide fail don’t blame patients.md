@@ -18,7 +18,7 @@ breadcrumbLinks:
  - / 
 ---
 
-The VA recently offered a program which issued devices to veterans to be able to take part in virtual visits; see the excellent overview from <a href="https://www.linkedin.com/in/ACoAAABm_U8BaARrolXlthtiJRs_juAgG_n6OWI">John Lynn</a> below. The full OIG report is here: <a href="https://lnkd.in/e-hpQRXw">https://lnkd.in/e-hpQRXw</a>
+The VA recently offered a program which issued devices to veterans to be able to take part in virtual visits; see the excellent overview from <a href="https://www.healthcareittoday.com/2022/08/15/the-challenges-of-offering-free-devices-to-patients-lessons-learned-from-the-vas-41000-device-program/">John Lynn</a>. The full OIG report is here: <a href=" https://www.va.gov/oig/pubs/VAOIG-21-02668-182.pdf"> https://www.va.gov/oig/pubs/VAOIG-21-02668-182.pdf</a>
 
 The goal of the program was to bridge the digital divide that existed for many veterans who didn’t have the right device or connectivity to receive virtual care. While the distribution of devices was somewhat successful, program goals had much room for improvement.
 

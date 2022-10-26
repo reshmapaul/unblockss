@@ -1,9 +1,9 @@
 --- 
-title: "The Secret Society that Is AIML Powered Clinical Decision Support (CDS)"
+title: "The Secret Society that Is AI/ML Powered Clinical Decision Support (CDS)"
 date: "2022-10-25"
 banner : "/images/blogs/AIML-powered-clinical-decision-support.jpg"
 ogType: "article"
-ogTitle: "The Secret Society that Is AIML Powered Clinical Decision Support (CDS) | Unblock Health"
+ogTitle: "The Secret Society that Is AI/ML Powered Clinical Decision Support (CDS) | Unblock Health"
 ogDescription: "I'm finding that when specifically asked, doctors do not want to discuss the AI/ML/NLP enabled tools they use that may help guide their decision-making about an individual patient's care & care coordination."
 ogImage: "/images/blogs/AIML-powered-clinical-decision-support.jpg"
 twitterImage: "/images/blogs/AIML-powered-clinical-decision-support.jpg"
@@ -11,7 +11,7 @@ twitterCard: "summary_large_image"
 breadcrumbs:
  - Home
  - Blog
- - The Secret Society that Is AIML Powered Clinical Decision Support (CDS)
+ - The Secret Society that Is AI/ML Powered Clinical Decision Support (CDS)
 breadcrumbLinks:
  - / 
  - /blog

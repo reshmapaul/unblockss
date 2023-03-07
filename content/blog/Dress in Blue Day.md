@@ -42,7 +42,7 @@ It’s important to not ignore symptoms such as:
 
 If you are experiencing any of these symptoms, make sure you see your doctor and that the symptoms are documented in your medical record as well as followed up on.
 
-When was your last colonoscopy? Check your medical records and check to see when your last colonoscopy was. My primary care doctor’s office is a private practice that doesn’t have a patient portal and still uses paper charts. I couldn’t remember how many years it’s since my last colonoscopy so I called up the office and confirmed it’s been over 5 years. I called the gastroenterologist’s office and scheduled my colonoscopy. Now it’s your turn!
+When was your last colonoscopy? Check your medical records and check to see when your last colonoscopy was. My primary care doctor’s office is a private practice that doesn’t have a patient portal and still uses paper charts. I couldn’t remember how many years it’s been since my last colonoscopy so I called up the office and confirmed it’s been over 5 years. I called the gastroenterologist’s office and scheduled my colonoscopy. Now it’s your turn!
 
 For more information on colorectal cancer, check out the following:
 

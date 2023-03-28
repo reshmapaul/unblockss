@@ -1,0 +1,246 @@
+baseURL = "https://www.unblock.health/"
+languageCode = "en-us"
+title = "Patient Advocacy Suite | Healthcare Advocate Services | Unblock Health"
+theme = "infinity-hugo"
+paginate = 10
+
+[params]
+    Description  = "The first-in-class comprehensive digital healthcare suite of patient advocacy tools for patients and consumers who are determined to be empowered in their health care journey. Unblock Health is revolutionizing patient autonomy and healthcare consumerism."
+    logotitle ="Comprehensive Healthcare Suite of Patient Advocacy Services designed for Patients and Consumers - Unblock Health"
+    footersectionaboutcontent ="Unblock Health is a first-in-class, comprehensive suite of patient advocacy services designed for patients and consumers who are determined to be empowered in their health care journey and are no longer willing to accept traditional barriers to their information."
+    # Navigation
+    [params.navigation]
+        logo = "images/logo.png"
+        home = "Home"
+        about = "About"
+        service = "Services"
+        register = "Register"
+        faqs     ="FAQs"
+
+    # Hero Area
+    [params.hero]
+        enable      = true
+        bg          = "images/banner.jpg"
+        title       = "Unblock Health is revolutionizing patient autonomy and healthcare consumerism."
+        subtitle    = "Unblock Health is a first-in-class, comprehensive suite of patient advocacy services designed for patients and consumers who are determined to be empowered in their health care journey and are no longer willing to accept traditional barriers to their information."
+        btnText     = "Register for an Invitation as a Patient Advocate"
+		btnTextTwo     = "Register for an Invitation as a Hospital HIM"
+        thankyoumessage ="Thank you for your interest and patience as we review the early access invitations at this time. Stay tuned!"
+        #countdownYear = "2019"
+        #countdownMonth = "11"
+        #countdownDay  = "28"
+        #countdownHour = "20"
+        #CountdownMinute ="20"
+        #CountdownSeconds ="00"
+        #countertoptitle ="Now accepting "
+        #counterbottomtitle ="invitations requests"
+
+    # About Section
+    [params.about]
+        enable      = true
+        heading     = "We’ve listened to patients’ frustrations and witnessed the barriers they face in accessing their data. We’ve heard patients demands for transparency and watched them be completely ignored. We know first-hand the grief, loss, anxiety, and distrust that stems from data blocking."
+
+        heading2  = "We have vowed to not stand back silently, powerlessly, and helplessly any longer."
+
+        subheading  = "Unblock Health is a suite of services that finally provides patients and carepartners with a way to level the playing field and demand access to the critical information needed to make informed, engaged, and empowered decisions about their care."
+
+        subheading2  = "Unblock Health, which is **FHIR** native and fully integratable, is strategically designed to:"
+
+        content = "Hold healthcare organizations accountable when they do not release medical records in a timely, HIPAA compliant manner, while carefully tracking the often intricate, multi-faceted process of interactions needed, reporting both violations and access champions in the public domain. "
+
+        content1 = "Request patient-generated health data (PGHD) from mhealth & digital health tech devices and apps."
+
+        content2 = "Request an itemized list of all the places that one’s health information has been “shared” or sold to facilitate transparency and awareness of human data science practices."
+
+        content3 = "To facilitate a digital workflow for the implementation of addendums that may be flagged by patients and carepartners upon review of their medical records and health information."
+
+        content4 = "Unblock Health is not a standardization, certification, or vetting authority for patient access technologies but rather a leading authority in the realms of software solutions, policy-shaping, and patient access education."
+
+        [[params.about.sliderItem]]
+            image   = "images/about/contentslider-1.jpg"
+        [[params.about.sliderItem]]
+            image   = "images/about/contentslider-2.jpg"
+        [[params.about.sliderItem]]
+            image   = "images/about/contentslider-3.jpg"
+
+
+    # Health information Section
+    [params.healthinformation]
+        enable      = true
+        title       = "Digital Healthcare Suite of Patient Advocacy Services - Unblock Health"
+        subtitle    = "Unblock Health is an Absolute MUST for:"
+        [[params.healthinformation.healthinformationItem]]
+            # give icon(themefisher icon font), title, description
+            # more about themefisher icon font visit https://github.com/themefisher/themefisher-font
+            # use delay for reveal items one by one
+            icon    = "/images/healthInformation/health-information-management.png"
+            title   = "Health Information Management (HIM)"
+            description = "How well is your organization embracing and complying with new patient data access and information sharing requirements?"
+            him1 ="Do you know what barriers patients are facing at your organization in accessing their data?"
+            him2 ="Don’t have a strategy to help patients request their PGHD from digital tech your organization recommends/uses?"
+            him3 ="Still handling hand-written or faxed addendum requests for processing and implementing patient record addendums?"
+            delay   = "0s"
+
+        [[params.healthinformation.healthinformationItem]]
+            # give icon(themefisher icon font), title, description
+            # more about themefisher icon font visit https://github.com/themefisher/themefisher-font
+            # use delay for reveal items one by one
+            icon    = "/images/healthInformation/office-of-patient-experience.png"
+            title   = "Office of Patient Experience"
+            description = "Lack of coordination of care negatively impacts the patient experience & outcomes, especially in chronic illness & life altering diagnoses."
+            him1 ="Delays in access to medical records and health information may result in negative HCAPS results or impact facility/caregiver reputation in public domain."
+            him2 ="What if your organization’s patient data access practices were shared online for patients & consumers to consider when deciding where to get care?"
+            delay   = "0.2s"
+
+        [[params.healthinformation.healthinformationItem]]
+            # give icon(themefisher icon font), title, description
+            # more about themefisher icon font visit https://github.com/themefisher/themefisher-font
+            # use delay for reveal items one by one
+            icon    = "/images/healthInformation/onc.png"
+            title   = "Regulatory: HHS, ONC,<br> CMS"
+           description = "While policies against data blocking are in place, there are no tools available for patients, carepartners, and consumers to directly report the broad spectrum of data blocking they routinely incur where they are."
+            him1 ="Patients & consumers have no way to directly request PGHD from digital health technologies."
+            him2 ="With increased access to data, patients and consumers need a seamless way to file addendum requests to correct errors & omissions."
+            delay   = "0.4s"
+
+        [[params.healthinformation.healthinformationItem]]
+            # give icon(themefisher icon font), title, description
+            # more about themefisher icon font visit https://github.com/themefisher/themefisher-font
+            # use delay for reveal items one by one
+            icon    = "/images/healthInformation/patients-and-care-partners.png"
+            title   = "Patients and </br>Carepartners"
+            description = "Are you facing a life-altering diagnosis and can’t get access to your own medical information quickly enough?"
+            him1 ="Are you unable to make informed, educated decisions about your care due to data blocking?"
+            him2 ="Do you use a digital health technology, like a wearable or app, and desperately need access to your PGHD?"
+            him3 =" Do you want transparency about where your data may have been shared or sold and for what purposes?"
+            subdesc ="Have you found an error or omission in your medical record that needs to be corrected immediately for continuity of care purposes?"
+            delay   = "0.6s"
+        
+        
+
+    
+    # Service Section
+    [params.service]
+        enable      = true
+        title       = "Why Unblock Health?"
+        subtitle    = "Unblock Health is ready to unlock barriers standing in the way of real-world interoperability, meaningful patient empowerment, open data access, and transparency of the future."
+        [[params.service.serviceItem]]
+            # give icon(themefisher icon font), title, description
+            # more about themefisher icon font visit https://github.com/themefisher/themefisher-font
+            # use delay for reveal items one by one
+            icon    = "/images/services/real-time-access-to-medical records.png"
+            title   = "DEMAND FOR REAL TIME ACCESS OF MEDICAL RECORDS"
+            description = "The rise of participatory medicine, shared decision making, and consumerism have contributed to patients expecting and demanding access to their medical records in real-time, where they are."
+            delay   = "0s"
+
+        [[params.service.serviceItem]]
+            # give icon(themefisher icon font), title, description
+            # more about themefisher icon font visit https://github.com/themefisher/themefisher-font
+            # use delay for reveal items one by one
+            icon    = "/images/services/access to data from wearables.png"
+            title   = "ACCESS TO DATA FROM WEARABLES"
+            description = "Patients use a broad spectrum of digital health technologies, such as wearables and apps, to enhance their care and expect access to their data in order to make actionable decisions."
+            delay   = "0.2s"
+
+        [[params.service.serviceItem]]
+            # give icon(themefisher icon font), title, description
+            # more about themefisher icon font visit https://github.com/themefisher/themefisher-font
+            # use delay for reveal items one by one
+            icon    = "/images/services/need-for-transperacy.png"
+            title   = "NEED FOR TRANSPARENCY"
+            description = "Patients are appalled by common human data science practices where aggregated data is sold for significant commercial profit. Patients are demanding transparency about who has access to their data and for what purposes."
+            delay   = "0.4s"
+
+        [[params.service.serviceItem]]
+            # give icon(themefisher icon font), title, description
+            # more about themefisher icon font visit https://github.com/themefisher/themefisher-font
+            # use delay for reveal items one by one
+            icon    = "/images/services/correction-of-errors.png"
+            title   = "CORRECTION OF ERRORS WITHIN THE MEDICAL RECORD"
+            description = "With increases in accessing data comes the discovery of the many errors and omissions that are often found within medical records. Patients need a streamlined way of submitting an addendum to their medical record for continuity of care purposes. Patients have a right to a comprehensive and accurate medical record. It’s a matter of safety."
+            delay   = "0.6s"
+        
+        [[params.service.serviceItem]]
+            # give icon(themefisher icon font), title, description
+            # more about themefisher icon font visit https://github.com/themefisher/themefisher-font
+            # use delay for reveal items one by one
+            icon    = "/images/services/patient-advocacy- tools.png"
+            title   = "RISE IN THE NEED FOR PATIENT ADVOCACY TOOLS"
+            description = "As consumers, patients are in demand of patient advocacy tools to pushback against a healthcare ecosystem that is responsible for friction points that hamper their healthcare trajectory."
+            delay   = "0.8s"
+
+        [[params.service.serviceItem]]
+            # give icon(themefisher icon font), title, description
+            # more about themefisher icon font visit https://github.com/themefisher/themefisher-font
+            # use delay for reveal items one by one
+            icon    = "/images/services/informed-decisions.png"
+            title   = "MAKE INFORMED DECISIONS ABOUT THEIR CARE"
+            description = "Patients often cannot get access to their medical records and health information, especially when they are faced with an emergency or critical diagnosis, such as a chronic illness or cancer."
+            delay   = "1s"
+
+        [[params.service.serviceItem]]
+            # give icon(themefisher icon font), title, description
+            # more about themefisher icon font visit https://github.com/themefisher/themefisher-font
+            # use delay for reveal items one by one
+            icon    = "/images/services/patient-satisfaction.png"
+            title   = "IMPROVE PATIENT SATISFACTION"
+            description = "Resolve and reduce delays and pinpoint weaknesses in HIPAA compliant data access workflows that negatively impact the patient experience and patient care.  Readily improve outcomes by improving coordination and continuity of patient care."
+            delay   = "1.2s"
+
+        [[params.service.serviceItem]]
+            # give icon(themefisher icon font), title, description
+            # more about themefisher icon font visit https://github.com/themefisher/themefisher-font
+            # use delay for reveal items one by one
+            icon    = "/images/services/healthcare-organizations.png"
+            title   = "HEALTHCARE ORGANIZATIONS SHOULD BE ACCOUNTABLE"
+            description = "Hold healthcare organizations accountable when they do not release medical records in a timely, HIPAA compliant manner, while carefully tracking the process of interactions needed and reporting both violations and access champions in the public domain."
+            delay   = "1.5s"
+
+        
+
+    
+    # Call to Action Section
+    [params.cta]
+        enable      = true
+        bg          = "images/subscribe-bg.jpg"
+        title       = "Partners"
+        netspectivelogo ="/images/partner-1-netspective.jpg"
+        netspectivetitle ="Netspective Communications"
+        netspectiveurl ="https://netspective.com/"
+        enlightenlogo   ="/images/partner-2-ER.jpg"
+        enlightentitle  ="Enlightening Results"
+        enlightenurl  ="https://www.enlighteningresults.com/"
+        titlesupporters = "Supporters"
+        Davedebronkartlogo ="/images/partner-2-epatient.jpg"
+        Davedebronkarttitle ="E-patients Dave"
+        Davedebronkarturl ="https://www.epatientdave.com/"
+
+     # subscribe Section
+    [params.subscribe]
+        enable      = true
+        bg          = "images/subscribe-bg.jpg"
+        title       = "Subscribe to Our Mailing List!"
+        subtitle    = "Stay informed about the latest updates in Unblock Health"
+    
+    [params.register]
+        enable      = true
+        title       = "Become an Unblock Health early adopter and pioneer"
+        subtitle    = "It's time to Unblock Health! Register to request your pre-launch, early access invitation today!"
+    [params.community]
+        enable      = true
+        title = "We're Putting a Stake in the Ground Against Data Blocking at HIMSS20 in Orlando! "
+        maindescription = "Calling all patients, carepartners, advocates, and data access champions!! Are you attending HIMSS20 in Orlando during the week of March 9th-13th? Don't tackle HIMSS20 alone! Data Unblockers are stronger together. Sign up for our 1st official Unblock Health HIMSS meetup with group selfie included (pics or it didn't happen...this will be EPIC....trust us!). Pick up your limited edition official UnblockHealth laptop decal & make your statement: Data blocking ends now, starting with me!"
+        subdescription ='All are welcome to stay for the panel discussion at the Stericycle Communications Solutions booth happening at 10:30 am on "How Consumerism Changes the Patient Journey", featuring Unblock Health co-founder and award-winning patient advocate, Grace Cordovano, PhD, BCPA.'
+        Date = "Date & Time: Tuesday, March 10th at 10 am"
+        Location = "Location: Meeting near Stericycle Communication Solutions booth #2490, Hall B"
+
+    [taxonomies]
+        news_sources = "news/source"
+[outputs]
+    home = ["HTML", "RSS", "JSON"]
+    page = ["HTML","Calendar"]
+    events = ["HTML","Calendar"]
+[outputFormats.Calendar]
+    protocol = "http://" 
+[date]
+   date = ["enddate", ":default"]

@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+VERSION:2.0
+BEGIN:VEVENT
+DTSTAMP:{{dateFormat "20060102T150405" .Date}}
+STATUS:CONFIRMED
+UID:{{dateFormat "20060102T150405" .Params.date}}@unblockhealth.com
+DTSTART:{{dateFormat "20060102T150405" .Params.date}}
+DTEND:{{dateFormat "20060102T150405" .Params.enddate}}
+SUMMARY:{{.Title}}
+DESCRIPTION:{{ .Content | plainify }} (Info: {{with .Params.cleanurl}}{{.}}{{else}}{{ $.Site.Params.socialshare }}{{ .Permalink }}{{end}})
+LOCATION:{{with .Params.location}}{{.}}{{else}}TBD{{end}}
+URL:{{ $.Site.Params.socialshare }}{{ .Permalink }}
+X-ALT-DESC;FMTTYPE=text/html:<!DOCTYPE HTML PUBLIC ""-//W3C//DTD HTML 3.2//E
+ N""><HTML><BODY>\n{{.Title}}<br>Location: {{with .Params.location}}{{.}}{{else}}TBD{{end}}<br>{{ .Content | plainify }}<br>Read more: {{ $.Site.Params.socialshare }}{{ .Permalink | safeURL }}<br>{{with .Params.cleanurl}}{{.}}{{else}}{{ $.Site.Params.socialshare }}{{.Permalink}}{{end}}\n</BODY></HTML>
+END:VEVENT
+END:VCALENDAR

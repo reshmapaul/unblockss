@@ -1,0 +1,140 @@
+{{ partial "header.html" . }}
+
+<article>  
+  <header class="slds-container_x-large slds-container_center slds-p-left_small slds-p-right_small">
+  <!-- top > starts > -->       
+  {{ $context := . }}
+  {{- partialCached "head" (dict "activeMenu" "Patient Impact Stories" "context" $context ) "patient-impact-storis-page-key" -}}  
+  <!-- top < ends < -->  
+  </header>
+</article>  
+
+<!-- main starts > -->
+<main>
+<section class="slds-p-vertical_x-large">   
+  <div class="slds-container_x-large slds-container_center slds-p-left_small slds-p-right_small">
+    <h1 class="slds-text-align_center" style="font-size: 40px; line-height: 50px;font-weight: 700;">Patient Impact Stories</h1>
+
+    <article class="slds-p-vertical_x-large slds-text-align_center">
+      <iframe id="patient-frame-slider" class="uh-carousel" src="/reveal/" width="100%" height="auto"></iframe>
+      </iframe>
+    </article>
+
+    <article class="slds-container_medium slds-container_center slds-p-left_small slds-p-right_small slds-p-vertical_x-large slds-text-align_center slds-hide">
+      <h3 style="font-size:24px; line-height:34px;">Do you have a personal story of how lack of access to records caused harm or how access to records made all the difference?</h3>
+      <p>Please fill in the details below. Review the current featured Patient Impact Stories as a guide, noting that stories must be brief but to the point. We will review your submission and, if approved, it will be published in the Patient Impact Stories collection.</p>
+      <aside>
+        <form method="POST" id="patient_impact_story_form">
+              <div class="slds-form-element slds-text-align_left">
+                <div class="slds-grid slds-wrap slds-gutters">
+                  <div class="slds-col slds-size_12-of-12 slds-medium-size_6-of-12">
+                    <div class="slds-form-element__control slds-m-bottom_medium">
+                      <input type="text" placeholder="First Name*"  required class="slds-input slds-p-vertical_x-small" name="First Name" id="patient_first_name" required>
+                    </div>
+                  </div>
+                  <div class="slds-col slds-size_12-of-12 slds-medium-size_6-of-12">
+                    <div class="slds-form-element__control slds-m-bottom_medium">
+                      <input type="text"  placeholder="Last Name*" class="slds-input slds-p-vertical_x-small" name="Last Name" id="patient_last_name" required>
+                    </div>
+                  </div>
+                </div>
+                <div class="slds-form-element__control slds-m-bottom_medium">
+                  <input type="email"  placeholder="Email Address*" class="slds-input slds-p-vertical_x-small" name="Email address" id="patient_email" required>
+                </div>
+      
+                {{/*  <div class="slds-form-element slds-m-bottom_medium slds-input-browse slds-p-vertical_x-small">
+                  <div class="slds-form-element__control">
+                  <div class="slds-file-selector slds-file-selector_files">
+                  <input type="file" class="slds-file-selector__input slds-assistive-text" accept="image/png, image/jpeg, image/gif" name="imgInp" id="imgInp" required  aria-describedby="error-24" aria-labelledby="file-selector-primary-label-21 file-selector-secondary-label22" />
+                  <label class="slds-file-selector__body" for="file-upload-input-23" id="file-selector-secondary-label22">
+                  <span class="slds-file-selector__button slds-button slds-button_neutral">
+                  <svg class="slds-button__icon slds-button__icon_left" aria-hidden="true">
+                  <use xlink:href="/icons/utility-sprite/svg/symbols.svg#upload"></use>
+                  </svg>Browse</span>
+                  <span class="slds-file-selector__text slds-medium-show">Add Your Photo*</span>
+                  </label>
+                  </div>
+                  </div>
+                </div>  */}}
+
+                <div style="position: relative;">
+                  <section style="position: absolute; right: -332px; top: -103px;" aria-describedby="dialog-body-id-109" aria-labelledby="dialog-heading-id-114" class="slds-popover slds-nubbin_left slds-popover_medium slds-hide myPopover" role="dialog">
+                    <button class="slds-button slds-button_icon slds-button_icon-small slds-float_right slds-popover__close" title="Close dialog" id="close-preview">
+                    <svg class="slds-button__icon" aria-hidden="true">
+                    <use xlink:href="/icons/utility-sprite/svg/symbols.svg#close"></use>
+                    </svg>
+                    <span class="slds-assistive-text">Close dialog</span>
+                    </button>
+                    <div class="slds-popover__body" id="dialog-body-id-109">
+                    <div class="slds-media">
+                    <div class="slds-media__body">
+                    <header class="slds-popover__header">
+                    <h2 class="slds-text-heading_small" id="dialog-heading-id-114">Preview</h2>
+                    </header>
+                    <p></p>
+                    </div>
+                    </div>
+                    </div>
+                  </section>
+                <div class="slds-form-element slds-m-bottom_medium slds-input-browse slds-p-vertical_x-small">
+                  <div class="slds-grid slds-wrap slds-gutters">
+                    <div class="slds-col slds-size_12-of-12 slds-medium-size_8-of-12">
+                      <div class="slds-form-element__control">
+                        <div class="slds-file-selector slds-file-selector_files image-preview-input">
+                        <input type="file" class="slds-file-selector__input slds-assistive-text" accept="image/png" id="imageInput" aria-describedby="error-24" aria-labelledby="file-selector-primary-label-21 file-selector-secondary-label22" />
+                        <label class="slds-file-selector__body" for="imageInput" id="file-selector-secondary-label22">
+                        <span class="slds-file-selector__button slds-button slds-button_neutral">
+                        <svg class="slds-button__icon slds-button__icon_left" aria-hidden="true">
+                        <use xlink:href="/icons/utility-sprite/svg/symbols.svg#upload"></use>
+                        </svg><span class="image-preview-input-title">Browse</span></span>
+                        <span class="slds-file-selector__text slds-medium-show image-preview-filename">Add Your Photo*</span>
+                        </label>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="slds-col slds-size_12-of-12 slds-medium-size_4-of-12 slds-text-align_right image-clear-btn slds-hide">
+                      <button class="slds-button slds-button slds-button_neutral">
+                        <span class="slds-text-body_small">Clear</span></button>
+                    </div>
+                  </div>
+                </div>
+                </div>                  
+      
+                <div class="slds-form-element__control slds-m-bottom_medium">
+                  <input type="text"  placeholder="Story Title*" class="slds-input slds-p-vertical_x-small" name="Story Title" id="story_title" required>
+                  {{/*  <div class="slds-form-element__help" id="form-error-01">This field is required.</div>  */}}
+                </div>
+                <div class="slds-form-element__control slds-m-bottom_xx-small">
+                  <textarea placeholder="Story Description*" class="slds-input slds-p-vertical_x-small" style="min-height:138px;" id="story_description" name="Story Description" required ></textarea>
+                </div>
+            <input type="hidden" name="_subject" value="[UnBlock Health] - Patient Story Form Submission" />
+                <div class="slds-text-align_right slds-m-bottom_medium"><b>0 / 500</b></div>
+                <p style="text-align:justify;">By submitting this story, I authorize Unblock Health to publish my approved story and corresponding photo in the Unblock Health Patient Impact Stories Collection. Submitted stories will not be used for any purposes outside of the Patient Impact Stories Collection.</p>
+                <button class="slds-button slds-button_brand slds-button_stretch slds-p-vertical_small slds-p-horizontal_medium slds-color__text_gray-1" id="patient-story-form-submit" disabled="true">
+                  <span class="slds-text-body_small slds-text-title_caps slds-color__text_gray-1"><b class="slds-text-heading_medium">Submit Your Story</b></span></button>
+              </div>
+          </form>
+          <div id="patient_story_success" class="slds-notify slds-notify_alert slds-alert_success" style="display:none;">
+      
+          </div>
+          <div id="patient-story_error" class="slds-notify slds-notify_alert slds-alert_error" style="display:none;">
+      
+          </div>
+          </aside>
+
+    </article>
+
+  </div>
+</section>
+</main>
+<!-- main < ends < -->
+<!-- footer > starts > -->
+{{- partialCached "footer-new" (dict "activeMenu" "Patient Impact Stories" "context" $context) "faqs" -}} 
+<!-- footer < ends < -->
+<script>
+  $(document).ready(function() {
+    $("#myButton").click(function() {
+      $("#myPopover").toggleClass("slds-hide");
+    });
+  });
+</script>

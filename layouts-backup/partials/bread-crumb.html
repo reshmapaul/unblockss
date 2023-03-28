@@ -1,0 +1,31 @@
+<div id="breadcrumbs" class="new-ofer-breadcrumbs container">
+  {{ if isset .Params "breadcrumbs" }}
+  {{ $length := (len .Params.breadcrumbs) }}
+  {{ range $elem_index, $breadcrumb := .Params.breadcrumbs  }}
+  {{ with $.Params.breadcrumbLinks }}
+  {{ $path := index . $elem_index }}
+  {{ if ne $elem_index 0 }} > {{ end }}
+  {{ $path_url := path.Join $.Site.Params.hostName $path }}
+  {{ if eq $elem_index 0}}
+  <a href="{{ $path_url }}">{{ $breadcrumb }}</a>
+  {{ else if ne $path "/"  }}
+  <a href="{{ $path_url }}"> {{ $breadcrumb }}</a>
+  {{ else }}
+  {{ $breadcrumb }}
+  {{ end }}
+  {{ end }}
+  {{ end }}
+  {{else}}
+  <a href="/">Home</a>
+  {{ $length := (len (split .URL "/")) }}
+  {{ range $elem_index, $breadcrumb := (split .URL "/") }}
+  {{ if gt (len . ) 0 }}
+  {{ if ne $elem_index (sub $length 2) }}
+  > <a href="/{{ . }}">{{ humanize (replace . "posts" "blog") }}</a>
+  {{else}}
+  > {{.}}
+  {{ end }}
+  {{ end }}
+  {{ end }}
+  {{end}}
+</div>

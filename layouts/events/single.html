@@ -1,149 +1,133 @@
 {{ partial "header.html" . }}
-{{ partial "navigation.html" . }}
-<section class="brief-outer section event-section">
-<div class="about-wrapper pb-3">
-  <main class="container search-result-row">
+<article>  
+  <header class="slds-container_x-large slds-container_center slds-p-left_small slds-p-right_small">
+  <!-- top > starts > -->
+  {{ $context := . }}
+  {{- partialCached "head" (dict "activeMenu" "Events" "context" $context ) "Events-page-key" -}}  
+  <!-- top < ends < -->  
+  </header>
+</article>  
 
-    {{ partial "bread-crumb.html" . }}
+<!-- main starts > -->
+<main>
+<section class="slds-p-vertical_x-large">   
+  <div class="slds-container_x-large slds-container_center slds-p-left_small slds-p-right_small">
 
-    {{ if (eq .Params.banner "Nil") }}
-    <picture class="post-figure m-b-15">
-      <img src="/img/content/post/no-image-article.jpg" class="img-responsive">
-    </picture>
-    {{else}}
+    <aside class="slds-m-bottom_small">
+      <nav role="navigation" aria-label="Breadcrumbs">
+        <ol class="slds-breadcrumb slds-list_horizontal slds-wrap slds-m-bottom_none slds-text-body_small" style="flex-wrap: nowrap;font-size: 13px;" itemprop="itemListElement" itemscope="" itemtype=""><li class="slds-breadcrumb__item">
+                <a itemprop="item" href="#."><span itemprop="name">Home</span></a>
+                <meta itemprop="position" content="1">
+            </li><li class="slds-breadcrumb__item">
+                <a itemprop="item" href="#."><span itemprop="name">Events</span></a>
+                <meta itemprop="position" content="2">
+            </li><li class="slds-breadcrumb__item slds-p-left_x-small slds-truncate">
+              {{ .Params.title }}</li>
+        </ol>
+    </nav>
+    </aside>
+    {{- $startDate :=  dateFormat "January 2, 2006" .Params.eventdate  -}}
+    {{ $endDate :=  dateFormat "January 2, 2006" .Params.enddate }}
 
-    <picture class="post-figure m-b-15">
-      <a href="{{ .Params.link }}" target="_blank"><img src="{{.Params.banner | absURL }}" class="img-responsive"
-          {{ if isset .Params "featuredimagedescription" }} alt="{{.Params.featuredimagedescription}}" {{end}}
-          onerror="this.onerror=null; this.src='/img/content/post/no-image-article.jpg'"></a>
-    </picture>
-    {{end}}
-
-
-    <!-- Modal > Add to Project ends -->
-    <article class="post {{ if ne .Params.dropcap false }}dropcase{{ end }}">
-      {{ $startDate :=  dateFormat "January 2, 2006" .Params.date }}
-      {{ $endDate :=  dateFormat "January 2, 2006" .Params.enddate }}
-
-      {{ $day := dateFormat "Monday" .Params.date }}
-      {{ $month := dateFormat "January" .Params.date }}
-      {{ $daydate := dateFormat "02" .Params.date }}
-      <!-- added -->
-      {{ if ge .Date.Unix now.Unix  }}
-      {{ with  .OutputFormats.Get "Calendar" -}}
-      <a href="{{ .Permalink | safeURL }}">
-        <div class="date-display ev-det-date-display">
-          <div class="date-event-mo">{{ $month }}</div>
-          <div class="date-event-dt">{{ $daydate }}</div>
-          <div class="date-event-da">{{ $day }}</div>
+    {{ $day := dateFormat "Monday" .Params.eventdate }}
+    {{ $month := dateFormat "January" .Params.eventdate }}
+    {{ $daydate := dateFormat "02" .Params.eventdate }}
+        <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12">
+          <img src="{{.Params.banner | absURL }}"  {{ if isset .Params "featuredimagedescription" }} alt="{{.Params.featuredimagedescription}}" {{ end }}
+          onerror="this.onerror=null; this.src='/img/content/post/no-image-article.jpg'" style="border-radius: 5px; width:100%; height: 400px; object-fit: cover;">
         </div>
-      </a>
-      {{- end }}
-      {{ else }}
-      <div class="date-display  ev-det-date-display">
-        <div class="date-event-mo">{{ $month }}</div>
-        <div class="date-event-dt">{{ $daydate }}</div>
-        <div class="date-event-da">{{ $day }}</div>
-      </div>
-      {{ end }}
-      <div class="cover-content">
-        <header class="post-header">
-          <div class="row">
-            <div class="col-lg-9 col-md-8">
-              <h1 class="post-title">{{ .Title }}</h1>
-              <!-- date -->
-              {{ if eq $startDate  $endDate }}
-              <div class="event-date-holder"><i class="far fa-calendar-alt"></i> {{ $endDate }}
-                {{ if( ne .Params.eventcancelled "true" )}}
-                {{ if le .Date.Unix now.Unix   }}
-                {{ if ge .Params.enddate  (now.Format "2006-01-02")}}
-                <span class="badge badge-success">Live</span>
-                {{ else }}
-                <span> ({{ add (div (sub now.Unix .Date.Unix) 86400) 1}} Days ago)</span>
-                {{ end }}
-                {{ else }}
-                {{ $daycount := (div (sub .Date.Unix now.Unix) 86400) }}
-                {{ if eq $daycount 0}}
-                <span> (in {{ add (div (sub .Date.Unix now.Unix) 86400) 1}} Day) </span>
-                {{ else }}
-                <span> (in {{ add (div (sub .Date.Unix now.Unix) 86400) 1}} Days)</span>
-                {{ end }}
-                {{ end }}
-                {{ end }}
+          <article class="slds-card slds-p-around_medium slds-container_large slds-container_center" style="margin-top:-100px;">
+          <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-m-top_xx-small">
+            <div class="slds-grid slds-wrap slds-gutters slds-m-bottom_x-small">
+              <div class="slds-media__figure slds-m-left_small slds-m-bottom_small">
+                <div class="slds-text-align_center" style="width: 105px;">
+                    <div class="slds-box slds-box_xx-small slds-has-bottom-magnet slds-text-title_caps slds-theme_success slds-color__text_gray-1" style="border:2px solid #04844B;">
+                    <div><b>{{ $month }}</b></div>
+                    </div>
+                    <div class="slds-box slds-box_xx-small slds-has-top-magnet slds-text-color_success" style="border:2px solid #04844B;">
+                    <div class="slds-text-heading_large"><b>{{ $daydate }}</b></div>
+                    </div>
+                </div>
               </div>
-              {{else}}
-              {{ if eq (dateFormat "2006" .Params.date) (dateFormat "2006" .Params.enddate) }}
-              <div class="event-date-holder"><i class="far fa-calendar-alt"></i>
-                {{ dateFormat "January 2" .Params.date }} to {{ $endDate }}
-                {{ if( ne .Params.eventcancelled "true" )}}
-                {{ if le .Date.Unix now.Unix   }}
-                {{ if ge .Params.enddate  (now.Format "2006-01-02")}}
-                <span class="badge badge-success">Live</span>
-                {{ else }}
-                <span> ({{ add (div (sub now.Unix .Date.Unix) 86400) 1}} Days ago)</span>
-                {{ end }}
-                {{ else }}
-                {{ $daycount := (div (sub .Date.Unix now.Unix) 86400) }}
-                {{ if eq $daycount 0}}
-                <span> (in {{ add (div (sub .Date.Unix now.Unix) 86400) 1}} Day) </span>
-                {{ else }}
-                <span> (in {{ add (div (sub .Date.Unix now.Unix) 86400) 1}} Days)</span>
-                {{ end }}
-                {{ end }}
-                {{ end }}
-              </div>
-              {{ else }}
-              <div class="event-date-holder"><i class="far fa-calendar-alt"></i> {{ $startDate }} to {{ $endDate }}
-                {{ if( ne .Params.eventcancelled "true" )}}
-                {{ if le .Date.Unix now.Unix   }}
-                {{ if ge .Params.enddate  (now.Format "2006-01-02")}}
-                <span class="badge badge-success">Live</span>
-                {{ else }}
-                <span> ({{ add (div (sub now.Unix .Date.Unix) 86400) 1}} Days ago)</span>
-                {{ end }}
-                {{ else }}
-                {{ $daycount := (div (sub .Date.Unix now.Unix) 86400) }}
-                {{ if eq $daycount 0}}
-                <span> (in {{ add (div (sub .Date.Unix now.Unix) 86400) 1}} Day) </span>
-                {{ else }}
-                <span> (in {{ add (div (sub .Date.Unix now.Unix) 86400) 1}} Days)</span>
-                {{ end }}
-                {{ end }}
-                {{ end }}
-              </div>
-              {{ end }}
-              {{end}}
-              {{ if  (ne .Params.location "null") -}}
-              <div class="event-location-holder"><i class="fas fa-map-marker-alt"></i> {{ .Params.location }}</div>
-              {{ end -}}
-            </div>
-            <div class="col-lg-3 col-md-4">
-              {{ if and (ge .Date.Unix now.Unix) (ne .Params.eventcancelled "true") }}      
-              {{ with  .OutputFormats.Get "Calendar" -}}
-              <a href="{{ .Permalink | safeURL }}" class="new-ofer-btn-1 ev-det-date-bt pull-right" data-toggle="modal"
-                data-target=""><i class="far fa-calendar-alt"></i> Add to Calendar</a>
-              {{- end }}
-              {{ end }}
-            </div>
-          </div>
-        </header>
-        {{ .Content }}
-        <hr>
-        {{ partial "social.html" . }}
-      </div>
-    </article>
-    
-    <!--<nav class="side-padding next-article">-->
-    <div class="top-10-most-list">
-      <div class="fhir-list-row">
-        {{ with .NextInSection }}
-        <h3 class="text-center next-ttl capitalize">Next Event</h3>
-        {{ .Render "li-event" }}
-        {{ end }}
-      </div>
-    </div>
+              <div class="slds-col slds-size_1-of-1 slds-medium-size_8-of-12 slds-large-size_10-of-12">
+                <h2 class="slds-text-heading_medium slds-m-bottom_small" style="font-weight: 700; font-size: 24px;line-height: 26px;">
+                  <b>{{ .Params.title }}</b></h2>
+      <div class="slds-m-bottom_small">
+        {{- if eq $startDate  $endDate  -}}
+        <p class="slds-text-heading_small slds-m-bottom_x-small">
+          <span class="slds-icon_container">
+            <svg class="slds-icon slds-icon-text-default slds-icon_xx-small slds-m-right_x-small" aria-hidden="true">
+            <use xlink:href="/icons/utility-sprite/svg/symbols.svg#event"></use>
+            </svg>
+            </span>{{- $endDate -}}<span class="slds-m-left_xx-small event-date" style="font-size:12px!important;" data-eventDate="{{ dateFormat "01/02/2006" .Params.eventdate }}" data-enddate="{{ dateFormat "01/02/2006" .Params.enddate }}"></span>
+        </p>
+        {{- else -}}
+        {{- if eq (dateFormat "2006" .Params.eventdate) (dateFormat "2006" .Params.enddate)  -}}
+        <p class="slds-text-heading_small slds-m-bottom_x-small">
+          <span class="slds-icon_container">
+            <svg class="slds-icon slds-icon-text-default slds-icon_xx-small slds-m-right_x-small" aria-hidden="true">
+            <use xlink:href="/icons/utility-sprite/svg/symbols.svg#event"></use>
+            </svg>
+            </span>{{ dateFormat "January 2" .Params.eventdate  }}&nbsp;to&nbsp;{{ $endDate  }}<span class="slds-m-left_xx-small event-date" style="font-size:12px!important;" data-eventDate="{{ dateFormat "01/02/2006" .Params.eventdate }}" data-enddate="{{ dateFormat "01/02/2006" .Params.enddate }}"></span>
+        </p>
+        {{- else -}}
+        <p class="slds-text-heading_small slds-m-bottom_x-small">
+          <span class="slds-icon_container">
+            <svg class="slds-icon slds-icon-text-default slds-icon_xx-small slds-m-right_x-small" aria-hidden="true">
+            <use xlink:href="/icons/utility-sprite/svg/symbols.svg#event"></use>
+            </svg>
+            </span>{{ $startDate  }}&nbsp;to&nbsp;{{ $endDate  }}<span class="slds-m-left_xx-small event-date" style="font-size:12px!important;" data-eventDate="{{ dateFormat "01/02/2006" .Params.eventdate }}" data-enddate="{{ dateFormat "01/02/2006" .Params.enddate }}"></span>
+        </p>
+        {{- end -}}
+        {{- end -}}
 
-  </main>
-</div>
+        <p class="slds-text-heading_small slds-m-bottom_x-small">
+              <span class="slds-icon_container">
+            <svg class="slds-icon slds-icon-text-default slds-icon_xx-small slds-m-right_x-small" aria-hidden="true">
+            <use xlink:href="/icons/utility-sprite/svg/symbols.svg#checkin"></use>
+            </svg>
+        </span>{{ .Params.location }}</p>
+      </div>
+      </div>
+  </div>
+
+            <aside>
+            <p>{{ .Content }}</p>
+                <hr class="slds-m-vertical_medium">
+                <div>
+                <h3 class="slds-text-title_caps slds-m-bottom_xx-small slds-color__text_gray-9"><b class="slds-text-body_small">Share</b></h3>
+                  <a href="http://www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" target="_blank"><button class="slds-button slds-button_outline-brand slds-p-around_small slds-p-horizontal_small slds-p-vertical_xx-small slds-m-around_xx-small" style="height:45px;justify-content: flex-start;">
+                    <embed class="slds-button__icon slds-button__icon_left slds-icon_small" src="/images/facebook.svg">Facebook
+                    </button></a>
+
+                    <a href="http://twitter.com/share?url={{ .Permalink }}&amp;text={{ .Title }}&amp;via={{ .Site.Social.twitter }}"
+                    target="_blank"><button class="slds-button slds-button_outline-brand slds-p-horizontal_small slds-p-vertical_xx-small slds-m-around_xx-small" style="height:45px;justify-content: flex-start;">
+                    <embed class="slds-button__icon slds-button__icon_left slds-icon_small" src="/images/twitter.svg" width="16" height="16">Twitter
+                  </button></a>
+                  
+                  <a href="http://www.linkedin.com/shareArticle?url={{ .Permalink }}&amp;title={{ .Title }}" target="_blank"><button class="slds-button slds-button_outline-brand slds-p-around_small slds-p-horizontal_small slds-p-vertical_xx-small slds-m-around_xx-small" style="height:45px;justify-content: flex-start;">
+                    <embed class="slds-button__icon slds-button__icon_left slds-icon_small" src="/images/linkedin.svg">Linkedin
+                  </button></a>
+      
+                    <a href="mailto:?subject=Check out this post by {{ .Permalink }}&amp;body={{ .Permalink }}" target="_blank"><button class="slds-button slds-button_outline-brand slds-p-around_small slds-p-horizontal_small slds-p-vertical_xx-small slds-m-around_xx-small" style="height:45px;justify-content: flex-start;">
+                      <embed class="slds-button__icon slds-button__icon_left slds-icon_small" src="/images/email.svg">Email
+                      </button></a>
+
+              </div>
+          </aside>    
+        </div>
+    </article>
+    <div class="slds-m-top_x-large">
+    {{- with .NextInSection -}}
+    <h2>Next Event</h2>
+    {{- .Render "li-event" -}} 
+    {{- end -}}
+    </div>
+  </div>
 </section>
-{{ partial "footer.html" . }}
+</main>
+<!-- main < ends < -->
+<!-- footer > starts > -->
+{{- partialCached "footer-new" (dict "activeMenu" "Events" ) -}} 
+<!-- footer < ends < -->
+<script src="/js/event-date.js"></script>

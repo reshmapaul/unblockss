@@ -369,6 +369,8 @@ $('.readmore-link').each(function( index ) {
     var patientdetails = $('#patientoption').val();
     var message = $('#message').val();
     var o = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
+    console.log(" patientdetails -----------",first_name, email, subject, patientdetails);
+    return false;
     if (first_name == '') {
       $('#namealert').css('display', 'block');
       return false;

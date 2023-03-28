@@ -1,0 +1,25 @@
+{{ partial "header.html" . }}
+
+<article>  
+  <header class="slds-container_x-large slds-container_center slds-p-left_small slds-p-right_small">
+  <!-- top > starts > --> 
+  {{ $context := . }}
+  {{- partialCached "head" (dict "activeMenu" "Terms and Conditions" "context" $context ) "terms-and-conditions-page-key" -}}  
+  <!-- top < ends < -->  
+  </header>
+</article>
+<!-- main starts > -->
+<main>
+<section class="slds-color__background_gray-1 slds-p-vertical_x-large">   
+  <div class="slds-container_x-large slds-container_center slds-p-left_small slds-p-right_small">
+    <h1 style="font-size: 40px; line-height: 50px;font-weight: 700;">{{- .Params.title -}}</h1>
+    <article class="slds-md-card">
+      {{- .Content | safeHTML -}} 
+    </article>
+  </div>
+</section>
+</main>
+<!-- main < ends < -->
+<!-- footer > starts > -->
+{{- partialCached "footer-new" (dict "activeMenu" "Terms and Conditions" "context" $context) "terms-and-conditions" -}}
+<!-- footer < ends < -->

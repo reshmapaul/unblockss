@@ -1,0 +1,74 @@
+<!-- top > starts > --> 
+<article>
+    <header class="slds-container_x-large slds-container_center slds-p-left_small slds-p-right_small">
+    <div class="slds-border_bottom">
+      <div class="slds-grid slds-wrap slds-p-vertical_medium">
+        <div class="slds-col slds-size_1-of-1 slds-small-size_12-of-12 slds-medium-size_6-of-12 slds-large-size_3-of-12 slds-m-top_small">
+          <div class="slds-context-bar__icon-action">
+            <a href="/" title="Unblock Health"><img src="/images/logo-unblock-health.png" alt="Unblock Health" width="180" class="slds-m-top_xx-small" style="max-width: 180px;"></a>
+          </div>
+        </div>
+        <div class="slds-col slds-size_1-of-1 slds-small-size_12-of-12 slds-medium-size_6-of-12 slds-large-size_4-of-12 slds-align_absolute-end slds-m-top_small">
+          
+          <div class="slds-form-element" style="min-width: 295px;">
+            <form id="searchsubmit" action="/search/" method="GET">
+              <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right">
+                <input type="text" name="s" placeholder="Search" id="search-query" class="slds-input slds-p-vertical_xx-small">
+                <button id="zoomsearch" class="slds-button slds-button_icon slds-input__icon slds-input__icon_right Top_Search_Bar" title="Search">
+                  <svg class="slds-button__icon slds-icon-text-light" aria-hidden="true">
+                    <use xlink:href="/icons/utility-sprite/svg/symbols.svg#search"></use>
+                  </svg>
+                  <span class="slds-assistive-text">Search</span>
+                </button>
+              </div>
+            </form>
+  
+          </div>
+        </div>
+        <div class="slds-col slds-size_1-of-1 slds-small-size_12-of-12 slds-medium-size_12-of-12 slds-large-size_5-of-12 slds-grid slds-grid_align-end slds-align-middle slds-m-top_small">
+          <div class="slds-grid slds-gutters slds-wrap slds-m-top_xx-small slds-text-align_right">
+            <div class="slds-col">
+              <ul class="slds-button-group-row">
+                <li class="slds-button-group-item slds-m-right_x-small">
+                  <a href="#." style="text-decoration: none;"><button class="slds-button slds-button_success slds-p-vertical_xx-small slds-color__text_gray-1" id="schedule-a-demo">Schedule a Demo</button></a>
+                </li>
+              </ul>
+            </div>
+            {{/*  <button class="slds-button slds-button_outline-brand slds-p-vertical_x-small slds-p-horizontal_medium slds-color__text_gray-1 slds-m-right_small">
+              <span class="slds-text-body_small"><b>Login</b></span></button>  
+              <button class="slds-button slds-button_brand slds-p-vertical_x-small slds-p-horizontal_medium slds-color__text_gray-1 slds-m-right_small slds-m-left_small" id="register-btn">
+                <span class="slds-text-body_small"><b>Register</b></span></button>*/}}
+          </div>
+        </div>
+      </div>
+  
+      <div class="slds-grid slds-grid_vertical-align-end">
+        <div class="slds-col slds-size_12-of-12">
+          
+          <div class="slds-tabs_default slds-tabs_medium slds-grid slds-grid_align-center">
+            <ul class="slds-tabs_default__nav slds-m-bottom_none slds-wrap" style="border-bottom: 0px;">
+              {{- $activeMenu := .activeMenu -}}
+                {{- $context := .context -}}
+                {{- if $context.Site.Params.topNavbarMenu -}}
+                {{- $count := 1 -}}
+                {{- range $elem_index, $topMenu := $context.Site.Params.topNavbarMenu -}}
+                {{- $upcount := add $count $elem_index -}}
+                {{- with $context.Site.Params.topNavbarMenuLink -}}
+                {{- $path := index . $elem_index -}}
+                {{- $path_url := path.Join $context.Site.Params.hostName $path -}}
+                <li class="slds-tabs_default__item {{ if eq $activeMenu $topMenu }} slds-is-active {{ end }}" title="{{ $topMenu }}">
+                  <a class="slds-tabs_default__link" href="{{ $context.Site.BaseURL }}{{ $path_url }}" id="{{ $topMenu | urlize }}-top-menu"><b>{{ $topMenu }}</b></a>
+                </li>
+                {{- end -}}
+                {{- end -}}
+                {{- end -}} 
+              </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+    </article>
+  <!-- top < ends < --> 
+  
+   

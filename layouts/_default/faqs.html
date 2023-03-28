@@ -1,15 +1,26 @@
 {{ partial "header.html" . }}
-{{ partial "navigation.html" . }}
-<section class="section sitemap container" >
-	 <div id="breadcrumbs" class="new-ofer-breadcrumbs container"> <a href="/">Home</a> > {{.Title}}</div>
-        <div class="container">
-        	<div class="heading">
-        	  <h1>{{.Title}}</h1>
-        	</div>
-            <div class="row">
-             {{.Content | safeHTML}}
 
-        </div>
+  <article>  
+    <header class="slds-container_x-large slds-container_center slds-p-horizontal_small">
+    <!-- top > starts > --> 
+    {{ $context := . }}
+    {{- partialCached "head" (dict "activeMenu" "FAQs" "context" $context ) "faqs-page-key" -}}  
+  <!-- top < ends < -->  
+    </header>
+  </article>  
+
+<!-- main starts > -->
+<main>
+  <section class="slds-color__background_gray-1 slds-p-vertical_x-large">  
+  <div class="slds-container_large slds-container_center slds-p-horizontal_small slds-p-vertical_medium slds-p-top_none">
+    <h1 style="font-size: 40px; line-height: 50px;font-weight: 700;">FAQ</h1>
+    <article>
+      {{ .Content | safeHTML }} 
+    </article>
+  </div>
 </section>
-
-{{ partial "footer.html" . }}
+</main>
+<!-- main < ends < -->
+<!-- footer > starts > -->
+{{- partialCached "footer-new" (dict "activeMenu" "FAQs" "context" $context) "faqs" -}} 
+<!-- footer < ends < -->

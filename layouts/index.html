@@ -1,23 +1,40 @@
 
 {{ partial "header.html" . }}
- 
-<!--{{ partial "preloader.html" . }}-->
-        
-{{ partial "navigation.html" . }}
 
-{{ partial "hero-area.html" . }}
+{{ $context := . }}
+{{- partialCached "head" (dict "activeMenu" "Home" "context" $context ) "home-page-key" -}}  
+   
+{{ partial "hero.html" . }}
 
-{{ partial "health-information.html" . }}
+{{ partial "about-home.html" . }}
 
-{{ partial "about.html" . }}
+{{ partial "partners-and-testimonials.html" . }}
 
-{{ partial "service.html" . }}
+{{- partialCached "footer-new" (dict "activeMenu" "Home" "context" $context) "home-page-key" -}} 
+<script>
+    $(document).ready(function () {
+      $("#about-read-more").on("click", function () {
+        window.location.href = "/about";
+      });
+  
+      $("#service-read-more").on("click", function () {
+        window.location.href = "/service";
+      });
+  
+      $("#register-patient-advocate").on("click", function () {
+        var selectedValue = 'PA';
+        var url = '/register?patient_option=' + selectedValue;
+        window.location.href = url;
+      });
+      $("#register-hospital-him").on("click", function () {
+        var selectedValue = 'HIM';
+        var url = '/register?patient_option=' + selectedValue;
+        window.location.href = url;
+      });
 
-{{ partial "subscribe.html" . }}
+      $("#book-a-demo").on("click", function () {
+        window.location.href = "https://webinar.unblock.health/free-trial";
+      });
 
-{{ partial "register.html" . }}
-
-{{ partial "partners.html" . }}
-
-
-{{ partial "footer.html" . }}
+    });
+  </script>

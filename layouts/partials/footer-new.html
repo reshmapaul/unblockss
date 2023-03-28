@@ -1,0 +1,233 @@
+{{/*  <footer id="commonfooter">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 about-unblock">
+                <img src="/images/footer-logo.png" class="footer-logo" alt="{{ .Site.Params.logotitle }}" title="{{ .Site.Params.logotitle }}"/></br>
+                 <p>{{ .Site.Params.footersectionaboutcontent }}</p>
+            </div>
+            <div class="col-md-4 twitter-feed">
+                <div class="twitter-widget-title" style="display: block;"><a href="https://www.twitter.com/hashtag/UnblockHealth" target="_blank" rel="nofollow">#UnblockHealth</a></div>
+                <div class="main panel panel-default z-depth-4 twitter-feed-main">
+                 <div id="twitter_feed"><div class="twitter-loader" role="status">
+                    
+                  </div></div>
+            </div>
+            
+
+            </div>
+            <div class="col-md-4">
+                <div class="form-group quick-contact">
+                    <h3>Contact Us</h3>
+                    <form method="POST"  id="contactform">
+                        <div class="input-field">
+                            <input type="text" class="form-control" placeholder="Name*" name="Name" id="quickname" required>
+                        </div>
+                        <div class="input-field">
+                            <input type="email" class="form-control" placeholder="Email Address*" name="Email" id="quickemail" required>
+                        </div>
+                        <div class="input-field">
+                            <input type="text" class="form-control" placeholder="Subject*" name="Subject" id="quicksubject" required>
+                        </div>
+                        <div class="input-field">
+                            <textarea class="form-control" placeholder="Message*" rows="3" name="Message" id="quickmessage" required></textarea>
+                        </div>
+                        <input type="hidden" name="_subject" value="[UnBlock Health] - Contact Form Submission" />
+                        <input id="contact-submit" type="button" class="btn btn-send" value="Send">   
+                            <!--<button class="btn btn-send" id="contact-submit" type="submit">Send</button>-->
+                        </form>
+                        <div id="successfooter" style="display:none;">
+                            
+                        </div>
+                        <div id="errorfooter" style="display:none;">
+                           
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row footer-content">
+                  <div class="col-md-12">
+                        <div class="block">
+                           <ul class="nav navbar-nav menu" id="top-nav">
+                             <li class="nav-item active">
+                                <a id="Home_footer_button" class="nav-link" href="{{ .Site.BaseURL }}">
+                                    {{ with .Site.Params.navigation.home }} {{ . }} {{ end }}
+                                </a>
+                            </li>
+                            {{ if .Site.Params.about.enable }}
+                                <li class="nav-item">
+                                    <a id="About_footer_button" class="nav-link" href="{{ .Site.BaseURL }}#about"> 
+                                        {{ with .Site.Params.navigation.about }} {{ . }} {{ end }}
+                                    </a>
+                                </li>
+                            {{ end }}
+                            {{ if .Site.Params.service.enable }}
+                                <li class="nav-item">
+                                    <a id="Services_footer_button" class="nav-link" href="{{ .Site.BaseURL }}#service">
+                                        {{ with .Site.Params.navigation.service }} {{ . }} {{ end }}
+                                    </a>
+                                </li>
+                               {{ end }}
+                               {{ if .Site.Params.register.enable }}
+                                <li class="nav-item">
+                                    <a id="Register_footer_button" class="nav-link" href="{{ .Site.BaseURL }}#register">
+                                        {{ with .Site.Params.navigation.register }} {{ . }} {{ end }}
+                                    </a>
+                                </li>
+                                {{ end }}
+                                <li id="Sitemap_footer_button" class="nav-item"><a class="nav-link" href="{{ .Site.BaseURL }}sitemap">Sitemap</a></li>
+                                <li id="Sitemap_footer_button" class="nav-item"><a class="nav-link" href="{{ .Site.BaseURL }}privacy-policy">Privacy Policy</a></li>
+                                <li id="Sitemap_footer_button" class="nav-item"><a class="nav-link" href="{{ .Site.BaseURL }}terms-and-conditions">Terms and Conditions</a></li>
+                          </ul>
+                            <p class="copyright-txt">Comprehensive Healthcare Suite of Patient Advocacy Services Designed for Patients and Consumers - <a href="#">Unblock Health</a> | Copyright &copy; {{ dateFormat "2006" now }}. All Rights Reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>  */}}
+
+
+
+{{/*  {{"<!-- Js -->" | safeHTML}}
+<script src="{{"js/vendor/jquery-2.1.1.min.js" | absURL}}"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="{{"js/bootstrap.min.js" | absURL}}"></script>
+<script src="{{"js/multiple-select-checkboxes.js" | absURL}}"></script>
+<script src="{{"js/vendor/modernizr-2.6.2.min.js" | absURL}}"></script>
+<script src="{{"js/jquery.lwtCountdown-1.0.js" | absURL}}"></script>
+<script src="{{"js/owl.carousel.min.js" | absURL}}"></script>
+<script src="{{"js/jquery.validate.min.js" | absURL}}"></script>
+<script src="{{"js/jquery.form.js" | absURL}}"></script>
+<script src="{{"js/jquery.nav.js" | absURL}}"></script>
+<script src="{{"js/twitter-widgets.js" | absURL}}"></script>
+<script src="{{"js/wow.min.js" | absURL}}"></script>
+<script src="{{"js/main.js" | absURL}}"></script>  */}}
+
+<!-- footer > starts > -->
+<footer class="slds-p-vertical_large slds-border_top" style="background: #2a416a; border-top: 10px solid #6c8ecc; color: #6c8ecc;">
+    <div class="slds-container_x-large slds-container_center slds-p-left_small slds-p-right_small">
+      <input type="hidden" name="searchKeyValue" value="" id="searchKeyValue">
+      <article class="slds-p-top_large slds-p-bottom_large">
+        <div class="slds-m-bottom_small slds-m-top_large">
+          <div class="slds-grid slds-gutters slds-wrap">
+            <div class="slds-col slds-size_1-of-1 slds-small-size_6-of-12 slds-medium-size_4-of-12 slds-large-size_4-of-12">
+              <p class="slds-m-bottom_x-large">
+                <a href="/"><img src="/images/logo-footer.png" alt="{{ .Site.Params.logotitle }}" title="{{ .Site.Params.logotitle }}" width="170" height="41"></a>
+              </p>
+              <p class="slds-text-body_small" style="color: #6c8ecc;">
+                {{ .context.Site.Params.footersectionaboutcontent }}
+              </p>
+              <hr class="slds-m-top_x-large slds-m-bottom_x-large" style="height: 0px; border-color: #6c8ecc;">
+  
+              <p class="slds-text-align_center" style="color: #6c8ecc;"><b>Brought to you by</b></p>
+              <div class="slds-grid slds-grid_align-center">
+                <div class="slds-clearfix slds-m-bottom_xx-small">
+                  <div class="slds-float_left non-authenticated-section slds-text-align_center slds-m-horizontal_small">
+                    <span class="slds-avatar slds-avatar_circle slds-avatar_large slds-color__background_gray-1">
+                      <img alt="Grace" src="/images/grace.png" title="Grace">
+                    </span>
+                    <p class="slds-m-top_xx-small slds-text-body_small"><a href="#." style="color:#6c8ecc;" target="_blank" title="Link to shahidshah.com"><i>@GraceCordovano</i></a></p>
+                  </div>
+                  <div class="slds-float_left non-authenticated-section slds-text-align_center slds-m-horizontal_small">
+                    <span class="slds-avatar slds-avatar_circle slds-avatar_large slds-color__background_gray-1">
+                      <img alt="Shahid Sha" src="/images/shahid-sha.png" title="Shahid Sha">
+                    </span>
+                    <p class="slds-m-top_xx-small slds-text-body_small"><a href="#." style="color:#6c8ecc;" target="_blank" title="Link to shahidshah.com"><i>@ShahidNShah</i></a></p>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+            <div class="slds-col slds-size_1-of-1 slds-small-size_6-of-12 slds-medium-size_4-of-12 slds-large-size_4-of-12">
+              <h3 class="slds-text-heading_medium slds-m-bottom_large" style="font-size: 24px; font-weight: 400; line-height: 24px;color: #6c8ecc;"><a href="https://www.twitter.com/hashtag/UnblockHealth">#UnblockHealth</a>                
+              </h3>
+              <p>
+                <img src="/images/unblock-twitter-widget.jpg" alt="" width="354">
+              </p>
+              
+              
+            </div>
+            <div class="slds-col slds-size_1-of-1 slds-small-size_12-of-12 slds-medium-size_4-of-12 slds-large-size_4-of-12">
+              <h3 class="slds-text-heading_medium medium" style="font-size: 24px; font-weight: 400; color: #6c8ecc;">
+                Contact Us
+              </h3>
+              <aside>
+                <form method="POST" name="contactform" id="contactform">
+                  <div class="slds-form-element">
+                    <div class="slds-form-element__control slds-m-bottom_medium">
+                      <input type="text" name="Name" id="quickname" placeholder="Name*" class="slds-input slds-p-vertical_x-small" required/>
+                    </div>
+                    <div class="slds-form-element__control slds-m-bottom_medium">
+                      <input type="email" name="Email" id="quickemail" placeholder="Email Address*" class="slds-input slds-p-vertical_x-small" required/>
+                    </div>
+                    <div class="slds-form-element__control slds-m-bottom_medium">
+                      <input type="text" name="Subject" id="quicksubject" placeholder="Subject*" class="slds-input slds-p-vertical_x-small" required/>
+                    </div>
+                    <div class="slds-form-element__control slds-m-bottom_medium">
+                      <textarea name="Message" id="quickmessage" placeholder="Message*" class="slds-input slds-p-vertical_x-small" style="min-height:138px;" required></textarea>
+                    </div>
+                    <input type="hidden" name="_subject" value="[UnBlock Health] - Contact Form Submission" />
+                    <button id="contact-submit"  class="slds-button slds-button_brand slds-button_stretch slds-p-vertical_small slds-p-horizontal_medium slds-color__text_gray-1">
+                      <span class="slds-text-body_small slds-text-title_caps slds-color__text_gray-1"><b>Send</b></span></button>
+                  </div>
+                  </form>
+                  <div id="successfooter" style="display:none;">
+                            
+                  </div>
+                  <div id="errorfooter" style="display:none;">
+                     
+                  </div>
+              </aside>
+              
+            </div>
+          </div>
+        </div>
+      </article>
+      <hr class="slds-color__border_gray-8 slds-m-top_small slds-m-bottom_large" style="height: 0px; border-color: #6c8ecc!important;">
+      <article class="slds-text-align_center slds-p-top_small slds-p-bottom_x-large">
+        <aside>
+          <ul class="slds-grid slds-grid_align-center slds-list_horizontal slds-has-inline-block-links slds-text-heading_small" style="font-size:18px;flex-wrap: wrap;">
+          {{- $context := .context -}}
+          {{- if $context.Site.Params.footerNavbarMenu -}}
+          {{- $count := 1 -}}
+          {{- range $elem_index, $footerMenu := $context.Site.Params.footerNavbarMenu -}}
+          {{- $upcount := add $count $elem_index -}}
+          {{- with $context.Site.Params.footerNavbarMenuLink -}}
+          {{- $path := index . $elem_index -}}
+          {{- $path_url := path.Join $context.Site.Params.hostName $path -}}
+          <li><a href="{{ $context.Site.BaseURL }}{{ $path_url }}" id ="{{ $footerMenu | urlize }}" class="slds-p-horizontal_small slds-p-vertical_xx-small" style="color: #6c8ecc;"><b>{{ $footerMenu }}</b></a></li>
+          {{- end -}} {{- end -}} {{- end -}}
+            </ul>
+          </aside>
+        
+        <p class="slds-text-body_small" style="line-height: 18px; color: #6c8ecc;">
+          Comprehensive Healthcare Suite of Patient Advocacy Services Designed for Patients and Consumers - Unblock Health | Copyright © 2023. All Rights Reserved.
+        </p>
+  
+      </article>
+    </div> 
+  </footer>
+  <!-- footer < ends < -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+<!-- footer < ends < -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+<script>
+$(document).ready(function () {
+$("#register-btn").click(function(){
+  window.location.href="/register";
+});
+$("#schedule-a-demo").click(function(){
+  window.location.href="https://webinar.unblock.health/free-trial";
+});
+});
+</script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="{{"js/jquery.validate.min.js" | absURL}}"></script>
+<script src="{{"js/jquery.form.js" | absURL}}"></script>
+<script src="{{"js/main-new.js" | absURL}}"></script>
+</section> 
+
+</body>
+</html>

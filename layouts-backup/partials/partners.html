@@ -1,0 +1,35 @@
+{{ if .Site.Params.cta.enable }}
+    {{"<!-- Call To Action Section -->" | safeHTML}}
+    <section class="call-to-action">
+        <div class="container partners-row">
+            <div class="row">
+                <div class="wow">
+                    <div class="col-md-6 partners-col">
+                            <div class="partners-col-border">
+                        {{ with .Site.Params.cta.title }}
+                            <h2>{{ . }}</h2>
+                        {{ end }}
+                       
+                        <div class="row partnersection">
+                        <div class="col-md-6 col-sm-6">
+                            <a id="netspective_logo" href="{{.Site.Params.cta.netspectiveurl }}" target="_blank"/><img src="{{.Site.Params.cta.netspectivelogo }}" alt="{{.Site.Params.cta.netspectivetitle }}" title="{{.Site.Params.cta.netspectivetitle }}" class="img-responsive img-fluid partnerimg"/></a></div>
+                        <div class="col-md-6 col-sm-6"><a id="enlighten_logo" href="{{.Site.Params.cta.enlightenurl }}" target="_blank"/><img src="{{.Site.Params.cta.enlightenlogo }}" alt="{{.Site.Params.cta.enlightentitle }}" title="{{.Site.Params.cta.enlightentitle }}" class="img-responsive img-fluid partnerimg"/></a>
+                        </div>
+                        </div>
+                        </div>
+                    </div>
+                   
+                    <div class="col-md-6 partners-col">
+                        {{ with .Site.Params.cta.titlesupporters }}
+                            <h2>{{ . }}</h2>
+                        {{ end }}
+                        <div class="row partnersection">
+                        <div class="col-md-12"><a id="netspective_logo" href="{{.Site.Params.cta.Davedebronkarturl }}" target="_blank"/><img src="{{.Site.Params.cta.Davedebronkartlogo }}" alt="{{.Site.Params.cta.Davedebronkarttitle }}" title="{{.Site.Params.cta.Davedebronkarttitle }}" class="img-responsive img-fluid partnerimg"/></a></div>
+                        </div>
+ 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{{ end }}

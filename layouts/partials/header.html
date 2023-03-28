@@ -50,8 +50,12 @@
     <meta property="twitter:image" content="{{.Params.banner | absURL }}"/>
     {{ end }}
 
-    {{ .Hugo.Generator }}
-    {{"<!-- Fonts -->" | safeHTML }}
+    {{/*  {{ .Hugo.Generator }}  */}}
+    <link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicons/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/design-system/2.14.2/styles/salesforce-lightning-design-system.min.css" integrity="sha512-v9eTZELqSZcRlIRltjIbpM55zkTQ9azkDAjI0IByyjHLWty1U2+CSPtnNxGpC3FFkpsKwAOfciCv4PWhW/pQGw==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/styles/salesforce-lightning-custom.css">
+    {{/*  {{"<!-- Fonts -->" | safeHTML }}
     <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400i|Source+Sans+Pro:300,400,600,700" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     {{ "<!-- Stylesheets -->" | safeHTML }}
@@ -64,7 +68,7 @@
     <link rel="stylesheet" href="{{ "css/style.css" | absURL }}">
     {{"<!-- Responsive Stylesheet -->" | safeHTML }}
     <link rel="stylesheet" href="{{ "css/responsive.css" | absURL }}">
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">  */}}
 <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -72,7 +76,7 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-KXR6XQ6');</script>
     <!-- End Google Tag Manager -->
- <script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0092/8173.js" async="async"></script>
+ {{/*  <script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0092/8173.js" async="async"></script>  */}}
 </head>
 
 <body id="body">
@@ -80,3 +84,5 @@
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KXR6XQ6"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+<section>
+  

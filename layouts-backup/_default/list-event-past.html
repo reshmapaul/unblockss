@@ -1,0 +1,62 @@
+{{ partial "header.html" . }}
+{{ partial "navigation.html" . }}
+<section class="single-body">
+  <article class="new-ofering-row-3 commun-content-row-3">
+    <div class="container">
+      {{ partial "bread-crumb.html" . }}
+      <div class="h1-custom-heading">
+            <h1>{{ .Params.Title}}</h1>
+          </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="category-what-new-row">
+            <div class="top-10-most-row">
+              <div class="top-10-most-row-tab-ttl">
+                 <div class="alert alert-warning" role="alert">Don’t miss these events focused on patient advocacy, patient empowerment, data access, & transparency.</div> 
+                <ul class="nav nav-tabs text-center" id="myTab" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link show " id="followed-tab" href="/events" aria-controls="followed"
+                      aria-selected="true"><i class="far fa-calendar-alt"></i> Upcoming Events</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link show active" id="favorite-tab" href="/events/past" aria-controls="favorite"
+                      aria-selected="false"><i class="fas fa-history"></i> Past Events</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link show" id="cancelled-tab" href="/events/cancelled" aria-controls="favorite"
+                      aria-selected="false"><i class="far fa-calendar-times"></i> Cancelled Events</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="tab-content" id="myTabContent">
+                <div class="active" id="favorite" role="tabpanel" aria-labelledby="favorite-tab">
+                  <div class="top-10-most-list">
+                    <div class="fhir-list-row">
+                      {{ $paginator := .Paginate (where .Site.Pages.ByDate.Reverse "Params.enddate" "lt" (now.Format "2006-01-02")) }}
+                      {{ if $paginator.Pages }}
+                      {{ range $paginator.Pages }}
+                      {{ .Render "li-event" }}
+                      {{ end }}
+                      {{ else }}
+                      <div class="no-events-found">No Events Found</div>
+                      {{ end }}
+                    </div>
+                  </div>
+                  {{ if or ($paginator.HasPrev) ($paginator.HasNext) }}
+                  <nav class="pagination-nav side-padding">
+                    {{ if $paginator.HasPrev }}<a href="{{ $paginator.Prev.URL }}" class="pagination-newer">&lt;
+                      Previous</a>{{ end }}
+                    {{ if $paginator.HasNext }}<a href="{{ $paginator.Next.URL }}" class="pagination-older">Next
+                      &gt;</a>{{ end }}
+                  </nav>
+                  {{ end }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+</section>
+{{ partial "footer.html" . }}

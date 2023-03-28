@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html class="no-js" lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    {{ if .Params.ogTitle }}
+    <title>{{ .Params.ogTitle }}</title>
+    {{ else }}
+    <title>{{ .Params.title }}</title>
+    {{ end }}
+    {{ if .Params.ogDescription }}
+    <meta name="description" content="{{ .Params.ogDescription }}">
+    {{ else }}
+    <meta name="description" content="{{ .Content | truncate 150 }}">
+    {{ end }}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="article" />
+    {{ if .Params.ogTitle }}
+    <meta property="og:title" content="{{ .Params.ogTitle }}" />
+    {{ else }}
+    <meta property="og:title" content="{{ .Params.title }}" />
+    {{ end }}
+    {{ if .Params.ogDescription }}
+    <meta property="og:description" content="{{.Params.ogDescription }}">
+    {{ else }}
+    <meta property="og:description" content="{{ .Content | truncate 150 }}">
+    {{ end }}
+    <meta property="og:site_name" content="unblock.health" />
+    {{ if .Params.ogImage }} 
+    <meta property="og:image" content="{{ .Params.ogImage | absURL}}" />
+    {{ else }}
+    <meta property="og:image" content="{{ .Params.banner | absURL}}" />
+    {{ end }}
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@unblock.health" />
+    {{ if .Params.ogTitle }}
+    <meta name="twitter:title" content="{{.Params.ogTitle }}" />
+    {{ else }}
+    <meta name="twitter:title" content="{{.Params.title }}" />
+    {{ end }}
+    {{ if .Params.ogDescription }}
+    <meta name="twitter:description" content="{{.Params.ogDescription }}" />
+    {{ else }}
+    <meta name="twitter:description" content="{{ .Content | truncate 150 }}" />
+    {{ end }}
+    {{ if .Params.ogImage }}
+    <meta property="twitter:image" content="{{.Params.ogImage | absURL }}"/>
+    {{ else }}
+    <meta property="twitter:image" content="{{.Params.banner | absURL }}"/>
+    {{ end }}
+
+    {{ .Hugo.Generator }}
+    {{"<!-- Fonts -->" | safeHTML }}
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400i|Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    {{ "<!-- Stylesheets -->" | safeHTML }}
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ "css/bootstrap.min.css" | absURL }}">
+    <link rel="stylesheet" href="{{ "css/themefisher-fonts.css" | absURL }}">
+    <link rel="stylesheet" href="{{ "css/font-awesome.min.css" | absURL }}">
+    <link rel="stylesheet" href="{{ "css/owl.carousel.css" | absURL }}">
+    <link rel="stylesheet" href="{{ "css/animate.css" | absURL }}">
+    <link rel="stylesheet" href="{{ "css/style.css" | absURL }}">
+    {{"<!-- Responsive Stylesheet -->" | safeHTML }}
+    <link rel="stylesheet" href="{{ "css/responsive.css" | absURL }}">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KXR6XQ6');</script>
+    <!-- End Google Tag Manager -->
+ <script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0092/8173.js" async="async"></script>
+</head>
+
+<body id="body">
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KXR6XQ6"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->

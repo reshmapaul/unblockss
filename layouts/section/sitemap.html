@@ -1,0 +1,51 @@
+{{ partial "header.html" . }}
+
+<article>  
+  <header class="slds-container_x-large slds-container_center slds-p-left_small slds-p-right_small">
+  <!-- top > starts > --> 
+  {{ $context := . }}
+  {{- partialCached "head" (dict "activeMenu" "Sitemap" "context" $context ) "sitemap-page-key" -}}  
+  <!-- top < ends < -->  
+  </header>
+</article>  
+
+<!-- main starts > -->
+<main>
+<section class="slds-color__background_gray-1 slds-p-vertical_x-large" style="min-height:450px;">   
+  <div class="slds-container_x-large slds-container_center slds-p-left_small slds-p-right_small">
+    <h1 style="font-size: 40px; line-height: 50px;font-weight: 700;">Sitemap</h1>
+    <article class="slds-md-card">
+      <ul class="slds-has-dividers_bottom slds-has-block-links_space slds-grid slds-wrap">
+        <li class="slds-item slds-col slds-size_1-of-1 slds-small-size_12-of-12 slds-medium-size_6-of-12 slds-large-size_6-of-12">
+        <a href="/">Home</a>
+        </li>
+        <li class="slds-item slds-col slds-size_1-of-1 slds-small-size_12-of-12 slds-medium-size_6-of-12 slds-large-size_6-of-12">
+        <a href="/about">About</a>
+        </li>
+        <li class="slds-item slds-col slds-size_1-of-1 slds-small-size_12-of-12 slds-medium-size_6-of-12 slds-large-size_6-of-12">
+          <a href="/services">Services</a>
+        </li>
+        <li class="slds-item slds-col slds-size_1-of-1 slds-small-size_12-of-12 slds-medium-size_6-of-12 slds-large-size_6-of-12">
+        <a href="/register">Register for an invitation as patient advocate</a>
+        </li>
+        <li class="slds-item slds-col slds-size_1-of-1 slds-small-size_12-of-12 slds-medium-size_6-of-12 slds-large-size_6-of-12">
+          <a href="/register">Register for an invitation as hospital HIM</a>
+        </li>
+        <li class="slds-item slds-col slds-size_1-of-1 slds-small-size_12-of-12 slds-medium-size_6-of-12 slds-large-size_6-of-12">
+          <a href="#">Partners</a>
+        </li>
+        <li class="slds-item slds-col slds-size_1-of-1 slds-small-size_12-of-12 slds-medium-size_6-of-12 slds-large-size_6-of-12">
+          <a href="https://www.netspective.com/">Netspective</a>
+        </li>
+        <li class="slds-item slds-col slds-size_1-of-1 slds-small-size_12-of-12 slds-medium-size_6-of-12 slds-large-size_6-of-12">
+          <a href="https://www.enlighteningresults.com/">Enlightening Results</a>
+        </li>
+      </ul>
+    </article>
+  </div>
+</section>
+</main>
+<!-- main < ends < -->
+<!-- footer > starts > -->
+{{- partialCached "footer-new" (dict "activeMenu" "FAQs" "context" $context) "faqs" -}} 
+<!-- footer < ends < -->

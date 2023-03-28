@@ -1,0 +1,26 @@
+{{ partial "header.html" . }}
+
+<article>  
+  <header class="slds-container_x-large slds-container_center slds-p-left_small slds-p-right_small">
+  <!-- top > starts > -->
+  {{ $context := . }}
+  {{- partialCached "head" (dict "activeMenu" "Privacy policy" "context" $context ) "privacy-policy-page-key" -}}  
+   <!-- top < ends < -->  
+  </header>
+</article>  
+
+<!-- main starts > -->
+<main>
+<section class="slds-color__background_gray-1 slds-p-vertical_x-large">   
+  <div class="slds-container_x-large slds-container_center slds-p-left_small slds-p-right_small">
+    <h1 style="font-size: 40px; line-height: 50px;font-weight: 700;">{{- .Params.title -}}</h1>
+    <article class="slds-md-card">
+      {{- .Content | safeHTML -}}  
+  </article>
+  </div>
+</section>
+</main>
+<!-- main < ends < -->
+<!-- footer > starts > -->
+{{- partialCached "footer-new" (dict "activeMenu" "Privacy Policy" "context" $context) "privacy-policy" -}} 
+<!-- footer < ends < -->

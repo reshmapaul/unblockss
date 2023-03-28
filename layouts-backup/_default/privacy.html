@@ -1,0 +1,15 @@
+{{ partial "header.html" . }}
+{{ partial "navigation.html" . }}
+<section class="section container" id="privacy-policy" >
+	 <div id="breadcrumbs" class="new-ofer-breadcrumbs container"> <a href="/">Home</a> > {{.Title}}</div>
+        <div class="container">
+        	<div class="heading">
+        	  <h1>{{.Title}}</h1>
+        	</div>
+            <div class="privacy">
+             {{.Content | safeHTML}}
+
+        </div>
+</section>
+
+{{ partial "footer.html" . }}

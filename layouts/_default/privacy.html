@@ -1,5 +1,6 @@
 {{ partial "header.html" . }}
 {{ partial "navigation.html" . }}
+{{$context := . }}
 <section class="section container" id="privacy-policy" >
 	 <div id="breadcrumbs" class="new-ofer-breadcrumbs container"> <a href="/">Home</a> > {{.Title}}</div>
         <div class="container">
@@ -12,4 +13,4 @@
         </div>
 </section>
 
-{{ partial "footer.html" . }}
+{{- partialCached "footer-new" (dict "activeMenu" "Privacy" "context" $context) "privacy-page-key" -}} 

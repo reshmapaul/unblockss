@@ -122,6 +122,26 @@ h6 {font-size: 14px; line-height: 20px;font-weight: 600;}
     margin-left: 0;
     text-align: left;
 }
+.slds-curated-content ul {
+	list-style-type: disc !important;
+	margin-left: 25px !important
+}
+
+.slds-curated-content ul li {
+	margin-bottom: 10px !important;
+}
+
+.slds-curated-content ol {
+	list-style-type: decimal !important;
+	margin-left: 25px !important
+}
+
+.slds-curated-content ol li {
+	margin-bottom: 10px !important;
+}
+.slds-curated-content ul li p, .slds-curated-content ol li p {
+	margin-bottom: 10px !important;	
+}
 main {min-height: calc(55vh);}
 /* /Normalize styles <---< */
 

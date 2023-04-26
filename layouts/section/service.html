@@ -1,211 +1,176 @@
 {{ partial "header.html" . }}
 
 {{ $context := . }}
-{{- partialCached "head" (dict "activeMenu" "Services" "context" $context ) "Services-page-key" -}}  
+{{- partialCached "head" (dict "activeMenu" "Services" "context" $context ) "service-page-key" -}}  
   
 <main>
 <section>   
   <div class="slds-container_fluid slds-container_center">
+  <section class="slds-color__background_gray-1 slds-p-vertical_x-large">
+    <article class="slds-container_x-large slds-container_center slds-p-horizontal_small">
 
-    <!-- <article class="slds-container_x-large slds-container_center slds-p-horizontal_small">
-    <aside class="slds-m-bottom_small">
-      <nav role="navigation" aria-label="Breadcrumbs">
-        <ol class="slds-breadcrumb slds-list_horizontal slds-wrap slds-m-bottom_none slds-text-body_small" style="flex-wrap: nowrap;white-space:nowrap;font-size: 13px;" itemprop="itemListElement" itemscope="" itemtype=""><li class="slds-breadcrumb__item">
-                <a itemprop="item" href="#."><span itemprop="name">Home</span></a>
-                <meta itemprop="position" content="1">
-            </li>
-            <li class="slds-breadcrumb__item slds-p-left_x-small slds-truncate">
-              About</li>
-        </ol>
-    </nav>
-    </aside>
-  </article> -->
-
-  <section class="slds-p-vertical_x-large slds-color__background_gray-1">
-    <article class="slds-container_x-large slds-container_center slds-p-horizontal_small slds-p-vertical_medium">
-      <h2 class="slds-m-bottom_x-large slds-text-align_center" style="font-size: 40px; line-height: 50px;font-weight: 700;">Why Unblock Health?</h2>  
-      <h3 class="slds-container_large slds-container_center slds-text-align_center" style="font-size: 26px; line-height: 34px; font-weight: 400;">Unblock Health is ready to dismantle barriers standing in the way of real-world interoperability, patient directed access, and transparency of the future.</h3>
-
-    <aside class="slds-grid slds-wrap slds-gutters">
-      <div class="slds-col slds-size_12-of-12 slds-small-size_6-of-12 slds-medium-size_6-of-12">
-          <div class="slds-p-around_medium">
-            <div class="slds-grid slds-wrap slds-gutters">
-          <div class="slds-col slds-size_12-of-12 slds-medium-size_3-of-12 slds-m-bottom_medium"><img src="/images/real-time-access-to-medical-records.png" alt="" width="" height="" style="width:128px;"></div>
-          <div class="slds-col slds-size_12-of-12 slds-medium-size_9-of-12 slds-m-bottom_xx-small">
-            <h4 class="slds-m-bottom_medium" style="font-size:26px; line-height:34px;">Demand for real time access of health information</h4>
-            <p>The rise of participatory medicine, shared decision making, and consumerism have contributed to patients expecting and demanding access to their medical records in real-time, where they are.</p>
+      <aside class="slds-grid slds-wrap slds-gutters slds-grid_vertical-align-center">
+        <div class="slds-col slds-size_12-of-12 slds-medium-size_6-of-12">
+          <div class="slds-p-around_medium">      
+          <h1 style="font-size: 40px; line-height: 50px;font-weight: 700;">Simple, patient-directed access to medical records</h1>
+          <h3 style="font-size: 26px; line-height: 34px;">Because sharing information should be easy</h3>
+          <p>Individual patient access services have struggled too hard for too long. And with new regulations demanding change, improvements are no longer a “nice to have.” </p>
+          <p>Unblock Health is the turnkey solution you need.</p>
+          <p>Patients can finally request access and corrections to their health records from one digital platform with simple fulfillment workflows, centralized command centers, and tools for regulation compliance.</p>
           </div>
         </div>
+        <div class="slds-col slds-size_12-of-12 slds-medium-size_6-of-12">
+          <div class="slds-p-around_medium">
+          <div class="slds-text-align_center slds-m-bottom_xx-small"><img src="/images/image-01.png" alt="" width="" height=""></div>
         </div>
       </div>
-
-      <div class="slds-col slds-size_12-of-12 slds-small-size_6-of-12 slds-medium-size_6-of-12">
-        <div class="slds-p-around_medium">
-          <div class="slds-grid slds-wrap slds-gutters">
-        <div class="slds-col slds-size_12-of-12 slds-medium-size_3-of-12 slds-m-bottom_medium"><img src="/images/access-to-data-from-wearables.png" alt="" width="" height="" style="width:128px;"></div>
-        <div class="slds-col slds-size_12-of-12 slds-medium-size_9-of-12 slds-m-bottom_xx-small">
-          <h4 class="slds-m-bottom_medium" style="font-size:26px; line-height:34px;">Streamline communication between end-users</h4>
-          <p>Our asynchronous messaging creates a seamless conduit for communication between end-users. Provide real-time updates, address questions, and reduce staff and patient administrative burden with Unblock Health chat.</p>
-        </div>
-      </div>
-      </div>
-    </div>
-
-    <div class="slds-col slds-size_12-of-12 slds-small-size_6-of-12 slds-medium-size_6-of-12">
-      <div class="slds-p-around_medium">
-        <div class="slds-grid slds-wrap slds-gutters">
-      <div class="slds-col slds-size_12-of-12 slds-medium-size_3-of-12 slds-m-bottom_medium"><img src="/images/need-for-transperacy.png" alt="" width="" height="" style="width:128px;"></div>
-      <div class="slds-col slds-size_12-of-12 slds-medium-size_9-of-12 slds-m-bottom_xx-small">
-        <h4 class="slds-m-bottom_medium" style="font-size:26px; line-height:34px;">Need for trust and transparency</h4>
-        <p>The lack of transparency surrounding patient directed access to their health information creates friction between patients and their providers as well as an unsatisfactory customer experience. Greater transparency into patient directed access processes will build trust.</p>
-      </div>
-    </div>
-    </div>
-  </div>
-
-  <div class="slds-col slds-size_12-of-12 slds-small-size_6-of-12 slds-medium-size_6-of-12">
-    <div class="slds-p-around_medium">
-      <div class="slds-grid slds-wrap slds-gutters">
-    <div class="slds-col slds-size_12-of-12 slds-medium-size_3-of-12 slds-m-bottom_medium"><img src="/images/correction-of-errors.png" alt="" width="" height="" style="width:128px;"></div>
-    <div class="slds-col slds-size_12-of-12 slds-medium-size_9-of-12 slds-m-bottom_xx-small">
-      <h4 class="slds-m-bottom_medium" style="font-size:26px; line-height:34px;">Improving data quality and reducing errors</h4>
-      <p>With increases in accessing health information comes the discovery of the many errors and omissions that are often found within medical records. Patients need a streamlined way of submitting a medical record correction request for continuity of care purposes. Patients have a right to a comprehensive and accurate medical record. It's a matter of safety.</p>
-    </div>
-  </div>
-  </div>
-</div>
-
-<div class="slds-col slds-size_12-of-12 slds-small-size_6-of-12 slds-medium-size_6-of-12">
-  <div class="slds-p-around_medium">
-    <div class="slds-grid slds-wrap slds-gutters">
-  <div class="slds-col slds-size_12-of-12 slds-medium-size_3-of-12 slds-m-bottom_medium"><img src="/images/patient-advocacy-tools.png" alt="" width="" height="" style="width:128px;"></div>
-  <div class="slds-col slds-size_12-of-12 slds-medium-size_9-of-12 slds-m-bottom_xx-small">
-    <h4 class="slds-m-bottom_medium" style="font-size:26px; line-height:34px;">Rise in the need for patient advocacy tools</h4>
-    <p>As consumers, patients are in demand of patient advocacy tools to pushback against a healthcare ecosystem that is responsible for friction points that hamper their healthcare trajectory.</p>
-  </div>
-</div>
-</div>
-</div>
-
-<div class="slds-col slds-size_12-of-12 slds-small-size_6-of-12 slds-medium-size_6-of-12">
-  <div class="slds-p-around_medium">
-    <div class="slds-grid slds-wrap slds-gutters">
-  <div class="slds-col slds-size_12-of-12 slds-medium-size_3-of-12 slds-m-bottom_medium"><img src="/images/informed-decisions.png" alt="" width="" height="" style="width:128px;"></div>
-  <div class="slds-col slds-size_12-of-12 slds-medium-size_9-of-12 slds-m-bottom_xx-small">
-    <h4 class="slds-m-bottom_medium" style="font-size:26px; line-height:34px;">Make informed decisions about their care</h4>
-    <p>Patients often cannot get access to their health information, especially when they are faced with an emergency or critical diagnosis, such as a chronic illness or cancer.</p>
-  </div>
-</div>
-</div>
-</div>
-
-<div class="slds-col slds-size_12-of-12 slds-small-size_6-of-12 slds-medium-size_6-of-12">
-  <div class="slds-p-around_medium">
-    <div class="slds-grid slds-wrap slds-gutters">
-  <div class="slds-col slds-size_12-of-12 slds-medium-size_3-of-12 slds-m-bottom_medium"><img src="/images/patient-satisfaction.png" alt="" width="" height="" style="width:128px;"></div>
-  <div class="slds-col slds-size_12-of-12 slds-medium-size_9-of-12 slds-m-bottom_xx-small">
-    <h4 class="slds-m-bottom_medium" style="font-size:26px; line-height:34px;">Improve patient satisfaction & brand reputation</h4>
-    <p>Resolve and reduce delays and pinpoint weaknesses in HIPAA compliant information access workflows that negatively impact the patient experience and patient care. Readily improve outcomes by improving coordination and continuity of patient care.</p>
-  </div>
-</div>
-</div>
-</div>
-
-<div class="slds-col slds-size_12-of-12 slds-small-size_6-of-12 slds-medium-size_6-of-12">
-  <div class="slds-p-around_medium">
-    <div class="slds-grid slds-wrap slds-gutters">
-  <div class="slds-col slds-size_12-of-12 slds-medium-size_3-of-12 slds-m-bottom_medium"><img src="/images/healthcare-organizations.png" alt="" width="" height="" style="width:128px;"></div>
-  <div class="slds-col slds-size_12-of-12 slds-medium-size_9-of-12 slds-m-bottom_xx-small">
-    <h4 class="slds-m-bottom_medium" style="font-size:26px; line-height:34px;">Community of Practice (CoP)</h4>
-    <p>Stop stressing about the new information sharing landscape and compliance with the Information Blocking Rules. The UH CoP supports professionals with a library of the latest best practices and resources as well as a live peer community to support all your access unmet needs and questions.</p>
-  </div>
-</div>
-</div>
-</div>
-</aside>
-
-
+    </aside>
 
     </article>
   </section>
 
-  <section class="slds-p-vertical_x-large">
-    <article class="slds-container_x-large slds-container_center slds-p-horizontal_small slds-p-vertical_medium">
-      <h2 class="slds-m-bottom_x-large slds-text-align_center" style="font-size: 40px; line-height: 50px;font-weight: 700;">Unblock Health is an Absolute MUST for:</h2> 
-      <aside class="slds-grid slds-wrap slds-gutters">
-      <div class="slds-col slds-size_12-of-12 slds-small-size_6-of-12 slds-medium-size_6-of-12">
-        <div class="slds-p-around_medium">
-          <div class="slds-grid slds-wrap slds-gutters">
-        <div class="slds-col slds-size_12-of-12 slds-medium-size_3-of-12 slds-m-bottom_medium"><img src="/images/health-information-management.png" alt="" width="" height="" style="width:128px;"></div>
-        <div class="slds-col slds-size_12-of-12 slds-medium-size_9-of-12 slds-m-bottom_xx-small">
-          <h4 class="slds-m-bottom_medium" style="font-size:26px; line-height:34px;">Health Information Management (HIM) Professionals</h4>
-          <ul class="slds-list_dotted">
-            <li class="slds-m-bottom_x-small">How well is your organization embracing and complying with information sharing requirements?</li>
-            <li class="slds-m-bottom_x-small">Do you know what barriers patients are facing at your organization in accessing their data?</li>
-            <li class="slds-m-bottom_x-small">Don't have a strategy to support patient directed access?</li> 
-            <li class="slds-m-bottom_x-small">Still handling hand-written or faxed addendum requests for processing and implementing patient record addendums?</li> 
-            </ul>
-        </div>
-      </div>
-      </div>
-      </div>
-      
-      <div class="slds-col slds-size_12-of-12 slds-small-size_6-of-12 slds-medium-size_6-of-12">
-        <div class="slds-p-around_medium">
-          <div class="slds-grid slds-wrap slds-gutters">
-        <div class="slds-col slds-size_12-of-12 slds-medium-size_3-of-12 slds-m-bottom_medium"><img src="/images/office-of-patient-experience.png" alt="" width="" height="" style="width:128px;"></div>
-        <div class="slds-col slds-size_12-of-12 slds-medium-size_9-of-12 slds-m-bottom_xx-small">
-          <h4 class="slds-m-bottom_medium" style="font-size:26px; line-height:34px;">Office of Patient Experience</h4>
-          <ul class="slds-list_dotted">
-            <li class="slds-m-bottom_x-small">Lack of coordination of care negatively impacts the patient experience & outcomes, especially in chronic illness & life altering diagnoses.</li>
-            <li class="slds-m-bottom_x-small">Delays in access to medical records and health information may result in negative HCAPS results or impact facility/caregiver reputation in public domain.</li>
-            <li class="slds-m-bottom_x-small">What if your organization's patient information access practices were shared online for patients & consumers to consider when deciding where to get care?</li> 
-            </ul>
-        </div>
-      </div>
-      </div>
-      </div>
-      
-      <div class="slds-col slds-size_12-of-12 slds-small-size_6-of-12 slds-medium-size_6-of-12">
-        <div class="slds-p-around_medium">
-          <div class="slds-grid slds-wrap slds-gutters">
-        <div class="slds-col slds-size_12-of-12 slds-medium-size_3-of-12 slds-m-bottom_medium"><img src="/images/onc.png" alt="" width="" height="" style="width:128px;"></div>
-        <div class="slds-col slds-size_12-of-12 slds-medium-size_9-of-12 slds-m-bottom_xx-small">
-          <h4 class="slds-m-bottom_medium" style="font-size:26px; line-height:34px;">Health Information Exchanges (HIEs) & Qualified Health Information Networks (QHINs)</h4>
-          <ul class="slds-list_dotted">
-            <li class="slds-m-bottom_x-small">Is supporting patient directed access a priority for your organization?</li>
-            <li class="slds-m-bottom_x-small">Do you lack subject matter expertise about individual access services?</li>
-            <li class="slds-m-bottom_x-small">Are you ready to begin a stream-lined approach to individual access services?</li>
-            </ul>
-        </div>
-      </div>
-      </div>
-      </div>
-      
-      <div class="slds-col slds-size_12-of-12 slds-small-size_6-of-12 slds-medium-size_6-of-12">
-        <div class="slds-p-around_medium">
-          <div class="slds-grid slds-wrap slds-gutters">
-        <div class="slds-col slds-size_12-of-12 slds-medium-size_3-of-12 slds-m-bottom_medium"><img src="/images/patients-and-care-partners.png" alt="" width="" height="" style="width:128px;"></div>
-        <div class="slds-col slds-size_12-of-12 slds-medium-size_9-of-12 slds-m-bottom_xx-small">
-          <h4 class="slds-m-bottom_medium" style="font-size:26px; line-height:34px;">Patients, Carepartners, Caregivers, Advocates</h4>
-          <ul class="slds-list_dotted">
-            <li class="slds-m-bottom_x-small">Are you facing a life-altering diagnosis and can't get access to your own medical information quickly enough?</li>
-            <li class="slds-m-bottom_x-small">Are you unable to make informed, educated decisions about your care due to information blocking?</li>
-            <li class="slds-m-bottom_x-small">Have you found an error or omission in your medical record that needs to be corrected immediately for continuity of care purposes? </li>            
-            </ul>
-        </div>
-      </div>
-      </div>
-      </div>
-      
-          </aside> 
-    </article>
-  </section>    
+  <section class="slds-p-vertical_x-large" style="background: #F4F8FF;">
+    <article class="slds-container_x-large slds-container_center slds-p-horizontal_small slds-p-vertical_medium slds-text-align_center">
+    <div class="slds-container_large slds-container_center slds-p-horizontal_small slds-p-vertical_medium slds-text-align_center">
+      <h2 class="slds-m-bottom_x-large" style="font-size: 50px; line-height: 58px;font-weight: 700; text-transform: uppercase;">Better processes, better satisfaction</h2>  
+      <h3 class="slds-container_medium slds-container_center" style="font-size: 20px; line-height: 28px; font-weight: 500;">Replace broken, manual processes with a digital system that delivers fast, accurate responses to all individual access requests.</h3>
+    </div>
 
+      <aside class="slds-grid slds-wrap slds-gutters slds-grid_vertical-align-center slds-p-vertical_large">
+        <div class="slds-col slds-size_12-of-12 slds-medium-size_6-of-12">
+          <div class="slds-p-around_medium">
+          <div class="slds-text-align_center slds-m-bottom_large"><img src="/images/chat-feature.png" alt="" width="" height=""></div>
+        </div>
+      </div>
+        <div class="slds-col slds-size_12-of-12 slds-medium-size_6-of-12">
+          <div class="slds-p-around_medium slds-text-align_left">   
+            <h2 style="font-size: 40px; line-height: 50px;font-weight: 700;">Build trust through communication</h2>
+          <h3 style="font-size: 26px; line-height: 34px;">Two-way, asynchronous messaging</h3>
+          <p>Offer patients more transparency and access with built-in asynchronous messaging. It’s all centralized and documented—quick, simple, effective.</p>   
+            {{/*  <ul>
+              <li class="slds-m-bottom_small slds-p-left_x-large slds-is-relative">
+                <span class="slds-icon_container slds-icon-action-check slds-icon_container_circle slds-is-absolute slds-text-align_center" style="left:0px;top:6px;padding: 2px;height: 17px;width: 17px;background: #6c8ecc;">
+                  <svg class="slds-icon slds-icon_xx-small" aria-hidden="true" style="width:11px; height:11px; position:relative;top: -2px;">
+                    <use xlink:href="/icons/action-sprite/svg/symbols.svg#check"></use>
+                  </svg>
+                </span>
+                Seamless communication powers streamlined efficiency and reduced costs.</li>
+                <li class="slds-m-bottom_small slds-p-left_x-large slds-is-relative">
+                  <span class="slds-icon_container slds-icon-action-check slds-icon_container_circle slds-is-absolute slds-text-align_center" style="left:0px;top:6px;padding: 2px;height: 17px;width: 17px;background: #6c8ecc;">
+                    <svg class="slds-icon slds-icon_xx-small" aria-hidden="true" style="width:11px; height:11px; position:relative;top: -2px;">
+                      <use xlink:href="/icons/action-sprite/svg/symbols.svg#check"></use>
+                    </svg>
+                  </span>
+                  Sign up for Unblock Health today to unlock improved communication.</li>
+              </ul>  */}}
+          </div>
+        </div>
+    </aside> 
+
+    <aside class="slds-grid slds-wrap slds-gutters slds-grid_vertical-align-center slds-p-vertical_large">
+      <div class="slds-col slds-size_12-of-12 slds-medium-size_6-of-12">
+        <div class="slds-p-around_medium slds-text-align_left"> 
+          <h2 style="font-size: 40px; line-height: 50px;font-weight: 700;">Make best practice the norm</h2>
+          <h3 style="font-size: 26px; line-height: 34px;">Built-in compliance support</h3>
+          <p>Automatically comply with published best practices from the ONC, AMA, and The Sequoia Project to deliver the best service for every patient.</p>      
+          {{/*  <ul>
+            <li class="slds-m-bottom_small slds-p-left_x-large slds-is-relative">
+              <span class="slds-icon_container slds-icon-action-check slds-icon_container_circle slds-is-absolute slds-text-align_center" style="left:0px;top:6px;padding: 2px;height: 17px;width: 17px;background: #6c8ecc;">
+                <svg class="slds-icon slds-icon_xx-small" aria-hidden="true" style="width:11px; height:11px; position:relative;top: -2px;">
+                  <use xlink:href="/icons/action-sprite/svg/symbols.svg#check"></use>
+                </svg>
+              </span>
+              Digitalization is necessary, empower your organization today.</li>
+              <li class="slds-m-bottom_small slds-p-left_x-large slds-is-relative">
+                <span class="slds-icon_container slds-icon-action-check slds-icon_container_circle slds-is-absolute slds-text-align_center" style="left:0px;top:6px;padding: 2px;height: 17px;width: 17px;background: #6c8ecc;">
+                  <svg class="slds-icon slds-icon_xx-small" aria-hidden="true" style="width:11px; height:11px; position:relative;top: -2px;">
+                    <use xlink:href="/icons/action-sprite/svg/symbols.svg#check"></use>
+                  </svg>
+                </span>
+                Demonstrate good intent with pioneering action.</li>
+            </ul>  */}}
+        </div>
+      </div>
+      <div class="slds-col slds-size_12-of-12 slds-medium-size_6-of-12">
+        <div class="slds-p-around_medium">
+        <div class="slds-text-align_center slds-m-bottom_large"><img src="/images/feature2-img.png" alt="" width="" height=""></div>
+      </div>
+    </div>
+  </aside>
+  
+  <aside class="slds-grid slds-wrap slds-gutters slds-grid_vertical-align-center slds-p-vertical_large">
+    <div class="slds-col slds-size_12-of-12 slds-medium-size_6-of-12">
+      <div class="slds-p-around_medium">
+      <div class="slds-text-align_center slds-m-bottom_large"><img src="/images/feature3.png" alt="" width="" height=""></div>
+    </div>
+  </div>
+    <div class="slds-col slds-size_12-of-12 slds-medium-size_6-of-12">
+      <div class="slds-p-around_medium slds-text-align_left">   
+        <h2 style="font-size: 40px; line-height: 50px;font-weight: 700;">Greater visibility, less admin work</h2>
+      <h3 style="font-size: 26px; line-height: 34px;">All-in-one command center</h3>
+      <p>Empower patients and team members with a centralized dashboard for status tracking, request progress, compliance documentation, messaging, and much more.
+      </p>   
+        {{/*  <ul>
+          <li class="slds-m-bottom_small slds-p-left_x-large slds-is-relative">
+            <span class="slds-icon_container slds-icon-action-check slds-icon_container_circle slds-is-absolute slds-text-align_center" style="left:0px;top:6px;padding: 2px;height: 17px;width: 17px;background: #6c8ecc;">
+              <svg class="slds-icon slds-icon_xx-small" aria-hidden="true" style="width:11px; height:11px; position:relative;top: -2px;">
+                <use xlink:href="/icons/action-sprite/svg/symbols.svg#check"></use>
+              </svg>
+            </span>
+            Give end-users & requestors greater control and visibility.</li>
+            <li class="slds-m-bottom_small slds-p-left_x-large slds-is-relative">
+              <span class="slds-icon_container slds-icon-action-check slds-icon_container_circle slds-is-absolute slds-text-align_center" style="left:0px;top:6px;padding: 2px;height: 17px;width: 17px;background: #6c8ecc;">
+                <svg class="slds-icon slds-icon_xx-small" aria-hidden="true" style="width:11px; height:11px; position:relative;top: -2px;">
+                  <use xlink:href="/icons/action-sprite/svg/symbols.svg#check"></use>
+                </svg>
+              </span>
+              Decreased administrative staff burden and Patient Administrative Burden.</li>
+          </ul>  */}}
+      </div>
+    </div>
+</aside>
+
+<aside class="slds-grid slds-wrap slds-gutters slds-grid_vertical-align-center slds-p-vertical_large">
+  <div class="slds-col slds-size_12-of-12 slds-medium-size_6-of-12">
+    <div class="slds-p-around_medium slds-text-align_left"> 
+      <h2 style="font-size: 40px; line-height: 50px;font-weight: 700;">Fast, sustainable workflows</h2>
+      <h3 style="font-size: 26px; line-height: 34px;">Digital forms and electronic signatures</h3>
+      <p>Digitize paper processes with electronic forms to quickly send and receive the patient info, request details, and consent forms you need.</p>      
+
+    </div>
+  </div>
+  <div class="slds-col slds-size_12-of-12 slds-medium-size_6-of-12">
+    <div class="slds-p-around_medium">
+    <div class="slds-text-align_center slds-m-bottom_large"><img src="/images/image-05a.png" alt="" width="" height=""></div>
+  </div>
+</div>
+</aside>
+
+    </article>
+  </section>  
+  <section class="slds-p-vertical_x-large slds-color__background_gray-1">
+    <article class="slds-container_large slds-container_center slds-p-horizontal_small slds-p-vertical_medium">   
+      <aside class="slds-grid slds-wrap slds-gutters slds-grid_vertical-align-center slds-p-vertical_large slds-text-align_center">
+        <div class="slds-col slds-size_12-of-12 slds-medium-size_12-of-12">
+          <h2 style="font-size: 40px; line-height: 50px;font-weight: 700;">Discover how Unblock Health improves individual patient access
+          </h2>
+          <button class="slds-button slds-button_outline-brand slds-p-vertical_medium slds-p-horizontal_large slds-color__text_gray-1" id="service-why-unblock-health">
+            <span class="slds-text-body_small" style="font-size:22px;"><b>Why Unblock Health?</b></span></button>
+        </div>
+      </aside>
+    </article>
+  </section>
   </div>
 </section>
 </main>
 <!-- main < ends < -->
-<!-- footer > starts > -->
-{{- partialCached "footer-new" (dict "activeMenu" "Services" "context" $context) "service-page-key" -}} 
-<!-- footer < ends < -->
+ <!-- footer > starts > -->
+ {{- partialCached "footer-new" (dict "activeMenu" "Services" "context" $context) "service-page-key" -}} 
+ <script>
+  $(document).ready(function () {
+    $("#service-why-unblock-health").on("click", function () {
+      window.location.href = "/about";
+    });
+  });
+  </script>
+ <!-- footer < ends < -->

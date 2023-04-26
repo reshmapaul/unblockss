@@ -8,7 +8,7 @@
 
 {{ partial "about-home.html" . }}
 
-{{ partial "partners-and-testimonials.html" . }}
+{{/*  {{ partial "partners-and-testimonials.html" . }}  */}}
 
 {{- partialCached "footer-new" (dict "activeMenu" "Home" "context" $context) "home-page-key" -}} 
 <script>
@@ -32,9 +32,22 @@
         window.location.href = url;
       });
 
+      $("#individual-register-patient-advocate").on("click", function () {
+        var selectedValue = 'PA';
+        var url = '/register?patient_option=' + selectedValue;
+        window.location.href = url;
+      });
+      $("#individual-register-hospital-him").on("click", function () {
+        var selectedValue = 'HIM';
+        var url = '/register?patient_option=' + selectedValue;
+        window.location.href = url;
+      });
       $("#book-a-demo").on("click", function () {
         window.location.href = "https://webinar.unblock.health/free-trial";
       });
-
+      $("#browse-impact-patient-stories").on("click", function () {
+        window.location.href = "/patient-impact-stories";
+      });
+      
     });
   </script>

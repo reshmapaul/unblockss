@@ -23,7 +23,7 @@
             <h2 class="slds-text-heading_medium slds-m-bottom_small" style="font-weight: 600; font-size: 24px;line-height: 26px;">
                 {{ $Title := .Params.title | urlize }}
                 {{ $Title := replace   $Title  "#" "" }}
-                <a href="/press/{{ $Title }}">{{ .Params.title }}</a>
+                <a href="{{ .Permalink }}">{{ .Params.title }}</a>
                 </h2>
                 <aside>
                 <p class="slds-m-bottom_small" style="line-height:21px!important;">{{ .Summary | safeHTML | truncate 200 }}</p>

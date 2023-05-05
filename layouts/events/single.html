@@ -128,6 +128,6 @@
 </main>
 <!-- main < ends < -->
 <!-- footer > starts > -->
-{{- partialCached "footer-new" (dict "activeMenu" "Events" ) -}} 
+{{- partialCached "footer-new" (dict "activeMenu" "Events"  "context" . ) "Events-page-key" -}} 
 <!-- footer < ends < -->
 <script src="/js/event-date.js"></script>

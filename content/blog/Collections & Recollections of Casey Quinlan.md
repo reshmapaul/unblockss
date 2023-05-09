@@ -49,10 +49,12 @@ https://www.caringbridge.org/visit/caseyquinlan/journal/view/id/6447e6876ed8c035
 **LinkedIn:** 
 
 Casey’s LinkedIN: https://www.linkedin.com/in/mightycasey/
+
   - Lygeia Ricciardi: https://www.linkedin.com/feed/update/urn:li:activity:7057011775673634816/
   - Unblock Health: https://www.linkedin.com/feed/update/urn:li:activity:7056975424257454080
 
 **Podcasts:**
+
   - Casey’s Podcasts Healthcare is Hilarious https://www.patreon.com/mightycasey
   - Unblock Health podcast: https://open.spotify.com/episode/7oR2dVLFdlmHch9HNADjuE
   - Danny van Leeuwen podcast: https://health-hats.com/pod181/

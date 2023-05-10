@@ -57,7 +57,12 @@ Casey’s LinkedIN: https://www.linkedin.com/in/mightycasey/
 
   - Casey’s Podcasts Healthcare is Hilarious https://www.patreon.com/mightycasey
   - Unblock Health podcast: https://open.spotify.com/episode/7oR2dVLFdlmHch9HNADjuE
+  - Danny van Leeuwen podcast: https://health-hats.com/pod193/
   - Danny van Leeuwen podcast: https://health-hats.com/pod181/
+
+    
+
+    
 
 **Casey Quinlan on Medium:** https://medium.com/@mightycasey
 

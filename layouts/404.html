@@ -1,16 +1,24 @@
 {{ partial "header.html" . }}
-{{ partial "navigation.html" . }}
-<section class="section" >
-        <div class="container">
-            <div class="row">
-              <div class="error-block">
-    <img src="/images/page-not-found.png" class="img-responsive"/>
-    <div class="b-text-1">Click Here to visit our <a href="{{.Site.BaseURL}}sitemap">sitemap</a> to find what you're looking for or contact us directly if you require assistance!</div>
-    <hr>
-	<a href="{{"/" | absURL}}" class="goback-bt">Home</a> 
-	</div>
-        </div>
-      </div>
-</section>
 
-{{ partial "footer.html" . }}
+{{ $context := . }}
+{{- partialCached "head" (dict "activeMenu" "About" "context" $context ) "about-page-key" -}}  
+  
+<main>
+  <section>   
+    <div class="slds-container_fluid slds-container_center slds-p-top_xx-large slds-m-top_xx-large">
+    {{/*  <img src="/images/page-not-found.png" class="img-responsive"/>  */}}
+    <section class="slds-p-vertical_x-large slds-text-align_center">
+      <article class="slds-container_x-large slds-container_center slds-p-horizontal_small slds-p-vertical_medium">
+      
+        <div class="b-text-1">Click Here to visit our <a href="{{.Site.BaseURL}}sitemap">sitemap</a> to find what you're looking for or contact us directly if you require assistance!</div>
+        <hr>
+          <a href="{{"/" | absURL}}" class="goback-bt">Home</a> 
+      </article>
+    </section>
+    </div>       
+  </section>
+</main>
+
+<!-- footer > starts > -->
+{{- partialCached "footer-new" (dict "activeMenu" "About" "context" $context) "About-page-key" -}} 
+<!-- footer < ends < -->

@@ -19,14 +19,10 @@ breadcrumbLinks:
 ---
 
 
-National Coordinator Micky Tripathi
-
-Office of the National Coordinator for Health Information Technology
-
-Mary E. Switzer Building
-
-330 C. St SW, 7th Floor
-
+National Coordinator Micky Tripathi<br>
+Office of the National Coordinator for Health Information Technology<br>
+Mary E. Switzer Building<br>
+330 C. St SW, 7th Floor<br>
 Washington, DC 20024
 
 Re: RIN 0955–AA03; Health Data, Technology, and Interoperability: Certification Program Updates, Algorithm Transparency, and Information Sharing
@@ -164,6 +160,7 @@ The success of predictive models and machine learning algorithms in health care 
 I highly encourage that matters addressed within HTI-1 proactively, continuously, and longitudinally include diverse patient perspectives and expertise. The <ins>Sequoia Project Consumers Voices Project</ins> is a strong example of a <ins>Patients Included</ins> model that demonstrates a reproducible model and foundation for ensuring equitable and diverse patient and carepartner voice representation.
 
 Other related questions not covered include:
+
 - How are errors currently in patient medical records going to be addressed? Will 
 there be a greater emphasis on correcting errors in medical records to improve 
 data quality of data powering DSIs?
@@ -184,8 +181,6 @@ Respectfully,
 
 Grace Cordovano
 
-Grace Cordovano, PhD, BCPA
-
-Founder, Enlightening Results
-
+Grace Cordovano, PhD, BCPA<br>
+Founder, Enlightening Results<br>
 Co-founder, Unblock Health

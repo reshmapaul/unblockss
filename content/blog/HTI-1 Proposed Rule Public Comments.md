@@ -99,6 +99,7 @@ Page 23776 of HTI-1 states, "*Within healthcare today, predictive models are inc
 Patients face an asymmetry of availability of and access to fair, appropriate, valid, effective, and safe (FAVES) information. It is important to note that clinicians are not the only end-users who need access to this information for informed and shared decision-making purposes and for building trust and transparency. Imagine a world where patients and consumers may select their care based on the availability of an offered DSI at a provider's office, hospital, or institution.
 
 Each component of FAVES information should be:
+
  - inclusively defined from the patient perspective through co-creative processes
  - readily available to patients **as end-receivers AND end-users of DSIs**
 
@@ -137,7 +138,7 @@ For example, there are concerns about the timeframe associated with the Patient 
 
 Certain portions of HTI-1, i.e., Patient Requested Restrictions, cannot continue to wait for years before we attain successful implementation, especially considering the active weaponization of health data and criminalization of the practice of evidence-based medicine post-Dobbs in certain regions of the country. This is a matter of patient and provider safety and health equity. Pushbacks and requests for implementation delays will likely mean delays in essential care, lives lost, inequities perpetuated, and continued harm, suffering, and burdens unnecessarily imposed on individuals receiving care and their care providers. I ask ONC to leverage its authority and leverage the power of multi-stakeholder partnerships, including partnerships with patients, to expedite advancing technical and functional capabilities to support doctors and patients with the tools and technology to protect sensitive information. I support the American Academy of Family Physicians (AAFPs) comments urging "*HHS to work with health IT developers and health data management platforms to advance meaningful data segmentation capabilities. Given the lack of industry progress in this area, the AAFP urges ONC to examine how it can spur action to respond to growing threats to patient privacy, the patient-physician relationship, and patient and clinician safety*."
 
-Patients want control over more than just specific data elements and classes; we want accountability, transparency, and control over **how our data is used and for what purposes**. Patient communities have expressed they are more willing to share their health information with their doctor and care team as it pertains to their care and are less comfortable sharing their health information with employers, big tech, life insurance companies, social media, data aggregators, and annual medical reporting companies.Prioritizing Patient Requested Restrictions to enable restrictions that align with real-world patient concerns and unmet needs, such as those highlighted in the most recent patient survey, Patient Perspectives Around Data Privacy 3, conducted by the American Medical Association (AMA) in collaboration with Savvy Cooperative. 
+Patients want control over more than just specific data elements and classes; we want accountability, transparency, and control over **how our data is used and for what purposes**. Patient communities have expressed they are more willing to share their health information with their doctor and care team as it pertains to their care and are less comfortable sharing their health information with employers, big tech, life insurance companies, social media, data aggregators, and annual medical reporting companies.Prioritizing Patient Requested Restrictions to enable restrictions that align with real-world patient concerns and unmet needs, such as those highlighted in the most recent patient survey, <a href="https://www.ama-assn.org/system/files/ama-patient-data-privacy-survey-results.pdf">Patient Perspectives Around Data Privacy</a> , conducted by the American Medical Association (AMA) in collaboration with Savvy Cooperative. 
 
 Individuals must be able to trust that the health information generated during the sanctity of the doctor-patient relationship is protected from being weaponized and free from contributing to discrimination and exacerbating health inequities.
 
@@ -163,11 +164,9 @@ The success of predictive models and machine learning algorithms in health care 
 I highly encourage that matters addressed within HTI-1 proactively, continuously, and longitudinally include diverse patient perspectives and expertise. The <ins>Sequoia Project Consumers Voices Project</ins> is a strong example of a <ins>Patients Included</ins> model that demonstrates a reproducible model and foundation for ensuring equitable and diverse patient and carepartner voice representation.
 
 Other related questions not covered include:
-
 - How are errors currently in patient medical records going to be addressed? Will 
 there be a greater emphasis on correcting errors in medical records to improve 
 data quality of data powering DSIs?
-
 - Will there be a patient/consumer DSI complaint portal for reporting concerns, 
 bias, discrimination, and harm?
 

@@ -148,6 +148,34 @@ h6 {font-size: 14px; line-height: 20px;font-weight: 600;}
     color: #dddbda!important;
     cursor: default!important;
 }
+/*.slds-content-curation ul li {
+	margin-bottom: 10px !important;
+    list-style: none;
+    color: black; 
+}*/
+
+.slds-curated-content.slds-content-curation ul {
+    list-style: none!important;
+    margin-left: 15px !important;
+}
+.slds-curated-content.slds-content-curation li {
+    padding-left:10px!important;
+}
+  .slds-curated-content.slds-content-curation li::before {
+    content: "\2713"; /* Unicode character for checkmark symbol */
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-left: -25px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 20px;
+    background-color: #3b3e41;
+    color: #fff;
+    border-radius: 2px;
+    margin-right: 8px;
+  }
+
 main {min-height: calc(55vh);}
 /* /Normalize styles <---< */
 

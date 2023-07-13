@@ -8,6 +8,7 @@ ogDescription: "Ensuring patients have access to the information, tools, and tec
 ogImage: "/images/blogs/paient-can't-wait-time.jpg"
 twitterImage: "/images/blogs/paient-can't-wait-time.jpg"
 twitterCard: "summary_large_image"
+blogStyle: true
 breadcrumbs:
  - Home
  - Blog

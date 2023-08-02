@@ -110,7 +110,7 @@
       <input type="hidden" name="searchKeyValue" value="" id="searchKeyValue">
       <article class="slds-p-top_large slds-p-bottom_large">
         <div class="slds-m-bottom_small slds-m-top_large">
-          <div class="slds-grid slds-gutters slds-wrap">
+          <div class="slds-grid slds-gutters slds-wrap slds-align_absolute-center">
             <div class="slds-col slds-size_1-of-1 slds-small-size_6-of-12 slds-medium-size_4-of-12 slds-large-size_4-of-12">
               <p class="slds-m-bottom_x-large">
                 <a href="/"><img src="/images/logo-footer.png" alt="{{ .Site.Params.logotitle }}" title="{{ .Site.Params.logotitle }}" width="170" height="41"></a>
@@ -139,13 +139,13 @@
                 </div>
               </div>
             </div>
-            <div class="slds-col slds-size_1-of-1 slds-small-size_6-of-12 slds-medium-size_4-of-12 slds-large-size_4-of-12 twitter-feed">
+            <div class="slds-col slds-size_1-of-1 slds-small-size_6-of-12 slds-medium-size_4-of-12 slds-large-size_4-of-12 twitter-feed slds-hide">
               <h3 class="slds-text-heading_medium slds-m-bottom_large" style="font-size: 24px; font-weight: 400; line-height: 24px;color: #6c8ecc;"><a href="https://www.twitter.com/hashtag/UnblockHealth" target="_blank">#UnblockHealth</a>                
               </h3>
               <p>
-                <img src="/images/unblock-twitter-widget.jpg" alt="" width="354">
+                {{/*  <img src="/images/unblock-twitter-widget.jpg" alt="" width="354">  */}}
               </p>
-              <div id="twitter_feed slds-hide">
+              <div id="twitter_feed">
               <div class="demo-only twitter-loader slds-hide" style="height:6rem;position:relative">
                 <div class="slds-spinner_container slds-hide" style="background-color: transparent!important;">
                   <div role="status" class="slds-spinner slds-spinner_medium slds-spinner_brand" style="left: 20% !important;">

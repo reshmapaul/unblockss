@@ -102,7 +102,7 @@ $('#contact-submit-live').click(function (e) {
           $('#name').val('');
           $('#email').val('');
           var $success = $('#success'); // get the reference of the div
-          $success.show().html('Your Message was sent successfully');
+          $success.show().html('We appreciate your registration with Unblock Health.');
         }
       });
     });

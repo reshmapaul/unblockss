@@ -33,7 +33,7 @@ It’s the **patient’s** decision if they wish to wait to review their results
 
 Delaying the release of available results may leads to many patients never receiving their results, delays in care, increases patient administrative burden, may lead to disease progression and even death. Don’t believe me? Check out the Unblock Health <a href="https://www.unblock.health/patient-impact-stories/">Patient Impact Stories</a> collection, real stories of the harm that can happen when patients don’t have access to their results and the good that happens when they do.
 
-2) Access to results when they are available isn’t the problem. The claims that patients are "too stupid/anxious/hysterical" to handle their results the problem (although the sentiments are grossly demeaning and insulting).
+2) Access to results when they are available isn’t the problem. The claims that patients are "too stupid/anxious/hysterical" to handle their results isn't the problem (although the sentiments are grossly demeaning and insulting).
 
 What’s causing the ongoing friction is the **format** of the results that are hitting our portals and mailboxes. We need plain language, actionable versions of our results. We need to distill the medicalese into easy to understand conclusions and provide patients with the next steps all in one place. AI and LLMs are strongly positioned to help. 
 

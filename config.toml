@@ -10,8 +10,8 @@ defaultMarkdownHandler            = "goldmark"
 unsafe                            = true
 
 [params]
-    topNavbarMenu                     = ["Home","About","Services","Register","News","Press","Events","Blog","FAQs","Patient Impact Stories"]
-    topNavbarMenuLink                 = ["/","/about","/service","/register","/news","/press","/events","/blog","/faqs","/patient-impact-stories"]
+    topNavbarMenu                     = ["Home","About","Services","Register","News","Press","Events","Blog","FAQs","Patient Impact Stories","Resources"]
+    topNavbarMenuLink                 = ["/","/about","/service","/register","/news","/press","/events","/blog","/faqs","/patient-impact-stories","/resources"]
     footerNavbarMenu = ["Home","About","Services","Register","Sitemap","Privacy Policy", "Terms and Conditions"]
     footerNavbarMenuLink = ["/","/about","/service","/register","/sitemap","/privacy-policy","/terms-and-conditions"]
 

@@ -1,0 +1,50 @@
+name: CI/CD Workflow
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '10'
+
+      - name: Install SSH Client
+        run: |
+          sudo apt update
+          sudo apt install openssh-client hugo -y
+
+      - name: Set up SSH agent
+        run: |
+          eval $(ssh-agent -s)
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+          echo -e "${{ secrets.SSH_PRIVATE_KEY }}" >> ~/.ssh/id_rsa
+          chmod 400 ~/.ssh/id_rsa
+      - name: Node and npm versions
+        run: |
+          node --version
+
+      - name: Install dependencies and build
+        run: |
+          npm install
+          node create_md_files/createMdFile.js && hugo
+
+      - name: Archive build artifacts
+        run: |
+          tar -czvf  www.unblock.health_dist.tar.gz public
+
+      - name: Copy build artifacts to the production server
+        run: |
+           scp -P422 -o StrictHostKeyChecking=no www.unblock.health_dist.tar.gz "${{ secrets.PRODUCTION_USER }}@${{ secrets.PRODUCTION_SERVER_IP }}:"
+           ssh -p22 -o StrictHostKeyChecking=no -t ${{ secrets.PRODUCTION_USER }}@${{ secrets.PRODUCTION_SERVER_IP }} "bash -i update-unblock-health-com.sh"
+~                                                                                                                                                                  

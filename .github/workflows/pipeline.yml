@@ -18,7 +18,7 @@ jobs:
         with:
           node-version: '10'
 
-      - name: Install SSH Client
+      - name: Install SSH Client and Hugo
         run: |
           sudo apt update
           sudo apt install openssh-client -y
@@ -33,7 +33,7 @@ jobs:
           chmod 700 ~/.ssh
           echo -e "${{ secrets.SSH_PRIVATE_KEY }}" >> ~/.ssh/id_rsa
           chmod 400 ~/.ssh/id_rsa
-      - name: Node and npm versions
+      - name: Node and Hugo versions
         run: |
           node --version
           hugo version
@@ -49,5 +49,5 @@ jobs:
 
       - name: Copy build artifacts to the production server
         run: |
-           scp -P422 -o StrictHostKeyChecking=no www.unblock.health_dist.tar.gz "${{ secrets.PRODUCTION_USER }}@${{ secrets.PRODUCTION_SERVER_IP }}:"
+           scp -P22 -o StrictHostKeyChecking=no www.unblock.health_dist.tar.gz "${{ secrets.PRODUCTION_USER }}@${{ secrets.PRODUCTION_SERVER_IP }}:"
            ssh -p22 -o StrictHostKeyChecking=no -t ${{ secrets.PRODUCTION_USER }}@${{ secrets.PRODUCTION_SERVER_IP }} "bash -i update-unblock-health-com.sh"

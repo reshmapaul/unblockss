@@ -38,7 +38,18 @@ jobs:
           node --version
           hugo version
 
-      - name: Install dependencies and build
+      - name: Execute Variables and Build
+        env: 
+          API_URL: ${{ vars.API_URL }}
+          AUTH_TOKEN: ${{ vars.AUTH_TOKEN }}
+          BASE_URL: ${{ vars.BASE_URL }}
+          CLEAN_URL_FIELD: ${{ vars.CLEAN_URL_FIELD }}
+          EVENTS_PROJECT_ID: ${{ vars.EVENTS_PROJECT_ID }}
+          EVENT_CANCELLED_FIELD: ${{ vars.EVENT_CANCELLED_FIELD }}
+          HUGO_VERSION: ${{ vars.HUGO_VERSION }}
+          LOCATION_FIELD: ${{ vars.LOCATION_FIELD }}
+          NEWS_PROJECT_ID: ${{ vars.NEWS_PROJECT_ID }}
+          PRESS_PROJECT_ID: ${{ vars.PRESS_PROJECT_ID }}
         run: |
           npm install
           node create_md_files/createMdFile.js && hugo

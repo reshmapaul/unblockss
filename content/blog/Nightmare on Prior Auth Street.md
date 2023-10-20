@@ -1,12 +1,12 @@
 --- 
 title: "Nightmare on Prior Auth Street"
 date: "2023-10-20"
-banner : "/images/noimage.jpg"
+banner : "/images/blogs/nightmare-on-prior-auth-street.jpg"
 ogType: "article"
 ogTitle: "Nightmare on Prior Auth Street | Unblock Health"
 ogDescription: "Medical records and health information need to flow continuously, seamlessly, and actionably in order for patient care to be coordinated, safe, and guided by informed decision making."
-ogImage: "/images/noimage.jpg"
-twitterImage: "/images/noimage.jpg"
+ogImage: "/images/blogs/nightmare-on-prior-auth-street.jpg"
+twitterImage: "/images/blogs/nightmare-on-prior-auth-street.jpg"
 twitterCard: "summary_large_image"
 breadcrumbs:
  - Home

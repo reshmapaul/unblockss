@@ -1,9 +1,9 @@
 --- 
-title: "Cracking Open the Other Black Box Unmasking AI's Role in Patient Care"
+title: "Cracking Open the Other Black Box: Unmasking AI's Role in Patient Care"
 date: "2023-10-25"
 banner : "/images/blogs/cracking-open-the-other-black-box.jpg"
 ogType: "article"
-ogTitle: "Cracking Open the Other Black Box Unmasking AI's Role in Patient Care | Unblock Health"
+ogTitle: "Cracking Open the Other Black Box: Unmasking AI's Role in Patient Care | Unblock Health"
 ogDescription: "Let's talk breast cancer screening, access to results in the portal, and AI powered breast cancer detection."
 ogImage: "/images/blogs/cracking-open-the-other-black-box.jpg"
 twitterImage: "/images/blogs/cracking-open-the-other-black-box.jpg"
@@ -11,7 +11,7 @@ twitterCard: "summary_large_image"
 breadcrumbs:
  - Home
  - Blog
- - Cracking Open the Other Black Box Unmasking AI's Role in Patient Care
+ - Cracking Open the Other Black Box - Unmasking AI's Role in Patient Care
 breadcrumbLinks:
  - / 
  - /blog
@@ -31,7 +31,7 @@ When my mammogram results hit my portal, I stopped dead in my tracks seeing "Sai
   >**EXAM: DIGITAL BILATERAL SCREENING MAMMOGRAM AND TOMOSYNTHESIS WITH CAD AND BREAST ULTRASOUND**
 
   >**MAMMOGRAM:**
-  
+
   >**HISTORY:** Female, 42 years old, presents for screening mammogram. No personal history of breast cancer. Family history of breast cancer in her mother diagnosed at age 48.
 
   >**TECHNIQUE:** Biltaeral 3D digital screening mammogram was performed. Examination was reviewed with **Saige-Dx, an Artificial Intelligence Diagnostic Aid Software**. Synthesized 2D images (C-view) were reconstructed from digital breast tomosynthesis data.

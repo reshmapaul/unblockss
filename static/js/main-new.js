@@ -65,6 +65,8 @@ $('#contact-submit-live').click(function (e) {
   } else {
     var patientdetailsvalue = '';
   }
+  $('#contact-submit-live').prop('disabled', 'disabled');
+  $('#contact-submit-live').addClass('is-disabled');
   $('.loader-form').show();
   var concatenatedValues = first_name + "|" + email + "|" + patientdetailsvalue;
 
@@ -86,7 +88,7 @@ $('#contact-submit-live').click(function (e) {
         "registration_type": patientdetailsvalue,
         "registration_datetime": todayDate
     }
-  };
+  }; 
   var settings = {
     "url": "https://api.novu.infra.medigy.com/v1/events/trigger",
     "method": "POST",

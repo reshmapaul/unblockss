@@ -34,7 +34,7 @@ jobs:
           PRESS_PROJECT_ID: ${{ vars.PRESS_PROJECT_ID }}
         run: |
           npm install
-          node create_md_files/createMdFile.js && hugo
+          node create_md_files/createMdFile.js && hugo --cacheDir /tmp/hugo_cache_ubh/
 
       - name: Archive build artifacts
         run: |

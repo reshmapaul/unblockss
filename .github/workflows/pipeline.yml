@@ -15,26 +15,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '10'
-
-      - name: Install SSH Client and Hugo
-        run: |
-          sudo apt update
-          sudo apt install openssh-client -y
-          wget https://github.com/gohugoio/hugo/releases/download/v0.58.3/hugo_0.58.3_Linux-64bit.tar.gz
-          tar -zxvf hugo_0.58.3_Linux-64bit.tar.gz
-          sudo mv hugo /usr/local/bin/
-
-      - name: Set up SSH agent
-        run: |
-          eval $(ssh-agent -s)
-          mkdir -p ~/.ssh
-          chmod 700 ~/.ssh
-          echo -e "${{ secrets.SSH_PRIVATE_KEY }}" >> ~/.ssh/id_rsa
-          chmod 400 ~/.ssh/id_rsa
       - name: Node and Hugo versions
         run: |
           node --version

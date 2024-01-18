@@ -20,7 +20,7 @@ breadcrumbLinks:
 
 ![Alt text](https://www.unblock.health/images/blogs/The-Missing-Code-in-AI-content-bnr.jpg "The Missing Code in AI")
 
-The accompanying image was created by DALL-E. 'The Missing Code in AI: The Patient Voice.' Generated image. OpenAI, \[1/12/2024\]
+<p style=" font-size: 12px;margin-top: -21px;">The accompanying image was created by DALL-E. 'The Missing Code in AI: The Patient Voice.' Generated image. OpenAI, \[1/12/2024\]</p>
 
 It's crystal clear that the patient and carepartner voice is not diversely represented in the co-creation of AI-powered solutions used in patient care and patient coordination of care.
 

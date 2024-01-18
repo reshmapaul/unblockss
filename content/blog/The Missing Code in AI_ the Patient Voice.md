@@ -34,7 +34,6 @@ Here are 4 actionable ways towards incremental improvements:
    
    Prioritize commitment to incorporating the lived experience and expertise of patients into your AI co-creation and implementation cycles by ensuring that we are neither excluded nor exploited. Diverse patient representation on leadership and advisory boards is a must. Allocate budgets to fairly compensate patients for their contributions. Bookmark the [Patients Included charter](https://patientsincluded.org/). 
 
-
 2. **Where the heck do I even find these mystical patients?** 
    
    Not being able to find a patient is an unacceptable excuse. Still justifying the “we-are-all-patients” logic? Don't know where to begin? Check out [Savvy Cooperative](https://www.savvy.coop/) for all your [#AskPatients](https://www.linkedin.com/feed/hashtag/?keywords=askpatients&highlightedUpdateUrns=urn%3Ali%3Aactivity%3A7151608471585521665) needs. 

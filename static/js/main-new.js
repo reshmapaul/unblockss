@@ -107,7 +107,7 @@ $('#contact-submit-live').click(function (e) {
   "method": "POST",
   "timeout": 0,
   "headers": {
-    "qu": "",
+    "Access-Control-Allow-Origin": "*",
     "Content-Type": "application/json"
   },
   "data": JSON.stringify({

@@ -62,13 +62,15 @@ $('#contact-submit-live').click(function (e) {
     var patientdetailsvalue = 'PPA';
   } else if(patientdetails == 'HIM'){
     var patientdetailsvalue = 'HIM';
-  } else {
+  } else if(patientdetails == 'PAT'){
+    var patientdetailsvalue = 'PAT';
+  }else {
     var patientdetailsvalue = '';
   }
   $('#contact-submit-live').prop('disabled', 'disabled');
   $('#contact-submit-live').addClass('is-disabled');
   $('.loader-form').show();
-  var concatenatedValues = first_name + "|" + email + "|" + patientdetailsvalue;
+ /* var concatenatedValues = first_name + "|" + email + "|" + patientdetailsvalue;
 
   var encodedValues = btoa(concatenatedValues);
   var NovuBaseURL = $('#_novbaseurl').val();
@@ -100,7 +102,21 @@ $('#contact-submit-live').click(function (e) {
     "data": JSON.stringify(registerFormData),
 };
   /* End of Novu Integration */
-  $.ajax(settings).done(function(response) {
+  
+  var settings = {
+  "url": "https://prime.dcp.infra.co.medigy.com/graphiql",
+  "method": "POST",
+  "timeout": 0,
+  "headers": {
+    "qu": "",
+    "Content-Type": "application/json"
+  },
+  "data": JSON.stringify({
+    query: "mutation MyMutation {\r\n  notifyUserRegistrationV1(input: {email: \"" + email + "\", name: \"" + first_name + "\",  userType: \"" + patientdetails + "\"}) {\r\n    requestApiResponse {\r\n      data\r\n      status {\r\n        code\r\n        message\r\n      }\r\n      success\r\n    }\r\n  }\r\n}",
+    variables: {}
+  })
+};
+$.ajax(settings).done(function (response) {
     var form = new FormData();
     form.append("grant_type", "client_credentials");
     form.append("client_id", "93d80a68-5ad0-878d-a787-5da44425070f");
@@ -159,6 +175,8 @@ $('#contact-submit-live').click(function (e) {
             $('#email').val('');
             var $success = $('#success'); // get the reference of the div
             $success.show().html('We appreciate your registration with Unblock Health.');
+            //setInterval('location.reload()', 800);
+            //$success.show().html('');
           }
         });
       });

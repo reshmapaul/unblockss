@@ -72,6 +72,8 @@
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">  */}}
 
  {{/*  <script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0092/8173.js" async="async"></script>  */}}
+ <script src="{{"js/vendor/jquery-2.1.1.min.js" | absURL}}"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
 
 <body>
@@ -100,9 +102,9 @@
       <p style="font-size: 23px; line-height:34px;">A new three-way partnership between Unblock Health, Health Gorilla, and CLEAR&reg; brings Individual Access Services (IAS) one step closer to reality.</p>
       <div class="slds-grid slds-wrap slds-gutters slds-m-bottom_medium">
         <div class="slds-col slds-size_12-of-12 slds-medium-size_6-of-12">
-		<a href="/register"><button class="slds-button bg-btn-style" style="width:250px; margin:20px 0px 0px;">
+		      <button id="start-free-account" class="slds-button bg-btn-style" style="width:250px; margin:20px 0px 0px;">
 							<span class="slds-text-heading_medium"><b>Start your<br>  free account</b></span>
-					</button></a>
+					</button>
 		  </div>
       </div>
     </aside>
@@ -219,9 +221,9 @@
 	  <p>The more pressure we place on healthcare organizations to share medical records, the faster we’re likely to see enforcement begin.</p>
 		<div class="slds-grid slds-gutters">
 			  <div class="slds-col">
-                <a href="/register"><button class="slds-button bg-btn-style" style="width:250px;">
+                <button id="free-account" class="slds-button bg-btn-style" style="width:250px;">
 							<span class="slds-text-heading_medium"><b>Start your<br>  free account</b></span>
-					</button></a>
+					</button>
 			  </div>
 		</div>
       </div> 
@@ -269,9 +271,9 @@
 			  </div>
 			  <div class="slds-col slds-size_8-of-8 slds-medium-size_2-of-8">
 					<div class="slds-col slds-size_12-of-12 slds-medium-size_6-of-12">
-						<a href="/register"><button class="slds-button bg-btn-style" style="width:250px;">
+						<button id="pat-register" class="slds-button bg-btn-style" style="width:250px;">
 							<span class="slds-text-heading_medium"><b>Start your<br>  free account</b></span>
-					</button></a>
+					</button>
 					</div>
 			  </div>
 			  <div class="slds-col slds-size_8-of-8 slds-medium-size_1-of-8">
@@ -291,3 +293,22 @@
 
 </body>
 </html>
+<script>
+  $(document).ready(function () {
+    $("#start-free-account").on("click", function () {
+        var selectedValue = 'PAT';
+        var url = '/register?option=' + selectedValue;
+        window.location.href = url;
+      });
+      $("#free-account").on("click", function () {
+        var selectedValue = 'PAT';
+        var url = '/register?option=' + selectedValue;
+        window.location.href = url;
+      });
+      $("#pat-register").on("click", function () {
+        var selectedValue = 'PAT';
+        var url = '/register?option=' + selectedValue;
+        window.location.href = url;
+      });
+  });
+</script>

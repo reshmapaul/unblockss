@@ -102,9 +102,8 @@ $('#contact-submit-live').click(function (e) {
     "data": JSON.stringify(registerFormData),
 };
   /* End of Novu Integration */
-  
   var settings = {
-  "url": "https://prime.dcp.infra.co.medigy.com/graphiql",
+  "url": "https://prime.dcp.infra.co.medigy.com/graphql",
   "method": "POST",
   "timeout": 0,
   "headers": {

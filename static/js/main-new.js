@@ -110,7 +110,7 @@ $('#contact-submit-live').click(function (e) {
     "Content-Type": "application/json"
   },
   "data": JSON.stringify({
-    query: "mutation MyMutation {\r\n  notifyUserRegistrationV1(input: {email: \"" + email + "\", name: \"" + first_name + "\",  userType: \"" + patientdetails + "\"}) {\r\n    requestApiResponse {\r\n      data\r\n      status {\r\n        code\r\n        message\r\n      }\r\n      success\r\n    }\r\n  }\r\n}",
+    query: "mutation MyMutation {\r\n  notifyUserRegistrationV1(input: {email: \"" + email + "\", name: \"" + first_name + "\",  userType: \"" + patientdetailsvalue + "\"}) {\r\n    requestApiResponse {\r\n      data\r\n      status {\r\n        code\r\n        message\r\n      }\r\n      success\r\n    }\r\n  }\r\n}",
     variables: {}
   })
 };

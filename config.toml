@@ -235,8 +235,8 @@ unsafe                            = true
     
     [params.register]
         enable      = true
-        title       = "Become an Unblock Health early adopter and pioneer"
-        subtitle    = "It's time to Unblock Health! Register to request your pre-launch, early access invitation today!"
+        title       = "Join the movement. Sign up for your Unblock Health account now!"
+        subtitle    = "It's time to Unblock Health! Register to request your early access invitation today!"
     [params.community]
         enable      = true
         title = "We're Putting a Stake in the Ground Against Data Blocking at HIMSS20 in Orlando! "

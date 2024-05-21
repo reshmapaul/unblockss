@@ -102,8 +102,20 @@ $('#contact-submit-live').click(function (e) {
     "data": JSON.stringify(registerFormData),
 };
   /* End of Novu Integration */
-  var settings = {
+  /*var settings = {
   "url": "https://prime.dcp.infra.co.medigy.com/graphql",
+  "method": "POST",
+  "timeout": 0,
+  "headers": {
+    "Content-Type": "application/json"
+  },
+  "data": JSON.stringify({
+    query: "mutation MyMutation {\r\n  notifyUserRegistrationV1(input: {email: \"" + email + "\", name: \"" + first_name + "\",  userType: \"" + patientdetails + "\"}) {\r\n    requestApiResponse {\r\n      data\r\n      status {\r\n        code\r\n        message\r\n      }\r\n      success\r\n    }\r\n  }\r\n}",
+    variables: {}
+  })
+};*/
+var settings = {
+  "url": "https://dcp.infra.unblock.health/graphql",
   "method": "POST",
   "timeout": 0,
   "headers": {

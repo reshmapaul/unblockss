@@ -134,7 +134,7 @@ $.ajax(settings).done(function (response) {
     var settings = {
       "async": true,
       "crossDomain": true,
-      "url": "https://crm.unblock.health/Api/access_token",
+      "url": "https://crm.unblock.health/legacy/Api/access_token",
       "method": "POST",
       "headers": {
         "Accept": "application/vnd.api+json"
@@ -150,7 +150,7 @@ $.ajax(settings).done(function (response) {
       var obj = $.parseJSON(response);
       var access_token = obj.access_token;
       var settings = {
-        "url": "https://crm.unblock.health/Api/V8/module",
+        "url": "https://crm.unblock.health/legacy/Api/V8/module",
         "method": "POST",
         "headers": {
           "Accept": "application/vnd.api+json",
@@ -158,16 +158,16 @@ $.ajax(settings).done(function (response) {
           "Content-Type": "application/json"
         },
         "processData": false,
-        "data": "{\r\n  \"data\": {\r\n    \"type\": \"Contacts\",\r\n    \"id\": \"" + uid + "\",\r\n    \"attributes\": {\r\n     \"first_name\":\"" + first_name + "\",\r\n     \"email1\":\"" + email + "\"\r\n,\r\n     \"lead_source\":\"Web Site\"\r\n,\r\n     \"title\":\"" + patientdetails + "\"\r\n   }\r\n  }\r\n}\r\n"
+        "data": "{\r\n  \"data\": {\r\n    \"type\": \"Contacts\",\r\n    \"id\": \"" + uid + "\",\r\n    \"attributes\": {\r\n     \"first_name\":\"" + first_name + "\",\r\n     \"email1\":\"" + email + "\"\r\n,\r\n     \"lead_source\":\"Web Site\"\r\n,\r\n     \"title\":\"" + patientdetails + "\"\r\n,\r\n     \"account_id\":\"aba27ce2-d758-bdeb-adef-5da4294bf9e8\"\r\n   }\r\n  }\r\n}\r\n"
       }
 
-      $.ajax(settings).done(function (response) {
+      /*$.ajax(settings).done(function (response) {
         console.log(response);
         var contactid = response.data.id;
         var settings = {
           "async": true,
           "crossDomain": true,
-          "url": "https://crm.unblock.health/Api/V8/module/Accounts/aba27ce2-d758-bdeb-adef-5da4294bf9e8/relationships",
+          "url": "https://crm.unblock.health/legacy/Api/V8/module/Accounts/aba27ce2-d758-bdeb-adef-5da4294bf9e8/relationships",
           "method": "POST",
           "headers": {
             "Accept": "application/vnd.api+json",
@@ -176,11 +176,10 @@ $.ajax(settings).done(function (response) {
           },
           "processData": false,
           "data": "{  \r\n   \"data\":{  \r\n         \"type\":\"Contacts\",\r\n         \"id\":\"" + contactid + "\"\r\n\t    \r\n      }\r\n}"
-        }
+        }*/
 
-        $.ajax(settings).done(function (response) {
-          console.log(response);
-          if (response.meta.message != "") {
+      $.ajax(settings).done(function (response) {
+        if (response.data.id !='') {
             $('#name').val('');
             $('#email').val('');
             var $success = $('#success'); // get the reference of the div
@@ -188,7 +187,7 @@ $.ajax(settings).done(function (response) {
             //setInterval('location.reload()', 800);
             //$success.show().html('');
           }
-        });
+
       });
     });
   }).fail(function(error) {
@@ -241,9 +240,10 @@ $('#contact-submit-live').prop('disabled', 'disabled');
     else {
       $('#messagealert').css('display', 'none');
     }
-    var description = 'Subject: '+subject;
+    /*var description = 'Subject: '+subject;
     description += '&#013;&#010;';
-    description += 'Message: '+message;
+    description += 'Message: '+message;*/
+    var description = 'Subject: ' + subject + '<br />' + 'Message: ' + message;
     var form = new FormData();
     form.append("grant_type", "client_credentials");
     form.append("client_id", "93d80a68-5ad0-878d-a787-5da44425070f");
@@ -251,7 +251,7 @@ $('#contact-submit-live').prop('disabled', 'disabled');
     var settings = {
       "async": true,
       "crossDomain": true,
-      "url": "https://crm.unblock.health/Api/access_token",
+      "url": "https://crm.unblock.health/legacy/Api/access_token",
       "method": "POST",
       "headers": {
         "Accept": "application/vnd.api+json"
@@ -267,7 +267,7 @@ $('#contact-submit-live').prop('disabled', 'disabled');
       var obj = $.parseJSON(response);
       var access_token = obj.access_token;
       var settings = {
-        "url": "https://crm.unblock.health/Api/V8/module",
+        "url": "https://crm.unblock.health/legacy/Api/V8/module",
         "method": "POST",
         "headers": {
           "Accept": "application/vnd.api+json",
@@ -275,16 +275,16 @@ $('#contact-submit-live').prop('disabled', 'disabled');
           "Content-Type": "application/json"
         },
         "processData": false,
-        "data": "{\r\n  \"data\": {\r\n    \"type\": \"Contacts\",\r\n    \"id\": \"" + uid + "\",\r\n    \"attributes\": {\r\n     \"first_name\":\"" + first_name + "\",\r\n     \"email1\":\"" + email + "\"\r\n,\r\n     \"lead_source\":\"Web Site\"\r\n,\r\n     \"title\":\"GEN\"\r\n,\r\n     \"description\":\"" + description + "\"\r\n   }\r\n  }\r\n}\r\n"
+        "data": "{\r\n  \"data\": {\r\n    \"type\": \"Contacts\",\r\n    \"id\": \"" + uid + "\",\r\n    \"attributes\": {\r\n     \"first_name\":\"" + first_name + "\",\r\n     \"email1\":\"" + email + "\"\r\n,\r\n     \"lead_source\":\"Web Site\"\r\n,\r\n     \"title\":\"GEN\"\r\n,\r\n     \"description\":\"" + description + "\"\r\n,\r\n     \"account_id\":\"aba27ce2-d758-bdeb-adef-5da4294bf9e8\"\r\n   }\r\n  }\r\n}\r\n"
       }
   
-      $.ajax(settings).done(function (response) {
+      /*$.ajax(settings).done(function (response) {
         //console.log(response);
         var contactid = response.data.id;
         var settings = {
           "async": true,
           "crossDomain": true,
-          "url": "https://crm.unblock.health/Api/V8/module/Accounts/aba27ce2-d758-bdeb-adef-5da4294bf9e8/relationships",
+          "url": "https://crm.unblock.health/legacy/Api/V8/module/Accounts/aba27ce2-d758-bdeb-adef-5da4294bf9e8/relationships",
           "method": "POST",
           "headers": {
             "Accept": "application/vnd.api+json",
@@ -293,17 +293,17 @@ $('#contact-submit-live').prop('disabled', 'disabled');
           },
           "processData": false,
           "data": "{  \r\n   \"data\":{  \r\n         \"type\":\"Contacts\",\r\n         \"id\":\"" + contactid + "\"\r\n\t    \r\n      }\r\n}"
-        }
+        }*/
   
         $.ajax(settings).done(function (response) {
           //console.log(response);
-          if (response.meta.message != "") {
+          if (response.data.id !='') {
             $("#contactform").trigger("reset");
             var $success = $('#successfooter'); // get the reference of the div
             $success.show().html('Your Message was sent successfully');
           }
         });
-      });
+      //});
     });
   });
 

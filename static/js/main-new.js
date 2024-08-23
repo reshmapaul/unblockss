@@ -20,179 +20,197 @@ $(document).ready(function () {
     
   });
 $('#contact-submit-live').click(function (e) {
-  e.preventDefault();  
-  var first_name = $('#name').val();
-  var email = $('#email').val();
-  var subject = $('#subject').val();
-  var patientdetails = $('#patientoption').val();
-  var message = $('#message').val();
-  var o = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
-  //console.log(" patientdetails -----------",first_name, email, subject, patientdetails);
- 
-  if (first_name == '') {
-    $('#namealert').css('display', 'block');
-    return false;
-  }
-  else {
-    $('#namealert').css('display', 'none');
-  }
-  if (email == '' || email.search(o) == -1) {
-    $('#emailalert').css('display', 'block');
-    return false;
-  }
-  else {
-    $('#emailalert').css('display', 'none');
-  }
-  if (subject == '') {
-    $('#subjectalert').css('display', 'block');
-    return false;
-  }
-  else {
-    $('#subjectalert').css('display', 'none');
-  }
-  if (patientdetails == '') {
-    $('#patientalert').css('display', 'block');
-    return false;
-  }
-  else {
-    $('#patientalert').css('display', 'none');
-  }
-  /*Novu Integration For Sending Mail */
-  if(patientdetails == 'PA'){
-    var patientdetailsvalue = 'PPA';
-  } else if(patientdetails == 'HIM'){
-    var patientdetailsvalue = 'HIM';
-  } else if(patientdetails == 'PAT'){
-    var patientdetailsvalue = 'PAT';
-  }else {
-    var patientdetailsvalue = '';
-  }
-  $('#contact-submit-live').prop('disabled', 'disabled');
-  $('#contact-submit-live').addClass('is-disabled');
-  $('.loader-form').show();
- /* var concatenatedValues = first_name + "|" + email + "|" + patientdetailsvalue;
-
-  var encodedValues = btoa(concatenatedValues);
-  var NovuBaseURL = $('#_novbaseurl').val();
-  var regformToEmail = $('#_regformsupportemail').val();
-  var inviteurl = NovuBaseURL+'token='+encodedValues;
-  var registerFormData = {
-    "name": "ubh-notify-user-registration",
-    "to": {
-        "subscriberId": regformToEmail,
-        "email": regformToEmail, 
-        "firstName": first_name,
-        "lastName": ""
-    },
-    "payload": {
-        "requestor_email":email,
-        "invite_link": inviteurl,
-        "registration_type": patientdetailsvalue,
-        "registration_datetime": todayDate
-    }
-  }; 
-  var settings = {
-    "url": "https://api.novu.infra.medigy.com/v1/events/trigger",
-    "method": "POST",
-    "timeout": 0,
-    "headers": {
-      "Authorization": "ApiKey fa94fe1651ebb4d55a1bdfe6e5810a16",
-      "Content-Type": "application/json"
-    },
-    "data": JSON.stringify(registerFormData),
-};
-  /* End of Novu Integration */
-  /*var settings = {
-  "url": "https://prime.dcp.infra.co.medigy.com/graphql",
-  "method": "POST",
-  "timeout": 0,
-  "headers": {
-    "Content-Type": "application/json"
-  },
-  "data": JSON.stringify({
-    query: "mutation MyMutation {\r\n  notifyUserRegistrationV1(input: {email: \"" + email + "\", name: \"" + first_name + "\",  userType: \"" + patientdetails + "\"}) {\r\n    requestApiResponse {\r\n      data\r\n      status {\r\n        code\r\n        message\r\n      }\r\n      success\r\n    }\r\n  }\r\n}",
-    variables: {}
-  })
-};*/
-var settings = {
-  "url": "https://dcp.infra.unblock.health/graphql",
-  "method": "POST",
-  "timeout": 0,
-  "headers": {
-    "Content-Type": "application/json"
-  },
-  "data": JSON.stringify({
-    query: "mutation MyMutation {\r\n  notifyUserRegistrationV1(input: {email: \"" + email + "\", name: \"" + first_name + "\",  userType: \"" + patientdetails + "\"}) {\r\n    requestApiResponse {\r\n      data\r\n      status {\r\n        code\r\n        message\r\n      }\r\n      success\r\n    }\r\n  }\r\n}",
-    variables: {}
-  })
-};
-$.ajax(settings).done(function (response) {
-    var form = new FormData();
-    form.append("grant_type", "client_credentials");
-    form.append("client_id", "93d80a68-5ad0-878d-a787-5da44425070f");
-    form.append("client_secret", "_S9UX^KZ&&t9W(aH");
-    var settings = {
-      "async": true,
-      "crossDomain": true,
-      "url": "https://crm.unblock.health/legacy/Api/access_token",
-      "method": "POST",
-      "headers": {
-        "Accept": "application/vnd.api+json"
-      },
-      "processData": false,
-      "contentType": false,
-      "mimeType": "multipart/form-data",
-      "data": form
-    }
-
-    $.ajax(settings).done(function (response) {
-
-      var obj = $.parseJSON(response);
-      var access_token = obj.access_token;
-      var settings = {
-        "url": "https://crm.unblock.health/legacy/Api/V8/module",
-        "method": "POST",
-        "headers": {
-          "Accept": "application/vnd.api+json",
-          "Authorization": "Bearer " + access_token + "",
-          "Content-Type": "application/json"
-        },
-        "processData": false,
-        "data": "{\r\n  \"data\": {\r\n    \"type\": \"Contacts\",\r\n    \"id\": \"" + uid + "\",\r\n    \"attributes\": {\r\n     \"first_name\":\"" + first_name + "\",\r\n     \"email1\":\"" + email + "\"\r\n,\r\n     \"lead_source\":\"Web Site\"\r\n,\r\n     \"title\":\"" + patientdetails + "\"\r\n,\r\n     \"account_id\":\"aba27ce2-d758-bdeb-adef-5da4294bf9e8\"\r\n   }\r\n  }\r\n}\r\n"
+  e.preventDefault();
+  var verifyCallback1 ="";
+  window.verifyCallback2 = function(token) {
+   verifyCallback1 = token;
+   var recaptcha_response1 = '';
+   recaptcha_response1 = verifyCallback1;
+   //console.log(recaptcha_response1);
+   var $errorfooter = $('#errorfooter'); // get the reference of the div
+   $errorfooter.show().html('');
+   var $success = $('#success');
+   $success.show().html('');
+   var uid = 0;
+   uid = uuidv4();  
+   var first_name = $('#name').val();
+   var email = $('#email').val();
+      var subject = $('#subject').val();
+      var patientdetails = $('#patientoption').val();
+      var message = $('#message').val();
+      var o = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
+      //console.log(" patientdetails -----------",first_name, email, subject, patientdetails);
+    
+      if (first_name == '') {
+        $('#namealert').css('display', 'block');
+        return false;
       }
+      else {
+        $('#namealert').css('display', 'none');
+      }
+      if (email == '' || email.search(o) == -1) {
+        $('#emailalert').css('display', 'block');
+        return false;
+      }
+      else {
+        $('#emailalert').css('display', 'none');
+      }
+      if (subject == '') {
+        $('#subjectalert').css('display', 'block');
+        return false;
+      }
+      else {
+        $('#subjectalert').css('display', 'none');
+      }
+      if (patientdetails == '') {
+        $('#patientalert').css('display', 'block');
+        return false;
+      }
+      else {
+        $('#patientalert').css('display', 'none');
+      }
+      /*Novu Integration For Sending Mail */
+      if(patientdetails == 'PA'){
+        var patientdetailsvalue = 'PPA';
+      } else if(patientdetails == 'HIM'){
+        var patientdetailsvalue = 'HIM';
+      } else if(patientdetails == 'PAT'){
+        var patientdetailsvalue = 'PAT';
+      }else {
+        var patientdetailsvalue = '';
+      }
+      $('#contact-submit-live').prop('disabled', 'disabled');
+      $('#contact-submit-live').addClass('is-disabled');
+    if(recaptcha_response1) {
+      $('.loader-form').show();
+      /* var concatenatedValues = first_name + "|" + email + "|" + patientdetailsvalue;
 
-      /*$.ajax(settings).done(function (response) {
-        console.log(response);
-        var contactid = response.data.id;
+        var encodedValues = btoa(concatenatedValues);
+        var NovuBaseURL = $('#_novbaseurl').val();
+        var regformToEmail = $('#_regformsupportemail').val();
+        var inviteurl = NovuBaseURL+'token='+encodedValues;
+        var registerFormData = {
+          "name": "ubh-notify-user-registration",
+          "to": {
+              "subscriberId": regformToEmail,
+              "email": regformToEmail, 
+              "firstName": first_name,
+              "lastName": ""
+          },
+          "payload": {
+              "requestor_email":email,
+              "invite_link": inviteurl,
+              "registration_type": patientdetailsvalue,
+              "registration_datetime": todayDate
+          }
+        }; 
         var settings = {
-          "async": true,
-          "crossDomain": true,
-          "url": "https://crm.unblock.health/legacy/Api/V8/module/Accounts/aba27ce2-d758-bdeb-adef-5da4294bf9e8/relationships",
+          "url": "https://api.novu.infra.medigy.com/v1/events/trigger",
           "method": "POST",
+          "timeout": 0,
           "headers": {
-            "Accept": "application/vnd.api+json",
-            "Authorization": "Bearer " + access_token + "",
+            "Authorization": "ApiKey fa94fe1651ebb4d55a1bdfe6e5810a16",
             "Content-Type": "application/json"
           },
-          "processData": false,
-          "data": "{  \r\n   \"data\":{  \r\n         \"type\":\"Contacts\",\r\n         \"id\":\"" + contactid + "\"\r\n\t    \r\n      }\r\n}"
-        }*/
-
+          "data": JSON.stringify(registerFormData),
+      };
+        /* End of Novu Integration */
+        /*var settings = {
+        "url": "https://prime.dcp.infra.co.medigy.com/graphql",
+        "method": "POST",
+        "timeout": 0,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "data": JSON.stringify({
+          query: "mutation MyMutation {\r\n  notifyUserRegistrationV1(input: {email: \"" + email + "\", name: \"" + first_name + "\",  userType: \"" + patientdetails + "\"}) {\r\n    requestApiResponse {\r\n      data\r\n      status {\r\n        code\r\n        message\r\n      }\r\n      success\r\n    }\r\n  }\r\n}",
+          variables: {}
+        })
+      };*/
+      var settings = {
+        "url": "https://dcp.infra.unblock.health/graphql",
+        "method": "POST",
+        "timeout": 0,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "data": JSON.stringify({
+          query: "mutation MyMutation {\r\n  notifyUserRegistrationV1(input: {email: \"" + email + "\", name: \"" + first_name + "\",  userType: \"" + patientdetails + "\"}) {\r\n    requestApiResponse {\r\n      data\r\n      status {\r\n        code\r\n        message\r\n      }\r\n      success\r\n    }\r\n  }\r\n}",
+          variables: {}
+        })
+      };
       $.ajax(settings).done(function (response) {
-        if (response.data.id !='') {
-            $('#name').val('');
-            $('#email').val('');
-            var $success = $('#success'); // get the reference of the div
-            $success.show().html('We appreciate your registration with Unblock Health.');
-            //setInterval('location.reload()', 800);
-            //$success.show().html('');
+          var form = new FormData();
+          form.append("grant_type", "client_credentials");
+          form.append("client_id", "93d80a68-5ad0-878d-a787-5da44425070f");
+          form.append("client_secret", "_S9UX^KZ&&t9W(aH");
+          var settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": "https://crm.unblock.health/legacy/Api/access_token",
+            "method": "POST",
+            "headers": {
+              "Accept": "application/vnd.api+json"
+            },
+            "processData": false,
+            "contentType": false,
+            "mimeType": "multipart/form-data",
+            "data": form
           }
 
+          $.ajax(settings).done(function (response) {
+
+            var obj = $.parseJSON(response);
+            var access_token = obj.access_token;
+            var settings = {
+              "url": "https://crm.unblock.health/legacy/Api/V8/module",
+              "method": "POST",
+              "headers": {
+                "Accept": "application/vnd.api+json",
+                "Authorization": "Bearer " + access_token + "",
+                "Content-Type": "application/json"
+              },
+              "processData": false,
+              "data": "{\r\n  \"data\": {\r\n    \"type\": \"Contacts\",\r\n    \"id\": \"" + uid + "\",\r\n    \"attributes\": {\r\n     \"first_name\":\"" + first_name + "\",\r\n     \"email1\":\"" + email + "\"\r\n,\r\n     \"lead_source\":\"Web Site\"\r\n,\r\n     \"title\":\"" + patientdetails + "\"\r\n,\r\n     \"account_id\":\"aba27ce2-d758-bdeb-adef-5da4294bf9e8\"\r\n   }\r\n  }\r\n}\r\n"
+            }
+
+            /*$.ajax(settings).done(function (response) {
+              console.log(response);
+              var contactid = response.data.id;
+              var settings = {
+                "async": true,
+                "crossDomain": true,
+                "url": "https://crm.unblock.health/legacy/Api/V8/module/Accounts/aba27ce2-d758-bdeb-adef-5da4294bf9e8/relationships",
+                "method": "POST",
+                "headers": {
+                  "Accept": "application/vnd.api+json",
+                  "Authorization": "Bearer " + access_token + "",
+                  "Content-Type": "application/json"
+                },
+                "processData": false,
+                "data": "{  \r\n   \"data\":{  \r\n         \"type\":\"Contacts\",\r\n         \"id\":\"" + contactid + "\"\r\n\t    \r\n      }\r\n}"
+              }*/
+
+            $.ajax(settings).done(function (response) {
+              if (response.data.id !='') {
+                  $('#name').val('');
+                  $('#email').val('');
+                  var $success = $('#success'); // get the reference of the div
+                  $success.show().html('We appreciate your registration with Unblock Health.');
+                  //setInterval('location.reload()', 800);
+                  //$success.show().html('');
+                }
+
+            });
+          });
+      }).fail(function(error) {
+        console.error("API call error:", error);
       });
-    });
-  }).fail(function(error) {
-    console.error("API call error:", error);
-  });
+    }else{
+      var $error = $('#error'); // get the reference of the div
+      $error.show().html('Please select CAPTCHA');
+    }
+  };
 });
 
 $('#contact-submit-live').prop('disabled', 'disabled');
@@ -207,104 +225,115 @@ $('#contact-submit-live').prop('disabled', 'disabled');
 
   $('#contact-submit').click(function (e) {
     e.preventDefault();
-    var first_name = $('#quickname').val();
-    var email = $('#quickemail').val();
-    var subject = $('#quicksubject').val();
-    var message = $('#quickmessage').val();
-    var o = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
-    if (first_name == '') {
-      $('#quicknamealert').css('display', 'block');
-      return false;
-    }
-    else {
-      $('#quicknamealert').css('display', 'none');
-    }
-    if (email == '' || email.search(o) == -1) {
-      $('#quickemailalert').css('display', 'block');
-      return false;
-    }
-    else {
-      $('#quickemailalert').css('display', 'none');
-    }
-    if (subject == '') {
-      $('#quicksubjectalert').css('display', 'block');
-      return false;
-    }
-    else {
-      $('#quicksubjectalert').css('display', 'none');
-    }
-    if (message == '') {
-      $('#messagealert').css('display', 'block');
-      return false;
-    }
-    else {
-      $('#messagealert').css('display', 'none');
-    }
-    /*var description = 'Subject: '+subject;
-    description += '&#013;&#010;';
-    description += 'Message: '+message;*/
-    var description = 'Subject: ' + subject + '<br />' + 'Message: ' + message;
-    var form = new FormData();
-    form.append("grant_type", "client_credentials");
-    form.append("client_id", "93d80a68-5ad0-878d-a787-5da44425070f");
-    form.append("client_secret", "_S9UX^KZ&&t9W(aH");
-    var settings = {
-      "async": true,
-      "crossDomain": true,
-      "url": "https://crm.unblock.health/legacy/Api/access_token",
-      "method": "POST",
-      "headers": {
-        "Accept": "application/vnd.api+json"
-      },
-      "processData": false,
-      "contentType": false,
-      "mimeType": "multipart/form-data",
-      "data": form
-    }
-  
-    $.ajax(settings).done(function (response) {
-  
-      var obj = $.parseJSON(response);
-      var access_token = obj.access_token;
-      var settings = {
-        "url": "https://crm.unblock.health/legacy/Api/V8/module",
-        "method": "POST",
-        "headers": {
-          "Accept": "application/vnd.api+json",
-          "Authorization": "Bearer " + access_token + "",
-          "Content-Type": "application/json"
-        },
-        "processData": false,
-        "data": "{\r\n  \"data\": {\r\n    \"type\": \"Contacts\",\r\n    \"id\": \"" + uid + "\",\r\n    \"attributes\": {\r\n     \"first_name\":\"" + first_name + "\",\r\n     \"email1\":\"" + email + "\"\r\n,\r\n     \"lead_source\":\"Web Site\"\r\n,\r\n     \"title\":\"GEN\"\r\n,\r\n     \"description\":\"" + description + "\"\r\n,\r\n     \"account_id\":\"aba27ce2-d758-bdeb-adef-5da4294bf9e8\"\r\n   }\r\n  }\r\n}\r\n"
+    var verifyCallback3 ="";
+    window.verifyCallback0 = function(token) {
+      var recaptcha_response='';
+      var recaptcha_response = token;
+      console.log(recaptcha_response);
+      var first_name = $('#quickname').val();
+      var email = $('#quickemail').val();
+      var subject = $('#quicksubject').val();
+      var message = $('#quickmessage').val();
+      var o = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
+      if (first_name == '') {
+        $('#quicknamealert').css('display', 'block');
+        return false;
       }
-  
-      /*$.ajax(settings).done(function (response) {
-        //console.log(response);
-        var contactid = response.data.id;
+      else {
+        $('#quicknamealert').css('display', 'none');
+      }
+      if (email == '' || email.search(o) == -1) {
+        $('#quickemailalert').css('display', 'block');
+        return false;
+      }
+      else {
+        $('#quickemailalert').css('display', 'none');
+      }
+      if (subject == '') {
+        $('#quicksubjectalert').css('display', 'block');
+        return false;
+      }
+      else {
+        $('#quicksubjectalert').css('display', 'none');
+      }
+      if (message == '') {
+        $('#messagealert').css('display', 'block');
+        return false;
+      }
+      else {
+        $('#messagealert').css('display', 'none');
+      }
+      /*var description = 'Subject: '+subject;
+      description += '&#013;&#010;';
+      description += 'Message: '+message;*/
+      var description = 'Subject: ' + subject + '<br />' + 'Message: ' + message;
+      if (recaptcha_response) {
+        var form = new FormData();
+        form.append("grant_type", "client_credentials");
+        form.append("client_id", "93d80a68-5ad0-878d-a787-5da44425070f");
+        form.append("client_secret", "_S9UX^KZ&&t9W(aH");
         var settings = {
           "async": true,
           "crossDomain": true,
-          "url": "https://crm.unblock.health/legacy/Api/V8/module/Accounts/aba27ce2-d758-bdeb-adef-5da4294bf9e8/relationships",
+          "url": "https://crm.unblock.health/legacy/Api/access_token",
           "method": "POST",
           "headers": {
-            "Accept": "application/vnd.api+json",
-            "Authorization": "Bearer " + access_token + "",
-            "Content-Type": "application/json"
+            "Accept": "application/vnd.api+json"
           },
           "processData": false,
-          "data": "{  \r\n   \"data\":{  \r\n         \"type\":\"Contacts\",\r\n         \"id\":\"" + contactid + "\"\r\n\t    \r\n      }\r\n}"
-        }*/
-  
+          "contentType": false,
+          "mimeType": "multipart/form-data",
+          "data": form
+        }
+      
         $.ajax(settings).done(function (response) {
-          //console.log(response);
-          if (response.data.id !='') {
-            $("#contactform").trigger("reset");
-            var $success = $('#successfooter'); // get the reference of the div
-            $success.show().html('Your Message was sent successfully');
+      
+          var obj = $.parseJSON(response);
+          var access_token = obj.access_token;
+          var settings = {
+            "url": "https://crm.unblock.health/legacy/Api/V8/module",
+            "method": "POST",
+            "headers": {
+              "Accept": "application/vnd.api+json",
+              "Authorization": "Bearer " + access_token + "",
+              "Content-Type": "application/json"
+            },
+            "processData": false,
+            "data": "{\r\n  \"data\": {\r\n    \"type\": \"Contacts\",\r\n    \"id\": \"" + uid + "\",\r\n    \"attributes\": {\r\n     \"first_name\":\"" + first_name + "\",\r\n     \"email1\":\"" + email + "\"\r\n,\r\n     \"lead_source\":\"Web Site\"\r\n,\r\n     \"title\":\"GEN\"\r\n,\r\n     \"description\":\"" + description + "\"\r\n,\r\n     \"account_id\":\"aba27ce2-d758-bdeb-adef-5da4294bf9e8\"\r\n   }\r\n  }\r\n}\r\n"
           }
+      
+          /*$.ajax(settings).done(function (response) {
+            //console.log(response);
+            var contactid = response.data.id;
+            var settings = {
+              "async": true,
+              "crossDomain": true,
+              "url": "https://crm.unblock.health/legacy/Api/V8/module/Accounts/aba27ce2-d758-bdeb-adef-5da4294bf9e8/relationships",
+              "method": "POST",
+              "headers": {
+                "Accept": "application/vnd.api+json",
+                "Authorization": "Bearer " + access_token + "",
+                "Content-Type": "application/json"
+              },
+              "processData": false,
+              "data": "{  \r\n   \"data\":{  \r\n         \"type\":\"Contacts\",\r\n         \"id\":\"" + contactid + "\"\r\n\t    \r\n      }\r\n}"
+            }*/
+      
+            $.ajax(settings).done(function (response) {
+              //console.log(response);
+              if (response.data.id !='') {
+                $("#contactform").trigger("reset");
+                var $success = $('#successfooter'); // get the reference of the div
+                $success.show().html('Your Message was sent successfully');
+              }
+            });
+          //});
         });
-      //});
-    });
+      }else{
+        var $errorfooter = $('#errorfooter'); // get the reference of the div
+        $errorfooter.show().html('Please select CAPTCHA');
+      }
+    };
   });
 
   $('#contact-submit').prop('disabled', 'disabled');

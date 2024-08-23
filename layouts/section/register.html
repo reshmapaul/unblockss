@@ -42,9 +42,10 @@
             <input type="hidden" name="_regformsupportemail" id="_regformsupportemail" value={{.Site.Params.unblockHealthSupportEmail}} />  
             </div>
 
-          <button class="slds-button slds-button_stretch slds-button_brand slds-p-around_medium slds-color__text_gray-1 slds-m-bottom_small" id="contact-submit-live">
-            <span class="slds-text-heading_medium" style="font-size: 24px;text-transform:uppercase;"><b>Register</b></span></button>
+            <button class="g-recaptcha slds-button slds-button_stretch slds-button_brand slds-p-around_medium slds-color__text_gray-1 slds-m-bottom_small"  id="contact-submit-live" data-sitekey="{{.Site.Params.recaptchasitekey}}"  data-callback="verifyCallback2"  data-size="invisible">
+              <span class="slds-text-heading_medium" style="font-size: 24px;text-transform:uppercase;"><b>Register</b></span></button>
         </div>
+      <div class="slds-form-element__control slds-m-bottom_medium">This site is protected by reCAPTCHA <br> and the Google <a href="https://policies.google.com/privacy" target="_blank" class=" text-blue-600">Privacy Policy</a> and <a href="https://policies.google.com/terms" target="_blank" class=" text-blue-600">Terms of Service</a> apply.</div>
 	 </form>
    <div id="success" style="display:none;">
 

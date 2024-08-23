@@ -178,8 +178,9 @@
                       <textarea name="Message" id="quickmessage" placeholder="Message*" class="slds-input slds-p-vertical_x-small" style="min-height:138px;" required></textarea>
                     </div>
                     <input type="hidden" name="_subject" value="[UnBlock Health] - Contact Form Submission" />
-                    <button id="contact-submit"  class="slds-button slds-button_brand slds-button_stretch slds-p-vertical_small slds-p-horizontal_medium slds-color__text_gray-1">
+                    <button id="contact-submit"  class="g-recaptcha slds-button slds-button_brand slds-button_stretch slds-p-vertical_small slds-p-horizontal_medium slds-color__text_gray-1" data-sitekey="{{ .context.Site.Params.recaptchasitekey}}"  data-callback="verifyCallback0"  data-size="invisible">
                       <span class="slds-text-body_small slds-text-title_caps slds-color__text_gray-1"><b>Send</b></span></button>
+                      <div class="slds-form-element__control slds-m-bottom_medium slds-text-body_small slds-text-align_center slds-m-top_medium">This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy" target="_blank" class="text-blue-600" style="color: #aac1eb;">Privacy Policy</a> and <a href="https://policies.google.com/terms" target="_blank" class="text-blue-600" style="color: #aac1eb;">Terms of Service</a> apply.</div>
                   </div>
                   </form>
                   <div id="successfooter" style="display:none;">

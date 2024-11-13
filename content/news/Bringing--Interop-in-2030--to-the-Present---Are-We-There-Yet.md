@@ -15,12 +15,11 @@ breadcrumbs:
 - Home
 - News
 - Bringing  Interop in 2030  to the Present   Are We There Yet
-  breadcrumbLinks:
+breadcrumbLinks:
 - /
 - /news
 - /
 source: "CommonWell Health Alliance"
-news/source: "CommonWell Health Alliance"
 ---
 
 I know the official calendar new year is months away, but for those of us with kids in school or those who take a breather in the summer, school opening may feel like a new year. With that comes time to think on what has passed, what is to come and what next.This year,,,,,,,,,,,,,,,,,,,,,

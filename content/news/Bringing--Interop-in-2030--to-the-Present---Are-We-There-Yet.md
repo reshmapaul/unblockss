@@ -11,15 +11,16 @@ ogDescription: "I know the official calendar new year is months away, but for th
 ogSiteName: "CommonWell Health Alliance"
 ogImage: "/images/resources/Bringing Interop in 2030 to the Present  Are We There Yet.png"
 twitterCard: "summary_large_image"
-breadcrumbs:
 
-- Home
-- News
-- Bringing  Interop in 2030  to the Present   Are We There Yet
-  breadcrumbLinks:
-- /
-- /news
-- /
+breadcrumbs:
+ - Home
+ - News
+ - Bringing  Interop in 2030  to the Present   Are We There Yet
+breadcrumbLinks:
+ - / 
+ - /news
+ - / 
+
   source: "CommonWell Health Alliance"
   news/source: "CommonWell Health Alliance"
 

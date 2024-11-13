@@ -114,13 +114,6 @@
       <description>We are living in an environment where too many providers are pushing back against patients accessing their medical records and health information.&#xA;In my daily patient advocacy work, I am seeing an increase in doctors discouraging:&#xA;portal use patients against reading new lab, pathology, or imaging results signing up for a patient portal. using apps to gather one&amp;rsquo;s health information. Discouraging the use of patient portals and not offering access to portals and individuals&amp;rsquo; information is harmful to patients, hinders the growth of the doctor-patient relationship, and directly causes inequities in care and access to care</description>
     </item>
     <item>
-      <title>testing</title>
-      <link>http://localhost:1313/blog/2024-11-13-testing/</link>
-      <pubDate>Tue, 10 Jan 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2024-11-13-testing/</guid>
-      <description>The Penmark CMS is enabled by 3 components, the Login component (renders login buttons), the Drafts component (renders a list of your drafts) and the Post component (renders an edit button for individual posts). The Drafts and Post component also render the Penmark editor when the edit button is clicked.&#xA;This guide details the steps to add Penmark to your Jekyll static site. Alternatively, you can start from this Penmark &amp;amp; Jekyll template, or you can view the commit adding Penmark to the Jekyll website.</description>
-    </item>
-    <item>
       <title>Patient Need-to-Knows The Information Blocking Rules</title>
       <link>http://localhost:1313/blog/patient-need-to-knows-the-information-blocking-rules/</link>
       <pubDate>Mon, 05 Dec 2022 00:00:00 +0000</pubDate>

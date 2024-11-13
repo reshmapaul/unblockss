@@ -2,19 +2,7 @@
 
 {{ $context := . }}
 {{- partialCached "head" (dict "activeMenu" "About" "context" $context ) "about-page-key" -}}  
-{{ $filePath := printf "%s%s" "content/" .File.Path }}
-
-<!-- top < ends < -->  
-<script 
-  type="module" 
-  src="https://penmark.appsinprogress.com/dist/PostClient.js"
-  draftsFolder="drafts"
-  postsFolder="content/about"
-  imagesFolder="static/images"
-  githubUsername="reshmapaul"
-  githubRepoName="unblockss"
-  postfilepath="{{ $filePath }}"
-></script>  
+ 
 <main>
 <section>   
   <div class="slds-container_fluid slds-container_center">
